@@ -1,0 +1,2318 @@
+# WordPress Blank Pot
+# Copyright (C) 2014 ...
+# This file is distributed under the GNU General Public License v2 or later.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bookstore theme v1.0.2\n"
+"POT-Creation-Date: 2019-01-24 10:27+0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Your Name <you@example.com>\n"
+"Language-Team: Beautheme <support@beautheme.com>\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,"
+"_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"Language: en_US\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: 404.php:9
+msgid "404 not found-"
+msgstr ""
+
+#: 404.php:10
+msgid "the resource requested could not be found on this server"
+msgstr ""
+
+#: 404.php:16 templates/header-default.php:53
+msgid "Search by title book..."
+msgstr ""
+
+#: 404.php:18
+msgid "All "
+msgstr ""
+
+#: comments.php:11 templates/content-detail.php:13
+#: templates/content-detailsidebar.php:14 templates/content-post.php:45
+#: templates/content-tags.php:8
+msgid "Comments"
+msgstr ""
+
+#: comments.php:27
+msgid "Submit comment"
+msgstr ""
+
+#: comments.php:28
+msgid "Leave a reply"
+msgstr ""
+
+#: comments.php:31 includes/ajax-contact.php:52
+#: woocommerce/single-product-reviews.php:38
+msgid "Email"
+msgstr ""
+
+#: comments.php:33 woocommerce/single-product-reviews.php:36
+msgid "Name"
+msgstr ""
+
+#: comments.php:35
+msgid "Message *"
+msgstr ""
+
+#: footer-none.php:4
+msgid "Pages"
+msgstr ""
+
+#: footer-none.php:6
+msgid "Edit "
+msgstr ""
+
+#: functions.php:78 functions.php:165
+msgid "Main menu"
+msgstr ""
+
+#: functions.php:166
+msgid "Sticker menu"
+msgstr ""
+
+#: functions.php:167
+msgid "Small menu"
+msgstr ""
+
+#: functions.php:168
+msgid "Mobile Menu"
+msgstr ""
+
+#: functions.php:188
+msgid "PREV"
+msgstr ""
+
+#: functions.php:189
+msgid "NEXT"
+msgstr ""
+
+#: functions.php:220
+msgid "Sidebar Product"
+msgstr ""
+
+#: functions.php:222
+msgid "Sidebar product widget position."
+msgstr ""
+
+#: functions.php:230
+msgid "Sidebar Home 07"
+msgstr ""
+
+#: functions.php:232
+msgid "Sidebar home 07 position."
+msgstr ""
+
+#: functions.php:240
+msgid "Sidebar Home 06"
+msgstr ""
+
+#: functions.php:242
+msgid "Sidebar home 06 position."
+msgstr ""
+
+#: functions.php:264
+msgid "Sidebar widget"
+msgstr ""
+
+#: functions.php:284
+msgid "Footer sidebar"
+msgstr ""
+
+#: functions.php:285
+msgid "This is footer sidebar "
+msgstr ""
+
+#: includes/ajax-author.php:82 woocommerce/content-single-style-01.php:466
+#: woocommerce/content-single-style-02.php:610
+#: woocommerce/content-single-style-02.php:667
+#: woocommerce/content-single-style-03.php:548
+msgid "Meet the Author"
+msgstr ""
+
+#: includes/ajax-author.php:136 woocommerce/content-single-style-01.php:519
+#: woocommerce/content-single-style-02.php:481
+msgid "Books of "
+msgstr ""
+
+#: includes/ajax-author.php:261
+msgid "Author avatar"
+msgstr ""
+
+#: includes/ajax-contact.php:19
+msgid "empty fist name"
+msgstr ""
+
+#: includes/ajax-contact.php:22
+msgid "empty last name"
+msgstr ""
+
+#: includes/ajax-contact.php:25
+msgid "empty email"
+msgstr ""
+
+#: includes/ajax-contact.php:28
+msgid "email is malformed"
+msgstr ""
+
+#: includes/ajax-contact.php:31
+msgid "empty message"
+msgstr ""
+
+#: includes/ajax-contact.php:35
+msgid "Error: "
+msgstr ""
+
+#: includes/ajax-contact.php:46
+msgid "You have a messages from website"
+msgstr ""
+
+#: includes/ajax-contact.php:47
+msgid "Fist name"
+msgstr ""
+
+#: includes/ajax-contact.php:48
+#: woocommerce/myaccount/form-edit-account.php:36
+msgid "Last name"
+msgstr ""
+
+#: includes/ajax-contact.php:50 vc_templates/be_contact_book.php:118
+#: vc_templates/be_contact_book.php:217 vc_templates/be_contact_book.php:291
+msgid "Website"
+msgstr ""
+
+#: includes/ajax-contact.php:53
+msgid "Message"
+msgstr ""
+
+#: includes/ajax-contact.php:69
+msgid "Contact email from"
+msgstr ""
+
+#: includes/ajax-contact.php:75
+msgid "Sending email error please try again"
+msgstr ""
+
+#: includes/ajax-contact.php:80
+msgid "Nodata Post"
+msgstr ""
+
+#: includes/beboo_composer.php:42
+msgid "CSS Animation"
+msgstr ""
+
+#: includes/beboo_composer.php:46
+msgid "No"
+msgstr ""
+
+#: includes/beboo_composer.php:47
+msgid "Top to bottom"
+msgstr ""
+
+#: includes/beboo_composer.php:48
+msgid "Bottom to top"
+msgstr ""
+
+#: includes/beboo_composer.php:49
+msgid "Left to right"
+msgstr ""
+
+#: includes/beboo_composer.php:50
+msgid "Right to left"
+msgstr ""
+
+#: includes/beboo_composer.php:51
+msgid "Appear from center"
+msgstr ""
+
+#: includes/beboo_composer.php:53
+msgid ""
+"Select type of animation if you want this element to be animated when it "
+"enters into the browsers viewport. Note: Works only in modern browsers."
+msgstr ""
+
+#: includes/beboo_composer.php:62
+msgid "Row stretch"
+msgstr ""
+
+#: includes/beboo_composer.php:65
+msgid "Default"
+msgstr ""
+
+#: includes/beboo_composer.php:66
+msgid "Stretch row"
+msgstr ""
+
+#: includes/beboo_composer.php:67
+msgid "Stretch row and content"
+msgstr ""
+
+#: includes/beboo_composer.php:68
+msgid "Stretch row and content (no paddings)"
+msgstr ""
+
+#: includes/beboo_composer.php:69
+msgid "Stretch row and content (no paddings content in center)"
+msgstr ""
+
+#: includes/beboo_composer.php:71
+msgid ""
+"Select stretching options for row and content (Note: stretched may not "
+"work properly if parent container has \"overflow: hidden\" CSS property)."
+msgstr ""
+
+#: includes/beboo_composer.php:84
+msgid "Show social list"
+msgstr ""
+
+#: includes/beboo_composer.php:87 includes/beboo_composer.php:111
+#: includes/beboo_composer.php:233 includes/beboo_composer.php:283
+#: includes/beboo_composer.php:342 includes/beboo_composer.php:432
+#: includes/beboo_composer.php:466 includes/beboo_composer.php:519
+#: includes/beboo_composer.php:555 includes/beboo_composer.php:600
+#: includes/beboo_composer_bich.php:11 includes/beboo_composer_bich.php:156
+#: includes/beboo_composer_bich.php:219 includes/beboo_composer_bich.php:360
+#: includes/beboo_composer_bich.php:391
+msgid "Beau Theme"
+msgstr ""
+
+#: includes/beboo_composer.php:88 includes/beboo_composer.php:112
+#: includes/beboo_composer.php:234 includes/beboo_composer.php:284
+#: includes/beboo_composer.php:433
+msgid "This section contain author info and some book"
+msgstr ""
+
+#: includes/beboo_composer.php:93 includes/beboo_composer.php:248
+#: includes/beboo_composer.php:288 includes/beboo_composer.php:438
+msgid "Title section"
+msgstr ""
+
+#: includes/beboo_composer.php:96 includes/beboo_composer.php:251
+#: includes/beboo_composer.php:291 includes/beboo_composer.php:441
+msgid "This for title box."
+msgstr ""
+
+#: includes/beboo_composer.php:108
+msgid "Author & book"
+msgstr ""
+
+#: includes/beboo_composer.php:117 includes/beboo_composer.php:119
+msgid "Author name"
+msgstr ""
+
+#: includes/beboo_composer.php:120
+msgid "This display name of author."
+msgstr ""
+
+#: includes/beboo_composer.php:121 includes/beboo_composer.php:129
+msgid "Author"
+msgstr ""
+
+#: includes/beboo_composer.php:125
+msgid "Author style"
+msgstr ""
+
+#: includes/beboo_composer.php:127
+msgid "Style 1, style 2, style 3"
+msgstr ""
+
+#: includes/beboo_composer.php:128
+msgid "This display list style of author."
+msgstr ""
+
+#: includes/beboo_composer.php:134
+msgid "Author description"
+msgstr ""
+
+#: includes/beboo_composer.php:136 includes/beboo_composer.php:615
+#: includes/beboo_composer_bich.php:204
+msgid ""
+"<p>I am text block. Click edit button to change this text. Lorem ipsum "
+"dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec "
+"ullamcorper mattis, pulvinar dapibus leo.</p>"
+msgstr ""
+
+#: includes/beboo_composer.php:137 includes/beboo_composer.php:146
+msgid "Author info"
+msgstr ""
+
+#: includes/beboo_composer.php:142
+msgid "Image"
+msgstr ""
+
+#: includes/beboo_composer.php:145 includes/beboo_composer.php:624
+#: includes/beboo_composer.php:632 includes/beboo_composer_bich.php:378
+msgid "Select image from media library."
+msgstr ""
+
+#: includes/beboo_composer.php:150
+msgid "Chose your books"
+msgstr ""
+
+#: includes/beboo_composer.php:152
+msgid "Show max 4 books min 2 books)"
+msgstr ""
+
+#: includes/beboo_composer.php:153
+msgid "Book list"
+msgstr ""
+
+#: includes/beboo_composer.php:157
+msgid "Author facebook"
+msgstr ""
+
+#: includes/beboo_composer.php:160
+msgid "This author facebook link."
+msgstr ""
+
+#: includes/beboo_composer.php:161 includes/beboo_composer.php:169
+#: includes/beboo_composer.php:177 includes/beboo_composer.php:185
+#: includes/beboo_composer.php:193 includes/beboo_composer.php:201
+#: includes/beboo_composer.php:209 includes/beboo_composer.php:217
+msgid "Social"
+msgstr ""
+
+#: includes/beboo_composer.php:165
+msgid "Author twitter"
+msgstr ""
+
+#: includes/beboo_composer.php:168
+msgid "This author twitter link."
+msgstr ""
+
+#: includes/beboo_composer.php:173
+msgid "Author Google"
+msgstr ""
+
+#: includes/beboo_composer.php:176
+msgid "This author Google link."
+msgstr ""
+
+#: includes/beboo_composer.php:181
+msgid "Author instagram"
+msgstr ""
+
+#: includes/beboo_composer.php:184
+msgid "This author instagram link."
+msgstr ""
+
+#: includes/beboo_composer.php:189
+msgid "Author pinterest"
+msgstr ""
+
+#: includes/beboo_composer.php:192
+msgid "This author pinterest link."
+msgstr ""
+
+#: includes/beboo_composer.php:197
+msgid "Author behance"
+msgstr ""
+
+#: includes/beboo_composer.php:200
+msgid "This author behance link."
+msgstr ""
+
+#: includes/beboo_composer.php:205
+msgid "Author youtube"
+msgstr ""
+
+#: includes/beboo_composer.php:208
+msgid "This author youtube link."
+msgstr ""
+
+#: includes/beboo_composer.php:213
+msgid "Author linkedin"
+msgstr ""
+
+#: includes/beboo_composer.php:216
+msgid "This author linkedin link."
+msgstr ""
+
+#: includes/beboo_composer.php:230
+msgid "Show blog items"
+msgstr ""
+
+#: includes/beboo_composer.php:240 includes/beboo_composer_bich.php:98
+msgid "Category"
+msgstr ""
+
+#: includes/beboo_composer.php:244 includes/beboo_composer_bich.php:102
+msgid "Select category products."
+msgstr ""
+
+#: includes/beboo_composer.php:255
+msgid "Title center ?"
+msgstr ""
+
+#: includes/beboo_composer.php:259 includes/beboo_composer.php:268
+#: includes/beboo_composer.php:372 includes/beboo_composer.php:450
+msgid "Select columns count."
+msgstr ""
+
+#: includes/beboo_composer.php:263 includes/beboo_composer.php:445
+#: includes/beboo_composer.php:578
+msgid "Perpage"
+msgstr ""
+
+#: includes/beboo_composer.php:280
+msgid "Book store agency"
+msgstr ""
+
+#: includes/beboo_composer.php:295
+msgid "Link for Ipad"
+msgstr ""
+
+#: includes/beboo_composer.php:298
+msgid "Link for app ipad."
+msgstr ""
+
+#: includes/beboo_composer.php:302
+msgid "Link for Iphone"
+msgstr ""
+
+#: includes/beboo_composer.php:305
+msgid "Link for app iphone."
+msgstr ""
+
+#: includes/beboo_composer.php:309
+msgid "United link"
+msgstr ""
+
+#: includes/beboo_composer.php:312
+msgid "United shop."
+msgstr ""
+
+#: includes/beboo_composer.php:316
+msgid "United kingdom"
+msgstr ""
+
+#: includes/beboo_composer.php:319
+msgid "United kingdom link."
+msgstr ""
+
+#: includes/beboo_composer.php:323 vc_templates/be_agency.php:28
+msgid "Japan"
+msgstr ""
+
+#: includes/beboo_composer.php:326
+msgid "Japan shop link."
+msgstr ""
+
+#: includes/beboo_composer.php:339
+msgid "Show logo publisher"
+msgstr ""
+
+#: includes/beboo_composer.php:343
+msgid "This section contain list logo publisher"
+msgstr ""
+
+#: includes/beboo_composer.php:348
+msgid "Show logo limit"
+msgstr ""
+
+#: includes/beboo_composer.php:353
+msgid "Limit logo load."
+msgstr ""
+
+#: includes/beboo_composer.php:357
+msgid "Number logo to show"
+msgstr ""
+
+#: includes/beboo_composer.php:384
+msgid "Beau pro categories"
+msgstr ""
+
+#: includes/beboo_composer.php:387
+msgid "Show categories products in masory layout"
+msgstr ""
+
+#: includes/beboo_composer.php:392 includes/beboo_composer_bich.php:16
+msgid "Style Slide"
+msgstr ""
+
+#: includes/beboo_composer.php:396 includes/beboo_composer_bich.php:28
+msgid "Select style Slide."
+msgstr ""
+
+#: includes/beboo_composer.php:400
+msgid "Select categoies show"
+msgstr ""
+
+#: includes/beboo_composer.php:416
+msgid "Number item:"
+msgstr ""
+
+#: includes/beboo_composer.php:429
+msgid "Show list author"
+msgstr ""
+
+#: includes/beboo_composer.php:463
+msgid "Show a icon"
+msgstr ""
+
+#: includes/beboo_composer.php:467
+msgid "This section show a icon with short description and title"
+msgstr ""
+
+#: includes/beboo_composer.php:472
+msgid "Title feature"
+msgstr ""
+
+#: includes/beboo_composer.php:475
+msgid "Your feature"
+msgstr ""
+
+#: includes/beboo_composer.php:480
+msgid "Chose your icon"
+msgstr ""
+
+#: includes/beboo_composer.php:491 includes/beboo_composer.php:538
+msgid "Description"
+msgstr ""
+
+#: includes/beboo_composer.php:498 includes/beboo_composer.php:530
+msgid "Chose your type"
+msgstr ""
+
+#: includes/beboo_composer.php:516
+msgid "Show subcribe form"
+msgstr ""
+
+#: includes/beboo_composer.php:520
+msgid "This section show subcribe form"
+msgstr ""
+
+#: includes/beboo_composer.php:525 includes/beboo_composer_bich.php:107
+msgid "Title"
+msgstr ""
+
+#: includes/beboo_composer.php:534
+msgid "Chose your layout you want to show"
+msgstr ""
+
+#: includes/beboo_composer.php:552
+msgid "Show testimonial"
+msgstr ""
+
+#: includes/beboo_composer.php:556
+msgid "This section show testimonial"
+msgstr ""
+
+#: includes/beboo_composer.php:561
+msgid "Testimonial type"
+msgstr ""
+
+#: includes/beboo_composer.php:565 includes/beboo_composer.php:583
+msgid "Number to show your testimonial"
+msgstr ""
+
+#: includes/beboo_composer.php:572
+msgid "Show navigation"
+msgstr ""
+
+#: includes/beboo_composer.php:574
+msgid "Show navigation?"
+msgstr ""
+
+#: includes/beboo_composer.php:597
+msgid "About paragraph"
+msgstr ""
+
+#: includes/beboo_composer.php:601
+msgid "This section show video"
+msgstr ""
+
+#: includes/beboo_composer.php:607
+msgid "Title paragraph"
+msgstr ""
+
+#: includes/beboo_composer.php:613
+msgid "Content"
+msgstr ""
+
+#: includes/beboo_composer.php:621
+msgid "Image 1"
+msgstr ""
+
+#: includes/beboo_composer.php:629
+msgid "Image 2"
+msgstr ""
+
+#: includes/beboo_composer.php:638
+msgid "Max height"
+msgstr ""
+
+#: includes/beboo_composer.php:644
+msgid "Chose your style"
+msgstr ""
+
+#: includes/beboo_composer.php:648
+msgid "Main book on landing page"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:8
+msgid "Show Beau Slide"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:12 includes/beboo_composer_bich.php:157
+msgid "This section show other book in here"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:32
+msgid "Enabled wishlist"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:43
+msgid "Enabled add to cart"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:54 includes/beboo_composer_bich.php:179
+msgid "Enabled price"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:66
+msgid "Number slide"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:74
+msgid "Perview slide"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:113
+msgid "Title center or not?"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:116
+msgid "Show title center."
+msgstr ""
+
+#: includes/beboo_composer_bich.php:120 includes/beboo_composer_bich.php:123
+msgid "Type slide black or none?"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:128
+msgid "Background color"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:131
+msgid "Choose text color"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:135 includes/beboo_composer_bich.php:138
+msgid "Background color full row?"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:153
+msgid "Show single book"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:161
+msgid "Title:"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:166
+msgid "Style Product"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:175 includes/beboo_composer_bich.php:229
+msgid "Select style product."
+msgstr ""
+
+#: includes/beboo_composer_bich.php:190
+msgid "Don't show flip book?"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:196
+msgid "ID product show:"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:202
+msgid "Single book description"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:216
+msgid "Show contact"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:220
+msgid "This section show contact in here"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:224
+msgid "Style Contact"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:226
+msgid "Select..."
+msgstr ""
+
+#: includes/beboo_composer_bich.php:226
+msgid "Style contact horizontal one column"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:226
+msgid "Style contact horizontal "
+msgstr ""
+
+#: includes/beboo_composer_bich.php:226
+msgid "Style contact vertical"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:233
+msgid "Use Contact Form 7"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:236
+msgid "Yes"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:244
+msgid "Select Contact Form"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:263
+msgid "Style google map"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:276
+msgid "Select style google map."
+msgstr ""
+
+#: includes/beboo_composer_bich.php:280
+msgid "Lat of map:"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:285
+msgid "Lng of map:"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:290
+msgid "Title contact:"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:295
+msgid "City of contact:"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:300
+msgid "Address of contact:"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:305
+msgid "Phone of contact:"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:310
+msgid "Email of contact:"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:315
+msgid "Facebook link of contact:"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:317 includes/beboo_composer_bich.php:323
+#: includes/beboo_composer_bich.php:329 includes/beboo_composer_bich.php:335
+#: includes/beboo_composer_bich.php:341
+msgid "Social options"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:321
+msgid "Twitter link of contact:"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:327
+msgid "Rss link of contact:"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:333
+msgid "Google link of contact:"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:339
+msgid "Flick link of contact:"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:345
+msgid "Contact book description"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:347
+msgid ""
+"<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean "
+"commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et "
+"magnis ...</p>"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:357
+msgid "Show store"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:361
+msgid "This section show other store in here"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:365
+msgid "Title store:"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:370
+msgid "Number store show:"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:375
+msgid "Image cover"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:388
+msgid "Show our Team"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:392
+msgid "This section show our Team."
+msgstr ""
+
+#: includes/beboo_composer_bich.php:396
+msgid "Title team:"
+msgstr ""
+
+#: includes/beboo_composer_bich.php:401
+msgid "Number person show:"
+msgstr ""
+
+#: includes/comment-walker.php:44
+msgid "Posted"
+msgstr ""
+
+#: includes/comment-walker.php:44
+msgid "at"
+msgstr ""
+
+#: includes/comment-walker.php:49
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:333
+msgid "Install Required Plugins"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:334
+msgid "Install Plugins"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:335
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:336
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:338
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/class-tgm-plugin-activation.php:343
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/class-tgm-plugin-activation.php:348
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %1$s "
+"plugin."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %1$s "
+"plugins."
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/class-tgm-plugin-activation.php:353
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to "
+"ensure maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/class-tgm-plugin-activation.php:358
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/class-tgm-plugin-activation.php:363
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %1$s "
+"plugin."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %1$s "
+"plugins."
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/class-tgm-plugin-activation.php:368
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/class-tgm-plugin-activation.php:373
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural ""
+"The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/class-tgm-plugin-activation.php:378
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %1$s "
+"plugin."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %1$s "
+"plugins."
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/class-tgm-plugin-activation.php:383
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/class-tgm-plugin-activation.php:388
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/class-tgm-plugin-activation.php:393
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/class-tgm-plugin-activation.php:397
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:398
+msgid "Return to the dashboard"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:399
+#: libs/class-tgm-plugin-activation.php:3029
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:400
+#: libs/class-tgm-plugin-activation.php:2832
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:402
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:403
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:404
+msgid "Dismiss this notice"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:405
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:520
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:521
+#: woocommerce/content-single-product.php:108
+msgid "Update Required"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:635
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:828
+#: libs/class-tgm-plugin-activation.php:3438
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:935
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:935
+#: libs/class-tgm-plugin-activation.php:938
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:938
+msgid ""
+"The remote plugin package consists of more than one file, but the files "
+"are not packaged in a folder."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:1116
+#: libs/class-tgm-plugin-activation.php:2828
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:1881
+#, php-format
+msgctxt "%s = version number"
+msgid "TGMPA v%s"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2167
+msgid "Required"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2170
+msgid "Recommended"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2186
+msgid "WordPress Repository"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2189
+msgid "External Source"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2192
+msgid "Pre-Packaged"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2209
+msgid "Not Installed"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2213
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2215
+msgid "Active"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2221
+msgid "Required Update not Available"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2224
+msgid "Requires Update"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2227
+msgid "Update recommended"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2235
+#, php-format
+msgctxt "%1$s = install status, %2$s = update status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2280
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/class-tgm-plugin-activation.php:2283
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/class-tgm-plugin-activation.php:2286
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/class-tgm-plugin-activation.php:2289
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/class-tgm-plugin-activation.php:2371
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2379
+msgid "Installed version:"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2387
+msgid "Minimum required version:"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2399
+msgid "Available version:"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2422
+#, php-format
+msgid ""
+"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
+"Dashboard</a>"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2436
+msgid "Plugin"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2437
+msgid "Source"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2438
+msgid "Type"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2442
+msgid "Version"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2443
+#: woocommerce/myaccount/my-orders.php:15
+msgid "Status"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2491
+#, php-format
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Install %2$s"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2495
+#, php-format
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Update %2$s"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2500
+#, php-format
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Activate %2$s"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2570
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2603
+msgid "Install"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2609
+msgid "Update"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2612
+msgid "Activate"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2643
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2645
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2681
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2683
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2788
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:2814
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:3028
+msgid "Plugin activation failed."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:3362
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:3364
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:3365
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:3369
+msgid ""
+"The installation and activation process is starting. This process may "
+"take a while on some hosts, so please be patient."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:3370
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:3370
+#: libs/class-tgm-plugin-activation.php:3376
+msgid "Show Details"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:3370
+#: libs/class-tgm-plugin-activation.php:3376
+msgid "Hide Details"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:3371
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:3372
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:3375
+msgid ""
+"The installation process is starting. This process may take a while on "
+"some hosts, so please be patient."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:3376
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:3377
+msgid "All installations have been completed."
+msgstr ""
+
+#: libs/class-tgm-plugin-activation.php:3378
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: page.php:17
+msgid "Pages:"
+msgstr ""
+
+#: page.php:23 woocommerce/myaccount/my-address.php:55
+msgid "Edit"
+msgstr ""
+
+#: templates/archive-default.php:4
+msgid "Blog"
+msgstr ""
+
+#: templates/archive-default.php:11 templates/header-blog.php:13
+msgid "Tag: "
+msgstr ""
+
+#: templates/archive-default.php:14 templates/header-blog.php:16
+msgid "Search with keywords: "
+msgstr ""
+
+#: templates/author-detail.php:99
+msgid "Books by"
+msgstr ""
+
+#: templates/author-detail.php:142
+msgid "Other author"
+msgstr ""
+
+#: templates/author-list.php:6 templates/author-list.php:20
+msgid "ALL"
+msgstr ""
+
+#: templates/content-detail.php:13 templates/content-detail.php:62
+#: templates/content-detailsidebar.php:14 templates/content-post.php:45
+#: templates/content-tags.php:8 templates/content-tags.php:58
+#: vc_templates/be_blog.php:49
+msgid "On"
+msgstr ""
+
+#: templates/content-detail.php:30 templates/content-detailsidebar.php:31
+#: templates/content-tags.php:26
+msgid ""
+"No description.\n"
+"\tPlease update your profile."
+msgstr ""
+
+#: templates/content-detail.php:45 templates/content-tags.php:41
+msgid "More news"
+msgstr ""
+
+#: templates/content-none.php:4
+msgid "Nothing Found"
+msgstr ""
+
+#: templates/content-none.php:10
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: templates/content-none.php:12
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: templates/content-none.php:15
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: templates/content-post.php:32
+msgid "Sticky"
+msgstr ""
+
+#: templates/content-post.php:39
+msgid "No image"
+msgstr ""
+
+#: templates/footer-text.php:23
+msgid "Copyright &copy;"
+msgstr ""
+
+#: templates/footer-text.php:23
+msgid "All Rights Reserved."
+msgstr ""
+
+#: templates/header-default.php:56
+msgid "All product"
+msgstr ""
+
+#: templates/header-default.php:127 templates/header-menuhumberger.php:172
+#: templates/stick-search.php:26
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: templates/header-menuhumberger.php:92
+msgid "Search by title book"
+msgstr ""
+
+#: templates/header-menuhumberger.php:95
+msgid "All products"
+msgstr ""
+
+#: templates/header-menuhumberger.php:112
+msgid "Search"
+msgstr ""
+
+#: templates/header-menuhumberger.php:141
+msgid "Sign in"
+msgstr ""
+
+#: templates/header-menuhumberger.php:141
+#: templates/header-menuhumberger.php:145
+msgid "Your account"
+msgstr ""
+
+#: templates/header-menuhumberger.php:145
+msgid "Log out"
+msgstr ""
+
+#: templates/header-menuhumberger.php:159
+msgid "Wishlist"
+msgstr ""
+
+#: templates/social-share.php:11 woocommerce/content-single-style-01.php:296
+#: woocommerce/content-single-style-02.php:301
+#: woocommerce/content-single-style-03.php:395
+msgid "Share to Pinterest"
+msgstr ""
+
+#: templates/social-share.php:12 woocommerce/content-single-style-01.php:297
+#: woocommerce/content-single-style-02.php:302
+#: woocommerce/content-single-style-03.php:396
+msgid "Share to Twitter"
+msgstr ""
+
+#: templates/social-share.php:13 woocommerce/content-single-style-01.php:298
+#: woocommerce/content-single-style-02.php:303
+#: woocommerce/content-single-style-03.php:397
+msgid "Share to Facebook"
+msgstr ""
+
+#: templates/social-share.php:14 woocommerce/content-single-style-01.php:299
+#: woocommerce/content-single-style-02.php:304
+#: woocommerce/content-single-style-03.php:398
+msgid "Share to Google Plus"
+msgstr ""
+
+#: templates/social-share.php:15
+msgid "Share to LinkedIn"
+msgstr ""
+
+#: vc_templates/be_agency.php:16
+msgid "BOOK for iPad"
+msgstr ""
+
+#: vc_templates/be_agency.php:18
+msgid "BOOK for iPhone"
+msgstr ""
+
+#: vc_templates/be_agency.php:26
+msgid "United States"
+msgstr ""
+
+#: vc_templates/be_agency.php:27
+msgid "United Kingdom"
+msgstr ""
+
+#: vc_templates/be_author.php:22
+msgid "About author"
+msgstr ""
+
+#: vc_templates/be_author.php:25
+msgid "Style"
+msgstr ""
+
+#: vc_templates/be_contact_book.php:114 vc_templates/be_contact_book.php:213
+#: vc_templates/be_contact_book.php:287
+msgid "Success & Error message"
+msgstr ""
+
+#: vc_templates/be_contact_book.php:115 vc_templates/be_contact_book.php:214
+#: vc_templates/be_contact_book.php:288
+msgid "First Name *"
+msgstr ""
+
+#: vc_templates/be_contact_book.php:116 vc_templates/be_contact_book.php:215
+#: vc_templates/be_contact_book.php:289
+msgid "Email *"
+msgstr ""
+
+#: vc_templates/be_contact_book.php:117 vc_templates/be_contact_book.php:216
+#: vc_templates/be_contact_book.php:290
+msgid "Last Name *"
+msgstr ""
+
+#: vc_templates/be_contact_book.php:119 vc_templates/be_contact_book.php:218
+#: vc_templates/be_contact_book.php:292
+msgid "Your message."
+msgstr ""
+
+#: vc_templates/be_contact_book.php:120 vc_templates/be_contact_book.php:219
+#: vc_templates/be_contact_book.php:293
+msgid "Send"
+msgstr ""
+
+#: vc_templates/be_contact_book.php:124 vc_templates/be_contact_book.php:223
+#: vc_templates/be_contact_book.php:297
+msgid "Contact"
+msgstr ""
+
+#: vc_templates/be_contact_book.php:126 vc_templates/be_contact_book.php:225
+#: vc_templates/be_contact_book.php:299
+msgid "No Form Contact !"
+msgstr ""
+
+#: vc_templates/be_contact_book.php:347
+msgid "Your email has been sent successfully"
+msgstr ""
+
+#: vc_templates/be_product_slide.php:117
+#: vc_templates/be_product_slide.php:290
+#: vc_templates/be_product_slide.php:465
+#: vc_templates/be_product_slide.php:637
+#: vc_templates/be_product_slide.php:948 vc_templates/be_singer_book.php:60
+#: vc_templates/be_singer_book.php:228 vc_templates/be_singer_book.php:456
+#: vc_templates/be_singer_book.php:598
+#: woocommerce/single-product/rating.php:27
+#, php-format
+msgid "Rated %s out of 5"
+msgstr ""
+
+#: vc_templates/be_product_slide.php:119
+#: vc_templates/be_product_slide.php:292
+#: vc_templates/be_product_slide.php:467
+#: vc_templates/be_product_slide.php:639
+#: vc_templates/be_product_slide.php:950 vc_templates/be_singer_book.php:62
+#: vc_templates/be_singer_book.php:230 vc_templates/be_singer_book.php:458
+#: vc_templates/be_singer_book.php:600
+#: woocommerce/single-product/rating.php:29
+#, php-format
+msgid "out of %s5%s"
+msgstr ""
+
+#: vc_templates/be_product_slide.php:120
+#: vc_templates/be_product_slide.php:293
+#: vc_templates/be_product_slide.php:468
+#: vc_templates/be_product_slide.php:640
+#: vc_templates/be_product_slide.php:951 vc_templates/be_singer_book.php:63
+#: vc_templates/be_singer_book.php:231 vc_templates/be_singer_book.php:459
+#: vc_templates/be_singer_book.php:601
+#: woocommerce/single-product/rating.php:30
+#, php-format
+msgid "based on %s customer rating"
+msgid_plural "based on %s customer ratings"
+msgstr[0] ""
+msgstr[1] ""
+
+#: vc_templates/be_product_slide.php:130
+#: vc_templates/be_product_slide.php:303
+#: vc_templates/be_product_slide.php:478
+#: vc_templates/be_product_slide.php:650
+#: vc_templates/be_product_slide.php:795
+#: vc_templates/be_product_slide.php:961 vc_templates/be_singer_book.php:42
+#: vc_templates/be_singer_book.php:210 vc_templates/be_singer_book.php:438
+#: vc_templates/be_singer_book.php:580 woocommerce/cart/cart.php:68
+#: woocommerce/content-product-style-01.php:46
+#: woocommerce/content-product-style-02.php:46
+#: woocommerce/content-single-style-01.php:139
+#: woocommerce/content-single-style-02.php:145
+#: woocommerce/content-single-style-03.php:236 woocommerce/wishlist.php:146
+msgid "by:"
+msgstr ""
+
+#: vc_templates/be_singer_book.php:152 vc_templates/be_singer_book.php:318
+#: vc_templates/be_singer_book.php:419 vc_templates/be_singer_book.php:558
+#: woocommerce/content-single-style-01.php:83
+#: woocommerce/content-single-style-02.php:87
+#: woocommerce/content-single-style-03.php:191
+msgid "Flip to back"
+msgstr ""
+
+#: vc_templates/be_singer_book.php:173 vc_templates/be_singer_book.php:570
+#: woocommerce/content-product-style-01.php:16
+#: woocommerce/content-product-style-02.php:15
+#: woocommerce/content-single-style-01.php:106
+#: woocommerce/content-single-style-02.php:111
+#: woocommerce/content-single-style-03.php:215
+msgid "Sale!"
+msgstr ""
+
+#: vc_templates/be_singer_book.php:183 vc_templates/be_singer_book.php:337
+#: vc_templates/be_singer_book.php:624
+#: woocommerce/content-single-style-01.php:287
+#: woocommerce/content-single-style-02.php:292
+#: woocommerce/content-single-style-03.php:385 woocommerce/meta.php:32
+msgid "Tag:"
+msgid_plural "Tags:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: vc_templates/be_subcribeform.php:18
+#: woocommerce/myaccount/form-edit-account.php:42
+#: woocommerce/myaccount/form-login.php:94
+msgid "Email address"
+msgstr ""
+
+#: vc_templates/be_subcribeform.php:19
+msgid "Go"
+msgstr ""
+
+#: woocommerce/archive-product.php:64
+msgid "No products were found matching your selection."
+msgstr ""
+
+#: woocommerce/archive-product.php:93
+msgid "All subject"
+msgstr ""
+
+#: woocommerce/cart/cart-empty.php:28
+msgid "Your cart is currently empty."
+msgstr ""
+
+#: woocommerce/cart/cart-empty.php:36
+msgid "Return To Shop"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:19
+msgid "Cart Totals"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:23
+#: woocommerce/checkout/review-order.php:69
+msgid "Subtotal"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:45
+msgid "Shipping"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:77
+msgid "GRAND TOTAL"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:89
+#, php-format
+msgid " (taxes estimated for %s)"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:92
+#, php-format
+msgid ""
+"Note: Shipping and taxes are estimated%s and will be updated during "
+"checkout based on your billing and shipping information."
+msgstr ""
+
+#: woocommerce/cart/cart.php:23
+msgid "Shopping cart"
+msgstr ""
+
+#: woocommerce/cart/cart.php:27 woocommerce/checkout/review-order.php:17
+msgid "Product name"
+msgstr ""
+
+#: woocommerce/cart/cart.php:28
+msgid "Price"
+msgstr ""
+
+#: woocommerce/cart/cart.php:29
+msgid "Quantity"
+msgstr ""
+
+#: woocommerce/cart/cart.php:30 woocommerce/checkout/review-order.php:18
+#: woocommerce/myaccount/my-orders.php:16
+msgid "Total"
+msgstr ""
+
+#: woocommerce/cart/cart.php:94
+msgid "Available on backorder"
+msgstr ""
+
+#: woocommerce/cart/cart.php:124 woocommerce/wishlist.php:189
+msgid "Remove"
+msgstr ""
+
+#: woocommerce/cart/cart.php:126
+msgid "Remove this item"
+msgstr ""
+
+#: woocommerce/cart/cart.php:148
+msgid "Grand total"
+msgstr ""
+
+#: woocommerce/cart/cart.php:154
+msgid "Update Cart"
+msgstr ""
+
+#: woocommerce/cart/cart.php:166
+msgid "Keep shopping"
+msgstr ""
+
+#: woocommerce/cart/cart.php:179
+msgid "Enter coupon code"
+msgstr ""
+
+#: woocommerce/cart/cart.php:181 woocommerce/checkout/form-coupon.php:25
+msgid "Coupon code"
+msgstr ""
+
+#: woocommerce/cart/cart.php:182 woocommerce/checkout/form-coupon.php:29
+msgid "Apply Coupon"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:18
+msgid "Billing &amp; Shipping"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:20
+msgid "BILLING ADDRESS"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:39
+msgid "Create an account?"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:50
+msgid ""
+"Create an account by entering the information below. If you are a "
+"returning customer please login at the top of the page."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:20
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:30
+msgid "Check out"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:48
+msgid "PAYMENT METHOD"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:67
+msgid "Please fill in your details above to see available payment methods."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:69
+msgid ""
+"Sorry, it seems that there are no available payment methods for your "
+"state. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:80
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the <em>Update Totals</em> button before placing your "
+"order. You may be charged more than the amount stated above if you fail "
+"to do so."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:80
+msgid "Update totals"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:90
+#, php-format
+msgid ""
+"I&rsquo;ve read and accept the <a href=\"%s\" target=\"_blank\">terms "
+"&amp; conditions</a>"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:116
+msgid "Your order"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:18
+msgid "Have a coupon?"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:18
+msgid "Click here to enter your code"
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:28
+msgid "Product"
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:29
+msgid "Qty"
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:30
+msgid "Totals"
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:62
+msgid "Payment"
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:70
+msgid ""
+"Sorry, it seems that there are no available payment methods for your "
+"location. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+
+#: woocommerce/checkout/review-order.php:116
+msgid "Total : "
+msgstr ""
+
+#: woocommerce/content-single-product.php:94
+msgid "by"
+msgstr ""
+
+#: woocommerce/content-single-product.php:109
+msgid ""
+"To play the media you will need to either update your browser to a recent "
+"version or update your"
+msgstr ""
+
+#: woocommerce/content-single-product.php:109
+msgid "Flash plugin"
+msgstr ""
+
+#: woocommerce/content-single-style-01.php:116
+#: woocommerce/content-single-style-02.php:122
+#: woocommerce/content-single-style-03.php:224
+msgid "ISBN: "
+msgstr ""
+
+#: woocommerce/content-single-style-01.php:177
+#: woocommerce/content-single-style-01.php:266
+#: woocommerce/content-single-style-02.php:184
+#: woocommerce/content-single-style-02.php:273
+#: woocommerce/content-single-style-03.php:275
+#: woocommerce/content-single-style-03.php:365
+msgid "Add to cart"
+msgstr ""
+
+#: woocommerce/content-single-style-01.php:248
+#: woocommerce/content-single-style-02.php:256
+#: woocommerce/content-single-style-03.php:347
+msgid "Hidden"
+msgstr ""
+
+#: woocommerce/content-single-style-01.php:295
+#: woocommerce/content-single-style-02.php:300
+#: woocommerce/content-single-style-03.php:394
+msgid "Share:"
+msgstr ""
+
+#: woocommerce/content-single-style-01.php:307
+#: woocommerce/content-single-style-02.php:313
+#: woocommerce/content-single-style-03.php:408
+msgid "Play audio"
+msgstr ""
+
+#: woocommerce/content-single-style-01.php:310
+#: woocommerce/content-single-style-02.php:316
+#: woocommerce/content-single-style-03.php:411
+msgid "Play Video"
+msgstr ""
+
+#: woocommerce/content-single-style-01.php:627
+#: woocommerce/content-single-style-02.php:590
+#: woocommerce/content-single-style-03.php:530
+msgid "About This Book"
+msgstr ""
+
+#: woocommerce/content-single-style-01.php:638
+#: woocommerce/content-single-style-01.php:654
+#: woocommerce/content-single-style-02.php:601
+#: woocommerce/content-single-style-02.php:620
+#: woocommerce/content-single-style-03.php:541
+msgid "Overview"
+msgstr ""
+
+#: woocommerce/content-single-style-01.php:641
+#: woocommerce/content-single-style-01.php:663
+#: woocommerce/content-single-style-02.php:604
+#: woocommerce/content-single-style-02.php:629
+#: woocommerce/content-single-style-03.php:544
+msgid "Details"
+msgstr ""
+
+#: woocommerce/content-single-style-01.php:644
+#: woocommerce/content-single-style-01.php:691
+#: woocommerce/content-single-style-02.php:607
+#: woocommerce/content-single-style-02.php:657
+#: woocommerce/content-single-style-03.php:546
+#: woocommerce/content-single-style-03.php:606
+msgid "Attributes"
+msgstr ""
+
+#: woocommerce/content-single-style-01.php:646
+#: woocommerce/content-single-style-02.php:612
+#: woocommerce/content-single-style-03.php:550
+msgid "Reviews"
+msgstr ""
+
+#: woocommerce/content-single-style-01.php:681
+#: woocommerce/content-single-style-02.php:646
+#: woocommerce/content-single-style-03.php:596
+msgid "Publisher"
+msgstr ""
+
+#: woocommerce/content-single-style-01.php:682
+#: woocommerce/content-single-style-02.php:647
+#: woocommerce/content-single-style-03.php:597
+msgid "Publish Date"
+msgstr ""
+
+#: woocommerce/content-single-style-01.php:683
+#: woocommerce/content-single-style-02.php:648
+#: woocommerce/content-single-style-03.php:598
+msgid "Page Count"
+msgstr ""
+
+#: woocommerce/content-single-style-03.php:671
+msgid "Author :"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:23
+msgid "Quantity: "
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:24
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr ""
+
+#: woocommerce/loop/orderby.php:17
+msgid "Sort by:"
+msgstr ""
+
+#: woocommerce/loop/pagination.php:30
+msgid "< PREV"
+msgstr ""
+
+#: woocommerce/loop/pagination.php:31
+msgid "NEXT >"
+msgstr ""
+
+#: woocommerce/meta.php:26
+msgid "ISBN:"
+msgstr ""
+
+#: woocommerce/meta.php:26
+msgid "N/A"
+msgstr ""
+
+#: woocommerce/meta.php:30
+msgid "Category:"
+msgid_plural "Categories:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/myaccount/form-add-payment-method.php:56
+msgid "Add Payment Method"
+msgstr ""
+
+#: woocommerce/myaccount/form-add-payment-method.php:62
+msgid ""
+"Sorry, it seems that there are no payment methods which support adding a "
+"new payment method. Please contact us if you require assistance or wish "
+"to make alternate arrangements."
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:32
+msgid "First name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:47
+msgid "Password Change"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:50
+msgid "Current Password (leave blank to leave unchanged)"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:54
+msgid "New Password (leave blank to leave unchanged)"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:58
+msgid "Confirm New Password"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:68
+msgid "Save changes"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:40
+#: woocommerce/myaccount/form-login.php:59
+msgid "Login"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:47
+msgid "Username or email address"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:51
+#: woocommerce/myaccount/form-login.php:101
+msgid "Password"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:61
+msgid "Remember me"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:65
+msgid "Lost your password?"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:78
+#: woocommerce/myaccount/form-login.php:115
+msgid "Register"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:87
+msgid "Username"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:108
+msgid "Anti-spam"
+msgstr ""
+
+#: woocommerce/myaccount/form-lost-password.php:26
+msgid ""
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
+msgstr ""
+
+#: woocommerce/myaccount/form-lost-password.php:29
+msgid "Username or email"
+msgstr ""
+
+#: woocommerce/myaccount/form-lost-password.php:39
+msgid "Reset Password"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:26
+msgid "My Addresses"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:28
+#: woocommerce/myaccount/my-address.php:34
+msgid "Billing Address"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:29
+msgid "Shipping Address"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:32
+msgid "My Address"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:45
+msgid ""
+"The following addresses will be used on the checkout page by default."
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:74
+msgid "You have not set up this type of address yet."
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:13
+msgid "Order"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:14
+msgid "Date"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:30
+msgid "Recent Orders"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:55
+msgctxt "hash before order number"
+msgid "#"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:65
+#, php-format
+msgid "%s for %s item"
+msgid_plural "%s for %s items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/myaccount/my-orders.php:72
+msgid "Pay"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:76
+msgid "View"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:80 woocommerce/wishlist.php:47
+msgid "Cancel"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:31
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:40
+msgid "Submit"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:46
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a review."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:50
+msgid "Your Rating"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:51
+msgid "Rate&hellip;"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:52
+msgid "Perfect"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:53
+msgid "Good"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:54
+msgid "Average"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:55
+msgid "Not that bad"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:56
+msgid "Very Poor"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:60
+msgid "Tell the world what you think of this product."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:69
+msgid ""
+"Only logged in customers who have purchased this product may leave a "
+"review."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:92
+msgid "There are no reviews yet."
+msgstr ""
+
+#: woocommerce/single-product/rating.php:33
+#, php-format
+msgid "%s customer review"
+msgid_plural "%s customer reviews"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product/related.php:52
+msgid "Featured Books"
+msgstr ""
+
+#: woocommerce/single-product/tabs/description.php:16
+msgid "Product Description"
+msgstr ""
+
+#: woocommerce/single-product/tabs/tabs.php:28
+msgid "Customer Reviews"
+msgstr ""
+
+#: woocommerce/wishlist.php:34
+msgid "Edit title"
+msgstr ""
+
+#: woocommerce/wishlist.php:43
+msgid "Save"
+msgstr ""
+
+#: woocommerce/wishlist.php:75
+msgid "Product Name"
+msgstr ""
+
+#: woocommerce/wishlist.php:81
+msgid "Unit Price"
+msgstr ""
+
+#: woocommerce/wishlist.php:92
+msgid "Stock Status"
+msgstr ""
+
+#: woocommerce/wishlist.php:184
+msgid "Free!"
+msgstr ""
+
+#: woocommerce/wishlist.php:189 woocommerce/wishlist.php:257
+msgid "Remove this product"
+msgstr ""
+
+#: woocommerce/wishlist.php:199
+msgid "Out of Stock"
+msgstr ""
+
+#: woocommerce/wishlist.php:202
+msgid "In Stock"
+msgstr ""
+
+#: woocommerce/wishlist.php:213
+#, php-format
+msgid "Added on : %s"
+msgstr ""
+
+#: woocommerce/wishlist.php:225
+msgid "Move"
+msgstr ""
+
+#: woocommerce/wishlist.php:237
+msgid "Shared"
+msgstr ""
+
+#: woocommerce/wishlist.php:240
+msgid "Private"
+msgstr ""
+
+#: woocommerce/wishlist.php:243
+msgid "Public"
+msgstr ""
+
+#: woocommerce/wishlist.php:267
+msgid "No products were added to the wishlist"
+msgstr ""
+
+#: woocommerce/wishlist.php:284
+msgid "Add the selected products to the cart"
+msgstr ""
+
+#: woocommerce/wishlist.php:292 woocommerce/wishlist.php:334
+msgid "Ask for an estimate"
+msgstr ""

@@ -1,0 +1,94 @@
+/*
+Theme Name: BeboStore
+Theme URI: http://bookstore.beautheme.com/demo/
+Author: BeauTheme
+Author URI: http://beautheme.com/
+Description: BeboStore theme that the main theme for book store, and some market page for sale book, CD, and other store.
+Version: 2.1.2
+License:  GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: bebostore
+Tags: custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template,  theme-options
+Copyright: (c) 2015 BeauTheme.
+*/
+
+.sticky {
+}
+
+.sticky:hover {
+}
+.wp-caption{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.wp-caption-text{
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery-caption {}
+
+.entry-content div{
+    max-width: 100%!important;
+}
+
+.bypostauthor {}
+
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+.alignleft {
+    float: left;
+    margin: 15px;
+}
+
+.aligncenter {}
+
+.gallery-caption, .aligncenter, .bypostauthor, .aligncenter {
+    margin-top: 40px;
+}
+
+.edit-link {
+    text-align: center;
+    float: left;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nothing-found {
+    display: block;
+    margin-bottom: 30px;
+}
+.screen-reader-text{}
+.bk-cover img, .bk-back img {
+    width: 100%;
+}
+.woo-login .woocommerce-MyAccount-navigation {
+    width: 100%;
+}
+.woo-login .woocommerce-MyAccount-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.woo-login .woocommerce-MyAccount-navigation ul li{
+  display: inline-block;
+}
+.book-item-shop .list-action .woocommerce-product-details__short-description {
+    display:  none;
+}
+.list-name-author .list-author-name li img {
+    height: 150px !important;
+    object-fit: cover;
+}
+
+#fixed-menu:after{
+    display: table;
+    content: '';
+    clear: both;
+}

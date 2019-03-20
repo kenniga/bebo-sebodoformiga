@@ -1,0 +1,108 @@
+== Changelog ==
+
+= 2.0.4 =
+* Released: August 11, 2016
+
++ Update plugin BeBo Store Postype v1.0.7
++ vc_templates/be_product_slide.php
++ vc_templates/be_subcribeform.php
++ templates/header-menuhumberger.php
++ templates/header-default.php
++ templates/author-detail.php
++ templates/author-list.php
++ 404.php
++ footer.php
++ footer-none.php
++ asset/js/bebostore.js
++ asset/css/bebostore_woo.css
++ Woocommerce/content-single-style-01.php
++ Woocommerce/content-single-style-02.php
++ Woocommerce/content-single-style-03.php
+
+
+= 2.0.3 =
+* Released: July 12, 2016
+
++ Woocommerce/content-product-style-01.php
++ Woocommerce/content-product-style-02.php
++ Woocommerce/content-single-style-01.php
++ Woocommerce/content-single-style-02.php
++ Woocommerce/content-single-style-03.php
++ Function
++ vc_templates/be_author.php
++ vc_templates/be_authorlist.php
++ vc_templates/author-detail.php
++ vc_templates/be_product_slide.php
++ vc_templates/be_single_book.php
++ Asset/css/bebostore_woo.css
++ Asset/css/bebostore.css
++ includes/ajax-author.php
++ includes/ajax-contact.php
++ templates/header-default.php
++ templates/header-menuhumberger.php
+
+= 2.0.2 =
+* Released: Jun 18, 2016
+
++ Woocommerce/content-product.php
++ Function
++ Asset/css/bebostore_woo.css
++ Update Woocommerce 2.6.2
+
+= 2.0.1 =
+* Released: Jun 13, 2016
+
++ Function
++ Delete file Woocommerce -> checkout -> form-shipping.php
++ Templates/header-menuhumberger.php
++ Templates/header-default.php
++ woocommerce/content-single-style-01.php
++ woocommerce/checkout/form-checkout.php
++ woocommerce/cart/cart.php
+
+= 2.0.0 =
+* Released: Jun 6, 2016
+
++ Function
++ includes/tgm-register-plugin.php
++ Asset/scss/bebostore_woo.css
++ Asset/scss/bebostore.css
++ Vc_templates/be_author.php
++ Vc_templates/be_testimonial.php
++ Vc_templates/be_singer_book.php
++ Vc_templates/be_product_slide.php
++ Includes/beboo_composer.php
++ single-authorbook.php
+
++ Woocomerce/content-single-style-01.php
++ Woocomerce/content-single-style-02.php
++ Woocomerce/content-single-style-03.php
++ Woocomerce/single-product/related.php
++ Woocomerce/checkout all forder
++ Document v2.0.0
+
+= 1.5 =
+* Released: March 22, 2016
+
++ Function
++ Update plugin BeBo Store Postype
++ templates/header-default.php
++ templates/header-menuhumberger.php
++ vc_templates/be_product_slide.php
++ vc_templates/be_singer_book.php
++ woocommerce/content-product-style-01.php
++ woocommerce/content-product-style-02.php
++ woocommerce/content-single-style-01.php
++ woocommerce/content-single-style-02.php
++ woocommerce/content-single-style-03.php
++ woocommerce/single-product/related.php
++ include/beboo_composer_bich.php
++ Document
+
+= 1.4 =
+* Released: February 22, 2016
+
++ bebostore/vc_templates/be_subcribeform.php
++ bebostore/woocommerce all forder 
++ bebostore/asset/css/bebostore_woo.css + bebostore.css
++ Plugin BeBo Store Postype

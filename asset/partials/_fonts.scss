@@ -1,0 +1,26 @@
+@if $import == true {
+	@font-face{
+		font-family:'Lato-Bold';
+		src:url('../fonts/lato-bold-webfont.eot');
+		src:url('../fonts/lato-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/lato-bold-webfont.woff') format('woff'),
+		url('../fonts/lato-bold-webfont.ttf') format('truetype'),
+		url('../fonts/lato-bold-webfont.svg') format('svg');
+	}
+	@font-face{
+		font-family:'Lato-Regular';
+		src:url('../fonts/lato-regular-webfont.eot');
+		src:url('../fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/lato-regular-webfont.woff') format('woff'),
+		url('../fonts/lato-regular-webfont.ttf') format('truetype'),
+		url('../fonts/lato-regular-webfont.svg') format('svg');
+	}
+	@font-face{
+		font-family:'Againts';
+		src:url('../fonts/againts.eot');
+		src:url('../fonts/againts.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/againts.woff') format('woff'),
+		url('../fonts/againts.ttf') format('truetype'),
+		url('../fonts/againts.svg') format('svg');
+	}
+}

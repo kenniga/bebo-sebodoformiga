@@ -1,0 +1,61 @@
+// breakpoints
+
+$S:     320px; // RP()   - MQ(S)
+$M:     768px; // RP()   - MQ(M)
+$L:     1170px;// RP(T)  - MQ(L)
+$SL:    1720px;// RP()   - MQ(SL)
+$AD:	1023px;// RP(L)  - MQ()
+$BD: 	1025px;// RP(MD) - MQ(XL)
+$BM:    780px; // RP(M)  - MQ(MD)
+$AM:	767px; // RP(S)  - MQ(T)
+$MB: 	600px; // RP(SS) - MQ()
+$MBL:   500px; // RP()   - MQ(ML)
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; }
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; }
+  }
+  @else if $canvas == MD {
+   @media only screen and (min-width: $BM) { @content; }
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; }
+  }
+  @else if $canvas == ML {
+   @media only screen and (min-width: $MBL) { @content; }
+  }
+  @else if $canvas == XL {
+   @media only screen and (min-width: $BD) { @content; }
+  }
+  @else if $canvas == T {
+   @media only screen and (min-width: $AM) { @content; }
+  }
+  @else if $canvas == SL {
+   @media only screen and (min-width: $SL) { @content; }
+  }
+}
+@mixin RP($canvas) {
+  @if $canvas == SS {
+   @media only screen and (max-width: $MB) { @content; }
+  }
+  @if $canvas == S {
+   @media only screen and (max-width: $AM) { @content; }
+  }
+  @else if $canvas == M {
+   @media only screen and (max-width: $BM) { @content; }
+  }
+  @else if $canvas = MD{
+   @media only screen and (max-width: $BD) { @content; }
+  }
+  @else if $canvas == L {
+   @media only screen and (max-width: $AD) { @content; }
+  }
+  @else if $canvas == T {
+    @media only screen and (max-width: $L) { @content; }
+  }
+}
