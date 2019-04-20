@@ -23,9 +23,4 @@
 		?>
 		</div>
 	</div><!--End top footer-->
-	<div class="bottom-footer">
-		<div class="container">
-			<?php get_template_part( 'templates/footer', 'text' ); ?>
-		</div>
-	</div><!--End bottom footer-->
 </footer>

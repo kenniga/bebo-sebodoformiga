@@ -32,7 +32,18 @@
 	$('#menu-mb').click(function(event) {
 		$('.mobile-menu').toggleClass('mobile-show');
 		$('body').toggleClass('active-menu');
-	});
+    });
+    
+    $('.close-btn').click(function(event) {
+        $('#menu-humberger').toggleClass('active-menu');
+        $('section').toggleClass('active-menu');
+        $('header').toggleClass('active-menu');
+        $('footer').toggleClass('active-menu');
+        $('body').toggleClass('active-menu');
+        $('.mobile-menu').toggleClass('mobile-show');
+        $('.menu-fix-all').toggleClass('active-menu');
+        $('.with-widget').toggleClass('active-menu');
+    });
 
     //stick menu home 7
     var headerHeight = 0;

@@ -83,6 +83,10 @@ Primary style
   -moz-osx-font-smoothing: grayscale;
 }
 
+.font-intro-bold {
+  font-family: intro-bold;
+}
+
 .be-box:before {
   content: "\e617";
 }
@@ -891,6 +895,10 @@ header.header-one {
   transition: all 0.3s ease-in-out;
 }
 
+header.header-one.no-header-top {
+  height: auto;
+}
+
 header.header-one.stick {
   background: #fff;
   position: fixed;
@@ -1291,6 +1299,29 @@ header.header-two .search-navigation .search form {
   }
 }
 
+@media only screen and (max-width: 1025px) {
+  .flex-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header.header-one.no-header-top .flex-row .beau-logo {
+    margin-top: 0;
+    transform: none;
+  }
+
+  header.header-one.no-header-top .flex-row .humberger-button {
+    top: 0;
+    position: relative;
+  }
+
+  header.header-one.no-header-top .flex-row .humberger-button button {
+    position: static;
+    transform: none;
+  }
+}
+
 header.header-two .search-navigation .search form .sbHolder {
   float: left;
   width: 50px;
@@ -1604,7 +1635,7 @@ header.header-two .nav-right {
   transform: translateY(-50%);
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1025px) {
   header.header-two .nav-right {
     top: 0;
   }
@@ -1772,7 +1803,38 @@ header.header-two .nav-right .woocomerce-cart:before {
   transition: all 0.3s ease-in-out;
 }
 
-@media only screen and (max-width: 780px) {
+header.header-one.no-header-top .header-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1025px) {
+  header.header-one.no-header-top .header-bottom {
+    width: auto;
+  }
+}
+
+header.header-one.no-header-top #main-nav {
+  position: static;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  float: none;
+}
+
+header.header-one.no-header-top .beau-logo {
+  position: static;
+  float: none;
+}
+
+@media only screen and (max-width: 1025px) {
   .beau-logo {
     margin-top: -55px;
   }
@@ -10254,6 +10316,12 @@ footer .bottom-footer .copyright a {
   width: 780px;
 }
 
+.modal-dialog.modal-lg {
+  width: 900px;
+}
+
+
+
 @media only screen and (max-width: 780px) {
   .modal-dialog {
     width: 89% !important;
@@ -10264,6 +10332,86 @@ footer .bottom-footer .copyright a {
   height: 440px;
   background: transparent;
 }
+
+.be_popupmodul .modal-content {
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 780px) {
+  .be_popupmodul .modal-content {
+    padding-bottom: 20px;
+    height: auto;
+  }
+
+  .modal-dialog {
+    margin: 0 auto;
+  }
+}
+
+.be_popupmodul h3 {
+  color: white;
+  font-family: intro-bold;
+  font-size: 34px;
+}
+
+.be_popupmodul h4 {
+  color: white;
+  font-size: 24px;
+  font-family: intro-bold;
+  text-transform: inherit;
+  letter-spacing: 0;
+  margin-top: 38px;
+}
+
+.be_popupmodul a.btn {
+  background-color: #2C4270;
+  color: white;
+  height: 48px;
+  width: 530px;
+  font-family: intro-bold;
+  font-size: 24px;
+  padding: 5px;
+  border-radius: 24px;
+  margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 780px) {
+  .be_popupmodul a.btn {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.be_popupmodul img {
+  margin: 0 auto;
+}
+
+.be_popupmodul .close {
+  position: absolute;
+  right: 15px;
+  top: 7px;
+  font-size: 40px;
+  color: white;
+  opacity: 1;
+}
+
+a.btn.be_btn--rounded {
+  border-radius: 1000px;
+  font-family: intro-bold;
+  padding: 6px 20px;
+  border-radius: 1000px;
+}
+
 
 @media only screen and (max-width: 780px) {
   .modal-dialog.beau-gallery-image {
