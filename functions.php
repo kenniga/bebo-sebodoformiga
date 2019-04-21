@@ -60,6 +60,13 @@ function bebostore_theme_support() {
     add_theme_support( 'title-tag' );
     add_theme_support( "custom-header", array());
     add_theme_support( "custom-background", array()) ;
+    add_theme_support( 'post-formats',
+        array(
+            'video',
+            'audio',
+            'gallery',
+        )
+    );
     add_editor_style();
 
     // For thumbnai and size image
@@ -80,6 +87,16 @@ function bebostore_theme_support() {
 }
 add_action( 'after_setup_theme', 'bebostore_theme_support' );
 
+
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return 'jm-btn-download-' . $randomString;
+}
 add_action( 'save_post_authorbook', 'set_prefix_name_author', 10,3 ); 
 function set_prefix_name_author( $post_id, $post, $update ) {     
     $title = array_values(array_diff(explode(" ", $post->post_title), array('')));

@@ -100,6 +100,117 @@ function bebostore_SocialList() {
 }
 class WPBakeryShortCode_Be_sociallist extends WPBakeryShortCode {}
 
+//This for popup modul jabarmasagi
+add_action( 'vc_before_init', 'jabarmasagi_PopupModul', 999999);
+function jabarmasagi_PopupModul() {
+  global $bebostore_perpage_arr, $bebostore_book_listall;
+  vc_map( array(
+      "name" => __( "Jabar Masagi Popup Modul", "bebostore" ),
+      "base" => "be_popupmodul",
+      'weight' => 91,
+      'category' => __( 'Beau Theme', 'bebostore' ),
+      "params" => array(
+      	// Need and image, select book, add more info
+        array(
+          'type' => 'textfield',
+          'heading' => __( 'Modul Target Class Name', 'bebostore' ),
+          'param_name' => 'modul_target',
+          'description' => __( 'Classname of modul.', 'bebostore' ),
+        ),
+        array(
+          'type' => 'textfield',
+          'heading' => __( 'Modul Title', 'bebostore' ),
+          'param_name' => 'modul_title',
+          'admin_label' => true,
+          'description' => __( 'Title name of modul.', 'bebostore' ),
+        ),
+        array(
+          'type' => 'attach_image',
+          'heading' => __( 'Modul Image', 'bebostore' ),
+          'param_name' => 'modul_image',
+          'description' => __( 'This display image of module.', 'bebostore' ),
+        ),
+        array(
+          'type' => 'textfield',
+          'heading' => __( 'Modul Subtitle', 'bebostore' ),
+          'param_name' => 'modul_subtitle',
+          'description' => __( 'Subtitle name of modul.', 'bebostore' ),
+        ),
+        array(
+          'type' => 'colorpicker',
+          'heading' => __( 'Modul Background', 'bebostore' ),
+          'param_name' => 'modul_background',
+        ),
+        array(
+          'type' => 'file_picker',
+          'heading' => __( 'Modul File', 'bebostore' ),
+          'param_name' => 'modul_file',
+        ),
+      ),
+   ) );
+}
+class WPBakeryShortCode_Be_popupmodul extends WPBakeryShortCode {}
+
+//This for popup modul jabarmasagi
+add_action( 'vc_before_init', 'jabarmasagi_ButtonDownload', 999999);
+function jabarmasagi_ButtonDownload() {
+  global $bebostore_perpage_arr, $bebostore_book_listall;
+  vc_map( array(
+      "name" => __( "Jabar Masagi Button Download", "bebostore" ),
+      "base" => "be_buttondownload",
+      'weight' => 91,
+      'category' => __( 'Beau Theme', 'bebostore' ),
+      "params" => array(
+      	// Need and image, select book, add more info
+        array(
+          'type' => 'textfield',
+          'heading' => __( 'Button Title', 'bebostore' ),
+          'param_name' => 'button_title',
+          'admin_label' => true,
+          'description' => __( 'Title name of button.', 'bebostore' ),
+        ),
+        array(
+          'type' => 'textfield',
+          'heading' => __( 'Button Font Size', 'bebostore' ),
+          'param_name' => 'button_font_size',
+          'description' => __( 'Font size in vw unit (will be added 1rem for responsive purposes).', 'bebostore' ),
+        ),
+        array(
+          'type' => 'textfield',
+          'heading' => __( 'Button Width', 'bebostore' ),
+          'param_name' => 'button_width',
+          'description' => __( 'Without any unit, so you must include the unit.', 'bebostore' ),
+        ),
+        array(
+          'type' => 'colorpicker',
+          'heading' => __( 'Button Background', 'bebostore' ),
+          'param_name' => 'button_background',
+        ),
+        array(
+          'type' => 'colorpicker',
+          'heading' => __( 'Button Font Color', 'bebostore' ),
+          'param_name' => 'button_font_color',
+        ),
+        array(
+          'type' => 'colorpicker',
+          'heading' => __( 'Button Background Hover', 'bebostore' ),
+          'param_name' => 'button_background_hover',
+        ),
+        array(
+          'type' => 'colorpicker',
+          'heading' => __( 'Button Font Color', 'bebostore' ),
+          'param_name' => 'button_font_color_hover',
+        ),
+        array(
+          'type' => 'file_picker',
+          'heading' => __( 'Button File', 'bebostore' ),
+          'param_name' => 'button_file',
+        ),
+      ),
+   ) );
+}
+class WPBakeryShortCode_Be_buttondownload extends WPBakeryShortCode {}
+
 //This for section author
 add_action( 'vc_before_init', 'bebostore_Author', 999999);
 function bebostore_Author() {
@@ -221,6 +332,52 @@ function bebostore_Author() {
 }
 class WPBakeryShortCode_Be_author extends WPBakeryShortCode {}
 
+
+//This for section blog
+add_action( 'vc_before_init', 'jabarmasagi_BlogCardSlider', 999999);
+function jabarmasagi_BlogCardSlider() {
+  global $bebostore_perpage_arr;
+  vc_map( array(
+      "name" => __( "Jabar Masagi Blog Card Slider", "bebostore" ),
+      "base" => "be_blogcardslider",
+      'weight' => 91,
+      'category' => __( 'Beau Theme', 'bebostore' ),
+      'description' => __( 'This section contain blog list in jabar masagi version', 'bebostore' ),
+      "params" => array(
+        // Need and image, select book, add more info
+        //Category
+        array(
+          'type' => 'dropdown',
+          'heading' => esc_html__( 'Category', 'bebostore' ),
+          'param_name' => 'category',
+          'value' => bebostore_get_category_blog(),
+          'admin_label' => true,
+          'description' => esc_html__( 'Select category products.', 'bebostore' )
+        ),
+        array(
+          'type' => 'dropdown',
+          'heading' => __( 'Perpage', 'bebostore' ),
+          'param_name' => 'blog_perpage',
+          'value' => $bebostore_perpage_arr,
+          'std' => 4,
+          'admin_label' => true,
+          'description' => __( 'Select columns count.', 'bebostore' )
+        ),
+        array(
+          'type' => 'dropdown',
+          'heading' => __( 'Blog Thumbnail Style', 'bebostore' ),
+          'param_name' => 'blog_thumbnail_style',
+          'value' => array(
+            __( 'Standard', 'bebostore' ) => '',
+            __( 'Full Thumbnail', 'bebostore' ) => 'full_thumbnail',
+          ),
+          'admin_label' => true,
+          'description' => __( 'How thumbnail image displayed.', 'bebostore' )
+        ),
+      ),
+   ) );
+}
+class WPBakeryShortCode_Be_blogcardslider extends WPBakeryShortCode {}
 
 //This for section blog
 add_action( 'vc_before_init', 'bebostore_Blog', 999999);

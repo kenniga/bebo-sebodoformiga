@@ -16,6 +16,25 @@
   src: url("../fonts/againts.eot?#iefix") format("embedded-opentype"), url("../fonts/againts.woff") format("woff"), url("../fonts/againts.ttf") format("truetype"), url("../fonts/againts.svg") format("svg");
 }
 
+@font-face {
+  font-family: 'intro-bold';  
+  src: url("../fonts/intro-bold-webfont.ttf");  
+  font-weight: bold;  
+}
+
+@font-face {
+  font-family: 'intro-regular';  
+  src: url("../fonts/Intro-Regular.otf");  
+  font-weight: normal;  
+}
+
+
+@font-face {
+  font-family: 'intro-book';  
+  src: url("../fonts/intro-book-webfont.ttf");  
+  font-weight: normal;  
+}
+
 /* --------------------------------
 
 1. Menu mobile
@@ -484,6 +503,15 @@ img {
   #book-mobile-menu .mobile-menu.mobile-show {
     display: block;
   }
+  
+  #book-mobile-menu .mobile-menu.mobile-show span.close-btn {
+    position: absolute;
+    color: white;
+    z-index: 999;
+    right: 14px;
+    top: 14px;
+    font-size: 20px;
+  }
 }
 
 #book-mobile-menu .mobile-menu ul {
@@ -500,6 +528,8 @@ img {
   font-size: 1.07692em;
   list-style: none;
   padding: 5px 0;
+  display: inline-block;
+  width: 80%;
 }
 
 #book-mobile-menu .mobile-menu ul li a {
@@ -5239,16 +5269,17 @@ body div.festi-cart-pop-up-products-content div.festi-cart-total span {
   padding: 1em;
   width: 40px;
   height: 40px;
-  color: transparent;
+  color: white;
+  background-color: #f7d309;
   border-radius: 30px;
-  border: 1px solid #f07c29;
+  border: 1px solid #f7d309;
   z-index: 9999;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 }
 
 .back-to-top:hover {
-  background-color: #f07c29;
+  background-color: #f7d309;
 }
 
 .back-to-top:hover:before {
@@ -5264,7 +5295,7 @@ body div.festi-cart-pop-up-products-content div.festi-cart-total span {
   left: 14px;
   top: 7px;
   font-size: 1.3em;
-  color: #f07c29;
+  color: #ffffff;
 }
 
 .woocommerce .book-item-detail .left-style .yith-wcwl-add-to-wishlist {

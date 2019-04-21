@@ -32,7 +32,18 @@
 	$('#menu-mb').click(function(event) {
 		$('.mobile-menu').toggleClass('mobile-show');
 		$('body').toggleClass('active-menu');
-	});
+    });
+    
+    $('.close-btn').click(function(event) {
+        $('#menu-humberger').toggleClass('active-menu');
+        $('section').toggleClass('active-menu');
+        $('header').toggleClass('active-menu');
+        $('footer').toggleClass('active-menu');
+        $('body').toggleClass('active-menu');
+        $('.mobile-menu').toggleClass('mobile-show');
+        $('.menu-fix-all').toggleClass('active-menu');
+        $('.with-widget').toggleClass('active-menu');
+    });
 
     //stick menu home 7
     var headerHeight = 0;
@@ -225,6 +236,49 @@
             }
         }
     })
+
+    $(document).ready(function(){
+
+        $('.jabarmasagi-blog-card-slider').each(function(){
+            console.log(this);
+            var mySwiper = new Swiper ($(this).find('.swiper-container'), {
+                slidesPerView: 3,
+                spaceBetween: 40,
+                breakpoints: {
+                    // when window width is <= 320px
+                    640: {
+                      slidesPerView: 1,
+                      spaceBetween: 20
+                    }
+                  }
+              });
+    
+              $(this).find('.swiper-button-next').on('click', function(){
+                mySwiper.slideNext();
+              })
+    
+              $(this).find('.swiper-button-prev').on('click', function(){
+                mySwiper.slidePrev();
+              })
+
+        })
+          
+          $('body').on('click', '.launch-video-modal', function () {
+              var videoSrc = $(this).data('video-id');
+              var videoAuto;
+              console.log('VIDEO SRC: ' + videoSrc);
+      
+              videoSrc = 'https://www.youtube.com/embed/' + videoSrc;
+              videoAuto = videoSrc + '?autoplay=1&modestbranding=1&rel=0';
+      
+              $('#video-modal iframe').attr('src', videoAuto)
+      
+              $('#video-modal .close').on('click', function () {
+                  $('#video-modal iframe').attr('src', 'videoSrc')
+              })
+          })
+    });
+
 
 
     //Back to top

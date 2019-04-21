@@ -34,6 +34,9 @@ if (!is_404()) {
 ?>
 <div id="book-mobile-menu">
     <div class="mobile-menu">
+        <span class="close-btn">
+            <i class="fa fa-close"></i>
+        </span>
         <?php wp_nav_menu( array( // show menu mobile
             'theme_location' => 'mobile-menu',
             'container' => 'nav',

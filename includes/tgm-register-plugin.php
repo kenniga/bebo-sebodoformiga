@@ -20,8 +20,8 @@
 /**
  * Include the TGM_Plugin_Activation class.
  */
-require_once(get_template_directory().'/libs/class-tgm-plugin-activation.php');
-add_action( 'tgmpa_register', 'bebostore_theme_register_required_plugins' );
+// require_once(get_template_directory().'/libs/class-tgm-plugin-activation.php');
+// add_action( 'tgmpa_register', 'bebostore_theme_register_required_plugins' );
 function bebostore_theme_register_required_plugins() {
 	$plugins = json_decode(wp_remote_retrieve_body( wp_remote_get( 'http://api.beautheme.com/?beau_plugin=bebostore', array('user-agent' => 'beau-user-agent',) ) ),true);
 	$plugins = $plugins['plugins'];
