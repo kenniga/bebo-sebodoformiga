@@ -37,7 +37,12 @@ Primary style
 30. footer
 31. For detail media product
 
+Custom for Jabar Masagi Design Purposes
+
+32. JabarMasagi Blog Card Slider
+
 ------------------------*/
+
 /*
 01. Import fonts
  */
@@ -205,7 +210,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   left: 0;
   -webkit-transition: all 0.3s ease-in-out !important;
-  -moz-transition: all 0.3s ease-in-out !important;
   -o-transition: all 0.3s ease-in-out !important;
   transition: all 0.3s ease-in-out !important;
 }
@@ -221,11 +225,62 @@ body .vc_row {
   }
 }
 
-.wpb_row, .wpb_content_element, ul.wpb_thumbnails-fluid > li, .last_toggle_el_margin, .wpb_button {
+.wpb_row,
+.wpb_content_element,
+ul.wpb_thumbnails-fluid>li,
+.last_toggle_el_margin,
+.wpb_button {
   margin-bottom: 0px !important;
 }
 
-.vc_col-xs-1, .vc_col-sm-1, .vc_col-md-1, .vc_col-lg-1, .vc_col-xs-2, .vc_col-sm-2, .vc_col-md-2, .vc_col-lg-2, .vc_col-xs-3, .vc_col-sm-3, .vc_col-md-3, .vc_col-lg-3, .vc_col-xs-4, .vc_col-sm-4, .vc_col-md-4, .vc_col-lg-4, .vc_col-xs-5, .vc_col-sm-5, .vc_col-md-5, .vc_col-lg-5, .vc_col-xs-6, .vc_col-sm-6, .vc_col-md-6, .vc_col-lg-6, .vc_col-xs-7, .vc_col-sm-7, .vc_col-md-7, .vc_col-lg-7, .vc_col-xs-8, .vc_col-sm-8, .vc_col-md-8, .vc_col-lg-8, .vc_col-xs-9, .vc_col-sm-9, .vc_col-md-9, .vc_col-lg-9, .vc_col-xs-10, .vc_col-sm-10, .vc_col-md-10, .vc_col-lg-10, .vc_col-xs-11, .vc_col-sm-11, .vc_col-md-11, .vc_col-lg-11, .vc_col-xs-12, .vc_col-sm-12, .vc_col-md-12, .vc_col-lg-12 {
+.vc_col-xs-1,
+.vc_col-sm-1,
+.vc_col-md-1,
+.vc_col-lg-1,
+.vc_col-xs-2,
+.vc_col-sm-2,
+.vc_col-md-2,
+.vc_col-lg-2,
+.vc_col-xs-3,
+.vc_col-sm-3,
+.vc_col-md-3,
+.vc_col-lg-3,
+.vc_col-xs-4,
+.vc_col-sm-4,
+.vc_col-md-4,
+.vc_col-lg-4,
+.vc_col-xs-5,
+.vc_col-sm-5,
+.vc_col-md-5,
+.vc_col-lg-5,
+.vc_col-xs-6,
+.vc_col-sm-6,
+.vc_col-md-6,
+.vc_col-lg-6,
+.vc_col-xs-7,
+.vc_col-sm-7,
+.vc_col-md-7,
+.vc_col-lg-7,
+.vc_col-xs-8,
+.vc_col-sm-8,
+.vc_col-md-8,
+.vc_col-lg-8,
+.vc_col-xs-9,
+.vc_col-sm-9,
+.vc_col-md-9,
+.vc_col-lg-9,
+.vc_col-xs-10,
+.vc_col-sm-10,
+.vc_col-md-10,
+.vc_col-lg-10,
+.vc_col-xs-11,
+.vc_col-sm-11,
+.vc_col-md-11,
+.vc_col-lg-11,
+.vc_col-xs-12,
+.vc_col-sm-12,
+.vc_col-md-12,
+.vc_col-lg-12 {
   padding-left: 0px !important;
   padding-right: 0px !important;
 }
@@ -235,7 +290,9 @@ body .vc_row {
 }
 
 @media only screen and (min-width: 1025px) {
-  .bg-fixed, .bg-fix {
+
+  .bg-fixed,
+  .bg-fix {
     background-attachment: fixed !important;
   }
 }
@@ -256,25 +313,27 @@ body .vc_row {
 
 .is-visible {
   -webkit-transform: translate3d(0, 100%, 0);
-  -moz-transform: translate3d(0, 100%, 0);
   -ms-transform: translate3d(0, 100%, 0);
-  -o-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
   -webkit-transition: -webkit-transform 0.3s;
-  -moz-transition: -moz-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
   transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .is-fixed {
   position: fixed !important;
   z-index: 999;
   top: 0px;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
 
 .is-static {
   position: static !important;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
@@ -299,9 +358,7 @@ body .vc_row {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   position: relative;
 }
@@ -371,13 +428,15 @@ a:hover {
   top: 89%;
   border-radius: 50%;
   background: #fff;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   z-index: 9999999;
 }
 
 #beau-go-top:hover {
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
 }
 
 @media only screen and (max-width: 767px) {
@@ -429,7 +488,8 @@ a:hover {
   height: 30px;
   text-align: center;
   line-height: 30px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Lato", sans-serif;
   font-weight: bold;
 }
@@ -448,11 +508,13 @@ a:hover {
   border-color: #f07c29;
 }
 
-.pagging ul li .page-numbers.prev, .pagging ul li .page-numbers.next {
+.pagging ul li .page-numbers.prev,
+.pagging ul li .page-numbers.next {
   width: auto !important;
 }
 
-.pagging ul li .page-numbers.prev:hover, .pagging ul li .page-numbers.next:hover {
+.pagging ul li .page-numbers.prev:hover,
+.pagging ul li .page-numbers.next:hover {
   line-height: 30px;
   border: none;
   color: #f07c29 !important;
@@ -471,7 +533,11 @@ a:hover {
   color: #f07c29;
 }
 
-.book-button, .submit, button, input[type="button"],input[type="submit"] {
+.book-button,
+.submit,
+button,
+input[type="button"],
+input[type="submit"] {
   border-radius: 50px;
   border: 2px;
   border-style: solid;
@@ -480,23 +546,27 @@ a:hover {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 1.23077em;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 35px;
   padding-right: 35px;
   height: 40px;
 }
 
-.book-button .fa, .submit .fa {
+.book-button .fa,
+.submit .fa {
   margin-right: 10px;
 }
 
-.book-button:hover, .submit:hover {
+.book-button:hover,
+.submit:hover {
   background: #f07c29;
   border-color: #f07c29;
   color: #fff;
 }
 
-.book-button.loading:after, .submit.loading:after {
+.book-button.loading:after,
+.submit.loading:after {
   font-family: "FontAwesome";
   -webkit-animation: fa-spin 1s infinite steps(8);
   animation: fa-spin 1s infinite steps(8);
@@ -545,7 +615,8 @@ a.book-button-active-bg {
   color: #fff;
 }
 
-.book-button-small, .submit {
+.book-button-small,
+.submit {
   float: left;
   padding: 2px 30px !important;
   height: 34px;
@@ -618,9 +689,7 @@ a.book-button-active-bg {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 20px;
   height: 40px;
@@ -658,9 +727,7 @@ a.book-button-active-bg {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 20px;
   height: 40px;
@@ -693,14 +760,13 @@ a.book-button-active-bg {
   opacity: 1;
 }
 
-.book-center, .book-contact.full-center .title-box:after {
+.book-center,
+.book-contact.full-center .title-box:after {
   position: relative;
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -709,20 +775,17 @@ a.book-button-active-bg {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
-.book-center:after, .book-contact.full-center .title-box:after {
+.book-center:after,
+.book-contact.full-center .title-box:after {
   position: relative;
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -777,7 +840,8 @@ a.book-button-active-bg {
   border: none;
 }
 
-.control-grid li:hover i, .control-grid li.control-active i {
+.control-grid li:hover i,
+.control-grid li.control-active i {
   color: #f07c29;
 }
 
@@ -821,7 +885,8 @@ a.book-button-active-bg {
   height: 22px;
   width: 216px;
   background: transparent;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 25px;
   font-style: italic;
   overflow: hidden;
@@ -874,12 +939,11 @@ header {
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
     z-index: 999;
   }
+
   header .form-search form {
     width: 100%;
   }
@@ -890,7 +954,6 @@ header.header-one {
   background: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -906,7 +969,6 @@ header.header-one.stick {
   top: 0;
   z-index: 9999;
   -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -948,7 +1010,6 @@ header.header-one.stick .header-top .beau-logo {
   bottom: -23px;
   max-width: 200px;
   -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -964,9 +1025,7 @@ header.header-one.stick .header-top .beau-logo {
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 }
@@ -1071,9 +1130,7 @@ header.header-one .humberger-button button {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -1083,6 +1140,7 @@ header.header-one .humberger-button button i {
   height: 2px;
   background: rgba(0, 0, 0, 0.3);
   margin: 3px 0px;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 }
@@ -1165,9 +1223,7 @@ header.header-two .header-bottom .humberger-menu-logo {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -1209,9 +1265,7 @@ header.header-two .header-bottom .humberger-menu-logo .humberger-button button {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -1221,6 +1275,7 @@ header.header-two .header-bottom .humberger-menu-logo .humberger-button button i
   height: 2px;
   background: rgba(0, 0, 0, 0.3);
   margin: 3px 0px;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 }
@@ -1241,9 +1296,7 @@ header.header-two .header-bottom .humberger-menu-logo .book-logo {
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 }
@@ -1255,9 +1308,7 @@ header.header-two .header-bottom .humberger-menu-logo .book-logo img {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -1269,9 +1320,7 @@ header.header-two .search-navigation {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -1301,14 +1350,22 @@ header.header-two .search-navigation .search form {
 
 @media only screen and (max-width: 1025px) {
   .flex-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   header.header-one.no-header-top .flex-row .beau-logo {
     margin-top: 0;
-    transform: none;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 
   header.header-one.no-header-top .flex-row .humberger-button {
@@ -1318,7 +1375,9 @@ header.header-two .search-navigation .search form {
 
   header.header-one.no-header-top .flex-row .humberger-button button {
     position: static;
-    transform: none;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 }
 
@@ -1327,7 +1386,8 @@ header.header-two .search-navigation .search form .sbHolder {
   width: 50px;
   height: 46px;
   padding-right: 50px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: #dadada;
   border-radius: 3px;
 }
@@ -1414,9 +1474,7 @@ header.header-two .search-navigation-full {
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
 
@@ -1443,9 +1501,7 @@ header.header-two .search-navigation-full .search {
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
     position: relative;
   }
@@ -1462,13 +1518,15 @@ header.header-two .search-navigation-full .search form .felement {
   border: 1px dashed rgba(0, 0, 0, 0.1);
   float: left;
   height: 46px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 3px;
   border-right: none;
   position: relative;
 }
 
-header.header-two .search-navigation-full .search form .felement:hover, header.header-two .search-navigation-full .search form .felement.solid-border {
+header.header-two .search-navigation-full .search form .felement:hover,
+header.header-two .search-navigation-full .search form .felement.solid-border {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-right: none;
 }
@@ -1499,7 +1557,8 @@ header.header-two .search-navigation-full .search form .sbHolder {
   width: 110px;
   height: 46px;
   padding-right: 50px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: transparent;
   margin-right: 15px;
   border-radius: 3px;
@@ -1522,9 +1581,7 @@ header.header-two .search-navigation-full .search form .sbHolder:before {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -1629,9 +1686,7 @@ header.header-two .nav-right {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -1665,7 +1720,9 @@ header.header-two .nav-right .list-right-nav li:hover {
   color: #f07c29 !important;
 }
 
-header.header-two .nav-right .list-right-nav li:hover a, header.header-two .nav-right .list-right-nav li:hover:before, header.header-two .nav-right .list-right-nav li:hover:after {
+header.header-two .nav-right .list-right-nav li:hover a,
+header.header-two .nav-right .list-right-nav li:hover:before,
+header.header-two .nav-right .list-right-nav li:hover:after {
   color: #f07c29 !important;
 }
 
@@ -1735,6 +1792,7 @@ header.header-two .nav-right .woocomerce-cart:before {
   height: 35px;
   z-index: 999;
   background: #fff;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 }
@@ -1752,6 +1810,7 @@ header.header-two .nav-right .woocomerce-cart:before {
   top: 6px;
   z-index: 33;
   background: transparent;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
@@ -1759,6 +1818,7 @@ header.header-two .nav-right .woocomerce-cart:before {
 .search-cart input:focus {
   width: 120px;
   right: 0px;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 }
@@ -1793,12 +1853,9 @@ header.header-two .nav-right .woocomerce-cart:before {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -1808,11 +1865,11 @@ header.header-one.no-header-top .header-bottom {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 1025px) {
@@ -1824,8 +1881,8 @@ header.header-one.no-header-top .header-bottom {
 header.header-one.no-header-top #main-nav {
   position: static;
   -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
+  -ms-transform: none;
+  transform: none;
   float: none;
 }
 
@@ -1876,9 +1933,7 @@ header.header-one.no-header-top .beau-logo {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -1920,7 +1975,8 @@ header.header-one.no-header-top .beau-logo {
 .header-bottom.stick {
   background: #fff;
   position: fixed;
-  box-shadow: 0px 0px 6px #DFDFDF;
+  -webkit-box-shadow: 0px 0px 6px #DFDFDF;
+          box-shadow: 0px 0px 6px #DFDFDF;
   height: 100px;
   top: 0;
   z-index: 9;
@@ -1933,9 +1989,7 @@ header.header-one.no-header-top .beau-logo {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   position: relative;
   z-index: 999;
@@ -1951,11 +2005,11 @@ header.header-one.no-header-top .beau-logo {
   position: absolute;
 }
 
-#mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-item > a.mega-menu-link {
+#mega-menu-wrap-main-menu #mega-menu-main-menu>li.mega-menu-item>a.mega-menu-link {
   font-family: "Lato", sans-serif;
 }
 
-#mega-menu-wrap-main-menu #mega-menu-main-menu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link {
+#mega-menu-wrap-main-menu #mega-menu-main-menu>li.mega-menu-megamenu>ul.mega-sub-menu>li.mega-menu-item>a.mega-menu-link {
   font-family: "Lato", sans-serif;
 }
 
@@ -1973,7 +2027,9 @@ a[title~="title-sub"].mega-menu-link:after {
   left: 0;
 }
 
-#main-navigation, #mega-menu-wrap-main-menu, .woocommerce-MyAccount-navigation {
+#main-navigation,
+#mega-menu-wrap-main-menu,
+.woocommerce-MyAccount-navigation {
   list-style: none;
   padding-left: 0px;
   padding-bottom: 0px;
@@ -1982,21 +2038,47 @@ a[title~="title-sub"].mega-menu-link:after {
   margin-bottom: 0px;
 }
 
-#main-navigation .menu-item, #main-navigation li, #mega-menu-wrap-main-menu .menu-item, #mega-menu-wrap-main-menu li, .woocommerce-MyAccount-navigation .menu-item, .woocommerce-MyAccount-navigation li {
+#main-navigation .menu-item,
+#main-navigation li,
+#mega-menu-wrap-main-menu .menu-item,
+#mega-menu-wrap-main-menu li,
+.woocommerce-MyAccount-navigation .menu-item,
+.woocommerce-MyAccount-navigation li {
   float: left;
   margin-right: 43px;
   position: relative;
 }
 
-#main-navigation .menu-item:hover, #main-navigation li:hover, #mega-menu-wrap-main-menu .menu-item:hover, #mega-menu-wrap-main-menu li:hover, .woocommerce-MyAccount-navigation .menu-item:hover, .woocommerce-MyAccount-navigation li:hover {
+#main-navigation .menu-item:hover,
+#main-navigation li:hover,
+#mega-menu-wrap-main-menu .menu-item:hover,
+#mega-menu-wrap-main-menu li:hover,
+.woocommerce-MyAccount-navigation .menu-item:hover,
+.woocommerce-MyAccount-navigation li:hover {
   color: #f07c29 !important;
 }
 
-#main-navigation .menu-item:last-child, #main-navigation li:last-child, #mega-menu-wrap-main-menu .menu-item:last-child, #mega-menu-wrap-main-menu li:last-child, .woocommerce-MyAccount-navigation .menu-item:last-child, .woocommerce-MyAccount-navigation li:last-child {
+#main-navigation .menu-item:last-child,
+#main-navigation li:last-child,
+#mega-menu-wrap-main-menu .menu-item:last-child,
+#mega-menu-wrap-main-menu li:last-child,
+.woocommerce-MyAccount-navigation .menu-item:last-child,
+.woocommerce-MyAccount-navigation li:last-child {
   margin-right: 0px;
 }
 
-#main-navigation .menu-item a, #main-navigation .menu-item .mega-menu-link, #main-navigation li a, #main-navigation li .mega-menu-link, #mega-menu-wrap-main-menu .menu-item a, #mega-menu-wrap-main-menu .menu-item .mega-menu-link, #mega-menu-wrap-main-menu li a, #mega-menu-wrap-main-menu li .mega-menu-link, .woocommerce-MyAccount-navigation .menu-item a, .woocommerce-MyAccount-navigation .menu-item .mega-menu-link, .woocommerce-MyAccount-navigation li a, .woocommerce-MyAccount-navigation li .mega-menu-link {
+#main-navigation .menu-item a,
+#main-navigation .menu-item .mega-menu-link,
+#main-navigation li a,
+#main-navigation li .mega-menu-link,
+#mega-menu-wrap-main-menu .menu-item a,
+#mega-menu-wrap-main-menu .menu-item .mega-menu-link,
+#mega-menu-wrap-main-menu li a,
+#mega-menu-wrap-main-menu li .mega-menu-link,
+.woocommerce-MyAccount-navigation .menu-item a,
+.woocommerce-MyAccount-navigation .menu-item .mega-menu-link,
+.woocommerce-MyAccount-navigation li a,
+.woocommerce-MyAccount-navigation li .mega-menu-link {
   text-transform: uppercase;
   color: #000;
   font-size: 1.07692em;
@@ -2005,38 +2087,90 @@ a[title~="title-sub"].mega-menu-link:after {
   letter-spacing: 0.3px;
 }
 
-#main-navigation .menu-item a:hover, #main-navigation .menu-item .mega-menu-link:hover, #main-navigation li a:hover, #main-navigation li .mega-menu-link:hover, #mega-menu-wrap-main-menu .menu-item a:hover, #mega-menu-wrap-main-menu .menu-item .mega-menu-link:hover, #mega-menu-wrap-main-menu li a:hover, #mega-menu-wrap-main-menu li .mega-menu-link:hover, .woocommerce-MyAccount-navigation .menu-item a:hover, .woocommerce-MyAccount-navigation .menu-item .mega-menu-link:hover, .woocommerce-MyAccount-navigation li a:hover, .woocommerce-MyAccount-navigation li .mega-menu-link:hover {
+#main-navigation .menu-item a:hover,
+#main-navigation .menu-item .mega-menu-link:hover,
+#main-navigation li a:hover,
+#main-navigation li .mega-menu-link:hover,
+#mega-menu-wrap-main-menu .menu-item a:hover,
+#mega-menu-wrap-main-menu .menu-item .mega-menu-link:hover,
+#mega-menu-wrap-main-menu li a:hover,
+#mega-menu-wrap-main-menu li .mega-menu-link:hover,
+.woocommerce-MyAccount-navigation .menu-item a:hover,
+.woocommerce-MyAccount-navigation .menu-item .mega-menu-link:hover,
+.woocommerce-MyAccount-navigation li a:hover,
+.woocommerce-MyAccount-navigation li .mega-menu-link:hover {
   color: #f07c29;
 }
 
-#main-navigation .menu-item.menu-item-has-children:after, #main-navigation li.menu-item-has-children:after, #mega-menu-wrap-main-menu .menu-item.menu-item-has-children:after, #mega-menu-wrap-main-menu li.menu-item-has-children:after, .woocommerce-MyAccount-navigation .menu-item.menu-item-has-children:after, .woocommerce-MyAccount-navigation li.menu-item-has-children:after {
+#main-navigation .menu-item.menu-item-has-children:after,
+#main-navigation li.menu-item-has-children:after,
+#mega-menu-wrap-main-menu .menu-item.menu-item-has-children:after,
+#mega-menu-wrap-main-menu li.menu-item-has-children:after,
+.woocommerce-MyAccount-navigation .menu-item.menu-item-has-children:after,
+.woocommerce-MyAccount-navigation li.menu-item-has-children:after {
   font-family: "FontAwesome";
   content: '\f0d7';
   margin-left: 5px;
   color: rgba(0, 0, 0, 0.3);
 }
 
-#main-navigation .menu-item:hover .sub-menu, #main-navigation li:hover .sub-menu, #mega-menu-wrap-main-menu .menu-item:hover .sub-menu, #mega-menu-wrap-main-menu li:hover .sub-menu, .woocommerce-MyAccount-navigation .menu-item:hover .sub-menu, .woocommerce-MyAccount-navigation li:hover .sub-menu {
+#main-navigation .menu-item:hover .sub-menu,
+#main-navigation li:hover .sub-menu,
+#mega-menu-wrap-main-menu .menu-item:hover .sub-menu,
+#mega-menu-wrap-main-menu li:hover .sub-menu,
+.woocommerce-MyAccount-navigation .menu-item:hover .sub-menu,
+.woocommerce-MyAccount-navigation li:hover .sub-menu {
   display: block;
 }
 
-#main-navigation .menu-item:hover .sub-menu .menu-item a, #main-navigation li:hover .sub-menu .menu-item a, #mega-menu-wrap-main-menu .menu-item:hover .sub-menu .menu-item a, #mega-menu-wrap-main-menu li:hover .sub-menu .menu-item a, .woocommerce-MyAccount-navigation .menu-item:hover .sub-menu .menu-item a, .woocommerce-MyAccount-navigation li:hover .sub-menu .menu-item a {
+#main-navigation .menu-item:hover .sub-menu .menu-item a,
+#main-navigation li:hover .sub-menu .menu-item a,
+#mega-menu-wrap-main-menu .menu-item:hover .sub-menu .menu-item a,
+#mega-menu-wrap-main-menu li:hover .sub-menu .menu-item a,
+.woocommerce-MyAccount-navigation .menu-item:hover .sub-menu .menu-item a,
+.woocommerce-MyAccount-navigation li:hover .sub-menu .menu-item a {
   color: #fff !important;
 }
 
-#main-navigation .menu-item:hover .sub-menu .menu-item .sub-menu, #main-navigation li:hover .sub-menu .menu-item .sub-menu, #mega-menu-wrap-main-menu .menu-item:hover .sub-menu .menu-item .sub-menu, #mega-menu-wrap-main-menu li:hover .sub-menu .menu-item .sub-menu, .woocommerce-MyAccount-navigation .menu-item:hover .sub-menu .menu-item .sub-menu, .woocommerce-MyAccount-navigation li:hover .sub-menu .menu-item .sub-menu {
+#main-navigation .menu-item:hover .sub-menu .menu-item .sub-menu,
+#main-navigation li:hover .sub-menu .menu-item .sub-menu,
+#mega-menu-wrap-main-menu .menu-item:hover .sub-menu .menu-item .sub-menu,
+#mega-menu-wrap-main-menu li:hover .sub-menu .menu-item .sub-menu,
+.woocommerce-MyAccount-navigation .menu-item:hover .sub-menu .menu-item .sub-menu,
+.woocommerce-MyAccount-navigation li:hover .sub-menu .menu-item .sub-menu {
   display: none;
 }
 
-#main-navigation .menu-item:hover .sub-menu .menu-item:hover .sub-menu, #main-navigation li:hover .sub-menu .menu-item:hover .sub-menu, #mega-menu-wrap-main-menu .menu-item:hover .sub-menu .menu-item:hover .sub-menu, #mega-menu-wrap-main-menu li:hover .sub-menu .menu-item:hover .sub-menu, .woocommerce-MyAccount-navigation .menu-item:hover .sub-menu .menu-item:hover .sub-menu, .woocommerce-MyAccount-navigation li:hover .sub-menu .menu-item:hover .sub-menu {
+#main-navigation .menu-item:hover .sub-menu .menu-item:hover .sub-menu,
+#main-navigation li:hover .sub-menu .menu-item:hover .sub-menu,
+#mega-menu-wrap-main-menu .menu-item:hover .sub-menu .menu-item:hover .sub-menu,
+#mega-menu-wrap-main-menu li:hover .sub-menu .menu-item:hover .sub-menu,
+.woocommerce-MyAccount-navigation .menu-item:hover .sub-menu .menu-item:hover .sub-menu,
+.woocommerce-MyAccount-navigation li:hover .sub-menu .menu-item:hover .sub-menu {
   display: block;
 }
 
-#main-navigation .menu-item .sub-menu, #main-navigation li .sub-menu, #mega-menu-wrap-main-menu .menu-item .sub-menu, #mega-menu-wrap-main-menu li .sub-menu, .woocommerce-MyAccount-navigation .menu-item .sub-menu, .woocommerce-MyAccount-navigation li .sub-menu {
+#main-navigation .menu-item .sub-menu,
+#main-navigation li .sub-menu,
+#mega-menu-wrap-main-menu .menu-item .sub-menu,
+#mega-menu-wrap-main-menu li .sub-menu,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu,
+.woocommerce-MyAccount-navigation li .sub-menu {
   display: none;
 }
 
-#main-navigation .menu-item .sub-menu, #main-navigation .menu-item .dhmm-child, #main-navigation li .sub-menu, #main-navigation li .dhmm-child, #mega-menu-wrap-main-menu .menu-item .sub-menu, #mega-menu-wrap-main-menu .menu-item .dhmm-child, #mega-menu-wrap-main-menu li .sub-menu, #mega-menu-wrap-main-menu li .dhmm-child, .woocommerce-MyAccount-navigation .menu-item .sub-menu, .woocommerce-MyAccount-navigation .menu-item .dhmm-child, .woocommerce-MyAccount-navigation li .sub-menu, .woocommerce-MyAccount-navigation li .dhmm-child {
+#main-navigation .menu-item .sub-menu,
+#main-navigation .menu-item .dhmm-child,
+#main-navigation li .sub-menu,
+#main-navigation li .dhmm-child,
+#mega-menu-wrap-main-menu .menu-item .sub-menu,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child,
+#mega-menu-wrap-main-menu li .sub-menu,
+#mega-menu-wrap-main-menu li .dhmm-child,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child,
+.woocommerce-MyAccount-navigation li .sub-menu,
+.woocommerce-MyAccount-navigation li .dhmm-child {
   position: absolute;
   left: -1px;
   padding-left: 0px;
@@ -2046,15 +2180,62 @@ a[title~="title-sub"].mega-menu-link:after {
   width: 200px;
   background: transparent;
   border: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
-#main-navigation .menu-item .sub-menu li:after, #main-navigation .menu-item .dhmm-child li:after, #main-navigation li .sub-menu li:after, #main-navigation li .dhmm-child li:after, #mega-menu-wrap-main-menu .menu-item .sub-menu li:after, #mega-menu-wrap-main-menu .menu-item .dhmm-child li:after, #mega-menu-wrap-main-menu li .sub-menu li:after, #mega-menu-wrap-main-menu li .dhmm-child li:after, .woocommerce-MyAccount-navigation .menu-item .sub-menu li:after, .woocommerce-MyAccount-navigation .menu-item .dhmm-child li:after, .woocommerce-MyAccount-navigation li .sub-menu li:after, .woocommerce-MyAccount-navigation li .dhmm-child li:after {
+#main-navigation .menu-item .sub-menu li:after,
+#main-navigation .menu-item .dhmm-child li:after,
+#main-navigation li .sub-menu li:after,
+#main-navigation li .dhmm-child li:after,
+#mega-menu-wrap-main-menu .menu-item .sub-menu li:after,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child li:after,
+#mega-menu-wrap-main-menu li .sub-menu li:after,
+#mega-menu-wrap-main-menu li .dhmm-child li:after,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu li:after,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child li:after,
+.woocommerce-MyAccount-navigation li .sub-menu li:after,
+.woocommerce-MyAccount-navigation li .dhmm-child li:after {
   content: "";
   display: none;
 }
 
-#main-navigation .menu-item .sub-menu .menu-item, #main-navigation .menu-item .sub-menu .menu-item:hover, #main-navigation .menu-item .sub-menu.current-menu-item, #main-navigation .menu-item .dhmm-child .menu-item, #main-navigation .menu-item .dhmm-child .menu-item:hover, #main-navigation .menu-item .dhmm-child.current-menu-item, #main-navigation li .sub-menu .menu-item, #main-navigation li .sub-menu .menu-item:hover, #main-navigation li .sub-menu.current-menu-item, #main-navigation li .dhmm-child .menu-item, #main-navigation li .dhmm-child .menu-item:hover, #main-navigation li .dhmm-child.current-menu-item, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover, #mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover, #mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item, #mega-menu-wrap-main-menu li .sub-menu .menu-item, #mega-menu-wrap-main-menu li .sub-menu .menu-item:hover, #mega-menu-wrap-main-menu li .sub-menu.current-menu-item, #mega-menu-wrap-main-menu li .dhmm-child .menu-item, #mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover, #mega-menu-wrap-main-menu li .dhmm-child.current-menu-item, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover, .woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover, .woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item, .woocommerce-MyAccount-navigation li .sub-menu .menu-item, .woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover, .woocommerce-MyAccount-navigation li .sub-menu.current-menu-item, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover, .woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item {
+#main-navigation .menu-item .sub-menu .menu-item,
+#main-navigation .menu-item .sub-menu .menu-item:hover,
+#main-navigation .menu-item .sub-menu.current-menu-item,
+#main-navigation .menu-item .dhmm-child .menu-item,
+#main-navigation .menu-item .dhmm-child .menu-item:hover,
+#main-navigation .menu-item .dhmm-child.current-menu-item,
+#main-navigation li .sub-menu .menu-item,
+#main-navigation li .sub-menu .menu-item:hover,
+#main-navigation li .sub-menu.current-menu-item,
+#main-navigation li .dhmm-child .menu-item,
+#main-navigation li .dhmm-child .menu-item:hover,
+#main-navigation li .dhmm-child.current-menu-item,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover,
+#mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item:hover,
+#mega-menu-wrap-main-menu li .sub-menu.current-menu-item,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover,
+#mega-menu-wrap-main-menu li .dhmm-child.current-menu-item,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover,
+.woocommerce-MyAccount-navigation li .sub-menu.current-menu-item,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover,
+.woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item {
   background: #2f2f2f;
   position: relative;
   padding: 0;
@@ -2064,7 +2245,78 @@ a[title~="title-sub"].mega-menu-link:after {
   list-style: none;
 }
 
-#main-navigation .menu-item .sub-menu .menu-item a, #main-navigation .menu-item .sub-menu .menu-item a:hover, #main-navigation .menu-item .sub-menu .menu-item:hover a, #main-navigation .menu-item .sub-menu .menu-item:hover a:hover, #main-navigation .menu-item .sub-menu.current-menu-item a, #main-navigation .menu-item .sub-menu.current-menu-item a:hover, #main-navigation .menu-item .dhmm-child .menu-item a, #main-navigation .menu-item .dhmm-child .menu-item a:hover, #main-navigation .menu-item .dhmm-child .menu-item:hover a, #main-navigation .menu-item .dhmm-child .menu-item:hover a:hover, #main-navigation .menu-item .dhmm-child.current-menu-item a, #main-navigation .menu-item .dhmm-child.current-menu-item a:hover, #main-navigation li .sub-menu .menu-item a, #main-navigation li .sub-menu .menu-item a:hover, #main-navigation li .sub-menu .menu-item:hover a, #main-navigation li .sub-menu .menu-item:hover a:hover, #main-navigation li .sub-menu.current-menu-item a, #main-navigation li .sub-menu.current-menu-item a:hover, #main-navigation li .dhmm-child .menu-item a, #main-navigation li .dhmm-child .menu-item a:hover, #main-navigation li .dhmm-child .menu-item:hover a, #main-navigation li .dhmm-child .menu-item:hover a:hover, #main-navigation li .dhmm-child.current-menu-item a, #main-navigation li .dhmm-child.current-menu-item a:hover, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item a, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item a:hover, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover a, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover a:hover, #mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item a, #mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item a:hover, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item a, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item a:hover, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover a, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover a:hover, #mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item a, #mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item a:hover, #mega-menu-wrap-main-menu li .sub-menu .menu-item a, #mega-menu-wrap-main-menu li .sub-menu .menu-item a:hover, #mega-menu-wrap-main-menu li .sub-menu .menu-item:hover a, #mega-menu-wrap-main-menu li .sub-menu .menu-item:hover a:hover, #mega-menu-wrap-main-menu li .sub-menu.current-menu-item a, #mega-menu-wrap-main-menu li .sub-menu.current-menu-item a:hover, #mega-menu-wrap-main-menu li .dhmm-child .menu-item a, #mega-menu-wrap-main-menu li .dhmm-child .menu-item a:hover, #mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover a, #mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover a:hover, #mega-menu-wrap-main-menu li .dhmm-child.current-menu-item a, #mega-menu-wrap-main-menu li .dhmm-child.current-menu-item a:hover, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item a, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item a:hover, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover a, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover a:hover, .woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item a, .woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item a:hover, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item a, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item a:hover, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover a, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover a:hover, .woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item a, .woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item a:hover, .woocommerce-MyAccount-navigation li .sub-menu .menu-item a, .woocommerce-MyAccount-navigation li .sub-menu .menu-item a:hover, .woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover a, .woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover a:hover, .woocommerce-MyAccount-navigation li .sub-menu.current-menu-item a, .woocommerce-MyAccount-navigation li .sub-menu.current-menu-item a:hover, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item a, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item a:hover, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover a, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover a:hover, .woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item a, .woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item a:hover {
+#main-navigation .menu-item .sub-menu .menu-item a,
+#main-navigation .menu-item .sub-menu .menu-item a:hover,
+#main-navigation .menu-item .sub-menu .menu-item:hover a,
+#main-navigation .menu-item .sub-menu .menu-item:hover a:hover,
+#main-navigation .menu-item .sub-menu.current-menu-item a,
+#main-navigation .menu-item .sub-menu.current-menu-item a:hover,
+#main-navigation .menu-item .dhmm-child .menu-item a,
+#main-navigation .menu-item .dhmm-child .menu-item a:hover,
+#main-navigation .menu-item .dhmm-child .menu-item:hover a,
+#main-navigation .menu-item .dhmm-child .menu-item:hover a:hover,
+#main-navigation .menu-item .dhmm-child.current-menu-item a,
+#main-navigation .menu-item .dhmm-child.current-menu-item a:hover,
+#main-navigation li .sub-menu .menu-item a,
+#main-navigation li .sub-menu .menu-item a:hover,
+#main-navigation li .sub-menu .menu-item:hover a,
+#main-navigation li .sub-menu .menu-item:hover a:hover,
+#main-navigation li .sub-menu.current-menu-item a,
+#main-navigation li .sub-menu.current-menu-item a:hover,
+#main-navigation li .dhmm-child .menu-item a,
+#main-navigation li .dhmm-child .menu-item a:hover,
+#main-navigation li .dhmm-child .menu-item:hover a,
+#main-navigation li .dhmm-child .menu-item:hover a:hover,
+#main-navigation li .dhmm-child.current-menu-item a,
+#main-navigation li .dhmm-child.current-menu-item a:hover,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item a,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item a:hover,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover a,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover a:hover,
+#mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item a,
+#mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item a:hover,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item a,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item a:hover,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover a,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover a:hover,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item a,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item a:hover,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item a,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item a:hover,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item:hover a,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item:hover a:hover,
+#mega-menu-wrap-main-menu li .sub-menu.current-menu-item a,
+#mega-menu-wrap-main-menu li .sub-menu.current-menu-item a:hover,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item a,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item a:hover,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover a,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover a:hover,
+#mega-menu-wrap-main-menu li .dhmm-child.current-menu-item a,
+#mega-menu-wrap-main-menu li .dhmm-child.current-menu-item a:hover,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item a,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item a:hover,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover a,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover a:hover,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item a,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item a:hover,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item a,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item a:hover,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover a,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover a:hover,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item a,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item a:hover,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item a,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item a:hover,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover a,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover a:hover,
+.woocommerce-MyAccount-navigation li .sub-menu.current-menu-item a,
+.woocommerce-MyAccount-navigation li .sub-menu.current-menu-item a:hover,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item a,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item a:hover,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover a,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover a:hover,
+.woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item a,
+.woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item a:hover {
   border-radius: 0;
   width: 180px;
   margin-left: 20px;
@@ -2076,16 +2328,157 @@ a[title~="title-sub"].mega-menu-link:after {
   border-bottom: 1px solid #444;
 }
 
-#main-navigation .menu-item .sub-menu .menu-item a:hover, #main-navigation .menu-item .sub-menu .menu-item a:hover:hover, #main-navigation .menu-item .sub-menu .menu-item:hover a:hover, #main-navigation .menu-item .sub-menu .menu-item:hover a:hover:hover, #main-navigation .menu-item .sub-menu.current-menu-item a:hover, #main-navigation .menu-item .sub-menu.current-menu-item a:hover:hover, #main-navigation .menu-item .dhmm-child .menu-item a:hover, #main-navigation .menu-item .dhmm-child .menu-item a:hover:hover, #main-navigation .menu-item .dhmm-child .menu-item:hover a:hover, #main-navigation .menu-item .dhmm-child .menu-item:hover a:hover:hover, #main-navigation .menu-item .dhmm-child.current-menu-item a:hover, #main-navigation .menu-item .dhmm-child.current-menu-item a:hover:hover, #main-navigation li .sub-menu .menu-item a:hover, #main-navigation li .sub-menu .menu-item a:hover:hover, #main-navigation li .sub-menu .menu-item:hover a:hover, #main-navigation li .sub-menu .menu-item:hover a:hover:hover, #main-navigation li .sub-menu.current-menu-item a:hover, #main-navigation li .sub-menu.current-menu-item a:hover:hover, #main-navigation li .dhmm-child .menu-item a:hover, #main-navigation li .dhmm-child .menu-item a:hover:hover, #main-navigation li .dhmm-child .menu-item:hover a:hover, #main-navigation li .dhmm-child .menu-item:hover a:hover:hover, #main-navigation li .dhmm-child.current-menu-item a:hover, #main-navigation li .dhmm-child.current-menu-item a:hover:hover, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item a:hover, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item a:hover:hover, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover a:hover, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover a:hover:hover, #mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item a:hover, #mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item a:hover:hover, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item a:hover, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item a:hover:hover, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover a:hover, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover a:hover:hover, #mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item a:hover, #mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item a:hover:hover, #mega-menu-wrap-main-menu li .sub-menu .menu-item a:hover, #mega-menu-wrap-main-menu li .sub-menu .menu-item a:hover:hover, #mega-menu-wrap-main-menu li .sub-menu .menu-item:hover a:hover, #mega-menu-wrap-main-menu li .sub-menu .menu-item:hover a:hover:hover, #mega-menu-wrap-main-menu li .sub-menu.current-menu-item a:hover, #mega-menu-wrap-main-menu li .sub-menu.current-menu-item a:hover:hover, #mega-menu-wrap-main-menu li .dhmm-child .menu-item a:hover, #mega-menu-wrap-main-menu li .dhmm-child .menu-item a:hover:hover, #mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover a:hover, #mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover a:hover:hover, #mega-menu-wrap-main-menu li .dhmm-child.current-menu-item a:hover, #mega-menu-wrap-main-menu li .dhmm-child.current-menu-item a:hover:hover, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item a:hover, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item a:hover:hover, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover a:hover, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover a:hover:hover, .woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item a:hover, .woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item a:hover:hover, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item a:hover, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item a:hover:hover, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover a:hover, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover a:hover:hover, .woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item a:hover, .woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item a:hover:hover, .woocommerce-MyAccount-navigation li .sub-menu .menu-item a:hover, .woocommerce-MyAccount-navigation li .sub-menu .menu-item a:hover:hover, .woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover a:hover, .woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover a:hover:hover, .woocommerce-MyAccount-navigation li .sub-menu.current-menu-item a:hover, .woocommerce-MyAccount-navigation li .sub-menu.current-menu-item a:hover:hover, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item a:hover, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item a:hover:hover, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover a:hover, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover a:hover:hover, .woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item a:hover, .woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item a:hover:hover {
+#main-navigation .menu-item .sub-menu .menu-item a:hover,
+#main-navigation .menu-item .sub-menu .menu-item a:hover:hover,
+#main-navigation .menu-item .sub-menu .menu-item:hover a:hover,
+#main-navigation .menu-item .sub-menu .menu-item:hover a:hover:hover,
+#main-navigation .menu-item .sub-menu.current-menu-item a:hover,
+#main-navigation .menu-item .sub-menu.current-menu-item a:hover:hover,
+#main-navigation .menu-item .dhmm-child .menu-item a:hover,
+#main-navigation .menu-item .dhmm-child .menu-item a:hover:hover,
+#main-navigation .menu-item .dhmm-child .menu-item:hover a:hover,
+#main-navigation .menu-item .dhmm-child .menu-item:hover a:hover:hover,
+#main-navigation .menu-item .dhmm-child.current-menu-item a:hover,
+#main-navigation .menu-item .dhmm-child.current-menu-item a:hover:hover,
+#main-navigation li .sub-menu .menu-item a:hover,
+#main-navigation li .sub-menu .menu-item a:hover:hover,
+#main-navigation li .sub-menu .menu-item:hover a:hover,
+#main-navigation li .sub-menu .menu-item:hover a:hover:hover,
+#main-navigation li .sub-menu.current-menu-item a:hover,
+#main-navigation li .sub-menu.current-menu-item a:hover:hover,
+#main-navigation li .dhmm-child .menu-item a:hover,
+#main-navigation li .dhmm-child .menu-item a:hover:hover,
+#main-navigation li .dhmm-child .menu-item:hover a:hover,
+#main-navigation li .dhmm-child .menu-item:hover a:hover:hover,
+#main-navigation li .dhmm-child.current-menu-item a:hover,
+#main-navigation li .dhmm-child.current-menu-item a:hover:hover,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item a:hover,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item a:hover:hover,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover a:hover,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover a:hover:hover,
+#mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item a:hover,
+#mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item a:hover:hover,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item a:hover,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item a:hover:hover,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover a:hover,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover a:hover:hover,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item a:hover,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item a:hover:hover,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item a:hover,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item a:hover:hover,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item:hover a:hover,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item:hover a:hover:hover,
+#mega-menu-wrap-main-menu li .sub-menu.current-menu-item a:hover,
+#mega-menu-wrap-main-menu li .sub-menu.current-menu-item a:hover:hover,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item a:hover,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item a:hover:hover,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover a:hover,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover a:hover:hover,
+#mega-menu-wrap-main-menu li .dhmm-child.current-menu-item a:hover,
+#mega-menu-wrap-main-menu li .dhmm-child.current-menu-item a:hover:hover,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item a:hover,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item a:hover:hover,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover a:hover,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover a:hover:hover,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item a:hover,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item a:hover:hover,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item a:hover,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item a:hover:hover,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover a:hover,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover a:hover:hover,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item a:hover,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item a:hover:hover,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item a:hover,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item a:hover:hover,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover a:hover,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover a:hover:hover,
+.woocommerce-MyAccount-navigation li .sub-menu.current-menu-item a:hover,
+.woocommerce-MyAccount-navigation li .sub-menu.current-menu-item a:hover:hover,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item a:hover,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item a:hover:hover,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover a:hover,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover a:hover:hover,
+.woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item a:hover,
+.woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item a:hover:hover {
   border-color: #f07c29;
   color: #f07c29 !important;
 }
 
-#main-navigation .menu-item .sub-menu .menu-item:last-child a, #main-navigation .menu-item .sub-menu .menu-item:hover:last-child a, #main-navigation .menu-item .sub-menu.current-menu-item:last-child a, #main-navigation .menu-item .dhmm-child .menu-item:last-child a, #main-navigation .menu-item .dhmm-child .menu-item:hover:last-child a, #main-navigation .menu-item .dhmm-child.current-menu-item:last-child a, #main-navigation li .sub-menu .menu-item:last-child a, #main-navigation li .sub-menu .menu-item:hover:last-child a, #main-navigation li .sub-menu.current-menu-item:last-child a, #main-navigation li .dhmm-child .menu-item:last-child a, #main-navigation li .dhmm-child .menu-item:hover:last-child a, #main-navigation li .dhmm-child.current-menu-item:last-child a, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:last-child a, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover:last-child a, #mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item:last-child a, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:last-child a, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover:last-child a, #mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item:last-child a, #mega-menu-wrap-main-menu li .sub-menu .menu-item:last-child a, #mega-menu-wrap-main-menu li .sub-menu .menu-item:hover:last-child a, #mega-menu-wrap-main-menu li .sub-menu.current-menu-item:last-child a, #mega-menu-wrap-main-menu li .dhmm-child .menu-item:last-child a, #mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover:last-child a, #mega-menu-wrap-main-menu li .dhmm-child.current-menu-item:last-child a, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:last-child a, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover:last-child a, .woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item:last-child a, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:last-child a, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover:last-child a, .woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item:last-child a, .woocommerce-MyAccount-navigation li .sub-menu .menu-item:last-child a, .woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover:last-child a, .woocommerce-MyAccount-navigation li .sub-menu.current-menu-item:last-child a, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item:last-child a, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover:last-child a, .woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item:last-child a {
+#main-navigation .menu-item .sub-menu .menu-item:last-child a,
+#main-navigation .menu-item .sub-menu .menu-item:hover:last-child a,
+#main-navigation .menu-item .sub-menu.current-menu-item:last-child a,
+#main-navigation .menu-item .dhmm-child .menu-item:last-child a,
+#main-navigation .menu-item .dhmm-child .menu-item:hover:last-child a,
+#main-navigation .menu-item .dhmm-child.current-menu-item:last-child a,
+#main-navigation li .sub-menu .menu-item:last-child a,
+#main-navigation li .sub-menu .menu-item:hover:last-child a,
+#main-navigation li .sub-menu.current-menu-item:last-child a,
+#main-navigation li .dhmm-child .menu-item:last-child a,
+#main-navigation li .dhmm-child .menu-item:hover:last-child a,
+#main-navigation li .dhmm-child.current-menu-item:last-child a,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:last-child a,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover:last-child a,
+#mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item:last-child a,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:last-child a,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover:last-child a,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item:last-child a,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item:last-child a,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item:hover:last-child a,
+#mega-menu-wrap-main-menu li .sub-menu.current-menu-item:last-child a,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item:last-child a,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover:last-child a,
+#mega-menu-wrap-main-menu li .dhmm-child.current-menu-item:last-child a,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:last-child a,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover:last-child a,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item:last-child a,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:last-child a,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover:last-child a,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item:last-child a,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item:last-child a,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover:last-child a,
+.woocommerce-MyAccount-navigation li .sub-menu.current-menu-item:last-child a,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item:last-child a,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover:last-child a,
+.woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item:last-child a {
   border-bottom: none;
 }
 
-#main-navigation .menu-item .sub-menu .menu-item .sub-menu, #main-navigation .menu-item .sub-menu .menu-item:hover .sub-menu, #main-navigation .menu-item .sub-menu.current-menu-item .sub-menu, #main-navigation .menu-item .dhmm-child .menu-item .sub-menu, #main-navigation .menu-item .dhmm-child .menu-item:hover .sub-menu, #main-navigation .menu-item .dhmm-child.current-menu-item .sub-menu, #main-navigation li .sub-menu .menu-item .sub-menu, #main-navigation li .sub-menu .menu-item:hover .sub-menu, #main-navigation li .sub-menu.current-menu-item .sub-menu, #main-navigation li .dhmm-child .menu-item .sub-menu, #main-navigation li .dhmm-child .menu-item:hover .sub-menu, #main-navigation li .dhmm-child.current-menu-item .sub-menu, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item .sub-menu, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover .sub-menu, #mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item .sub-menu, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item .sub-menu, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover .sub-menu, #mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item .sub-menu, #mega-menu-wrap-main-menu li .sub-menu .menu-item .sub-menu, #mega-menu-wrap-main-menu li .sub-menu .menu-item:hover .sub-menu, #mega-menu-wrap-main-menu li .sub-menu.current-menu-item .sub-menu, #mega-menu-wrap-main-menu li .dhmm-child .menu-item .sub-menu, #mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover .sub-menu, #mega-menu-wrap-main-menu li .dhmm-child.current-menu-item .sub-menu, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item .sub-menu, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover .sub-menu, .woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item .sub-menu, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item .sub-menu, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover .sub-menu, .woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item .sub-menu, .woocommerce-MyAccount-navigation li .sub-menu .menu-item .sub-menu, .woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover .sub-menu, .woocommerce-MyAccount-navigation li .sub-menu.current-menu-item .sub-menu, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item .sub-menu, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover .sub-menu, .woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item .sub-menu {
+#main-navigation .menu-item .sub-menu .menu-item .sub-menu,
+#main-navigation .menu-item .sub-menu .menu-item:hover .sub-menu,
+#main-navigation .menu-item .sub-menu.current-menu-item .sub-menu,
+#main-navigation .menu-item .dhmm-child .menu-item .sub-menu,
+#main-navigation .menu-item .dhmm-child .menu-item:hover .sub-menu,
+#main-navigation .menu-item .dhmm-child.current-menu-item .sub-menu,
+#main-navigation li .sub-menu .menu-item .sub-menu,
+#main-navigation li .sub-menu .menu-item:hover .sub-menu,
+#main-navigation li .sub-menu.current-menu-item .sub-menu,
+#main-navigation li .dhmm-child .menu-item .sub-menu,
+#main-navigation li .dhmm-child .menu-item:hover .sub-menu,
+#main-navigation li .dhmm-child.current-menu-item .sub-menu,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item .sub-menu,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover .sub-menu,
+#mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item .sub-menu,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item .sub-menu,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover .sub-menu,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item .sub-menu,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item .sub-menu,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item:hover .sub-menu,
+#mega-menu-wrap-main-menu li .sub-menu.current-menu-item .sub-menu,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item .sub-menu,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover .sub-menu,
+#mega-menu-wrap-main-menu li .dhmm-child.current-menu-item .sub-menu,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item .sub-menu,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover .sub-menu,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item .sub-menu,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item .sub-menu,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover .sub-menu,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item .sub-menu,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item .sub-menu,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover .sub-menu,
+.woocommerce-MyAccount-navigation li .sub-menu.current-menu-item .sub-menu,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item .sub-menu,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover .sub-menu,
+.woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item .sub-menu {
   position: absolute;
   left: 170px;
   top: 0px;
@@ -2093,11 +2486,81 @@ a[title~="title-sub"].mega-menu-link:after {
   z-index: 999;
 }
 
-#main-navigation .menu-item .sub-menu .menu-item .sub-menu li a, #main-navigation .menu-item .sub-menu .menu-item:hover .sub-menu li a, #main-navigation .menu-item .sub-menu.current-menu-item .sub-menu li a, #main-navigation .menu-item .dhmm-child .menu-item .sub-menu li a, #main-navigation .menu-item .dhmm-child .menu-item:hover .sub-menu li a, #main-navigation .menu-item .dhmm-child.current-menu-item .sub-menu li a, #main-navigation li .sub-menu .menu-item .sub-menu li a, #main-navigation li .sub-menu .menu-item:hover .sub-menu li a, #main-navigation li .sub-menu.current-menu-item .sub-menu li a, #main-navigation li .dhmm-child .menu-item .sub-menu li a, #main-navigation li .dhmm-child .menu-item:hover .sub-menu li a, #main-navigation li .dhmm-child.current-menu-item .sub-menu li a, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item .sub-menu li a, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover .sub-menu li a, #mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item .sub-menu li a, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item .sub-menu li a, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover .sub-menu li a, #mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item .sub-menu li a, #mega-menu-wrap-main-menu li .sub-menu .menu-item .sub-menu li a, #mega-menu-wrap-main-menu li .sub-menu .menu-item:hover .sub-menu li a, #mega-menu-wrap-main-menu li .sub-menu.current-menu-item .sub-menu li a, #mega-menu-wrap-main-menu li .dhmm-child .menu-item .sub-menu li a, #mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover .sub-menu li a, #mega-menu-wrap-main-menu li .dhmm-child.current-menu-item .sub-menu li a, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item .sub-menu li a, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover .sub-menu li a, .woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item .sub-menu li a, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item .sub-menu li a, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover .sub-menu li a, .woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item .sub-menu li a, .woocommerce-MyAccount-navigation li .sub-menu .menu-item .sub-menu li a, .woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover .sub-menu li a, .woocommerce-MyAccount-navigation li .sub-menu.current-menu-item .sub-menu li a, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item .sub-menu li a, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover .sub-menu li a, .woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item .sub-menu li a {
+#main-navigation .menu-item .sub-menu .menu-item .sub-menu li a,
+#main-navigation .menu-item .sub-menu .menu-item:hover .sub-menu li a,
+#main-navigation .menu-item .sub-menu.current-menu-item .sub-menu li a,
+#main-navigation .menu-item .dhmm-child .menu-item .sub-menu li a,
+#main-navigation .menu-item .dhmm-child .menu-item:hover .sub-menu li a,
+#main-navigation .menu-item .dhmm-child.current-menu-item .sub-menu li a,
+#main-navigation li .sub-menu .menu-item .sub-menu li a,
+#main-navigation li .sub-menu .menu-item:hover .sub-menu li a,
+#main-navigation li .sub-menu.current-menu-item .sub-menu li a,
+#main-navigation li .dhmm-child .menu-item .sub-menu li a,
+#main-navigation li .dhmm-child .menu-item:hover .sub-menu li a,
+#main-navigation li .dhmm-child.current-menu-item .sub-menu li a,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item .sub-menu li a,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover .sub-menu li a,
+#mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item .sub-menu li a,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item .sub-menu li a,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover .sub-menu li a,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item .sub-menu li a,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item .sub-menu li a,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item:hover .sub-menu li a,
+#mega-menu-wrap-main-menu li .sub-menu.current-menu-item .sub-menu li a,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item .sub-menu li a,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover .sub-menu li a,
+#mega-menu-wrap-main-menu li .dhmm-child.current-menu-item .sub-menu li a,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item .sub-menu li a,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover .sub-menu li a,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item .sub-menu li a,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item .sub-menu li a,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover .sub-menu li a,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item .sub-menu li a,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item .sub-menu li a,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover .sub-menu li a,
+.woocommerce-MyAccount-navigation li .sub-menu.current-menu-item .sub-menu li a,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item .sub-menu li a,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover .sub-menu li a,
+.woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item .sub-menu li a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-#main-navigation .menu-item .sub-menu .menu-item .sub-menu li a:hover, #main-navigation .menu-item .sub-menu .menu-item:hover .sub-menu li a:hover, #main-navigation .menu-item .sub-menu.current-menu-item .sub-menu li a:hover, #main-navigation .menu-item .dhmm-child .menu-item .sub-menu li a:hover, #main-navigation .menu-item .dhmm-child .menu-item:hover .sub-menu li a:hover, #main-navigation .menu-item .dhmm-child.current-menu-item .sub-menu li a:hover, #main-navigation li .sub-menu .menu-item .sub-menu li a:hover, #main-navigation li .sub-menu .menu-item:hover .sub-menu li a:hover, #main-navigation li .sub-menu.current-menu-item .sub-menu li a:hover, #main-navigation li .dhmm-child .menu-item .sub-menu li a:hover, #main-navigation li .dhmm-child .menu-item:hover .sub-menu li a:hover, #main-navigation li .dhmm-child.current-menu-item .sub-menu li a:hover, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item .sub-menu li a:hover, #mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover .sub-menu li a:hover, #mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item .sub-menu li a:hover, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item .sub-menu li a:hover, #mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover .sub-menu li a:hover, #mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item .sub-menu li a:hover, #mega-menu-wrap-main-menu li .sub-menu .menu-item .sub-menu li a:hover, #mega-menu-wrap-main-menu li .sub-menu .menu-item:hover .sub-menu li a:hover, #mega-menu-wrap-main-menu li .sub-menu.current-menu-item .sub-menu li a:hover, #mega-menu-wrap-main-menu li .dhmm-child .menu-item .sub-menu li a:hover, #mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover .sub-menu li a:hover, #mega-menu-wrap-main-menu li .dhmm-child.current-menu-item .sub-menu li a:hover, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item .sub-menu li a:hover, .woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover .sub-menu li a:hover, .woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item .sub-menu li a:hover, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item .sub-menu li a:hover, .woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover .sub-menu li a:hover, .woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item .sub-menu li a:hover, .woocommerce-MyAccount-navigation li .sub-menu .menu-item .sub-menu li a:hover, .woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover .sub-menu li a:hover, .woocommerce-MyAccount-navigation li .sub-menu.current-menu-item .sub-menu li a:hover, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item .sub-menu li a:hover, .woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover .sub-menu li a:hover, .woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item .sub-menu li a:hover {
+#main-navigation .menu-item .sub-menu .menu-item .sub-menu li a:hover,
+#main-navigation .menu-item .sub-menu .menu-item:hover .sub-menu li a:hover,
+#main-navigation .menu-item .sub-menu.current-menu-item .sub-menu li a:hover,
+#main-navigation .menu-item .dhmm-child .menu-item .sub-menu li a:hover,
+#main-navigation .menu-item .dhmm-child .menu-item:hover .sub-menu li a:hover,
+#main-navigation .menu-item .dhmm-child.current-menu-item .sub-menu li a:hover,
+#main-navigation li .sub-menu .menu-item .sub-menu li a:hover,
+#main-navigation li .sub-menu .menu-item:hover .sub-menu li a:hover,
+#main-navigation li .sub-menu.current-menu-item .sub-menu li a:hover,
+#main-navigation li .dhmm-child .menu-item .sub-menu li a:hover,
+#main-navigation li .dhmm-child .menu-item:hover .sub-menu li a:hover,
+#main-navigation li .dhmm-child.current-menu-item .sub-menu li a:hover,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item .sub-menu li a:hover,
+#mega-menu-wrap-main-menu .menu-item .sub-menu .menu-item:hover .sub-menu li a:hover,
+#mega-menu-wrap-main-menu .menu-item .sub-menu.current-menu-item .sub-menu li a:hover,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item .sub-menu li a:hover,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child .menu-item:hover .sub-menu li a:hover,
+#mega-menu-wrap-main-menu .menu-item .dhmm-child.current-menu-item .sub-menu li a:hover,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item .sub-menu li a:hover,
+#mega-menu-wrap-main-menu li .sub-menu .menu-item:hover .sub-menu li a:hover,
+#mega-menu-wrap-main-menu li .sub-menu.current-menu-item .sub-menu li a:hover,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item .sub-menu li a:hover,
+#mega-menu-wrap-main-menu li .dhmm-child .menu-item:hover .sub-menu li a:hover,
+#mega-menu-wrap-main-menu li .dhmm-child.current-menu-item .sub-menu li a:hover,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item .sub-menu li a:hover,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu .menu-item:hover .sub-menu li a:hover,
+.woocommerce-MyAccount-navigation .menu-item .sub-menu.current-menu-item .sub-menu li a:hover,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item .sub-menu li a:hover,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child .menu-item:hover .sub-menu li a:hover,
+.woocommerce-MyAccount-navigation .menu-item .dhmm-child.current-menu-item .sub-menu li a:hover,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item .sub-menu li a:hover,
+.woocommerce-MyAccount-navigation li .sub-menu .menu-item:hover .sub-menu li a:hover,
+.woocommerce-MyAccount-navigation li .sub-menu.current-menu-item .sub-menu li a:hover,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item .sub-menu li a:hover,
+.woocommerce-MyAccount-navigation li .dhmm-child .menu-item:hover .sub-menu li a:hover,
+.woocommerce-MyAccount-navigation li .dhmm-child.current-menu-item .sub-menu li a:hover {
   border-color: #f07c29;
 }
 
@@ -2200,9 +2663,7 @@ a[title~="title-sub"].mega-menu-link:after {
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 }
@@ -2218,7 +2679,8 @@ a[title~="title-sub"].mega-menu-link:after {
   height: auto;
   margin-bottom: 40px;
   text-align: right;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-right: 40px;
 }
 
@@ -2241,16 +2703,15 @@ a[title~="title-sub"].mega-menu-link:after {
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 }
 
 .hot-author .author-info {
   float: left;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-right: 40px;
 }
 
@@ -2342,9 +2803,7 @@ a[title~="title-sub"].mega-menu-link:after {
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 }
@@ -2363,6 +2822,7 @@ a[title~="title-sub"].mega-menu-link:after {
   color: rgba(0, 0, 0, 0.7);
   text-align: center;
   line-height: 25px;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 }
@@ -2378,7 +2838,8 @@ a[title~="title-sub"].mega-menu-link:after {
 .hot-author .author-book {
   float: left;
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   list-style: none;
   padding-left: 30px;
   padding-top: 40px;
@@ -2394,7 +2855,8 @@ a[title~="title-sub"].mega-menu-link:after {
   float: left;
   width: 49%;
   min-height: 250px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -2408,9 +2870,7 @@ a[title~="title-sub"].mega-menu-link:after {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 100px;
 }
@@ -2439,7 +2899,8 @@ a[title~="title-sub"].mega-menu-link:after {
   margin-bottom: 40px;
 }
 
-.title-box.book-center, .book-contact.full-center .title-box:after {
+.title-box.book-center,
+.book-contact.full-center .title-box:after {
   text-align: center;
 }
 
@@ -2508,7 +2969,13 @@ section {
 /*
 	Class section for extend
  */
-.section, .book-hightlight-slider, .book-features, .best-seller, .book-blogs-section, .parthner-slider, .book-advertising {
+.section,
+.book-hightlight-slider,
+.book-features,
+.best-seller,
+.book-blogs-section,
+.parthner-slider,
+.book-advertising {
   float: left;
   width: 100%;
 }
@@ -2544,21 +3011,22 @@ section {
     margin-bottom: 40px;
     margin-top: 20px;
   }
+
   .bk-list li {
     position: relative;
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
   }
+
   .wpb_single_image .vc_single_image-wrapper {
     width: 100%;
     height: auto;
     margin-bottom: 20px;
   }
+
   .wpb_single_image img {
     width: 100%;
     height: auto;
@@ -2576,21 +3044,21 @@ section {
     text-align: center;
     width: 100%;
   }
+
   .book-today-hightlight .title-box:after {
     position: absolute;
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
     top: 15px;
   }
 }
 
 .book-today-hightlight .book-info {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 15px;
   margin-top: -30px;
 }
@@ -2655,7 +3123,8 @@ section {
 }
 
 .book-today-hightlight.big-hightlight .book-info {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 30px;
 }
 
@@ -2725,9 +3194,7 @@ section {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -2745,9 +3212,7 @@ section {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -2797,12 +3262,15 @@ section {
   position: relative;
 }
 
-.hightlight-slider-section .container .btn-prev, .hightlight-slider-section .container .btn-next {
+.hightlight-slider-section .container .btn-prev,
+.hightlight-slider-section .container .btn-next {
   top: 35%;
 }
 
 @media only screen and (max-width: 1025px) {
-  .hightlight-slider-section .container .btn-prev, .hightlight-slider-section .container .btn-next {
+
+  .hightlight-slider-section .container .btn-prev,
+  .hightlight-slider-section .container .btn-next {
     display: none;
   }
 }
@@ -2820,6 +3288,7 @@ section {
 .book-slider-hightlight .swiper-slide {
   height: auto;
   margin-top: 40px;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
@@ -2830,32 +3299,35 @@ section {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
 
 .book-slider-hightlight .swiper-slide .book-image {
   width: 160px;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
 
 .book-slider-hightlight .swiper-slide .book-image img {
   width: 160px;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
 
 .book-slider-hightlight .swiper-slide .book-info {
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
 
 .book-slider-hightlight .swiper-slide .book-info .book-name {
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
@@ -2865,10 +3337,9 @@ section {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
@@ -2877,36 +3348,46 @@ section {
   .book-slider-hightlight .swiper-slide.swiper-slide-active {
     width: 215px !important;
     margin-top: 0px;
+    -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
   }
-  .book-slider-hightlight .swiper-slide.swiper-slide-active .book-item, .book-slider-hightlight .swiper-slide.swiper-slide-active .book-actions, .book-slider-hightlight .swiper-slide.swiper-slide-active .book-image {
+
+  .book-slider-hightlight .swiper-slide.swiper-slide-active .book-item,
+  .book-slider-hightlight .swiper-slide.swiper-slide-active .book-actions,
+  .book-slider-hightlight .swiper-slide.swiper-slide-active .book-image {
     width: 215px;
   }
+
   .book-slider-hightlight .swiper-slide.swiper-slide-active .book-item {
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
+    -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
   }
+
   .book-slider-hightlight .swiper-slide.swiper-slide-active .book-image img {
     width: 215px;
+    -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
   }
+
   .book-slider-hightlight .swiper-slide.swiper-slide-active .book-info {
+    -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
   }
+
   .book-slider-hightlight .swiper-slide.swiper-slide-active .book-info .book-name {
     font-size: 3.07692em;
     line-height: 40px;
   }
+
   .book-slider-hightlight .swiper-slide.swiper-slide-active .book-info .book-author {
     opacity: 0.7;
   }
@@ -2921,9 +3402,7 @@ section {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   position: relative;
 }
@@ -2934,9 +3413,7 @@ section {
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 }
@@ -2947,9 +3424,7 @@ section {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   position: relative;
 }
@@ -2985,7 +3460,8 @@ section {
 }
 
 .book-promotion .promot-item {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-left: 15px;
   margin-right: 15px;
   width: 335px;
@@ -3003,9 +3479,7 @@ section {
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
 
@@ -3074,9 +3548,7 @@ section {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -3146,14 +3618,13 @@ section {
     text-align: center;
     width: 100%;
   }
+
   .book-features .title-box:after {
     position: absolute;
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
     top: 15px;
   }
@@ -3215,9 +3686,7 @@ section {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -3266,28 +3735,40 @@ span.onsale {
   }
 }
 
-.best-seller-section, .best-seller {
+.best-seller-section,
+.best-seller {
   max-height: 500px;
 }
 
 @media only screen and (min-width: 767px) {
-  .best-seller-section-option2, .best-seller.book-center, .book-contact.full-center .best-seller.title-box:after {
+
+  .best-seller-section-option2,
+  .best-seller.book-center,
+  .book-contact.full-center .best-seller.title-box:after {
     max-height: 500px;
   }
 }
 
-.best-seller-section-option2 .book-hot, .best-seller.book-center .book-hot, .book-contact.full-center .best-seller.title-box:after .book-hot {
+.best-seller-section-option2 .book-hot,
+.best-seller.book-center .book-hot,
+.book-contact.full-center .best-seller.title-box:after .book-hot {
   padding-left: 5px;
 }
 
 @media only screen and (max-width: 1025px) {
-  .best-seller-section-option2 .book-hot, .best-seller.book-center .book-hot, .book-contact.full-center .best-seller.title-box:after .book-hot {
+
+  .best-seller-section-option2 .book-hot,
+  .best-seller.book-center .book-hot,
+  .book-contact.full-center .best-seller.title-box:after .book-hot {
     padding-left: 25px;
   }
 }
 
 @media only screen and (max-width: 780px) {
-  .best-seller-section-option2 .book-hot, .best-seller.book-center .book-hot, .book-contact.full-center .best-seller.title-box:after .book-hot {
+
+  .best-seller-section-option2 .book-hot,
+  .best-seller.book-center .book-hot,
+  .book-contact.full-center .best-seller.title-box:after .book-hot {
     padding-left: 5px;
   }
 }
@@ -3318,18 +3799,18 @@ span.onsale {
   }
 }
 
-.best-seller.book-center .title-box, .book-contact.full-center .best-seller.title-box:after .title-box {
+.best-seller.book-center .title-box,
+.book-contact.full-center .best-seller.title-box:after .title-box {
   text-align: center;
   width: 100%;
 }
 
-.best-seller.book-center .title-box:after, .book-contact.full-center .best-seller.title-box:after .title-box:after {
+.best-seller.book-center .title-box:after,
+.book-contact.full-center .best-seller.title-box:after .title-box:after {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   position: relative;
 }
@@ -3340,7 +3821,8 @@ span.onsale {
 }
 
 .book-bestseller .book-info {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-right: 35px;
   text-align: right;
   position: relative;
@@ -3368,15 +3850,14 @@ span.onsale {
     text-align: center;
     margin-bottom: 10px;
   }
+
   .book-bestseller .book-info .title-box:after {
     position: absolute;
     top: 15px;
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 }
@@ -3456,7 +3937,8 @@ span.onsale {
 
 @media only screen and (max-width: 1025px) {
   .book-bestseller .book-description .book-description-content {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding-left: 15px;
     padding-right: 20px;
   }
@@ -3473,7 +3955,8 @@ span.onsale {
   font-family: "Merriweather", serif;
   font-weight: 300;
   color: rgba(0, 0, 0, 0.7);
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   line-height: 22px;
   letter-spacing: 0.1px;
   font-size: 1em;
@@ -3565,9 +4048,7 @@ span.onsale {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   font-family: "Times New Roman";
   font-size: 1.53846em;
@@ -3590,14 +4071,16 @@ span.onsale {
   }
 }
 
-.testimonial-half, .subcribe-half {
+.testimonial-half,
+.subcribe-half {
   background-size: cover;
   height: 400px;
   float: left;
   position: relative;
 }
 
-.testimonial-half .book-half-testimonial, .subcribe-half .book-half-testimonial {
+.testimonial-half .book-half-testimonial,
+.subcribe-half .book-half-testimonial {
   float: left;
   position: absolute;
   width: 560px;
@@ -3606,9 +4089,7 @@ span.onsale {
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   height: 200px;
   color: #fff;
@@ -3616,12 +4097,15 @@ span.onsale {
 }
 
 @media only screen and (max-width: 780px) {
-  .testimonial-half .book-half-testimonial, .subcribe-half .book-half-testimonial {
+
+  .testimonial-half .book-half-testimonial,
+  .subcribe-half .book-half-testimonial {
     width: 100%;
   }
 }
 
-.testimonial-half .book-half-testimonial .testi-message, .subcribe-half .book-half-testimonial .testi-message {
+.testimonial-half .book-half-testimonial .testi-message,
+.subcribe-half .book-half-testimonial .testi-message {
   font-family: "Times New Roman";
   font-size: 1.53846em;
   line-height: 25px;
@@ -3635,18 +4119,23 @@ span.onsale {
 }
 
 @media only screen and (max-width: 780px) {
-  .testimonial-half .book-half-testimonial .testi-message, .subcribe-half .book-half-testimonial .testi-message {
+
+  .testimonial-half .book-half-testimonial .testi-message,
+  .subcribe-half .book-half-testimonial .testi-message {
     font-size: 1.38462em;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .testimonial-half .book-half-testimonial .testi-message, .subcribe-half .book-half-testimonial .testi-message {
+
+  .testimonial-half .book-half-testimonial .testi-message,
+  .subcribe-half .book-half-testimonial .testi-message {
     font-size: 1.23077em;
   }
 }
 
-.testimonial-half .book-half-testimonial .testi-message:after, .subcribe-half .book-half-testimonial .testi-message:after {
+.testimonial-half .book-half-testimonial .testi-message:after,
+.subcribe-half .book-half-testimonial .testi-message:after {
   content: "";
   height: 2px;
   position: absolute;
@@ -3654,15 +4143,14 @@ span.onsale {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 60px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-.testimonial-half .book-half-testimonial .testi-author ul, .subcribe-half .book-half-testimonial .testi-author ul {
+.testimonial-half .book-half-testimonial .testi-author ul,
+.subcribe-half .book-half-testimonial .testi-author ul {
   margin-top: 25px;
   list-style: none;
   padding-left: 0px;
@@ -3672,44 +4160,49 @@ span.onsale {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
-.testimonial-half .book-half-testimonial .testi-author ul li, .subcribe-half .book-half-testimonial .testi-author ul li {
+.testimonial-half .book-half-testimonial .testi-author ul li,
+.subcribe-half .book-half-testimonial .testi-author ul li {
   float: left;
   font-family: "Lato", sans-serif;
 }
 
-.testimonial-half .book-half-testimonial .testi-author ul li:after, .subcribe-half .book-half-testimonial .testi-author ul li:after {
+.testimonial-half .book-half-testimonial .testi-author ul li:after,
+.subcribe-half .book-half-testimonial .testi-author ul li:after {
   content: "/";
   margin-left: 10px;
   margin-right: 10px;
   color: rgba(255, 255, 255, 0.3);
 }
 
-.testimonial-half .book-half-testimonial .testi-author ul li:first-child, .subcribe-half .book-half-testimonial .testi-author ul li:first-child {
+.testimonial-half .book-half-testimonial .testi-author ul li:first-child,
+.subcribe-half .book-half-testimonial .testi-author ul li:first-child {
   font-size: 1.07692em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7);
 }
 
-.testimonial-half .book-half-testimonial .testi-author ul li:last-child, .subcribe-half .book-half-testimonial .testi-author ul li:last-child {
+.testimonial-half .book-half-testimonial .testi-author ul li:last-child,
+.subcribe-half .book-half-testimonial .testi-author ul li:last-child {
   color: rgba(255, 255, 255, 0.3);
   font-style: italic;
 }
 
-.testimonial-half .book-half-testimonial .testi-author ul li:last-child:after, .subcribe-half .book-half-testimonial .testi-author ul li:last-child:after {
+.testimonial-half .book-half-testimonial .testi-author ul li:last-child:after,
+.subcribe-half .book-half-testimonial .testi-author ul li:last-child:after {
   display: none;
 }
 
-.testimonial-half .btn-prev, .subcribe-half .btn-prev {
+.testimonial-half .btn-prev,
+.subcribe-half .btn-prev {
   left: 10%;
 }
 
-.testimonial-half .btn-next, .subcribe-half .btn-next {
+.testimonial-half .btn-next,
+.subcribe-half .btn-next {
   right: 10%;
 }
 
@@ -3731,9 +4224,7 @@ span.onsale {
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   text-align: center;
 }
@@ -3802,6 +4293,7 @@ span.onsale {
   .list-blog .blog-item {
     width: 23%;
     margin-right: 2.6%;
+    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
   }
@@ -3825,7 +4317,6 @@ span.onsale {
   height: auto;
   position: relative;
   -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -3838,10 +4329,8 @@ span.onsale {
 
 .list-blog .blog-item:hover img {
   -webkit-box-shadow: 10px 8px 14px -5px rgba(105, 104, 104, 0.75);
-  -moz-box-shadow: 10px 8px 14px -5px rgba(105, 104, 104, 0.75);
   box-shadow: 10px 8px 14px -5px rgba(105, 104, 104, 0.75);
   -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -3851,7 +4340,8 @@ span.onsale {
 }
 
 .list-blog .blog-item .title-blog {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   float: left;
   width: 100%;
   margin-top: 15px;
@@ -3871,7 +4361,8 @@ span.onsale {
 }
 
 .list-blog .blog-item .blog-timeup {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   float: left;
   width: 100%;
   font-family: "Merriweather", serif;
@@ -3998,9 +4489,7 @@ span.onsale {
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
     margin-top: 40px;
     margin-bottom: 40px;
@@ -4061,9 +4550,7 @@ span.onsale {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   font-family: "Merriweather", serif;
   font-size: 1.38462em;
@@ -4089,9 +4576,7 @@ span.onsale {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   padding-left: 0px;
   margin-left: -1px;
@@ -4103,7 +4588,8 @@ span.onsale {
   float: left;
   width: 25%;
   height: 200px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: none;
   overflow: hidden !important;
 }
@@ -4129,6 +4615,7 @@ span.onsale {
 
 .cat-list-random .cat-items .category-image img {
   opacity: 0.3;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 }
@@ -4140,9 +4627,7 @@ span.onsale {
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   min-width: 100%;
   min-height: 200px;
@@ -4218,9 +4703,7 @@ span.onsale {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   text-align: center;
   z-index: 99;
@@ -4247,6 +4730,7 @@ span.onsale {
 
 .cat-list-random .cat-items a.view-more {
   background: #ede8de;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 }
@@ -4309,9 +4793,7 @@ Author book style
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -4324,7 +4806,8 @@ Author book style
 .book-subcribe-form.search-on-menu {
   width: 422px;
   height: 55px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media only screen and (max-width: 767px) {
@@ -4377,9 +4860,7 @@ Author book style
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -4463,9 +4944,11 @@ List service list icon and short desc
 
 .service-item {
   text-align: center;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 15px;
   padding-right: 15px;
   text-align: center;
@@ -4484,9 +4967,7 @@ List service list icon and short desc
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   margin-bottom: 15px;
   float: left;
@@ -4503,14 +4984,13 @@ List service list icon and short desc
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   color: rgba(0, 0, 0, 0.4);
 }
 
-.service-item:hover .service-title, .service-item:hover i {
+.service-item:hover .service-title,
+.service-item:hover i {
   color: #f07c29;
 }
 
@@ -4533,9 +5013,7 @@ List service list icon and short desc
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   bottom: -10px;
 }
@@ -4686,7 +5164,6 @@ List service list icon and short desc
   position: relative;
   overflow: hidden;
   -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -4699,7 +5176,6 @@ List service list icon and short desc
 
 .left-full .list-full-categories .items-category.stick-cat {
   -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   height: 65px;
@@ -4710,7 +5186,6 @@ List service list icon and short desc
 .left-full .list-full-categories .items-category.stick-cat:hover img {
   opacity: 1;
   -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -4723,7 +5198,6 @@ List service list icon and short desc
 .left-full .list-full-categories .items-category.stick-cat img {
   opacity: 0;
   -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -4733,6 +5207,7 @@ List service list icon and short desc
 }
 
 .left-full .list-full-categories .items-category img {
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   position: absolute;
@@ -4741,9 +5216,7 @@ List service list icon and short desc
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   min-width: 100%;
   min-height: 130px;
@@ -4774,9 +5247,7 @@ List service list icon and short desc
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
 
@@ -4800,17 +5271,20 @@ List service list icon and short desc
 }
 
 .middle-full {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .right-full {
   background: rgba(244, 243, 241, 0.7);
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-top: 85px;
 }
 
 .right-full .title-box {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
 }
 
@@ -4826,7 +5300,8 @@ List service list icon and short desc
 .content-widget {
   float: left;
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-bottom: 50px;
 }
 
@@ -5115,7 +5590,8 @@ List service list icon and short desc
 .sidebar-widget {
   float: left;
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-bottom: 50px;
 }
 
@@ -5189,7 +5665,8 @@ List service list icon and short desc
   color: #f07c29;
 }
 
-.sidebar-widget .list-best-seller li:hover .b-name, .sidebar-widget .list-best-seller li:hover .b-price {
+.sidebar-widget .list-best-seller li:hover .b-name,
+.sidebar-widget .list-best-seller li:hover .b-price {
   color: #f07c29 !important;
 }
 
@@ -5307,7 +5784,8 @@ List service list icon and short desc
 .list-full {
   float: left;
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 60px;
   padding-right: 60px;
 }
@@ -5409,7 +5887,8 @@ List service list icon and short desc
   }
 }
 
-.book-full-mothly-with-scroll .swiper-slide .item-month-slide .book-item, .book-full-mothly-with-scroll .swiper-slide .item-month-slide .book-info {
+.book-full-mothly-with-scroll .swiper-slide .item-month-slide .book-item,
+.book-full-mothly-with-scroll .swiper-slide .item-month-slide .book-info {
   float: left;
 }
 
@@ -5458,6 +5937,7 @@ List service bottom
   padding-left: 8%;
   float: left;
   cursor: pointer;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
@@ -5467,14 +5947,13 @@ List service bottom
   color: rgba(255, 255, 255, 0.2);
 }
 
-.service-fitem i, .service-fitem span {
+.service-fitem i,
+.service-fitem span {
   position: relative;
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   float: left;
 }
@@ -5493,7 +5972,8 @@ List service bottom
   }
 }
 
-.service-fitem:hover i, .service-fitem:hover span {
+.service-fitem:hover i,
+.service-fitem:hover span {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
@@ -5588,6 +6068,7 @@ List service bottom
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
@@ -5613,7 +6094,8 @@ List service bottom
 }
 
 .blog-items .news-description {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .blog-items .news-description .news-title {
@@ -5663,10 +6145,13 @@ List service bottom
 }
 
 .page-blogs-list .blog-items .news-description {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.page-blogs-list .blog-items .news-description .news-title, .page-blogs-list .blog-items .news-description .news-dateup, .page-blogs-list .blog-items .news-description .short-desc {
+.page-blogs-list .blog-items .news-description .news-title,
+.page-blogs-list .blog-items .news-description .news-dateup,
+.page-blogs-list .blog-items .news-description .short-desc {
   width: 80%;
 }
 
@@ -5697,12 +6182,15 @@ List service bottom
   padding-right: 35px;
 }
 
-.page-blogs-list .blog-items:nth-child(even) .news-description .news-title, .page-blogs-list .blog-items:nth-child(even) .news-description .news-dateup, .page-blogs-list .blog-items:nth-child(even) .news-description .short-desc {
+.page-blogs-list .blog-items:nth-child(even) .news-description .news-title,
+.page-blogs-list .blog-items:nth-child(even) .news-description .news-dateup,
+.page-blogs-list .blog-items:nth-child(even) .news-description .short-desc {
   float: right;
 }
 
 .page-blogs-grid {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   float: left;
 }
@@ -5731,7 +6219,8 @@ List service bottom
   padding-bottom: 30px;
   margin-top: 30px;
   position: relative;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .page-blogs-grid.grid-2columns .blog-items img {
@@ -5743,6 +6232,7 @@ List service bottom
   .page-blogs-grid.grid-2columns .blog-items.item-even {
     padding-right: 15px;
   }
+
   .page-blogs-grid.grid-2columns .blog-items.item-odd {
     padding-left: 15px;
   }
@@ -5920,7 +6410,8 @@ List service bottom
 
 .page-blogs-grid.blogs-classic-colums .blog-items .news-description {
   float: left;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-right: 25px;
   padding-left: 10px;
 }
@@ -5932,7 +6423,8 @@ List service bottom
 
 .right-sidebar {
   float: right;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-top: 25px;
 }
 
@@ -5976,7 +6468,8 @@ List service bottom
 
 .right-sidebar .sidebar-widget .title-sidebar-widget {
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media only screen and (min-width: 767px) {
@@ -5987,7 +6480,8 @@ List service bottom
 
 .right-sidebar .sidebar-widget .sidebar-content-widget {
   float: left;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media only screen and (min-width: 767px) {
@@ -6219,14 +6713,17 @@ List service bottom
   }
 }
 
-.section-blog-detail .blogs-detail .news-content img, .section-blog-detail .blogs-detail .news-content div {
+.section-blog-detail .blogs-detail .news-content img,
+.section-blog-detail .blogs-detail .news-content div {
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 767px) {
-  .section-blog-detail .blogs-detail .news-content img, .section-blog-detail .blogs-detail .news-content div {
+
+  .section-blog-detail .blogs-detail .news-content img,
+  .section-blog-detail .blogs-detail .news-content div {
     position: relative;
   }
 }
@@ -6262,9 +6759,7 @@ List service bottom
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 20px;
 }
@@ -6336,9 +6831,7 @@ List service bottom
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   min-width: 100%;
   min-height: 400px;
@@ -6380,9 +6873,7 @@ List service bottom
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
 
@@ -6406,7 +6897,8 @@ List service bottom
 }
 
 .book-about-author .about-post-author {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .book-about-author .about-post-author span {
@@ -6486,7 +6978,8 @@ List service bottom
 }
 
 .comment-list .comment .comment-body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 30px;
   font-family: "Merriweather", serif;
   color: rgba(0, 0, 0, 0.9);
@@ -6518,7 +7011,8 @@ List service bottom
 }
 
 .comment-list .sub-comment {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 30px;
 }
 
@@ -6539,12 +7033,15 @@ List service bottom
   border: none;
 }
 
-.imgleft, .imgright {
+.imgleft,
+.imgright {
   width: 330px;
 }
 
 @media only screen and (max-width: 1025px) {
-  .imgleft, .imgright {
+
+  .imgleft,
+  .imgright {
     width: 310px;
   }
 }
@@ -6554,9 +7051,7 @@ List service bottom
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   position: fixed;
   left: 20px;
@@ -6607,7 +7102,8 @@ List service bottom
   cursor: pointer;
 }
 
-.fillter-alphabeta ul li:hover a, .fillter-alphabeta ul li.active a {
+.fillter-alphabeta ul li:hover a,
+.fillter-alphabeta ul li.active a {
   color: #f07c29;
 }
 
@@ -6672,6 +7168,7 @@ List service bottom
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   z-index: -1;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   text-align: center;
@@ -6708,9 +7205,7 @@ List service bottom
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   top: 35%;
   font-size: 11.53846em;
@@ -6840,6 +7335,7 @@ List service bottom
 .list-name-author .list-author-name.author-list-avatar {
   float: left;
   width: 100%;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
@@ -6855,6 +7351,8 @@ List service bottom
   margin-right: 29px;
   margin-bottom: 10px;
   width: 120px;
+  -webkit-transition: height 350ms ease;
+  -o-transition: height 350ms ease;
   transition: height 350ms ease;
 }
 
@@ -6887,7 +7385,8 @@ List service bottom
 
 .list-name-author .list-author-name.author-list-avatar .author-item.expand {
   height: 870px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .list-name-author .list-author-name.author-list-avatar .author-item.expand:before {
@@ -6904,6 +7403,8 @@ List service bottom
 
 .list-name-author .list-author-name.author-list-avatar .author-item.expand .detail-author {
   position: absolute;
+  -webkit-transition: height 350ms ease;
+  -o-transition: height 350ms ease;
   transition: height 350ms ease;
   margin-top: 40px;
   width: 100%;
@@ -6923,9 +7424,7 @@ List service bottom
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   top: 35%;
   font-size: 11.53846em;
@@ -6942,7 +7441,9 @@ List service bottom
   color: #999;
 }
 
-.list-name-author .list-author-name.author-list-avatar .author-item.expand .on-close:before, .list-name-author .list-author-name.author-list-avatar .author-item.expand .on-close:after {
+.list-name-author .list-author-name.author-list-avatar .author-item.expand .on-close:before,
+.list-name-author .list-author-name.author-list-avatar .author-item.expand .on-close:after {
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   content: '';
@@ -6952,17 +7453,18 @@ List service bottom
   height: 1px;
   background: #888;
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
 }
 
 .list-name-author .list-author-name.author-list-avatar .author-item.expand .on-close:after {
   -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
 }
 
-.list-name-author .list-author-name.author-list-avatar .author-item.expand .on-close:hover:before, .list-name-author .list-author-name.author-list-avatar .author-item.expand .on-close:hover:after {
+.list-name-author .list-author-name.author-list-avatar .author-item.expand .on-close:hover:before,
+.list-name-author .list-author-name.author-list-avatar .author-item.expand .on-close:hover:after {
   background: #fff;
 }
 
@@ -6982,14 +7484,13 @@ List service bottom
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   font-size: 3.07692em;
   font-weight: 300;
   color: #000;
   opacity: 0.3;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
@@ -7030,11 +7531,10 @@ List service bottom
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   top: 30%;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   border-radius: 50px;
@@ -7116,7 +7616,8 @@ List service bottom
   margin-top: 70px;
 }
 
-.book-contact .book-form-contact .book-contact-form, .book-contact .book-form-contact .wpcf7-form {
+.book-contact .book-form-contact .book-contact-form,
+.book-contact .book-form-contact .wpcf7-form {
   float: left;
   width: 100%;
   height: auto;
@@ -7124,55 +7625,85 @@ List service bottom
   margin-bottom: 120px;
 }
 
-.book-contact .book-form-contact .wpcf7-form label, .book-contact .book-form-contact .wpcf7-form label span{
+.book-contact .book-form-contact .wpcf7-form label,
+.book-contact .book-form-contact .wpcf7-form label span {
   display: block;
 }
 
-.book-contact .book-form-contact .book-contact-form .txt-contact, .book-contact .book-form-contact .book-contact-form .txt-message, .book-contact .book-form-contact input[type="text"], .book-contact .book-form-contact input[type="email"], .book-contact .book-form-contact textarea {
+.book-contact .book-form-contact .book-contact-form .txt-contact,
+.book-contact .book-form-contact .book-contact-form .txt-message,
+.book-contact .book-form-contact input[type="text"],
+.book-contact .book-form-contact input[type="email"],
+.book-contact .book-form-contact textarea {
   margin-bottom: 20px;
   border: none;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   float: left;
   width: 100%;
   resize: none;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 15px;
   font-family: "Merriweather", serif;
   padding-bottom: 10px;
   font-size: 0.92308em;
 }
 
-.book-contact .book-form-contact .book-contact-form .txt-contact::-webkit-input-placeholder, .book-contact .book-form-contact .book-contact-form .txt-message::-webkit-input-placeholder, .book-contact .book-form-contact .book-contact-form input[type="text"]::-webkit-input-placeholder, .book-contact .book-form-contact .book-contact-form input[type="email"]::-webkit-input-placeholder, .book-contact .book-form-contact .book-contact-form textarea::-webkit-input-placeholder {
+.book-contact .book-form-contact .book-contact-form .txt-contact::-webkit-input-placeholder,
+.book-contact .book-form-contact .book-contact-form .txt-message::-webkit-input-placeholder,
+.book-contact .book-form-contact .book-contact-form input[type="text"]::-webkit-input-placeholder,
+.book-contact .book-form-contact .book-contact-form input[type="email"]::-webkit-input-placeholder,
+.book-contact .book-form-contact .book-contact-form textarea::-webkit-input-placeholder {
   font-style: italic;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.book-contact .book-form-contact .book-contact-form .txt-contact::-moz-placeholder, .book-contact .book-form-contact .book-contact-form .txt-message::-moz-placeholder, .book-contact .book-form-contact .book-contact-form input[type="text"]::-moz-placeholder, .book-contact .book-form-contact .book-contact-form input[type="email"]::-moz-placeholder, .book-contact .book-form-contact .book-contact-form textarea::-moz-placeholder {
+.book-contact .book-form-contact .book-contact-form .txt-contact::-moz-placeholder,
+.book-contact .book-form-contact .book-contact-form .txt-message::-moz-placeholder,
+.book-contact .book-form-contact .book-contact-form input[type="text"]::-moz-placeholder,
+.book-contact .book-form-contact .book-contact-form input[type="email"]::-moz-placeholder,
+.book-contact .book-form-contact .book-contact-form textarea::-moz-placeholder {
   font-style: italic;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.book-contact .book-form-contact .book-contact-form .txt-contact:-moz-placeholder, .book-contact .book-form-contact .book-contact-form .txt-message:-moz-placeholder, .book-contact .book-form-contact .book-contact-form [type="text"]:-moz-placeholder, .book-contact .book-form-contact .book-contact-form [type="email"]:-moz-placeholder, .book-contact .book-form-contact .book-contact-form textarea:-moz-placeholder {
+.book-contact .book-form-contact .book-contact-form .txt-contact:-moz-placeholder,
+.book-contact .book-form-contact .book-contact-form .txt-message:-moz-placeholder,
+.book-contact .book-form-contact .book-contact-form [type="text"]:-moz-placeholder,
+.book-contact .book-form-contact .book-contact-form [type="email"]:-moz-placeholder,
+.book-contact .book-form-contact .book-contact-form textarea:-moz-placeholder {
   font-style: italic;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.book-contact .book-form-contact .book-contact-form .txt-contact:-ms-input-placeholder, .book-contact .book-form-contact .book-contact-form .txt-message:-ms-input-placeholder, .book-contact .book-form-contact .book-contact-form [type="text"]:-ms-input-placeholder, .book-contact .book-form-contact .book-contact-form [type="email"]:-ms-input-placeholder, .book-contact .book-form-contact .book-contact-form textarea:-ms-input-placeholder {
+.book-contact .book-form-contact .book-contact-form .txt-contact:-ms-input-placeholder,
+.book-contact .book-form-contact .book-contact-form .txt-message:-ms-input-placeholder,
+.book-contact .book-form-contact .book-contact-form [type="text"]:-ms-input-placeholder,
+.book-contact .book-form-contact .book-contact-form [type="email"]:-ms-input-placeholder,
+.book-contact .book-form-contact .book-contact-form textarea:-ms-input-placeholder {
   font-style: italic;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.book-contact .book-form-contact .book-contact-form .txt-contact:focus, .book-contact .book-form-contact .book-contact-form .txt-message:focus, .book-contact .book-form-contact .book-contact-form [type="text"]:focus, .book-contact .book-form-contact .book-contact-form [type="email"]:focus, .book-contact .book-form-contact .book-contact-form textarea:focus {
+.book-contact .book-form-contact .book-contact-form .txt-contact:focus,
+.book-contact .book-form-contact .book-contact-form .txt-message:focus,
+.book-contact .book-form-contact .book-contact-form [type="text"]:focus,
+.book-contact .book-form-contact .book-contact-form [type="email"]:focus,
+.book-contact .book-form-contact .book-contact-form textarea:focus {
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-.book-contact .book-form-contact button, .book-contact .book-form-contact input[type="button"], .book-contact .book-form-contact input[type="submit"] {
+.book-contact .book-form-contact button,
+.book-contact .book-form-contact input[type="button"],
+.book-contact .book-form-contact input[type="submit"] {
   float: right;
   border-color: rgba(240, 124, 41, 0.9);
   color: #f07c29;
 }
 
-.book-contact .book-form-contact button:hover, .book-contact .book-form-contact input[type="button"]:hover, .book-contact .book-form-contact input[type="submit"]:hover {
+.book-contact .book-form-contact button:hover,
+.book-contact .book-form-contact input[type="button"]:hover,
+.book-contact .book-form-contact input[type="submit"]:hover {
   background: #f07c29;
   border-color: #f07c29;
   color: #fff;
@@ -7222,11 +7753,10 @@ List service bottom
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   top: 30%;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   border-radius: 50px;
@@ -7340,12 +7870,14 @@ List service bottom
 
 .book-comment-form .comment-form li {
   float: left;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-bottom: 30px;
   list-style: none;
 }
 
-.book-comment-form .comment-form li input[type="text"], .book-comment-form .comment-form li textarea {
+.book-comment-form .comment-form li input[type="text"],
+.book-comment-form .comment-form li textarea {
   border: none;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   float: left;
@@ -7355,7 +7887,8 @@ List service bottom
   max-height: 45px;
 }
 
-.book-comment-form .comment-form li input[type="text"]::-webkit-input-placeholder, .book-comment-form .comment-form li textarea::-webkit-input-placeholder {
+.book-comment-form .comment-form li input[type="text"]::-webkit-input-placeholder,
+.book-comment-form .comment-form li textarea::-webkit-input-placeholder {
   font-family: "Merriweather", serif;
   font-style: italic;
   font-size: 0.92308em;
@@ -7363,7 +7896,8 @@ List service bottom
   font-weight: 300;
 }
 
-.book-comment-form .comment-form li input[type="text"]::-moz-placeholder, .book-comment-form .comment-form li textarea::-moz-placeholder {
+.book-comment-form .comment-form li input[type="text"]::-moz-placeholder,
+.book-comment-form .comment-form li textarea::-moz-placeholder {
   font-family: "Merriweather", serif;
   font-style: italic;
   font-size: 0.92308em;
@@ -7371,7 +7905,8 @@ List service bottom
   font-weight: 300;
 }
 
-.book-comment-form .comment-form li input[type="text"]:-moz-placeholder, .book-comment-form .comment-form li textarea:-moz-placeholder {
+.book-comment-form .comment-form li input[type="text"]:-moz-placeholder,
+.book-comment-form .comment-form li textarea:-moz-placeholder {
   font-family: "Merriweather", serif;
   font-style: italic;
   font-size: 0.92308em;
@@ -7379,7 +7914,8 @@ List service bottom
   font-weight: 300;
 }
 
-.book-comment-form .comment-form li input[type="text"]:-ms-input-placeholder, .book-comment-form .comment-form li textarea:-ms-input-placeholder {
+.book-comment-form .comment-form li input[type="text"]:-ms-input-placeholder,
+.book-comment-form .comment-form li textarea:-ms-input-placeholder {
   font-family: "Merriweather", serif;
   font-style: italic;
   font-size: 0.92308em;
@@ -7426,9 +7962,7 @@ List service bottom
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 }
@@ -7507,9 +8041,7 @@ List service bottom
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -7533,9 +8065,7 @@ List service bottom
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -7579,9 +8109,7 @@ List service bottom
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   float: right;
   width: auto;
@@ -7653,7 +8181,8 @@ List service bottom
 }
 
 .member-list .member-item {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-left: 15px;
   margin-right: 15px;
   width: 244px;
@@ -7753,13 +8282,10 @@ List service bottom
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   opacity: 0.5;
   -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -7767,7 +8293,6 @@ List service bottom
 .parthner-slider .swiper-wrapper a img:hover {
   opacity: 1;
   -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -7790,8 +8315,11 @@ List service bottom
   position: relative;
   -webkit-transition: height 2s ease-out;
   /* Safari */
+  -o-transition: height 2s ease-out;
   transition: height 2s ease-out;
-  transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 
 .page-404 .markup-404 {
@@ -7808,9 +8336,7 @@ List service bottom
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   text-align: center;
   color: #fff;
@@ -7835,9 +8361,7 @@ List service bottom
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 580px;
   padding: 12px 20px 12px 20px;
@@ -7917,9 +8441,7 @@ List service bottom
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   position: absolute;
 }
@@ -7940,6 +8462,7 @@ List service bottom
   margin-right: 22px;
   background: #666;
   overflow: hidden;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 }
@@ -7958,11 +8481,10 @@ List service bottom
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   opacity: 0.3;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
@@ -7988,9 +8510,7 @@ List service bottom
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   float: left;
   width: 100%;
@@ -8026,7 +8546,8 @@ List service bottom
  */
 @media only screen and (max-width: 1025px) {
   .woocommerce-shipping-fields {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding-left: 15px;
     width: 95%;
   }
@@ -8059,7 +8580,8 @@ List service bottom
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-left: 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 30px;
   font-family: "Merriweather", serif;
   width: 100%;
@@ -8075,7 +8597,8 @@ List service bottom
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-left: 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 30px;
   font-family: "Merriweather", serif;
   width: 100%;
@@ -8089,7 +8612,8 @@ List service bottom
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-left: 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 30px;
   font-family: "Merriweather", serif;
   width: 100%;
@@ -8103,7 +8627,8 @@ List service bottom
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-left: 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 30px;
   font-family: "Merriweather", serif;
   width: 100%;
@@ -8139,7 +8664,8 @@ List service bottom
 }
 
 .shopping-cart .main-cart {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .shopping-cart #payment {
@@ -8300,7 +8826,8 @@ List service bottom
   width: 70%;
 }
 
-.shopping-cart .shop_table tbody .product-info-name a, .shopping-cart .shop_table tbody .product-info-name span {
+.shopping-cart .shop_table tbody .product-info-name a,
+.shopping-cart .shop_table tbody .product-info-name span {
   float: left;
   width: 100%;
 }
@@ -8382,14 +8909,16 @@ List service bottom
   }
 }
 
-.shopping-cart .shop_table tbody tr td.product-price, .shopping-cart .shop_table tbody tr td.product-subtotal {
+.shopping-cart .shop_table tbody tr td.product-price,
+.shopping-cart .shop_table tbody tr td.product-subtotal {
   font-family: "Merriweather", serif;
   font-size: 1.07692em;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.7);
 }
 
-.shopping-cart .shop_table tbody tr td.product-price .remove_from_wishlist, .shopping-cart .shop_table tbody tr td.product-subtotal .remove_from_wishlist {
+.shopping-cart .shop_table tbody tr td.product-price .remove_from_wishlist,
+.shopping-cart .shop_table tbody tr td.product-subtotal .remove_from_wishlist {
   color: rgba(0, 0, 0, 0.4) !important;
   font-size: 0.8em;
   font-weight: 300;
@@ -8397,7 +8926,8 @@ List service bottom
   padding: 10px 0;
 }
 
-.shopping-cart .shop_table tbody tr td.product-price .remove_from_wishlist:hover, .shopping-cart .shop_table tbody tr td.product-subtotal .remove_from_wishlist:hover {
+.shopping-cart .shop_table tbody tr td.product-price .remove_from_wishlist:hover,
+.shopping-cart .shop_table tbody tr td.product-subtotal .remove_from_wishlist:hover {
   background: none;
   color: #f07c29;
 }
@@ -8524,23 +9054,30 @@ List service bottom
 }
 
 @media only screen and (max-width: 767px) {
-  .login-page h2, .col-2 h2 {
+
+  .login-page h2,
+  .col-2 h2 {
     padding-left: 15px;
     padding-right: 15px;
   }
-  .login-page form, .col-2 form {
+
+  .login-page form,
+  .col-2 form {
     border: none !important;
   }
+
   .wishlist_table thead {
     display: none !important;
   }
+
   .wishlist_table td {
     width: 100% !important;
   }
 }
 
 .info-cart {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .info-cart .title-box-cart {
@@ -8588,7 +9125,8 @@ List service bottom
 }
 
 .info-cart .box-info-cart.cart-type-2 table tr td {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Lato", sans-serif;
   font-size: 0.92308em;
 }
@@ -8685,7 +9223,8 @@ List service bottom
   float: right;
   background: #f1f1f1;
   margin-top: 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 20px;
 }
 
@@ -8716,7 +9255,8 @@ List service bottom
   float: left;
   width: 100%;
   border: 2px solid rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 3px 10px 3px 10px;
   border-radius: 150px;
 }
@@ -8796,9 +9336,7 @@ List service bottom
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -8841,9 +9379,7 @@ List service bottom
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -8853,9 +9389,7 @@ List service bottom
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -8887,7 +9421,8 @@ List service bottom
 }
 
 .about-book-landing .book-item-intro .book-info-show {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 40px;
   color: #fff;
 }
@@ -8947,9 +9482,7 @@ List service bottom
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   font-size: 4.61538em;
   font-family: "Times New Roman";
@@ -8974,16 +9507,15 @@ List service bottom
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
 .landing-author-instagram .list-image-instagram .insta-image {
   float: left;
   width: 16.666%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: 1px solid #fff;
   height: auto;
   overflow: hidden;
@@ -8996,6 +9528,7 @@ List service bottom
 .landing-author-instagram .list-image-instagram .insta-image img {
   opacity: 0.4;
   width: 100%;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   min-height: 100%;
@@ -9024,7 +9557,8 @@ List service bottom
 .landing-book-blog .landing-list-news li {
   float: left;
   width: 50%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .landing-book-blog .landing-list-news li:hover a {
@@ -9092,7 +9626,8 @@ List service bottom
 }
 
 .story-about-book .book-story-list .row div {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .story-about-book .book-story-list .row div h2 {
@@ -9163,18 +9698,18 @@ List service bottom
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 0px;
   text-align: right;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-right: 30px;
 }
 
 .book-player-video .player-image {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 15px;
   position: relative;
 }
@@ -9190,9 +9725,7 @@ List service bottom
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   cursor: pointer;
 }
@@ -9223,9 +9756,7 @@ List service bottom
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   list-style: none;
   padding-left: 0px;
@@ -9339,9 +9870,7 @@ List service bottom
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   position: absolute;
   text-align: center;
@@ -9425,7 +9954,8 @@ List service bottom
   border: none;
   background: transparent;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 486px;
   height: 30px;
   padding-left: 80px;
@@ -9441,9 +9971,7 @@ List service bottom
     left: 50%;
     right: auto;
     -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 90%;
     padding-left: 0px;
@@ -9481,15 +10009,19 @@ Get info author
 .row-full-info.active {
   height: 670px;
   opacity: 1;
-  animation-name: expand;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
+  -webkit-animation-name: expand;
+          animation-name: expand;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 
 @keyframe expand {
   0% {
     height: 0px;
   }
+
   100% {
     height: 670px;
   }
@@ -9511,9 +10043,7 @@ Get info author
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -9564,7 +10094,8 @@ Get info author
 }
 
 .super-ftop:nth-child(2) {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-left: 1px dashed rgba(0, 0, 0, 0.1);
   border-right: 1px dashed rgba(0, 0, 0, 0.1);
   padding-left: 3%;
@@ -9587,9 +10118,7 @@ Get info author
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   padding-bottom: 20px;
 }
@@ -9731,7 +10260,8 @@ footer .top-footer .footer-logo {
   footer .col-sm-2 {
     width: 30% !important;
     margin-bottom: 30px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding-right: 30px;
   }
 }
@@ -9753,7 +10283,8 @@ footer .footer-widget {
   float: left;
   width: 100%;
   height: auto;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -9782,13 +10313,15 @@ footer .footer-widget .widget-body {
   color: rgba(0, 0, 0, 0.5);
 }
 
-footer .footer-widget .widget-body .menu, footer .footer-widget .widget-body .product-categories {
+footer .footer-widget .widget-body .menu,
+footer .footer-widget .widget-body .product-categories {
   list-style: none;
   padding-left: 0px;
   margin-bottom: 0px;
 }
 
-footer .footer-widget .widget-body .menu li, footer .footer-widget .widget-body .product-categories li {
+footer .footer-widget .widget-body .menu li,
+footer .footer-widget .widget-body .product-categories li {
   float: left;
   width: 100%;
   height: auto;
@@ -9796,22 +10329,28 @@ footer .footer-widget .widget-body .menu li, footer .footer-widget .widget-body 
   line-height: 25px;
 }
 
-footer .footer-widget .widget-body .menu li.col-md-6, footer .footer-widget .widget-body .menu li.col-sm-6, footer .footer-widget .widget-body .product-categories li.col-md-6, footer .footer-widget .widget-body .product-categories li.col-sm-6 {
+footer .footer-widget .widget-body .menu li.col-md-6,
+footer .footer-widget .widget-body .menu li.col-sm-6,
+footer .footer-widget .widget-body .product-categories li.col-md-6,
+footer .footer-widget .widget-body .product-categories li.col-sm-6 {
   width: 50%;
 }
 
-footer .footer-widget .widget-body .menu li a, footer .footer-widget .widget-body .product-categories li a {
+footer .footer-widget .widget-body .menu li a,
+footer .footer-widget .widget-body .product-categories li a {
   font-weight: 300;
   color: rgba(0, 0, 0, 0.5);
 }
 
-footer .footer-widget .widget-body .menu li a:hover, footer .footer-widget .widget-body .product-categories li a:hover {
+footer .footer-widget .widget-body .menu li a:hover,
+footer .footer-widget .widget-body .product-categories li a:hover {
   color: #f07c29;
 }
 
 footer .footer-widget .widget-body .book-info {
   width: 50%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 15px;
 }
 
@@ -9840,9 +10379,7 @@ footer .landing-social-author {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -9863,7 +10400,8 @@ footer .bottom-footer {
   z-index: 9999;
 }
 
-footer .bottom-footer .container, footer .bottom-footer .container-fluid {
+footer .bottom-footer .container,
+footer .bottom-footer .container-fluid {
   position: relative;
   height: 100%;
 }
@@ -9874,9 +10412,7 @@ footer .bottom-footer .payment {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -9902,9 +10438,7 @@ footer .bottom-footer .copyright {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   color: rgba(255, 255, 255, 0.2);
 }
@@ -9933,6 +10467,7 @@ footer .bottom-footer .copyright a {
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
+
   100% {
     opacity: 1;
     -webkit-transform: none;
@@ -9946,6 +10481,7 @@ footer .bottom-footer .copyright a {
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
+
   100% {
     opacity: 1;
     -webkit-transform: none;
@@ -9958,15 +10494,16 @@ footer .bottom-footer .copyright a {
   animation-name: fadeInUp;
 }
 
-.gradient, .jp-audio .jp-type-playlist .jp-gui .jp-progress .jp-seek-bar .jp-play-bar, .jp-audio .jp-volume-controls .jp-volume-bar .jp-volume-bar-value {
+.gradient,
+.jp-audio .jp-type-playlist .jp-gui .jp-progress .jp-seek-bar .jp-play-bar,
+.jp-audio .jp-volume-controls .jp-volume-bar .jp-volume-bar-value {
   background: #3359ac;
-  background: -moz-linear-gradient(left, #3359ac 0%, #1ba3d9 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, #3359ac), color-stop(100%, #1ba3d9));
   background: -webkit-linear-gradient(left, #3359ac 0%, #1ba3d9 100%);
   background: -o-linear-gradient(left, #3359ac 0%, #1ba3d9 100%);
-  background: -ms-linear-gradient(left, #3359ac 0%, #1ba3d9 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#3359ac), to(#1ba3d9));
   background: linear-gradient(to right, #3359ac 0%, #1ba3d9 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3359ac', endColorstr='#1ba3d9', GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3359ac', endColorstr='#1ba3d9', GradientType=1);
 }
 
 .jp-audio *:focus,
@@ -10063,9 +10600,7 @@ footer .bottom-footer .copyright a {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   height: 2px;
   background: rgba(255, 255, 255, 0.8);
@@ -10150,7 +10685,8 @@ footer .bottom-footer .copyright a {
   margin-left: 10px;
 }
 
-.jp-audio .jp-time-holder .jp-current-time, .jp-audio .jp-time-holder .jp-duration {
+.jp-audio .jp-time-holder .jp-current-time,
+.jp-audio .jp-time-holder .jp-duration {
   float: left;
 }
 
@@ -10298,7 +10834,8 @@ footer .bottom-footer .copyright a {
   }
 }
 
-.mejs-container, .mejs-container * {
+.mejs-container,
+.mejs-container * {
   max-width: 780px !important;
   max-height: 440px !important;
 }
@@ -10461,18 +10998,17 @@ a.btn.be_btn--rounded {
   left: 50%;
   right: auto;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 0px;
   height: 0px;
-  border-left: '50px' solid transparent;
-  border-right: '50px' solid transparent;
-  border-bottom: '50px' solid '#2f2f2f';
+  border-left: '50px'solid transparent;
+  border-right: '50px'solid transparent;
+  border-bottom: '50px'solid '#2f2f2f';
 }
 
-.modal-dialog .modal-body .beau-back, .modal-dialog .modal-body .beau-next {
+.modal-dialog .modal-body .beau-back,
+.modal-dialog .modal-body .beau-next {
   position: absolute;
   width: 25%;
   height: 100%;
@@ -10567,6 +11103,7 @@ a.btn.be_btn--rounded {
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
+
   100% {
     opacity: 1;
     -webkit-transform: none;
@@ -10580,6 +11117,7 @@ a.btn.be_btn--rounded {
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
+
   100% {
     opacity: 1;
     -webkit-transform: none;
@@ -10741,9 +11279,7 @@ a.btn.be_btn--rounded {
   top: 50%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
   height: 2px;
   background: rgba(0, 0, 0, 0.2);
@@ -10835,7 +11371,8 @@ a.btn.be_btn--rounded {
   margin-left: 5px;
 }
 
-.jp-audio .jp-time-holder .jp-current-time, .jp-audio .jp-time-holder .jp-duration {
+.jp-audio .jp-time-holder .jp-current-time,
+.jp-audio .jp-time-holder .jp-duration {
   float: left;
 }
 
@@ -10997,7 +11534,8 @@ a.btn.be_btn--rounded {
 }
 
 .author-detail .detail-author-description {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 30px;
 }
 
@@ -11029,7 +11567,8 @@ a.btn.be_btn--rounded {
 }
 
 /*Book By*/
-.title-list-book, .title-boxies {
+.title-list-book,
+.title-boxies {
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 70px;
@@ -11077,75 +11616,285 @@ a.btn.be_btn--rounded {
   border-bottom: none;
   padding-bottom: 0px;
 }
+
 /* UPDATE 205 */
 /* FIX humberger issue in Firefox */
 #menu-humberger #main-navigation {
-    position : relative;
+  position: relative;
 }
+
 #menu-humberger {
-    position : fixed;
+  position: fixed;
 }
+
 #menu-humberger.active-menu {
-    left : 0;
+  left: 0;
 }
+
 .breadthums-navigation .container {
-    z-index : 99;
+  z-index: 99;
 }
+
 .archive #product-sidebar {
-    z-index: 98;
+  z-index: 98;
 }
+
 .price_slider_wrapper .ui-slider .ui-slider-handle {
-        position: absolute;
-        z-index: 2;
-        width: 1em;
-        height: 1em;
-        background-color: #000;
-        border-radius: 1em;
-        cursor: ew-resize;
-        outline: 0;
-        top: -.3em;
-        margin-left: -.5em;
+  position: absolute;
+  z-index: 2;
+  width: 1em;
+  height: 1em;
+  background-color: #000;
+  border-radius: 1em;
+  cursor: ew-resize;
+  outline: 0;
+  top: -.3em;
+  margin-left: -.5em;
 }
+
 .price_slider_wrapper .ui-slider {
-    position: relative;
-    text-align: left;
-    margin-left: .5em;
-    margin-right: .5em;
-    margin-top : 8rem;
+  position: relative;
+  text-align: left;
+  margin-left: .5em;
+  margin-right: .5em;
+  margin-top: 8rem;
 }
+
 .price_slider_wrapper .ui-slider .ui-slider-range {
-    position: absolute;
-    z-index: 1;
-    font-size: .7em;
-    display: block;
-    border: 0;
-    border-radius: 1em;
-    background-color: #000;
-    height : .5em;
+  position: absolute;
+  z-index: 1;
+  font-size: .7em;
+  display: block;
+  border: 0;
+  border-radius: 1em;
+  background-color: #000;
+  height: .5em;
 }
- .price_slider_wrapper .ui-widget-content {
-     border-radius: 1em;
-     background-color: #666;
-     border: 0;
-     height: .5em;
+
+.price_slider_wrapper .ui-widget-content {
+  border-radius: 1em;
+  background-color: #666;
+  border: 0;
+  height: .5em;
 }
+
 .price_slider_wrapper .ui-slider .price_slider_amount {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
+
 .price_slider_wrapper .ui-slider .price_slider_amount .price_label {
-    margin-top : .5rem;
+  margin-top: .5rem;
 }
+
 .price_slider_wrapper .price_slider {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
+
 @media only screen and (max-width: 767px) {
-    .detail-author-book .box-author-book .swiper-slide {
-        width : 100%;
-    }
-    .list-name-author .list-author-name.author-list-avatar .author-item.expand {
-        width : 100%;
-    }
-    .list-name-author .list-author-name.author-list-avatar .author-item.expand .detail-author {
-        position : relative;
-    }
+  .detail-author-book .box-author-book .swiper-slide {
+    width: 100%;
+  }
+
+  .list-name-author .list-author-name.author-list-avatar .author-item.expand {
+    width: 100%;
+  }
+
+  .list-name-author .list-author-name.author-list-avatar .author-item.expand .detail-author {
+    position: relative;
+  }
+}
+
+/*
+32. For Jabarmasagi General
+ */
+
+.btn.jabarmasagi-btn.btn-rounded {
+  background: rgb(27, 44, 81);
+  border-radius: 1000px;
+  color: white;
+  font-family: intro-regular;
+  width: 80%;
+  margin: 0 auto;
+  padding: 8px 12px;
+}
+
+.btn.jabarmasagi-btn.btn-rounded:hover {
+  background: #27bff1;
+  color: #000;
+}
+
+/*
+33. For Jabarmasagi Card Slider
+ */
+
+.jabarmasagi-blog-card-slider .card-item {
+  background: white;
+  padding: 20px 60px;
+  border-radius: 20px;
+  height: 100%;
+}
+
+.jabarmasagi-blog-card-slider.full_thumbnail .card-item {
+  padding: 20px 30px;
+}
+
+.jabarmasagi-blog-card-slider .list-blog-slider {
+  padding-left: 0;
+}
+
+#video-modal button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  z-index: 9999;
+  position: absolute;
+  right: 0;
+  top: -30px;
+  height: 20px;
+  float: none;
+  opacity: 1;
+}
+
+.jabarmasagi-blog-card-slider .card-item h4 ,
+.jabarmasagi-blog-card-slider .card-item h4 > a {
+  font-family: intro-bold;
+  color: black;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.jabarmasagi-blog-card-slider .card-item>a {
+  display: block;
+  text-align: center;
+}
+
+.jabarmasagi-blog-card-slider .swiper-button-next,
+.jabarmasagi-blog-card-slider .swiper-button-prev {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  font-size: 20px;
+  color: white;
+}
+
+.jabarmasagi-blog-card-slider .swiper-button-next {
+  right: calc(1vw + 1rem);
+}
+
+.jabarmasagi-blog-card-slider .swiper-button-next i {
+  margin-left: 4px;
+}
+
+.jabarmasagi-blog-card-slider .swiper-button-prev {
+  left: calc(1vw + 1rem);
+}
+
+.jabarmasagi-blog-card-slider .swiper-button-prev i {
+  margin-right: 2px;
+}
+
+.jabarmasagi-blog-card-slider .card-item p.blog-excerpt {
+  font-family: intro-regular;
+  font-size: 16px;
+  text-align: center;
+  color: #cecece;
+  margin-bottom: 40px;
+}
+
+.jabarmasagi-blog-card-slider .card-item>a img {
+  margin: 0 auto;
+  border-radius: 20px;
+  min-height: 200px;
+  object-fit: contain;
+  -o-object-fit: contain;
+}
+
+.jabarmasagi-blog-card-slider.full_thumbnail .card-item>a.book-blog-thumb {
+  margin-left: -30px;
+  margin-right: -30px;
+  margin-top: -20px;
+}
+
+.jabarmasagi-blog-card-slider.full_thumbnail .card-item>a img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.jabarmasagi-blog-card-slider .card-item.post-video {
+  padding: 0;
+  position: relative;
+}
+
+.jabarmasagi-blog-card-slider .card-item.post-video > a {
+  height: 100%;
+}
+
+.jabarmasagi-blog-card-slider .card-item.post-video > a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+
+.jabarmasagi-blog-card-slider .card-item.post-video span.icon-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.jabarmasagi-blog-card-slider .card-item.post-video span.icon-play i{
+  font-size: 20px;
+  margin-left: 3px;
+}
+
+.jabarmasagi-blog-card-slider .swiper-slide {
+  height: auto;
+  list-style: none;
+}
+
+@media only screen and (min-width: 767px) {
+  .jabarmasagi-blog-card-slider .list-blog .blog-item {
+    width: calc(100%/3);
+    margin-right: 2.6%;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .jabarmasagi-blog-card-slider .list-blog .blog-item {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
 }

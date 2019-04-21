@@ -237,6 +237,49 @@
         }
     })
 
+    $(document).ready(function(){
+
+        $('.jabarmasagi-blog-card-slider').each(function(){
+            console.log(this);
+            var mySwiper = new Swiper ($(this).find('.swiper-container'), {
+                slidesPerView: 3,
+                spaceBetween: 40,
+                breakpoints: {
+                    // when window width is <= 320px
+                    640: {
+                      slidesPerView: 1,
+                      spaceBetween: 20
+                    }
+                  }
+              });
+    
+              $(this).find('.swiper-button-next').on('click', function(){
+                mySwiper.slideNext();
+              })
+    
+              $(this).find('.swiper-button-prev').on('click', function(){
+                mySwiper.slidePrev();
+              })
+
+        })
+          
+          $('body').on('click', '.launch-video-modal', function () {
+              var videoSrc = $(this).data('video-id');
+              var videoAuto;
+              console.log('VIDEO SRC: ' + videoSrc);
+      
+              videoSrc = 'https://www.youtube.com/embed/' + videoSrc;
+              videoAuto = videoSrc + '?autoplay=1&modestbranding=1&rel=0';
+      
+              $('#video-modal iframe').attr('src', videoAuto)
+      
+              $('#video-modal .close').on('click', function () {
+                  $('#video-modal iframe').attr('src', 'videoSrc')
+              })
+          })
+    });
+
+
 
     //Back to top
     var offset = 220;

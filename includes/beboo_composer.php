@@ -334,12 +334,12 @@ class WPBakeryShortCode_Be_author extends WPBakeryShortCode {}
 
 
 //This for section blog
-add_action( 'vc_before_init', 'jabarmasagi_BlogSlider', 999999);
-function jabarmasagi_BlogSlider() {
+add_action( 'vc_before_init', 'jabarmasagi_BlogCardSlider', 999999);
+function jabarmasagi_BlogCardSlider() {
   global $bebostore_perpage_arr;
   vc_map( array(
-      "name" => __( "Jabar Masagi Blog List", "bebostore" ),
-      "base" => "be_blogslider",
+      "name" => __( "Jabar Masagi Blog Card Slider", "bebostore" ),
+      "base" => "be_blogcardslider",
       'weight' => 91,
       'category' => __( 'Beau Theme', 'bebostore' ),
       'description' => __( 'This section contain blog list in jabar masagi version', 'bebostore' ),
@@ -363,10 +363,21 @@ function jabarmasagi_BlogSlider() {
           'admin_label' => true,
           'description' => __( 'Select columns count.', 'bebostore' )
         ),
+        array(
+          'type' => 'dropdown',
+          'heading' => __( 'Blog Thumbnail Style', 'bebostore' ),
+          'param_name' => 'blog_thumbnail_style',
+          'value' => array(
+            __( 'Standard', 'bebostore' ) => '',
+            __( 'Full Thumbnail', 'bebostore' ) => 'full_thumbnail',
+          ),
+          'admin_label' => true,
+          'description' => __( 'How thumbnail image displayed.', 'bebostore' )
+        ),
       ),
    ) );
 }
-class WPBakeryShortCode_Be_blogslider extends WPBakeryShortCode {}
+class WPBakeryShortCode_Be_blogcardslider extends WPBakeryShortCode {}
 
 //This for section blog
 add_action( 'vc_before_init', 'bebostore_Blog', 999999);
