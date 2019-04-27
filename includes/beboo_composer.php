@@ -101,6 +101,41 @@ function bebostore_SocialList() {
 class WPBakeryShortCode_Be_sociallist extends WPBakeryShortCode {}
 
 //This for popup modul jabarmasagi
+add_action( 'vc_before_init', 'jabarmasagi_PopupRegister', 999999);
+function jabarmasagi_PopupRegister() {
+  global $bebostore_perpage_arr, $bebostore_book_listall;
+  vc_map( array(
+      "name" => __( "Jabar Masagi Popup Register", "bebostore" ),
+      "base" => "be_popupregister",
+      'weight' => 91,
+      'category' => __( 'Beau Theme', 'bebostore' ),
+      "params" => array(
+      	// Need and image, select book, add more info
+        array(
+          'type' => 'textfield',
+          'heading' => __( 'Popup Target Class Name', 'bebostore' ),
+          'param_name' => 'popup_target',
+          'description' => __( 'Classname of popup.', 'bebostore' ),
+        ),
+        array(
+          'type' => 'textfield',
+          'heading' => __( 'Popup Title', 'bebostore' ),
+          'param_name' => 'popup_title',
+          'admin_label' => true,
+          'description' => __( 'Title name of popup.', 'bebostore' ),
+        ),
+        array(
+          'type' => 'attach_image',
+          'heading' => __( 'Popup Image', 'bebostore' ),
+          'param_name' => 'popup_image',
+          'description' => __( 'This display image of popup.', 'bebostore' ),
+        ),
+      ),
+   ) );
+}
+class WPBakeryShortCode_Be_popupregister extends WPBakeryShortCode {}
+
+//This for popup modul jabarmasagi
 add_action( 'vc_before_init', 'jabarmasagi_PopupModul', 999999);
 function jabarmasagi_PopupModul() {
   global $bebostore_perpage_arr, $bebostore_book_listall;

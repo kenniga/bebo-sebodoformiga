@@ -277,6 +277,12 @@
                   $('#video-modal iframe').attr('src', 'videoSrc')
               })
           })
+          
+          $('body').on('click', '.jm-open-modal', function () {
+              var modalTarget = $(this).find('a').attr('href');
+
+              $(modalTarget).modal('show');
+          })
     });
 
 

@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "autoprefixer": "^9.5.1",
+    "node-sass": "^4.11.0",
+    "onchange": "^5.2.0",
+    "postcss": "^7.0.14",
+    "postcss-cli": "^6.1.2",
+    "watch": "^1.0.2"
+  },
+  "scripts": {
+    "node-sass": "node-sass --output-style=expanded --source-map=true asset/scss/bebostore.scss asset/css/bebostore.css",
+    "prefix": "postcss asset/css/bebostore.css --use=autoprefixer --output=asset/css/bebostore.css",
+    "build:sass": "npm run node-sass && npm run prefix",
+    "start": "onchange \"asset/scss/*.scss\" -- npm run build:sass"
+  }
+}

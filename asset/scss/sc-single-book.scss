@@ -1,0 +1,75 @@
+.sc-single-book {
+
+    .title-box.title-best span:after {
+        border-color: #f4f7da !important;
+    }
+
+    .title-box.title-best {
+        width: 100%;
+    }
+
+    .book-bestseller {
+        display: flex;
+        flex-wrap: wrap;
+
+        .book-description .book-description-content {
+            position: static;
+            padding-left: 30px;
+            padding-top: 30px;
+        }
+    }
+
+    
+    .bk-info.detail-book-action.book-actions {
+        float: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        height: 100%;
+        background: #0000006e;
+        -webkit-transform: translate3d(0,0,20px);
+        transform: translate3d(0,0,20px);
+        opacity: 0;
+        visibility: hidden;
+        transition: .42s;
+
+
+        .list-action {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .button:before {
+                top: 0;
+            }
+
+            .yith-wcwl-add-to-wishlist {
+                margin: 0;
+            }
+        }
+
+        .product.woocommerce.add_to_cart_inline {
+            border: none!important;
+            padding: 0!important;
+            margin: 0;
+            min-height: unset;
+            margin-bottom: 30px;
+            .woocommerce-Price-amount.amount {
+                display: none;
+            }
+        }
+    }
+
+    .bk-list:hover .bk-info.detail-book-action.book-actions {
+        opacity: 1;
+        visibility: visible;
+        transition: .42s;
+    }
+    .bk-list:hover li .bk-book.bk-bookdefault {
+        transform: none;
+    }
+}
