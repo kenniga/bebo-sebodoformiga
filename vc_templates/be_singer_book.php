@@ -145,17 +145,9 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 								</div>
 								<div class="bk-info detail-book-action">
 								<?php
-									if($beau_option['flip-book'] == 'Yes'){
-										if ($flip != true) {
-									?>
-									<div class="flip-book">
-									<button class="bk-bookback"><?php _e('Flip to back', 'bebostore');?></button>
-									</div>
-									<?php
-										}
-									}
+									do_shortcode( '[add_to_cart id=' . $id_product . ']' );
 								?>
-
+								wew1
 								</div>
 							</li>
 						</ul>
@@ -192,14 +184,13 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 	<?php
 		if ($option =='best-sale-center') {
 	?>
-	<div class="best-seller-section-option2 woocommerce">
+	<div class="best-seller-section-option2 woocommerce sc-single-book">
 
 			<div class="container">
 
 				<div class="best-seller book-center">
 					<div class="book-bestseller">
 						<div class="title-box title-best"><span><?php print($title_single); ?></span></div>
-						<div class="clearfix"></div>
 						<div class="book-info bestseller-name col-md-4 col-sm-4 col-xs-12">
 							<span class="book-name"><a href="<?php echo esc_url(get_permalink($id_product)); ?>"><?php print($title_product); ?></a></span>
 							<span class="book-author">
@@ -233,7 +224,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 									</div>
 								<?php endif; ?>
 							</span>
-							<div class="clearfix"></div>
 							<?php
 								if ($enabled_price != 'No') {
 									$_price = $product->get_price();
@@ -257,6 +247,14 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 								<ul id="bk-list" class="bk-list clearfix">
 									<li>
 										<div class="bk-book book-2 bk-bookdefault">
+											<div class="list-action">
+											<?php
+																			do_action( 'woocommerce_after_shop_loop_item' );
+																	?>
+																	<?php
+																			echo do_shortcode( '[yith_wcwl_add_to_wishlist]' );
+																	?>
+											</div>
 											<div class="bk-front">
 												<div class="bk-cover">
 													<img src="<?php print($feat_image); ?>" alt="img-book"/>
@@ -309,18 +307,13 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 												</h2>
 											</div>
 										</div>
-										<div class="bk-info detail-book-action">
-										<?php
-											if($beau_option['flip-book'] == 'Yes'){
-												if ($flip != true) {
-											?>
-											<div class="flip-book">
-											<button class="bk-bookback"><?php _e('Flip to back', 'bebostore');?></button>
+										<div class="bk-info detail-book-action book-actions">
+											<div class="list-action">
+												<?php
+													echo do_shortcode( '[add_to_cart id=' . $id_product . ']' );
+													echo do_shortcode( '[yith_wcwl_add_to_wishlist product_id="' . $id_product . '"]' );
+												?>
 											</div>
-											<?php
-												}
-											}
-										?>
 
 										</div>
 									</li>
@@ -411,16 +404,9 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 								</div>
 							</div>
 							<div class="bk-info detail-book-action">
+								wew3
 							<?php
-								if($beau_option['flip-book'] == 'Yes'){
-									if ($flip != true) {
-								?>
-								<div class="flip-book">
-								<button class="bk-bookback"><?php _e('Flip to back', 'bebostore');?></button>
-								</div>
-								<?php
-									}
-								}
+								do_shortcode( '[add_to_cart id=' . $id_product . ']' );
 							?>
 
 							</div>
@@ -550,16 +536,9 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 										</h2>
 									</div>
 								<div class="bk-info detail-book-action">
+									wew4
 								<?php
-									if($beau_option['flip-book'] == 'Yes'){
-										if ($flip != true) {
-									?>
-									<div class="flip-book">
-									<button class="bk-bookback"><?php _e('Flip to back', 'bebostore');?></button>
-									</div>
-									<?php
-										}
-									}
+									do_shortcode( '[add_to_cart id=' . $id_product . ']' );
 								?>
 
 								</div>
