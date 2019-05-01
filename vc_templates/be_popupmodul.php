@@ -34,11 +34,11 @@ echo $scoped_style;
 
 <div class="be_popupmodul modal fade " id="<?php echo esc_attr( $modul_target ); ?>" tabindex="-1" role="dialog"
 	aria-labelledby="<?php echo esc_attr( $modul_target ); ?>" aria-hidden="true">
-	<div class="modal-dialog modal-lg" <?php 
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content" <?php 
 	  	if ( !empty( $modul_background ) ) { 
 			echo 'style="' . esc_attr( $modul_background ) .  ';"'; 
-		}  ?> role="document">
-		<div class="modal-content">
+		}  ?> >
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 			</button>

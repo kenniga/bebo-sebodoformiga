@@ -33,7 +33,6 @@ if ($title_center == "title_center") {
 <div class="book-blogs-section">
 	<div class="container">
 		<div class="title-box title-blog <?php echo esc_attr($class_extra)?>"><span><?php echo esc_html($title_box); ?></span></div><!--title-box-->
-		<div class="clearfix"></div>
 		<?php if ($loop->have_posts()) {?>
 		<ul class="list-blog">
 			<?php while ($loop->have_posts()) {$loop ->the_post();?>

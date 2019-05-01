@@ -1,0 +1,48 @@
+.sc-woocategory {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    &__item {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 35px;
+        > a {
+            display: block;
+            background: #e22f3d;
+            height: 100%;
+            position: relative;
+
+            span.category-name {
+                color: #ECE8DD;
+            }
+
+        }
+
+        .category-info {
+            font-size: 32px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            /* bottom: 0; */
+            transform: translateY(-50%);
+        }
+
+        &.col-md-5 {
+
+            &:after {
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+            }
+            > a {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
