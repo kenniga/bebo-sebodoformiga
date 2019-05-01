@@ -2683,8 +2683,8 @@ footer .footer-widget .widget-body .book-info .book-rate .star-rating {
   display: block;
 }
 
-.woocomerce-cart .be {
-  font-size: 2.30769em;
+.woocomerce-cart .icon-icon-cart {
+  font-size: 20px;
 }
 
 .woocomerce-cart a:hover {
@@ -2700,6 +2700,15 @@ footer .footer-widget .widget-body .book-info .book-rate .star-rating {
   height: 60px;
 }
 
+.wishlist-link {
+  position: relative;
+}
+
+.wishlist-icon {
+  font-size: 17px;
+}
+
+.wishlist-link .wishlist-counter,
 .woocomerce-cart .icon-cart-ajax {
   display: block;
   position: absolute;
@@ -2717,6 +2726,8 @@ footer .footer-widget .widget-body .book-info .book-rate .star-rating {
 
 .right-menu>* {
   margin-right: 14px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .right-menu {

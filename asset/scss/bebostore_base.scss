@@ -89,6 +89,20 @@ Custom for Jabar Masagi Design Purposes
 }
 
 @font-face {
+  font-family: 'Work Sans';
+  src: url("../fonts/WorkSans-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url("../fonts/WorkSans-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Korina';
   src: url("../fonts/Korinna-Bold.ttf");
   font-weight: 700;
@@ -113,6 +127,45 @@ Custom for Jabar Masagi Design Purposes
   src: url("../fonts/Beau-Theme-Icon.eot?#iefix7mu29a") format("embedded-opentype"), url("../fonts/Beau-Theme-Icon.ttf?7mu29a") format("truetype"), url("../fonts/Beau-Theme-Icon.woff?7mu29a") format("woff"), url("../fonts/Beau-Theme-Icon.svg?7mu29a#Beau-Theme-Icon") format("svg");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nor-Icon';
+  src: url("../fonts/nor-icon.eot?ecn6ys");
+  src: url("../fonts/nor-icon.eot?ecn6ys#iefix") format("embedded-opentype"), 
+       url("../fonts/nor-icon.ttf?ecn6ys") format("truetype"), 
+       url("../fonts/nor-icon.woff?ecn6ys") format("woff"), 
+       url("../fonts/nor-icon.svg?ecn6ys#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Nor-Icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon-cart:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-icon-heart:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-icon-search:before {
+  content: "\e902";
+  color: #fff;
 }
 
 .be {
@@ -402,7 +455,7 @@ ul.wpb_thumbnails-fluid>li,
 }
 
 a {
-  color: rgba(0, 0, 0, 0.4);
+  color: black;
 }
 
 a:hover {
@@ -967,7 +1020,6 @@ a.book-button-active-bg {
 }
 
 header.header-one {
-  height: 190px;
   background: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.3s ease-in-out;
@@ -978,6 +1030,10 @@ header.header-one {
 header.header-one.no-header-top {
   height: auto;
   padding: 20px 0;
+}
+
+.header-top {
+  text-transform: uppercase;
 }
 
 header.header-one.stick {
@@ -1041,8 +1097,6 @@ header.header-one.stick .header-bottom .woocomerce-cart .be {
 header.header-one .header-top {
   float: left;
   width: 100%;
-  height: 115px;
-  padding-top: 55px;
 }
 
 @media only screen and (max-width: 780px) {
@@ -1735,6 +1789,24 @@ header.header-one.no-header-top #main-nav {
 header.header-one.no-header-top .beau-logo {
   position: static;
   float: none;
+}
+
+#small-navigation {
+  text-transform: uppercase;
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  margin-bottom: 0;
+
+  li {
+    border-right: 1px solid black;
+    padding: 0 7px;
+
+    &:last-child {
+      padding-right: 0;
+      border-right: none;
+    }
+  }
 }
 
 #menu-top {

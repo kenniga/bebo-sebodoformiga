@@ -411,3 +411,24 @@ function bebostore_get_single_post( $post_type = '' ) {
 
     return $result;
 }
+
+function sebodo_debug( $dv_value, $dv_bgcolor = '#666', $dv_fontcolor='#fff', $dv_height = '450' ){
+    $dv_height = ( $dv_height == '' ) ? '450' : $dv_height;
+    $dv_output = '<pre style="font-size:13px; height:'.$dv_height.'px; overflow-y:scroll; background: '.$dv_bgcolor.'; color: '.$dv_fontcolor.';">';
+    $dv_output .= print_r( $dv_value, true );
+    $dv_output .= '</pre>';
+    printf( "%s", $dv_output );
+}
+
+function update_wishlist_count(){
+    if( function_exists( 'YITH_WCWL' ) ){
+        wp_send_json( YITH_WCWL()->count_products() );
+    }
+}
+add_action( 'wp_ajax_update_wishlist_count', 'update_wishlist_count' );
+add_action( 'wp_ajax_nopriv_update_wishlist_count', 'update_wishlist_count' );
+
+function enqueue_custom_wishlist_js(){
+	wp_enqueue_script( 'yith-wcwl-custom-js', get_stylesheet_directory_uri() . '/yith-wcwl-custom.js', array( 'jquery' ), false, true );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_custom_wishlist_js' );
