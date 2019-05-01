@@ -2683,13 +2683,8 @@ footer .footer-widget .widget-body .book-info .book-rate .star-rating {
   display: block;
 }
 
-<<<<<<< HEAD
 .woocomerce-cart .icon-icon-cart {
   font-size: 20px;
-=======
-.woocomerce-cart .be {
-  font-size: 2.30769em;
->>>>>>> 72ecced934dff9ef8b424e4ed99712cb72f941a2
 }
 
 .woocomerce-cart a:hover {
@@ -2731,11 +2726,8 @@ footer .footer-widget .widget-body .book-info .book-rate .star-rating {
 
 .right-menu>* {
   margin-right: 14px;
-<<<<<<< HEAD
   display: flex;
   align-items: flex-end;
-=======
->>>>>>> 72ecced934dff9ef8b424e4ed99712cb72f941a2
 }
 
 .right-menu {
