@@ -64,6 +64,46 @@ Custom for Jabar Masagi Design Purposes
   src: url("../fonts/againts.eot?#iefix") format("embedded-opentype"), url("../fonts/againts.woff") format("woff"), url("../fonts/againts.ttf") format("truetype"), url("../fonts/againts.svg") format("svg");
 }
 
+@font-face {
+  font-family: 'goudy-heavyface';
+  src: url("../fonts/goudy-heavyface.otf");
+}
+
+@font-face {
+  font-family: 'goudy-heavyface';
+  src: url("../fonts/goudy-heavyface-italic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url("../fonts/WorkSans-ExtraLight.ttf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url("../fonts/WorkSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Korina';
+  src: url("../fonts/Korinna-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Korina';
+  src: url("../fonts/Korinna-Bold-Italic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
 /*
  02. Import icon
   */
