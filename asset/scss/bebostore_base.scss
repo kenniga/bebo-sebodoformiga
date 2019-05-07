@@ -106,7 +106,14 @@ Custom for Jabar Masagi Design Purposes
   font-family: 'Korina';
   src: url("../fonts/Korinna-Bold.ttf");
   font-weight: 700;
-  font-style: normal;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Korina';
+  src: url("../fonts/Korinna-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
 }
 
 @font-face {
@@ -2787,7 +2794,6 @@ a[title~="title-sub"].mega-menu-link:after {
  */
 .title-box {
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.5);
   letter-spacing: 0.1px;
   font-size: 1.23077em;
   font-family: "Lato", sans-serif;
@@ -2803,6 +2809,19 @@ a[title~="title-sub"].mega-menu-link:after {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  font-weight: 700;
+}
+
+.vc_row.bg-peach-dots:before {
+  content: '';
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  display: block;
+  background-image: url(../images/bg-peach-dots.png);
+  background-size: contain;
 }
 
 .title-box.title-best span{
@@ -2837,6 +2856,7 @@ a[title~="title-sub"].mega-menu-link:after {
   float: left;
   width: 100%;
   clear: both;
+  font-weight: 700;
 }
 
 .title-box span a {
@@ -2863,7 +2883,7 @@ a[title~="title-sub"].mega-menu-link:after {
 }
 
 .title-box:after {
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid rgb(0, 0, 0);
   width: 60px;
   float: left;
   margin-top: 10px;
@@ -3219,6 +3239,13 @@ a[title~="title-sub"].mega-menu-link:after {
   -webkit-transition: all 0.5s ease-in-out;
 }
 
+.book-slider-hightlight .swiper-slide .book-item-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
 .book-slider-hightlight .swiper-slide .book-image img {
   width: 160px;
   -o-transition: all 0.5s ease-in-out;
@@ -3290,12 +3317,18 @@ a[title~="title-sub"].mega-menu-link:after {
   }
 
   .book-slider-hightlight .swiper-slide.swiper-slide-active .book-info .book-name {
-    font-size: 3.07692em;
+    font-size: 1.75em;
     line-height: 40px;
   }
 
   .book-slider-hightlight .swiper-slide.swiper-slide-active .book-info .book-author {
-    opacity: 0.7;
+    font-size: 1em;
+  }
+
+  .book-slider-hightlight .swiper-slide .book-info .book-author {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.85em;
   }
 }
 
@@ -3341,6 +3374,12 @@ a[title~="title-sub"].mega-menu-link:after {
 
 .book-hightlight-slider .book-item-slide .book-info .book-name {
   margin-top: 0px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.title-box {
+  font-weight: 700;
 }
 
 .book-hightlight-slider .book-item-slide .book-info .book-author {
@@ -3349,7 +3388,8 @@ a[title~="title-sub"].mega-menu-link:after {
 }
 
 .book-hightlight-slider .book-item-slide .book-info .book-price {
-  margin-top: 15px;
+  margin-top: 30px;
+  font-size: 1.3em;
 }
 
 .book-hightlight-slider .book-item-slide .book-info .book-price img {
@@ -4106,43 +4146,6 @@ span.onsale {
   position: relative;
 }
 
-.subcribe-half .form-subcrible {
-  position: relative;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  text-align: center;
-}
-
-.subcribe-half .subcribe-message-title {
-  color: rgba(255, 255, 255, 0.7);
-  float: left;
-  font-family: "Merriweather", serif;
-  margin-bottom: 30px;
-}
-
-.subcribe-half .subcribe-message-title .subcribe-title {
-  text-transform: uppercase;
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-size: 1.92308em;
-  float: left;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.subcribe-half .subcribe-message-title .subcribe-message {
-  float: left;
-  width: 100%;
-  font-family: "Merriweather", serif;
-  font-size: 1em;
-  line-height: 20px;
-}
-
 .testimonial-black .subcribe-half {
   height: 155px !important;
 }
@@ -4178,16 +4181,6 @@ span.onsale {
   list-style: none;
 }
 
-@media only screen and (min-width: 767px) {
-  .list-blog .blog-item {
-    width: 23%;
-    margin-right: 2.6%;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-  }
-}
-
 @media only screen and (max-width: 767px) {
   .list-blog .blog-item {
     width: 100%;
@@ -4202,7 +4195,6 @@ span.onsale {
 
 .list-blog .blog-item img {
   opacity: 1;
-  width: 245px;
   height: auto;
   position: relative;
   -webkit-transition: all 0.2s ease-in-out;

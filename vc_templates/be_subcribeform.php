@@ -7,8 +7,8 @@ extract(shortcode_atts(array(
 ), $atts));
 ?>
 <?php if ($subcribe_type == 'ahalf'): ?>
-<div class="subcribe-half col-md-12 col-sm-12 col-xs-12">
-	<div class="form-subcrible col-md-8 col-sm-8 col-xs-12 pull-left">
+<div class="subcribe-half col-12">
+	<div class="form-subscribe">
 		<div class="subcribe-message-title">
 			<span class="subcribe-title"><?php printf('%s', $subcribe_title)?></span>
 			<span class="subcribe-message"><?php printf('%s', $subcribe_description)?></span>
@@ -24,11 +24,15 @@ extract(shortcode_atts(array(
 <?php endif ?>
 
 <?php if ($subcribe_type == 'full_layout' || $subcribe_type != 'ahalf'):?>
-<div class="sc-subscribe-form subcribe-half col-md-12 col-sm-12 col-xs-12">
-	<div class="form-subcrible col-md-8 col-sm-8 col-xs-12 pull-left">
+<div class="sc-subscribe-form subcribe-half  col-md-12 col-sm-12 col-12">
+	<div class="form-subscribe flex-wrap">
 		<div class="subcribe-message-title">
-			<span class="subcribe-title"><?php printf('%s', $subcribe_title)?></span>
-			<span class="subcribe-message"><?php printf('%s', $subcribe_description)?></span>
+			<h3 class="subcribe-title">
+				<?php printf('%s', $subcribe_title)?>
+			</h3>
+			<h6 class="subcribe-message">
+				<?php printf('%s', $subcribe_description)?>
+			</h6>	
 		</div><!--Subcribe message-->
 		<div class="book-subcribe-form">
 			<div id="bookstore-subcribe" class="bebostore-subcribe">

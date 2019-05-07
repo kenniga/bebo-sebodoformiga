@@ -10,6 +10,33 @@
         padding-left: 15px;
         padding-right: 15px;
         margin-top: 35px;
+
+        &.col-md-5:before {
+                content: '';
+                position: absolute;
+                top: 20px;
+                margin-right: 20px;
+                left: 0%;
+                right: 0;
+                bottom: -30px;
+                display: block;
+                background-size: contain;
+                background-image: url(../images/square-dots.png);
+
+        }
+        &.col-md-7:before {
+                content: '';
+                position: absolute;
+                top: 20px;
+                margin-right: 20px;
+                left: 0%;
+                right: 0;
+                bottom: -30px;
+                display: block;
+                background-size: contain;
+                background-image: url(../images/long-dots.png);
+
+        }
         > a {
             display: block;
             background: #e22f3d;

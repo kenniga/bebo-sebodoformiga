@@ -477,7 +477,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 																			$author = get_field('field_book_author');
 																	?>
 																		<?php if( $author ): ?>
-																				<?php esc_html_e('by:', 'bebostore'); ?>
+																				<?php esc_html_e('By:', 'bebostore'); ?>
 																				<?php
 																				if(count($author) == 1){
 																				foreach( $author as $authors ): ?>

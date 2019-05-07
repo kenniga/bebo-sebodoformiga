@@ -1,22 +1,22 @@
 <?php
-$perpage = $category = $title_box = $title_center = "";
+$blog_perpage = $category = $title_box = $title_center = "";
 extract(shortcode_atts(array(
     'title_box' => '',
     'title_center' => '',
-    'perpage' 	=> '4',
+    'blog_perpage' 	=> '',
     'category' => '',
 ), $atts));
 if ($category == 'All') {
   	$args = array(
       'post_type' => 'post',
-      'posts_per_page' => $perpage,
+      'posts_per_page' => $blog_perpage,
       'order' => 'DESC' ,
 	);
 }
 else{
 	$args = array(
       'post_type' => 'post',
-      'posts_per_page' => $perpage,
+      'posts_per_page' => $blog_perpage,
       'order' => 'DESC' ,
       'category_name' => $category,
 	);
@@ -30,13 +30,13 @@ if ($title_center == "title_center") {
 	$class_extra = "";
 }
 ?>
-<div class="book-blogs-section">
+<div class="book-blogs-section sc-blog">
 	<div class="container">
 		<div class="title-box title-blog <?php echo esc_attr($class_extra)?>"><span><?php echo esc_html($title_box); ?></span></div><!--title-box-->
 		<?php if ($loop->have_posts()) {?>
-		<ul class="list-blog">
+		<ul class="list-blog row">
 			<?php while ($loop->have_posts()) {$loop ->the_post();?>
-			<li class="blog-item  col-md-3 col-sm-3 col-xs-12">
+			<li class="blog-item col-md-4 col-sm-4 col-xs-12">
 				<?php
 					$imgFeature = get_the_post_thumbnail( get_the_ID(), 'bebostore-thumbnail');
 					if ($imgFeature == "") {
