@@ -36,23 +36,20 @@ if ( ! wc_ship_to_billing_address_only() ) {
 }
 
 $oldcol    = 1;
-$col = 1;
+$col = 6;
 ?>
 
-<h2><?php echo $page_title; ?></h2>
-
-<p>
+<p class="addresses-description">
 	<?php echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following addresses will be used on the checkout page by default.', 'bebostore' ) ); ?>
 </p>
 
-<?php if ( ! wc_ship_to_billing_address_only()) echo '<div class="u-columns woocommerce-Addresses col2-set addresses">'; ?>
+<?php if ( ! wc_ship_to_billing_address_only()) echo '<div class="u-columns woocommerce-Addresses col2-set addresses row">'; ?>
 
 <?php foreach ( $get_addresses as $name => $title ) : ?>
 
-	<div class="u-column<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> col-<?php echo ( ( $oldcol = $oldcol * -1 ) < 0 ) ? 1 : 2; ?> woocommerce-Address">
+	<div class="u-column<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> col-6 woocommerce-Address">
 		<header class="woocommerce-Address-title title">
 			<h3><?php echo $title; ?></h3>
-			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'bebostore' ); ?></a>
 		</header>
 		<address>
 			<?php
@@ -76,6 +73,7 @@ $col = 1;
 					echo $formatted_address;
 			?>
 		</address>
+		<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'bebostore' ); ?></a>
 	</div>
 
 <?php endforeach; ?>

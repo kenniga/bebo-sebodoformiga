@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 wc_print_notices();?>
 
-<div class="woo-login">
+<div class="woo-login woo-dashboard">
 	<div class="container">
 		<?php
 		/**

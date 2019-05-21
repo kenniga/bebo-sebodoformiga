@@ -104,9 +104,9 @@ Custom for Jabar Masagi Design Purposes
 
 @font-face {
   font-family: 'Korina';
-  src: url("../fonts/Korinna-Bold.ttf");
-  font-weight: 700;
-  font-style: bold;
+  src: url("../fonts/Korinna Bold.ttf");
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
@@ -1951,6 +1951,12 @@ a[title~="title-sub"].mega-menu-link:after {
   float: left;
   margin-right: calc(3.5vw + 1rem);
   position: relative;
+}
+
+#main-navigation .menu-item,
+#main-navigation li {
+  display: flex;
+  align-items: center;
 }
 
 #main-navigation .menu-item:hover,
@@ -6652,10 +6658,6 @@ List service bottom
   padding-top: 0px;
 }
 
-.section-blog-detail.blogs-detail-full .container {
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
-}
-
 .section-blog-detail.blogs-detail-full .container .book-comment-form {
   margin-bottom: 70px;
 }
@@ -10109,14 +10111,6 @@ footer .footer-column {
   padding-right: 15px;
 }
 
-footer .footer-column:first-child {
-  padding-left: 0px;
-}
-
-footer .footer-column:last-child {
-  padding-right: 0px;
-}
-
 footer .footer-widget {
   float: left;
   width: 100%;
@@ -10125,6 +10119,31 @@ footer .footer-widget {
           box-sizing: border-box;
   padding-left: 15px;
   padding-right: 15px;
+
+  span.widget-separator {
+    display: block;
+    height: 3px;
+    margin-bottom: 60px;
+    margin-top: 40px;
+    background: #E36B2E;
+  }
+
+  img.image.wp-image-2432.attachment-full.size-full {
+    width: 100%;
+  }
+
+  .wdgt-address a {
+    font-size: 20px;
+    color: white;
+  }
+
+  .address-footer p {
+    margin-bottom: 0;
+    font-weight: 600;
+    color: white;
+    font-size: 15px;
+    line-height: 1.5;
+  }
 }
 
 footer .footer-widget:first-child {

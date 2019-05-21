@@ -1,0 +1,199 @@
+.woocommerce-account {
+
+    header.entry-header {
+        background: none;
+        text-align: center;
+
+        .entry-title {
+            position: relative;
+            font-size: 16px;
+            color: black;
+            text-transform: uppercase;
+            font-weight: 700;
+            display: inline-block;
+
+            &:after {
+                border-bottom: 3px solid black;
+                width: 60px;
+                display: block;
+                position: absolute;
+                margin-top: 15px;
+                text-align: center;
+                content: "";
+                width: calc(100% + 1rem);
+                margin-left: -0.5rem;
+            }
+        }
+    }
+
+    .woocommerce form.login,
+    .woocommerce form.register {
+        padding: 0;
+    }
+    .woocommerce-error {
+        background: #E6E7E8;
+        border: none;
+        margin-top: 5em; 
+    }
+
+    .woo-login {
+
+        h2 {
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        form input:not(.button) {
+            border: none;
+            border-bottom: 1px solid black;
+            border-radius: 0;
+        }
+
+        form input.button {
+            border-radius: 0;
+            font-family: 'Work Sans';
+            font-weight: 700;
+        }
+        form label {
+            font-family: 'Korina';
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        form label.rememberme.inline {
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+
+            input {
+                margin-right: 7px;
+            }
+        }
+
+        .extra-option, .woocommerce-privacy-policy-text {
+
+            margin-top: 35px;
+
+             &:before, &:after {
+                 content: none;
+             }
+        }
+
+        .extra-option {
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        .lost_password a:link,
+        .lost_password a:visited {
+            color: #DF713A;
+        }
+    }
+
+    .woocommerce-MyAccount-navigation {
+        float: none;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        li {
+            margin-right: 0;
+            flex: 1 1 calc(100%/6);
+            padding: 0 15px;
+            text-align: center;
+            border-right: 1px solid #B0B0B0;
+
+            @media screen and (max-width: 578px) {
+                margin: 5px;
+            }
+
+            &:first-child {
+                padding-left: 0;
+            }
+            
+            &:last-child {
+                border-right: 0;
+            }
+            &.is-active {
+                a {
+                    background: #E36B2E;
+                    color: white;
+                    font-weight: 700;
+
+                    @media screen and (max-width: 578px) {
+                        padding: 5px;
+                    }
+                }
+            }
+            a {
+                display: block;
+                
+            }
+        }
+    }
+
+    .woocommerce .woocommerce-MyAccount-content {
+        margin-top: 80px;
+    }
+
+    .woo-dashboard .woocommerce-MyAccount-content {
+        float: none;
+        p:nth-of-type(2) {
+            margin-top: 40px;
+
+            a:link,
+            a:visited {
+                color: #A7A9AC;
+            }
+            a:hover {
+                color: #E36B2E;
+                text-decoration: none;
+            }
+        }
+        p:nth-of-type(1) {
+
+            a:link,
+            a:visited {
+                color: #E36B2E;
+            }
+        }
+        p.addresses-description {
+            margin-bottom: 50px;
+            font-weight: 600;
+        }
+
+        .u-columns {
+            display: flex;
+        }
+
+        .woocommerce-Address {
+            header {
+                background: none;
+                color: black;
+
+                h3 {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 20px;
+                    margin-bottom: 0;
+                }
+            }
+            address {
+                color: #A7A9AC;
+                margin: 1.5rem 0;
+            }
+            a.edit {
+                text-transform: uppercase;
+                font-weight: 700;
+                color: #E36B2E;
+            }
+        }
+    }
+}

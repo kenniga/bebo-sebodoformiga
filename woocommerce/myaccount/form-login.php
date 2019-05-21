@@ -31,13 +31,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="container">
 		
 	
-	<div class="u-columns col2-set" id="customer_login">
+	<div class="u-columns col2-set row" id="customer_login">
 
-		<div class="u-column1 col-1">
+		<div class="u-column1 col-12 col-sm-6">
 
 	<?php endif; ?>
 
-			<h2><?php _e( 'Login', 'bebostore' ); ?></h2>
+			<h2><?php _e( 'Log in', 'bebostore' ); ?></h2>
 
 			<form method="post" class="login">
 
@@ -54,16 +54,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<?php do_action( 'woocommerce_login_form' ); ?>
 
-				<p class="form-row">
+				<div class="form-row justify-content-between align-items-center extra-option">
 					<?php wp_nonce_field( 'woocommerce-login' ); ?>
-					<input type="submit" class="woocommerce-Button button" name="login" value="<?php esc_attr_e( 'Login', 'bebostore' ); ?>" />
-					<label for="rememberme" class="inline">
+					<label for="rememberme" class="inline rememberme">
 						<input class="woocommerce-Input woocommerce-Input--checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <?php _e( 'Remember me', 'bebostore' ); ?>
 					</label>
-				</p>
-				<p class="woocommerce-LostPassword lost_password">
-					<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php _e( 'Lost your password?', 'bebostore' ); ?></a>
-				</p>
+					<p class="woocommerce-LostPassword lost_password">
+						<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php _e( 'Forgot password?', 'bebostore' ); ?></a>
+					</p>
+				</div>
+				<input type="submit" class="woocommerce-Button button" name="login" value="<?php esc_attr_e( 'Login', 'bebostore' ); ?>" />
 
 				<?php do_action( 'woocommerce_login_form_end' ); ?>
 
@@ -73,7 +73,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		</div>
 
-		<div class="u-column2 col-2">
+		<div class="u-column2 col-12 col-sm-6">
 
 			<h2><?php _e( 'Register', 'bebostore' ); ?></h2>
 

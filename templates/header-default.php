@@ -56,11 +56,11 @@
 						<img src="<?php echo esc_url($store_logo);?>" alt="Logo">
 					</a>
                 </div><!--End .logo-->
-                <div id="main-nav">
+                <div id="main-nav" class="d-md-flex">
                     <?php
                         wp_nav_menu(array(
                             'theme_location' => 'main-menu',
-                            'menu_class'    => 'col-md-12 col-sm-12 hidden-xs',
+                            'menu_class'    => 'col-md-12 col-sm-12 hidden-xs d-md-flex',
                             'menu_id'       => 'main-navigation',
                             'container'     => '',
                         ));
