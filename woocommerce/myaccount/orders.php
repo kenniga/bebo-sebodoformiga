@@ -17,8 +17,6 @@ $my_orders_columns = apply_filters( 'woocommerce_my_account_my_orders_columns', 
 	'order-actions' => '&nbsp;',
 ) );
 
-sebodo_debug($my_orders_columns);
-
 $customer_orders = get_posts( apply_filters( 'woocommerce_my_account_my_orders_query', array(
 	'numberposts' => $order_count,
 	'meta_key'    => '_customer_user',
@@ -29,9 +27,9 @@ $customer_orders = get_posts( apply_filters( 'woocommerce_my_account_my_orders_q
 
 if ( $customer_orders ) : ?>
 
-	<h2><?php echo apply_filters( 'woocommerce_my_account_my_orders_title', __( 'Recent Orders', 'bebostore' ) ); ?></h2>
+	<h2><?php echo apply_filters( 'woocommerce_my_account_my_orders_title', __( 'Orders', 'bebostore' ) ); ?></h2>
 	<div class="container">
-		<table class="shop_table shop_table_responsive my_account_orders testes">
+		<table class="shop_table shop_table_responsive my_account_orders">
 
 			<thead>
 				<tr>

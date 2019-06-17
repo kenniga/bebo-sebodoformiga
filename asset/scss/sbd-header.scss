@@ -1,0 +1,101 @@
+.header-top .top-menu {
+    height: 50px;;
+}
+
+@media screen and (max-width: 768px) {
+
+    .beau-logo {
+        width: 40%;
+    }
+
+    .right-menu {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        > * {
+            margin-right: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
+    .wishlist-link {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .wishlist-link .wishlist-counter, .woocomerce-cart .icon-cart-ajax {
+        display: block;
+        position: absolute;
+        width: 1.2em;
+        height: 1.2em;
+        line-height: 1.2em;
+        border-radius: 50%;
+        background: #f07c29;
+        color: #fff;
+        text-align: center;
+        right: -2px;
+        top: -5px;
+        z-index: 999;
+        font-size: 0.6em;
+        font-weight: 700;
+    }
+
+    .woocomerce-cart {
+        margin-right: 12px;
+
+        > a {
+            display: flex !important;
+            align-items: center;
+        }
+
+        .icon-icon-cart {
+            font-size: 20px;
+            font-size: 1em;
+        }
+        .icon-cart-ajax {
+            top: -1px;
+            font-family: 'Work Sans' !important;
+        }
+    }
+
+    header .form-search {
+        width: 100%;
+        position: relative;
+        left: inherit;
+        right: inherit;
+        transform: inherit;
+        z-index: 999;
+        margin-right: 0;
+    }
+
+    a.open-search-modal {
+        cursor: pointer;
+        width: 2.2em;
+        height: 2.2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white;
+        border-radius: 50%;
+        color: white;
+        font-size: 0.7em;
+    }
+
+    .mobile-menu {
+        .beau-logo {
+            width: 100%;
+            padding: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+            > a {
+                width: 40%;
+                display: block;
+            }
+        }
+    }
+
+}

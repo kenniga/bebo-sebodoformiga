@@ -1128,6 +1128,7 @@ header.header-one .humberger-button {
   header.header-one .humberger-button {
     display: flex;
     border-right: none;
+    margin-left: 20px;
   }
 }
 
@@ -2092,6 +2093,11 @@ a[title~="title-sub"].mega-menu-link:after {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+#main-navigation li .sub-menu,
+#main-navigation .menu-item .sub-menu {
+  top: calc( 36px + 1rem );
 }
 
 #main-navigation .menu-item .sub-menu li:after,
@@ -7835,9 +7841,6 @@ List service bottom
 
 .list-store .item-store {
   text-align: center;
-  padding: 50px;
-  height: 265px;
-  overflow: hidden;
 }
 
 .list-store .item-store .store-title {
@@ -7846,7 +7849,6 @@ List service bottom
   font-weight: bold;
   color: #000;
   text-transform: uppercase;
-  margin-bottom: 25px;
 }
 
 .list-store .item-store .store-address {

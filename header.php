@@ -34,9 +34,22 @@ if (!is_404()) {
 ?>
 <div id="book-mobile-menu">
     <div class="mobile-menu">
+        <div class="beau-logo">
+            <?php
+                if (isset($beau_option['logo'])) {
+                    $store_logo = $beau_option['logo']['url'];
+                }else{
+                    $store_logo = get_template_directory_uri().'/asset/images/logo.png';
+                }
+            ?>
+            <a href="<?php echo esc_url(home_url( '/' ));?>">
+                <img src="<?php echo esc_url($store_logo);?>" alt="Logo">
+            </a>
+        </div><!--End .logo-->
         <span class="close-btn">
             <i class="fa fa-close"></i>
         </span>
+
         <?php wp_nav_menu( array( // show menu mobile
             'theme_location' => 'mobile-menu',
             'container' => 'nav',

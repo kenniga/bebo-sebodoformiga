@@ -382,15 +382,16 @@ img {
 */
 #book-mobile-menu {
   position: fixed;
-  width: 240px;
+  width: 100%;
   z-index: 9999;
-  top: 0;
+  top: 50px;
+  background: #262626;
 }
 
 #book-mobile-menu .mobile-menu {
   position: relative;
   max-width: 100%;
-  width: 250px;
+  width: 100%;
   z-index: 9;
   top: 0;
   left: 0;
@@ -416,7 +417,7 @@ img {
 }
 
 #book-mobile-menu .mobile-menu ul {
-  background-color: #131210;
+  background-color: #262626;
   padding: 15px 0 15px 30px;
 }
 
@@ -434,7 +435,7 @@ img {
 }
 
 #book-mobile-menu .mobile-menu ul li a {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 1);
   background: none;
   box-shadow: none;
 }
@@ -2722,6 +2723,13 @@ footer .footer-widget .widget-body .book-info .book-rate .star-rating {
   right: -8px;
   top: -8px;
   z-index: 999;
+  font-family: "Work Sans" !important;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.woocomerce-cart .icon-cart-ajax {
+  top: -3px;
 }
 
 .right-menu>* {

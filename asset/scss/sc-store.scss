@@ -1,0 +1,32 @@
+.sc-store {
+    .store-title {
+        margin-bottom: 0;
+            border-bottom: 1px solid #D04144;
+    }
+    .store-address {
+        > * {
+            padding: 15px 0;
+            border-bottom: 1px solid #D04144;
+            &:last-child {
+                border: none;
+            }
+        }
+
+        ul.socials-block {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            justify-content: center;
+
+            li {
+                padding: 0 15px;
+                font-size: 1.2rem;
+
+                a:link,
+                a:visited {
+                    color: #D04144
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,161 @@
+.modal-backdrop {
+    background-color: #e0333e;
+    transition: .42s;
+
+    &.show {
+    transition: .42s;
+    opacity: 1;
+    }
+}
+
+.modal-search {
+    transition: .42s;
+
+    &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: url(../images/desktop-stripe-search.png);
+        background-position: bottom;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    
+    }
+    .modal-body {
+        background: #e0333e;
+    }
+
+    .modal-dialog {
+        max-width: 700px;
+    }
+
+    button.close {
+        background: none;
+        height: auto;
+        position: absolute;
+        top: -20vh;
+        z-index: 10;
+        right: -50px;
+        font-size: 50px;
+        color: #f4f7da;
+        opacity: 1;
+    }
+
+    form {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        button {
+            border-radius: 0;
+            border-color: #f4f7da;
+            color: #f4f7da;
+            font-family: "Work Sans";
+            border-width: 1px;
+            height: 35px;
+            margin-top: 20px;
+        }
+
+        input[name="s"] {
+            background: none;
+            border: none;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+            flex: 1 1 75%;
+            padding: 12px 0;
+            font-family: 'Korina';
+            font-style: italic;
+            text-align: center;
+            color: #f4f7da;
+
+            &::placeholder {
+                color: #f4f7da;
+                opacity: 1; /* Firefox */
+                
+            }
+              
+            &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+               color: #f4f7da;
+            }
+              
+            &::-ms-input-placeholder { /* Microsoft Edge */
+               color: #f4f7da;
+            }
+        }
+
+        .sbHolder {
+            flex: 1 1 10%;
+            padding: 0px 0;
+            
+
+            ul {
+                list-style: none;
+                padding-left: 0;
+                position: absolute;
+                margin-top: 42px;
+
+                li {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                    background: #e0333e;
+
+                    a {
+                        color: #f4f7da;
+                        display: block;
+                        padding: 12px;
+                        padding-bottom: 2px;
+
+                        &:hover {
+                            background: #f4f7da;
+                            color: #e0333e;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sbSelector {
+            margin: 6px 0;
+            border-left: 2px solid rgba(0, 0, 0, 0.5);
+            padding-left: 12px;
+            display: block;
+            padding-bottom: 6px;
+            padding-top: 6px;
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #f4f7da;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &:before {
+                content: "\f078";
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: inherit;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                order: 1;
+                margin-left: 15px;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: -8px;
+                left: -2px;
+                right: 0;
+                height: 2px;
+                background: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}

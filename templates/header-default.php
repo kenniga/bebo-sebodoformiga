@@ -7,9 +7,9 @@
     include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 ?>
 <?php if( $enabled_header_top == 0 ): ?>
-<div class="header-top py-3">
+<div class="header-top">
 	<div class="container">
-		<div class="d-flex justify-content-end align-items-center">
+		<div class="top-menu d-flex justify-content-end align-items-center">
 			<div class="language-selector">
 				<?php if (has_nav_menu('small-menu')): ?>
 					<?php
@@ -56,7 +56,7 @@
 						<img src="<?php echo esc_url($store_logo);?>" alt="Logo">
 					</a>
                 </div><!--End .logo-->
-                <div id="main-nav" class="d-md-flex">
+                <div id="main-nav" class="d-md-flex h-100">
                     <?php
                         wp_nav_menu(array(
                             'theme_location' => 'main-menu',
@@ -101,47 +101,21 @@
                     ?>
                     <?php if ($disable_search != '2'): ?>
                     <div class="form-search">
-                        <a class="open-search-modal" data-toggle="modal" data-target="#search-modal">
+                        <a class="open-search-modal" data-toggle="modal" data-target="#search-modal" data-backdrop="static" data-keyboard="false">
                             <i class="fa fa-search" aria-hidden="true"></i>
                         </a>
-                        <div id="search-modal" class="modal modal-search">
-                            <form action="<?php echo esc_url(home_url( '/' ));?>" method="get" class="book-search-head">
-                                <i class="fa fa-search"></i>
-                                <input type="text" name="s" value="" placeholder="<?php esc_html_e('Search by title book...', 'bebostore'); ?>">
-                                <input type="hidden" name="post_type" value="product" />
-                                <select name="product_cat" class="custom-dropdown">
-                                    <option value="" selected><?php esc_html_e('All product','bebostore'); ?></option>
-                                    <?php
-                                        if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-                                        $args = array(
-                                            'orderby'   => 'title',
-                                            'order'     => 'ASC',
-                                            'hide_empty'          => FALSE,
-                                        );
-                                        $product_categories = get_terms( 'product_cat', $args );
-                                        $count = count($product_categories);
-                                        if (class_exists('WC()')) {
-                                            # code...
-                                        }
-                                        if ( $count > 0 ){
-                                            foreach ( $product_categories as $product_category ) {
-                                                echo '<option value="' .  $product_category->slug . '">' . $product_category->name . '</option>';
-                                            }
-                                        }
-                                    }
-                                    ?>
-                                </select>
-                            </form>
-                        </div>
                     </div><!--Left .pull-left-->
                     <?php endif ?>
                 </div>
             </div>
-            <span class="humberger-button d-flex d-sm-none">
+            <?php 
+                if ($hamburger_logo == "") {
+                    $hamburger_logo = get_template_directory_uri().'/asset/images/icon-hamburger-menu.png';
+                } 
+            ?>
+            <span class="humberger-button d-flex d-sm-none align-items-center justify-content-between">
                 <button>
-                    <i></i>
-                    <i></i>
-                    <i></i>
+                    <img src="<?php echo esc_url($hamburger_logo);?>" alt="">
                 </button>
             </span>
 
