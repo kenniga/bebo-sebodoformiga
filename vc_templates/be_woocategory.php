@@ -25,51 +25,52 @@ if($product_cat != NULL) {
 ?>
 
 <div id="<?php echo esc_html($idRand); ?>">
-	<ul class="cat-list-random">
-		<?php
-			$args = array(
-			    'number'     => $number,
-			    'orderby'    => 'title',
-			    'include'	 =>  $product_cat_list,
-			    'order'      => 'ASC',
-			);
-			$product_categories = get_terms( 'product_cat', $args );
-			$count = count($product_categories);
-			$i = 1;
-			?>
+	<div class="container">
+		<ul class="row sc-woocategory">
 			<?php
-			if ( $count > 0 ){
-			    foreach ( $product_categories as $product_category ) {
-			    $wthumbnail_id = get_woocommerce_term_meta( $product_category->term_id,'thumbnail_id', true );
-           		$wimage = wp_get_attachment_url( $wthumbnail_id );
-           		$cat_height = '';
-           		if ($i == 7) {
-           			$cat_height = 'cat-height2';
-           		}
-           		elseif ($i == 9) {
-           			$cat_height = 'cat-width2';
-           		}
-			   	?>
-
-			   	<li class="cat-items <?php print($cat_height); ?>">
-					<a href="<?php echo esc_url(get_term_link( $product_category)); ?>">
-						<div class="category-image">
-							<?php if (!$wimage==''){?>
-								<img class="cat-image" src="<?php print($wimage); ?>" alt="cat-img">
-							<?php } ?>
-						</div>
-						<div class="category-info">
-							<span class="category-name"><?php print($product_category->name); ?></span>
-							<span class="category-number">( <?php print($product_category->count); ?> )</span>
-						</div>
-					</a>
-				</li>
-			   	<?php
-			    $i++;
-			    }
-			}
-			?>
-	</ul>
+				$args = array(
+					'number'     => $number,
+					'orderby'    => 'title',
+					'include'	 =>  $product_cat_list,
+					'order'      => 'ASC',
+				);
+				$product_categories = get_terms( 'product_cat', $args );
+				$count = count($product_categories);
+				$i = 1;
+				?>
+				<?php
+				if ( $count > 0 ){
+					foreach ( $product_categories as $product_category ) {
+					$wthumbnail_id = get_woocommerce_term_meta( $product_category->term_id,'thumbnail_id', true );
+					   $wimage = wp_get_attachment_url( $wthumbnail_id );
+					   $cat_height = '';
+					   if ($i == 1 || $i == 4) {
+						   $cat_height = 'col-md-5';
+					   }
+					   else {
+						   $cat_height = 'col-md-7';
+					   }
+					   ?>
+	
+					   <li class="sc-woocategory__item <?php print($cat_height); ?>">
+						<a href="<?php echo esc_url(get_term_link( $product_category)); ?>">
+							<div class="category-image">
+								<?php if (!$wimage==''){?>
+									<img class="cat-image" src="<?php print($wimage); ?>" alt="cat-img">
+								<?php } ?>
+							</div>
+							<div class="category-info">
+								<span class="category-name"><?php print($product_category->name); ?></span>
+							</div>
+						</a>
+					</li>
+					   <?php
+					$i++;
+					}
+				}
+				?>
+		</ul>
+	</div>
 	<script>
 		(function($) {
 			"use strict";
@@ -78,7 +79,7 @@ if($product_cat != NULL) {
 				  $('#<?php echo esc_js($idRand);;?> .cat-list-random').isotope({
 				    itemSelector: '.cat-items',
 				    masonry: {
-				      // columnWidth: 685
+				      columnWidth: 685
 				    }
 				});
 			  });

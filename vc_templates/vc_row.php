@@ -1,6 +1,6 @@
 <?php
 /** @var $this WPBakeryShortCode_VC_Row */
-$output = $el_class = $bg_image = $bg_color = $bg_image_repeat = $font_color = $padding = $margin_bottom = $css = $full_width = $el_id = $parallax_image = $parallax = '';
+$output = $el_class = $full_height = $columns_placement = $flex_row = $bg_image = $bg_color = $bg_image_repeat = $font_color = $padding = $margin_bottom = $css = $full_width = $el_id = $parallax_image = $parallax = '';
 extract( shortcode_atts( array(
 	'el_class' => '',
 	'bg_image' => '',
@@ -14,6 +14,10 @@ extract( shortcode_atts( array(
 	'parallax_image' => false,
 	'css' => '',
 	'el_id' => '',
+	'disable_element' => '',
+	'full_height' => '',
+	'columns_placement' => '',
+	'flex_row' => '',
 ), $atts ) );
 $parallax_image_id = '';
 $parallax_image_src = '';
@@ -25,9 +29,33 @@ $css_classes = array(
 	$el_class,
 	vc_shortcode_custom_css_class( $css ),
 );
+
+if ( ! empty( $full_height ) ) {
+	$css_classes[] = 'vc_row-o-full-height';
+	if ( ! empty( $columns_placement ) ) {
+		$flex_row = true;
+		$css_classes[] = 'vc_row-o-columns-' . $columns_placement;
+		if ( 'stretch' === $columns_placement ) {
+			$css_classes[] = 'vc_row-o-equal-height';
+		}
+	}
+}
+
+if ( ! empty( $flex_row ) ) {
+	$css_classes[] = 'vc_row-flex';
+}
+
 // wp_enqueue_style( 'js_composer_front' );stretch_row_content_no_spaces_content
 wp_enqueue_script( 'wpb_composer_front_js' );
 // wp_enqueue_style('js_composer_custom_css');stretch_row_content_no_spaces
+
+if ( 'yes' === $disable_element ) {
+	// if ( vc_is_page_editable() ) {
+		$css_classes[] = 'vc_hidden-lg vc_hidden-xs vc_hidden-sm vc_hidden-md';
+	// } else {
+		// return '';
+	// }
+}
 
 $el_class = $this->getExtraClass( $el_class );
 

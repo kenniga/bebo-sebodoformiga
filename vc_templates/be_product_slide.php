@@ -391,10 +391,12 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 	if ($option == 'zoom') {
 	?>
 	<section>
-		<div class="hightlight-slider-section <?php print($type); ?> <?php print($full_bg) ?>" style="background-color:<?php print($color); ?>">
+		<div class="hightlight-slider-section <?php print($type); ?> <?php print($full_bg) ?> sc-product-slider" style="background-color:<?php print($color); ?>">
 			<div class="container">
 				<div class="book-hightlight-slider">
+					<?php if( !empty($slide_title) ) { ?>
 					<div class="title-box <?php print($class_center); ?> title-"><span><?php print($slide_title); ?></span></div>
+					<?php } ?>
 					<div class="clearfix"></div>
 					<div class="swiper-container book-slider-hightlight book-slider-hightlight-<?php print($id_ran); ?>">
 							<!-- Additional required wrapper -->
