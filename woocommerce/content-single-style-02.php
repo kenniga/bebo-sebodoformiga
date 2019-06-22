@@ -29,7 +29,7 @@
 					<div class="row">
 						<div class="book-detail book-full-view col-lg-12 col-md-12 col-sm-12 col-12">
 							<div class="row">
-								<div class="col-md-5 col-sm-5 col-sm-12">
+								<div class="col-md-6 col-sm-6 col-12">
 									<div class="book-details-item">
 										<?php if ($none_book != 'on'){ ?>
 											<?php if ($disable_3d == 2): ?>
@@ -116,7 +116,7 @@
 
 								</div>
 
-								<div class="book-item-detail col-md-7 col-sm-7 col-12">
+								<div class="book-item-detail col-md-6 col-sm-6 col-12">
 
 									<?php
 										$ISBN = get_post_meta( get_the_ID(), '_beautheme_product_ISBN', true );
@@ -260,26 +260,27 @@
 											}
 										?>
 									<?php endif; ?>
-									<div class="row">
-										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+									<div class="row single-taxonomies-section">
+										<div class="col-12">
 											<?php
-												$product_tag = wc_get_product_tag_list(get_the_ID(), ', ', '<span class="tagged_as">' . _n( 'Tag:', 'Tags:', $tag_count, 'bebostore' ) . ' ', '</span>' );
+												$category_name_item = wc_get_product_category_list(
+													get_the_ID( $product ),
+													', ', 
+													'<div class="category_as">' . _n( 'Categories:', 'Categories:', 
+													$tag_count, 'bebostore' ) . ' ', 
+													'</div>'
+												);
+												$product_tag = wc_get_product_tag_list(
+													get_the_ID(), 
+													', ', 
+													'<div class="tagged_as">' . _n( 'Tag:', 'Tags:', 
+													$tag_count, 'bebostore' ) . ' ', 
+													'</div>' 
+												);
 												print($product_tag);
+												print($category_name_item);
 												$pinImage = $image_links;
-												$category_name_item = strip_tags(wc_get_product_category_list(get_the_ID($product)));
-												sebodo_debug($category_name_item);
 											?>
-										</div>
-										<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-											<div class="beau-tags social-share">
-												<ul class="social">
-													<li class="title-social"><?php _e('Share:', 'bebostore'); ?></li>
-													<li class="pinterest-cresta-share" id="pinterest-cresta"><a rel="nofollow" href="http://pinterest.com/pin/create/bookmarklet/?url=<?php echo urlencode(get_permalink( $post->ID )) ?>&amp;media=<?php echo esc_attr($pinImage)?>&amp;description=<?php echo htmlspecialchars(urlencode(html_entity_decode(get_the_title( $post->ID ), ENT_COMPAT, 'UTF-8')), ENT_COMPAT, 'UTF-8')?>" title="<?php _e('Share to Pinterest','bebostore')?>" onclick="window.open(this.href, 'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=700,height=450');return false;"><i class="fa fa-pinterest"></i></a><span class="cresta-the-count" id="pinterest-count"><i class="cs c-icon-cresta-spinner animate-spin"></i></span></li>
-													<li class="twitter-cresta-share" id="twitter-cresta"><a rel="nofollow" href="http://twitter.com/share?text=<?php echo htmlspecialchars(urlencode(html_entity_decode(the_title_attribute( 'echo=0' ), ENT_COMPAT, 'UTF-8')), ENT_COMPAT, 'UTF-8') ?>&amp;url=<?php echo  urlencode(get_permalink( $post->ID )) ?>" title="<?php _e('Share to Twitter','bebostore')?>" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=700,height=450');return false;"><i class="fa fa-twitter"></i></a><span class="cresta-the-count" id="twitter-count"><i class="cs c-icon-cresta-spinner animate-spin"></i></span></li>
-													<li class="facebook-cresta-share" id="facebook-cresta"><a rel="nofollow" href="http://www.facebook.com/sharer.php?u=<?php echo urlencode(get_permalink( $post->ID )) ?>&amp;t=<?php echo htmlspecialchars(urlencode(html_entity_decode(get_the_title( $post->ID ), ENT_COMPAT, 'UTF-8')), ENT_COMPAT, 'UTF-8') ?>" title="<?php _e('Share to Facebook','bebostore')?>" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=700,height=450');return false;"><i class="fa fa-facebook"></i></a><span class="cresta-the-count" id="facebook-count"><i class="cs c-icon-cresta-spinner animate-spin"></i></span></li>
-													<li class="googleplus-cresta-share" id="googleplus-cresta"><a rel="nofollow" href="https://plus.google.com/share?url=<?php echo  urlencode(get_permalink( $post->ID )) ?>" title="<?php _e('Share to Google Plus','bebostore')?>" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=700,height=450');return false;"><i class="fa fa-google-plus"></i></a><span class="cresta-the-count" id="googleplus-count"><i class="cs c-icon-cresta-spinner animate-spin"></i></span></li>
-												</ul>
-											</div>
 										</div>
 									</div>
 									<div class="clearfix"></div>
@@ -428,14 +429,18 @@
 							<div class="container">
 								<div class="row heading-details">
 									<div class="col-sm-4 col-12">
-										<h6>
-											DETAILS
-										</h6>
+										<div class="heading-box">
+											<h5>
+												DETAILS
+											</h5>
+										</div>
 									</div>
 									<div class="col-sm-8 col-12">
-										<h6>
-											DESCRIPTION
-										</h6>
+										<div class="heading-box">
+											<h5>
+												DESCRIPTION
+											</h5>
+										</div>
 									</div>
 								</div>
 								<?php
@@ -449,7 +454,6 @@
 									<div class="col-12 col-sm-4">
 									<?php if( $publisher ): ?>
 										<div id="desc-detail" class="book-desc-detail">
-											<span class="title-detail"><?php _e('Details', 'bebostore'); ?></span>
 											<?php foreach( $publisher as $publisher ): ?>
 												<?php
 													$id_publisher = $publisher->ID;
@@ -460,6 +464,7 @@
 												?>
 												<span class="detail-desc box-detail-desc">
 													<p>
+														<strong><?php _e('Pages', 'bebostore'); ?></strong>: <?php print($publishing_page) ?><br>
 														<?php if ($ISBN != '') { ?>
 															<strong>ISBN</strong>: <?php print $ISBN; ?><br>
 														<?php } ?>
@@ -468,7 +473,6 @@
 														<?php } ?>
 														<strong><?php _e('Publisher', 'bebostore'); ?></strong>: <?php echo get_the_title($id_publisher) ;?><br>
 														<strong><?php _e('Publish Date', 'bebostore'); ?></strong>: <?php print($publishing_year_item) ?><br>
-														<strong><?php _e('Page Count', 'bebostore'); ?></strong>: <?php print($publishing_page) ?>
 													</p>
 												</span>
 											<?php endforeach; ?>
@@ -478,7 +482,7 @@
 									<div class="col-12 col-sm-4">
 									<?php if( $author ): ?>
 										<div id="meet-author" class="book-desc-detail">
-											<div class="box-meet-author box-detail-desc col-md-12 col-sm-12 col-xs-12">
+											<div class="box-meet-author box-detail-desc">
 												<?php foreach( $author as $authors ): ?>
 													<?php
 														$id_author 		= $authors->ID;
@@ -493,13 +497,9 @@
 														$url_youtube = get_post_meta( $id_author, '_beautheme_author_youtube', true );
 														$url_linkedin = get_post_meta( $id_author, '_beautheme_author_linkedin', true );
 													?>
-													<div class="author-info">
-														<div class="desc-name">
-															<div class="name-author">
-																By <a href="<?php echo get_permalink( $id_author ); ?>" target="blank"><?php echo get_the_title( $id_author ); ?></a>
-															</div>
+														<div class="name-author">
+															By <a href="<?php echo get_permalink( $id_author ); ?>" target="blank"><?php echo get_the_title( $id_author ); ?></a>
 														</div>
-													</div>
 													<div class="clearfix"></div>
 												<?php endforeach; ?>
 											</div><!--End box author-->

@@ -103,6 +103,76 @@
                 }
             }
 
+            .tagged_as, 
+            .category_as {
+                font-family: 'Korina';
+                font-weight: 700;
+                font-style: italic;
+                text-transform: capitalize;
+                color: #858585;
+                margin-bottom: 7px;
+                a {
+                    color: #858585;
+                }
+            }
+            .single-taxonomies-section {
+                margin-top: 35px;
+            }
+
+        }
+
+        .about-this-book {
+            .heading-box {
+                border-bottom: 1px solid black;
+            }
+            .heading-details {
+                margin-bottom: 20px;
+                > * {
+                    &:first-child {
+                        .heading-box {
+                            margin-right: -15px;
+
+                            h5 {
+                                position: relative;
+                                &:after {
+                                    content: "";
+                                    position: absolute;
+                                    right: -15px;
+                                    left: 0;
+                                    border-bottom: 3px solid #DF713A;
+                                    bottom: calc(-0.5rem - 2px);
+                                }
+                            }
+                        }
+                    }
+                    &:last-child {
+                        .heading-box {
+                            margin-left: -15px;
+                            padding-left: 15px;
+                        }
+                    }
+                }
+            }
+            .details-content {
+                .name-author {
+                    font-family: 'Korina';
+                    font-style: italic;
+                    font-weight: 500;
+                    color: #858585;
+
+                    a {
+                        margin-left: 15px;
+                        font-family: 'Work Sans';
+                        font-style: normal;
+                        font-size: 15px;
+                    }
+                }
+            }
+            h5 {
+                font-family: 'Work Sans';
+                font-weight: 600;
+                display: inline-block;
+            }
         }
 
     }
