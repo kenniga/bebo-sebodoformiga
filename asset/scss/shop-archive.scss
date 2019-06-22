@@ -1,6 +1,28 @@
 body.archive.woocommerce-page {
     background: #E8E7E1;
 }
+
+.shop-book-featured {
+    * {
+        color: #f4f7da !important;
+    }
+
+    &__wrapper {
+        background: #e22f3d;
+
+        .title-box.title-best {
+            padding-top: 40px;
+            font-size: 21px;
+            padding-bottom: 27px;
+        }
+    }
+    .stripe-up-img {
+        margin-top: -2px;
+        img {
+            width: 100%;
+        }
+    }
+}
 .woocommerce {
     .archive-tools {
         display: flex;

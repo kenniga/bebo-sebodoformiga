@@ -14,8 +14,10 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 	?>
 	<div class="best-seller-section-option2 woocommerce sc-single-book">
 
-			<div class="container">
-			<div class="title-box title-best"><span><?php print($title_single); ?></span></div>
+		<div class="container">
+			<div class="title-box title-best">
+				<span><?php print($title_single); ?></span>
+			</div>
 			<div class="swiper-bookslider">
 				<div class="swiper-wrapper best-seller">
 				<?php 
@@ -39,7 +41,9 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 						<div class="swiper-slide">
 							<div class="book-bestseller">
 								<div class="book-info bestseller-name col-md-4 col-sm-4 col-xs-12">
-									<span class="book-name"><a href="<?php echo esc_url(get_permalink($id_product)); ?>"><?php print($title_product); ?></a></span>
+									<span class="book-name">
+										<a href="<?php echo esc_url(get_permalink($id_product)); ?>"><?php print($title_product); ?></a>
+									</span>
 									<span class="book-author">
 										<?php
 										$author = get_field('field_book_author', $id_product);
@@ -95,12 +99,10 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 											<li>
 												<div class="bk-book book-2 bk-bookdefault">
 													<div class="list-action">
-													<?php
-																					do_action( 'woocommerce_after_shop_loop_item' );
-																			?>
-																			<?php
-																					echo do_shortcode( '[yith_wcwl_add_to_wishlist]' );
-																			?>
+														<?php
+															do_action( 'woocommerce_after_shop_loop_item' );
+															echo do_shortcode( '[yith_wcwl_add_to_wishlist]' );
+														?>
 													</div>
 													<div class="bk-front">
 														<div class="bk-cover">
@@ -129,7 +131,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 																<?php
 																	$book_spine = get_field('book_spine', $id_product);
 																	$author = get_field('field_book_author', $id_product);
-															?>
+																?>
 																<?php
 																if($book_spine != '') {
 																	echo esc_attr($book_spine);
@@ -198,5 +200,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				
 			</div>
 		</div>
+	</div>
 
 <?php endif; ?>

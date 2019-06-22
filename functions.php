@@ -504,3 +504,11 @@ add_action( 'wp_enqueue_scripts', 'enqueue_custom_wishlist_js' );
 
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 add_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 50 );
+add_filter( 'woocommerce_get_availability', 'customizing_availability_text', 10, 2);
+function customizing_availability_text( $availability, $product ) {
+    if ( $product->is_in_stock() ) {
+        $availability['availability'] = str_replace('in stock', '', $availability['availability']);
+
+    }
+    return $availability;
+}

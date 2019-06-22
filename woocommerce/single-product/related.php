@@ -15,8 +15,8 @@ global $product, $woocommerce_loop;
 if ( empty( $product ) || ! $product->exists() ) {
 	return;
 }
-
 $related = wc_get_related_products(get_the_ID($product));
+sebodo_debug($related);
 if ( sizeof( $related ) == 0 ) return;
 
 $args = apply_filters( 'woocommerce_related_products_args', array(
