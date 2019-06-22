@@ -266,6 +266,8 @@
 												$product_tag = wc_get_product_tag_list(get_the_ID(), ', ', '<span class="tagged_as">' . _n( 'Tag:', 'Tags:', $tag_count, 'bebostore' ) . ' ', '</span>' );
 												print($product_tag);
 												$pinImage = $image_links;
+												$category_name_item = strip_tags(wc_get_product_category_list(get_the_ID($product)));
+												sebodo_debug($category_name_item);
 											?>
 										</div>
 										<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
@@ -532,6 +534,7 @@
 			<div class="container">
 			<?php
 				$category_name_item = strip_tags(wc_get_product_category_list(get_the_ID($product)));
+				sebodo_debug($category_name_item);
             ?>
 
                 <?php foreach( $author as $authors ): ?>
