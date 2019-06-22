@@ -239,6 +239,13 @@
 
     $(document).ready(function(){
 
+        var swiper = new Swiper('.swiper-bookslider', {
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          });
+
         $('.jabarmasagi-blog-card-slider').each(function(){
             console.log(this);
             var mySwiper = new Swiper ($(this).find('.swiper-container'), {

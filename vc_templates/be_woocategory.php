@@ -14,7 +14,7 @@ $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true )
 // get the image URL
 $image = wp_get_attachment_url( $thumbnail_id );
 // print the IMG HTML
-$term = get_terms( 'product_cat' );
+$term = get_terms( 'pa_product-type' );
 $product_cat_list = array();
 if($product_cat != NULL) {
     $product_cat_list = explode(',', $product_cat);
@@ -34,7 +34,7 @@ if($product_cat != NULL) {
 					'include'	 =>  $product_cat_list,
 					'order'      => 'ASC',
 				);
-				$product_categories = get_terms( 'product_cat', $args );
+				$product_categories = get_terms( 'pa_product-type', $args );
 				$count = count($product_categories);
 				$i = 1;
 				?>
@@ -45,10 +45,10 @@ if($product_cat != NULL) {
 					   $wimage = wp_get_attachment_url( $wthumbnail_id );
 					   $cat_height = '';
 					   if ($i == 1 || $i == 4) {
-						   $cat_height = 'col-md-5';
+						   $cat_height = 'col-md-5 col-5';
 					   }
 					   else {
-						   $cat_height = 'col-md-7';
+						   $cat_height = 'col-md-7 col-7';
 					   }
 					   ?>
 	

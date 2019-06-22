@@ -237,7 +237,17 @@ if (function_exists('register_sidebar')) {
         'name'          => esc_html__('Sidebar Product','bebostore'),
         'id'            => 'sidebar-product',
         'description'   => esc_html__('Sidebar product widget position.','bebostore'),
-        'before_widget' => '<div id="%1$s" class="with-widget col-md-3 col-sm-3 col-xs-12">',
+        'before_widget' => '<div id="%1$s" class="sidebar-product">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>'
+    ));
+    
+    register_sidebar(array(
+        'name'          => esc_html__('Sidebar Product Top','bebostore'),
+        'id'            => 'sidebar-product-top',
+        'description'   => esc_html__('Sidebar product widget position.','bebostore'),
+        'before_widget' => '<div id="%1$s" class="">',
         'after_widget'  => '</div>',
         'before_title'  => '<h2>',
         'after_title'   => '</h2>'
@@ -391,6 +401,65 @@ function bebostore_get_list_taxonomy_by_name($taxonomy){
     else return false;
 
 }
+
+function sebodo_product_autocomplete_suggester( $query) {
+    global $wpdb;
+    $product_id = (int) $query;
+    $post_meta_infos = $wpdb->get_results( $wpdb->prepare( "SELECT a.ID AS id, a.post_title AS title, b.meta_value AS sku
+                FROM {$wpdb->posts} AS a
+                LEFT JOIN ( SELECT meta_value, post_id  FROM {$wpdb->postmeta} WHERE `meta_key` = '_sku' ) AS b ON b.post_id = a.ID
+                WHERE a.post_type = 'product' AND ( a.ID = '%d' OR b.meta_value LIKE '%%%s%%' OR a.post_title LIKE '%%%s%%' )", $product_id > 0 ? $product_id : - 1, stripslashes( $query ), stripslashes( $query ) ), ARRAY_A );
+
+    $results = array();
+    if ( is_array( $post_meta_infos ) && ! empty( $post_meta_infos ) ) {
+        foreach ( $post_meta_infos as $value ) {
+            $data = array();
+            $data['value'] = $value['id'];
+            $data['label'] = esc_attr__( 'Id', 'js_composer' ) . ': ' . $value['id'] . ( ( strlen( $value['title'] ) > 0 ) ? ' - ' . esc_attr__( 'Title', 'js_composer' ) . ': ' . $value['title'] : '' ) . ( ( strlen( $value['sku'] ) > 0 ) ? ' - ' . esc_attr__( 'Sku', 'js_composer' ) . ': ' . $value['sku'] : '' );
+            $results[] = $data;
+        }
+    }
+    return $results;
+}
+
+add_filter( 'vc_autocomplete_be_bookslider_products_callback', 'sebodo_product_autocomplete_suggester', 10, 1 );
+
+function sebodo_product_autocomplete_suggester_render( $query ) {
+    $query = trim( $query['value'] ); // get value from requested
+    if ( ! empty( $query ) ) {
+        // get product
+        $product_object = wc_get_product( (int) $query );
+        if ( is_object( $product_object ) ) {
+            $product_sku = $product_object->get_sku();
+            $product_title = $product_object->get_title();
+            $product_id = $product_object->get_id();
+
+            $product_sku_display = '';
+            if ( ! empty( $product_sku ) ) {
+                $product_sku_display = ' - ' . esc_attr__( 'Sku', 'js_composer' ) . ': ' . $product_sku;
+            }
+
+            $product_title_display = '';
+            if ( ! empty( $product_title ) ) {
+                $product_title_display = ' - ' . esc_attr__( 'Title', 'js_composer' ) . ': ' . $product_title;
+            }
+
+            $product_id_display = esc_attr__( 'Id', 'js_composer' ) . ': ' . $product_id;
+
+            $data = array();
+            $data['value'] = $product_id;
+            $data['label'] = $product_id_display . $product_title_display . $product_sku_display;
+
+            return ! empty( $data ) ? $data : false;
+        }
+
+        return false;
+    }
+
+    return false;
+}
+
+add_filter( 'vc_autocomplete_be_bookslider_products_render', 'sebodo_product_autocomplete_suggester_render', 10, 1 );
 /**
  * Get Single Post by Post Type
  * @param  string $post_type
@@ -433,3 +502,5 @@ function enqueue_custom_wishlist_js(){
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_custom_wishlist_js' );
 
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+add_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 50 );

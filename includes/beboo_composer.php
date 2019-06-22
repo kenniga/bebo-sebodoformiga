@@ -136,6 +136,64 @@ function jabarmasagi_PopupRegister() {
 class WPBakeryShortCode_Be_popupregister extends WPBakeryShortCode {}
 
 //This for popup modul jabarmasagi
+add_action( 'vc_before_init', 'sebodo_BookSlider', 999999);
+function sebodo_BookSlider() {
+  global $bebostore_perpage_arr, $bebostore_book_listall;
+  $allowed_html_array = '';
+  vc_map( array(
+    "name" => esc_html__( "Show Books Slider - Sebodo Formiga", "bebostore" ),
+    "base" => "be_bookslider",
+    'weight' => 91,
+    'category' => esc_html__( 'Beau Theme', 'bebostore' ),
+    "params" => array( 
+      array(
+        'type' => 'textfield',
+        'heading' => esc_html__( 'Title:', 'bebostore' ),
+        'param_name' => 'title_single',
+      ),
+      array(
+        'type' => 'dropdown',
+        'heading' => esc_html__( 'Enabled price', 'bebostore' ),
+        'param_name' => 'enabled_price',
+        'value' => array(
+          'Select...' => '',
+          'Yes' => 'Yes',
+          'No' => 'No',
+          ),
+        'admin_label' => true,
+      ),
+      array(
+          'type' => 'checkbox',
+          'heading' => esc_html__("Don't show flip book?", 'bebostore'),
+          'param_name' => 'flip',
+          'value' => 'Yes, please',
+      ),
+      array(
+        'type'          => 'autocomplete',
+        'heading'       => esc_html__( 'Select products show', 'bebostore' ),
+        'param_name'    => 'products',
+        'admin_label' => true,
+        'settings'      => array(
+          'multiple' 		=> true,
+          'sortable' 		=> true,
+          'unique_values' => true,
+          'min_length' => 1,
+        ),
+      ),
+      array(
+        'type' => 'textarea_html',
+        'holder' => 'div',
+        'heading' => esc_html__( 'Single book description', 'bebostore' ),
+        'param_name' => 'content',
+        'value' => wp_kses(__( '<p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>', 'bebostore' ), 
+        $allowed_html_array),
+      ),
+    ),
+ ) );
+}
+class WPBakeryShortCode_Be_bookslider extends WPBakeryShortCode {}
+
+//This for popup modul jabarmasagi
 add_action( 'vc_before_init', 'jabarmasagi_PopupModul', 999999);
 function jabarmasagi_PopupModul() {
   global $bebostore_perpage_arr, $bebostore_book_listall;
@@ -600,7 +658,7 @@ function bebostore_proCategories() {
               'groups'            => true,
               'unique_values'     => true,
               'display_inline'    => true,
-              'values'            => bebostore_get_list_taxonomy_by_name('product_cat')
+              'values'            => bebostore_get_list_taxonomy_by_name('pa_product-type')
           ),
         ),
         array(

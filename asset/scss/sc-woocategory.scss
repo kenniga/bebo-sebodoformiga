@@ -13,7 +13,7 @@
 
         &.col-md-5:before {
                 content: '';
-                position: absolute;
+                position: absolute; 
                 top: 20px;
                 margin-right: 20px;
                 left: 0%;
@@ -22,6 +22,11 @@
                 display: block;
                 background-size: contain;
                 background-image: url(../images/square-dots.png);
+                @media only screen and (max-width: 768px) {
+                    background-image: url(../images/mobile-square-dots.png);
+                    left: 7px;
+                    bottom: -10px;
+                }
 
         }
         &.col-md-7:before {
@@ -35,6 +40,11 @@
                 display: block;
                 background-size: contain;
                 background-image: url(../images/long-dots.png);
+                @media only screen and (max-width: 768px) {
+                    background-image: url(../images/mobile-long-dots.png);
+                    left: 7px;
+                    bottom: -10px;
+                }
 
         }
         > a {
@@ -57,6 +67,10 @@
             right: 0;
             /* bottom: 0; */
             transform: translateY(-50%);
+
+            @media only screen and (max-width: 768px) {
+                font-size: 1rem;
+            }
         }
 
         &.col-md-5 {

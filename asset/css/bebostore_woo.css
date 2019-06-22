@@ -2779,7 +2779,6 @@ a.open-search-modal:hover {
 16. Page book store - Shop
 */
 body .shop-left-bar {
-  float: left;
   width: 100%;
   height: auto;
 }
@@ -2799,6 +2798,7 @@ body .shop-left-bar .left-bar {
   padding-right: 0px;
   padding-top: 70px;
   margin-bottom: 30px;
+  background: #262626;
 }
 
 @media only screen and (max-width: 767px) {
@@ -2962,24 +2962,14 @@ body .shop-list-book .book-info .book-author {
 20. breadthums-navigation
 */
 .breadthums-navigation {
-  float: left;
   width: 100%;
-  height: 120px;
-  background: #fff;
 }
 
 .breadthums-navigation .container {
   position: relative;
-  height: 120px;
   padding-top: 5px;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
   z-index: 9;
-}
-
-@media only screen and (max-width: 767px) {
-  .breadthums-navigation .container {
-    height: 190px;
-  }
 }
 
 .breadthums-navigation .navigation-listcat {
@@ -3007,11 +2997,6 @@ body .shop-list-book .book-info .book-author {
 
 .breadthums-navigation .breadthums {
   position: relative;
-  float: left;
-  top: 50%;
-  bottom: auto;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 @media only screen and (max-width: 767px) {
@@ -3024,11 +3009,9 @@ body .shop-list-book .book-info .book-author {
   list-style: none;
   padding-left: 0px;
   margin-bottom: 0px;
-  float: left;
 }
 
 .breadthums-navigation .breadthums .list-breadthum li {
-  float: left;
   font-family: "Lato", sans-serif;
   color: rgba(0, 0, 0, 0.2);
 }
@@ -3371,7 +3354,6 @@ body .shop-list-book .book-info .book-author {
 }
 
 .right-sidebar .sidebar-widget {
-  float: left;
   width: 100%;
   height: auto;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
@@ -3389,14 +3371,13 @@ body .shop-list-book .book-info .book-author {
 
 .right-sidebar .sidebar-widget h2 {
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.5);
+  color: white;
   letter-spacing: 0.1px;
   font-size: 1.230769231em;
-  font-family: 'Lato',sans-serif;
+  font-family: 'Work Sans',sans-serif;
   font-weight: 700;
-  float: left;
   margin-bottom: 25px;
-  padding-left: 0px;
+  padding-left: 20px;
   padding-right: 20px;
   position: relative;
 }
@@ -3405,11 +3386,7 @@ body .shop-list-book .book-info .book-author {
   content: '';
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   width: 60px;
-  float: left;
   margin-top: 10px;
-  position: absolute;
-  bottom: -10px;
-  left: 0;
 }
 
 .right-sidebar .sidebar-widget ul {
@@ -3417,19 +3394,17 @@ body .shop-list-book .book-info .book-author {
 }
 
 .right-sidebar .sidebar-widget ul li {
-  float: left;
   margin-bottom: 20px;
-  float: left;
   width: 100%;
   font-size: 1.23077em;
-  color: rgba(0, 0, 0, 0.4);
+  color: white;
   font-family: "Times New Roman";
   list-style: none;
 }
 
 .right-sidebar .sidebar-widget ul li a {
   margin-right: 5px;
-  color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 .right-sidebar .sidebar-widget ul li:hover {
@@ -3691,8 +3666,6 @@ body .shop-list-book .book-info .book-author {
 }
 
 .archive .breadthums-navigation .woocommerce-ordering .position-sort {
-  position: absolute;
-  right: 145px;
   min-width: 300px;
 }
 
@@ -3756,6 +3729,7 @@ body .shop-list-book .book-info .book-author {
 
 .archive .breadthums-navigation .breadthums .woocommerce-breadcrumb span {
   padding-left: 10px;
+  padding-right: 10px;
 }
 
 .archive #list {
@@ -3894,24 +3868,10 @@ body .shop-list-book .book-info .book-author {
   }
 }
 
-.archive .shop-left-bar .right-sidebar .sidebar-widget h2 {
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.7);
-  letter-spacing: 0.1px;
-  font-size: 1.230769231em;
-  font-family: 'Lato',sans-serif;
-  font-weight: 700;
-  float: left;
-  margin-bottom: 25px;
-  padding-left: 0px;
-  padding-right: 40px;
-}
-
 .archive .shop-left-bar .right-sidebar .sidebar-widget h2:after {
   content: '';
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   width: 60px;
-  float: left;
   margin-top: 10px;
 }
 
@@ -3922,20 +3882,38 @@ body .shop-list-book .book-info .book-author {
 
 .archive .shop-left-bar .right-sidebar .sidebar-widget .product-categories li {
   list-style: none;
-}
-
-.archive .shop-left-bar .right-sidebar .sidebar-widget .product-categories li:hover a {
-  color: #f07c29;
-}
-
-.archive .shop-left-bar .right-sidebar .sidebar-widget .product-categories li:hover span {
-  color: #f07c29;
+  padding: 0 20px;
 }
 
 .archive .shop-left-bar .right-sidebar .sidebar-widget .product-categories li a {
-  margin-right: 5px;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 1em;
+  margin-right: -20px;
+  margin-left: -20px;
+  color: white;
+  font-size: 1rem;
+  display: block;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.archive .shop-left-bar .right-sidebar .sidebar-widget .product-categories li a:hover {
+  color: #f07c29;
+  border-bottom: 1px solid #f07c29;
+  text-decoration: none;
+}
+
+.archive .shop-left-bar .right-sidebar .sidebar-widget .product-categories li > span:hover {
+  color: #f07c29;
+  border-bottom: 1px solid #f07c29;
+  text-decoration: none;
+}
+
+.archive .shop-left-bar .right-sidebar .sidebar-widget .product-categories li ul.children li a {
+  margin-right: -40px;
+  margin-left: -40px;
+  padding-top: 20px;
+  padding-left: 40px;
 }
 
 .archive .shop-left-bar .right-sidebar .sidebar-widget .product-categories li span {

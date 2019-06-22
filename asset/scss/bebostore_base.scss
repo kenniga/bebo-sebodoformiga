@@ -2930,7 +2930,7 @@ a[title~="title-sub"].mega-menu-link:after {
 .book-blogs-section,
 .parthner-slider,
 .book-advertising {
-  width: 100%;
+  // width: 100%;
 }
 
 /*
@@ -2977,7 +2977,7 @@ a[title~="title-sub"].mega-menu-link:after {
   .wpb_single_image .vc_single_image-wrapper {
     width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: -1px;
   }
 
   .wpb_single_image img {
@@ -3718,9 +3718,9 @@ span.onsale {
 }
 
 .best-seller {
-  width: 100%;
-  height: auto;
-  z-index: 1;
+  // width: 100%;
+  // height: auto;
+  // z-index: 1;
 }
 
 @media only screen and (min-width: 780px) {
@@ -3737,7 +3737,7 @@ span.onsale {
 
 @media only screen and (max-width: 767px) {
   .best-seller {
-    padding-bottom: 700px !important;
+    padding-bottom: 70px !important;
   }
 }
 
@@ -3765,14 +3765,12 @@ span.onsale {
 .book-bestseller .book-info {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-right: 35px;
   text-align: right;
   position: relative;
 }
 
 @media only screen and (max-width: 767px) {
   .book-bestseller .book-info {
-    padding-right: 0px;
     height: auto;
     margin-bottom: 30px;
   }
@@ -3848,19 +3846,9 @@ span.onsale {
   }
 }
 
-.book-bestseller .book-description {
-  min-height: 340px;
-}
-
 @media only screen and (max-width: 780px) {
   .book-bestseller .book-description {
     float: right;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .book-bestseller .book-description {
-    display: none;
   }
 }
 
@@ -5446,7 +5434,6 @@ List service list icon and short desc
 }
 
 .sidebar-widget {
-  float: left;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -5466,7 +5453,6 @@ List service list icon and short desc
 
 .sidebar-widget ol li {
   list-style-position: inside;
-  float: left;
   width: 100%;
   margin-bottom: 10px;
 }
@@ -6298,7 +6284,6 @@ List service bottom
 }
 
 .right-sidebar .sidebar-widget {
-  float: left;
   width: 100%;
   height: auto;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
@@ -6307,10 +6292,9 @@ List service bottom
 }
 
 .right-sidebar .sidebar-widget ul {
-  float: left;
   width: 100%;
 }
-
+ 
 .right-sidebar .sidebar-widget a {
   color: rgba(0, 0, 0, 0.5);
 }
@@ -6363,7 +6347,6 @@ List service bottom
 }
 
 .right-sidebar .sidebar-widget .list-category li {
-  float: left;
   margin-bottom: 20px;
   float: left;
   width: 100%;
@@ -7865,9 +7848,9 @@ List service bottom
 26. Breadthums
  */
 .breadthums-navigation {
-  float: left;
   width: 100%;
-  height: 120px;
+  font-family: 'Work Sans';
+    font-weight: 400;
 }
 
 @media only screen and (max-width: 767px) {
@@ -7910,23 +7893,15 @@ List service bottom
 
 .breadthums-navigation .breadthums {
   position: relative;
-  float: left;
-  top: 50%;
-  bottom: auto;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .breadthums-navigation .breadthums .list-breadthum {
   list-style: none;
   padding-left: 0px;
   margin-bottom: 0px;
-  float: left;
 }
 
 .breadthums-navigation .breadthums .list-breadthum li {
-  float: left;
   font-family: "Lato", sans-serif;
   color: rgba(0, 0, 0, 0.2);
 }
