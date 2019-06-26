@@ -16,15 +16,14 @@ if ( empty( $product ) || ! $product->exists() ) {
 	return;
 }
 $related = wc_get_related_products(get_the_ID($product));
-sebodo_debug($related);
 if ( sizeof( $related ) == 0 ) return;
 
 $args = apply_filters( 'woocommerce_related_products_args', array(
 	'post_type'            => 'product',
 	'ignore_sticky_posts'  => 1,
 	'no_found_rows'        => 1,
-	'posts_per_page'       => 5,
-	'orderby'              => $orderby,
+	'posts_per_page'       => 4,
+	'orderby'              => 'date',
 	'post__in'             => $related,
 	'post__not_in'         => get_the_ID($product)
 ) );
@@ -49,7 +48,7 @@ if ( $products->have_posts() ) : ?>
 		<div class="book-features no-border">
 		<?php } ?>
 			<div class="related products">
-			<div class="title-box"><span><?php _e( 'Featured Books', 'bebostore' ); ?></span></div>
+			<div class="title-box"><span><?php _e( 'New Arrivals', 'bebostore' ); ?></span></div>
 				<?php woocommerce_product_loop_start(); ?>
 
 					<?php while ( $products->have_posts() ) : $products->the_post(); ?>

@@ -3463,7 +3463,7 @@ a[title~="title-sub"].mega-menu-link:after {
 }
 
 .feature-section .products li {
-  width: 16% !important;
+  width: 25% !important;
 }
 
 .feature-section .products li:nth-child(5) {
@@ -3514,11 +3514,11 @@ a[title~="title-sub"].mega-menu-link:after {
 }
 
 .feature-section .products li .book-info .book-price .price .amount {
-  font-family: "Merriweather", serif;
-  font-style: italic;
-  font-weight: bold;
-  color: #f07c29;
-  font-size: 1.538461538em;
+  font-family: 'goudy-heavyface';
+  font-weight: 700;
+  font-style: normal;
+  color: #F4F6DC;
+  font-size: 20px;
 }
 
 .feature-section .products li .book-info .book-price .price del span {

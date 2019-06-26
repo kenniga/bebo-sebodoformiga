@@ -71,7 +71,7 @@ get_header( 'shop' ); ?>
 											<?php
 											$author = get_field('field_book_author', $id_product);
 											if( $author ): ?>
-												<?php esc_html_e('by:', 'bebostore'); 
+												<?php esc_html_e('By:', 'bebostore'); 
 												if(count($author) == 1){
 													foreach( $author as $authors ): ?>
 														<a href="<?php echo esc_url(get_permalink( $authors->ID )); ?>" target="blank"><?php echo get_the_title( $authors->ID ); ?></a>

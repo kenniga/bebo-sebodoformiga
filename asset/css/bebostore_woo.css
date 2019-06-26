@@ -1492,7 +1492,7 @@ footer .footer-widget .widget-body .book-info .book-rate .star-rating {
 }
 
 .woocommerce .book-item-detail .price .amount {
-  font-family: "Merriweather", serif;
+  font-family: 'goudy-heavyface', serif;
   font-style: italic;
   font-weight: bold;
   color: #D03F3D;

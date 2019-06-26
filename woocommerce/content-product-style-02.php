@@ -43,7 +43,7 @@
 			<?php echo woocommerce_template_loop_rating(); ?>
 			<span class="book-name"><a href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></span>
 			<span class="book-author">
-				<?php _e('by:', 'bebostore'); ?>
+				<?php _e('By:', 'bebostore'); ?>
                    <?php
                    		$author = get_field('field_book_author');
                    ?>

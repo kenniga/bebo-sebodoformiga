@@ -102,12 +102,10 @@
 													<?php do_action( 'woocommerce_product_thumbnails' ); ?>
 												</div>
 											</div>
-										<?php }
-											else{
-												?>
+										<?php } else { ?>
 											<img src="<?php print($image_links); ?>" alt="img-book"/>
 											<?php
-											}
+										}
 										?>
 									</div>
 									<?php if ( $product->is_on_sale() ) : ?>
@@ -428,14 +426,14 @@
 						<div class="about-this-book">
 							<div class="container">
 								<div class="row heading-details">
-									<div class="col-sm-4 col-12">
+									<div class="col-sm-3 col-12">
 										<div class="heading-box">
 											<h5>
 												DETAILS
 											</h5>
 										</div>
 									</div>
-									<div class="col-sm-8 col-12">
+									<div class="col-sm-9 col-12">
 										<div class="heading-box">
 											<h5>
 												DESCRIPTION
@@ -451,8 +449,8 @@
 									$overview = get_the_content();
 								?>
 								<div class="row details-content">
-									<div class="col-12 col-sm-4">
-									<?php if( $publisher ): ?>
+									<div class="col-sm-3 col-12">
+										<?php if( $publisher ): ?>
 										<div id="desc-detail" class="book-desc-detail">
 											<?php foreach( $publisher as $publisher ): ?>
 												<?php
@@ -463,23 +461,68 @@
 
 												?>
 												<span class="detail-desc box-detail-desc">
-													<p>
-														<strong><?php _e('Pages', 'bebostore'); ?></strong>: <?php print($publishing_page) ?><br>
+													<div class="row">
+														<div class="col-6">
+															<strong>
+																<?php _e('Pages', 'bebostore'); ?>
+															</strong>
+														</div>
+														<div class="col-6">
+															<span>
+																<?php print($publishing_page) ?> Pages
+															</span>
+														</div>
 														<?php if ($ISBN != '') { ?>
-															<strong>ISBN</strong>: <?php print $ISBN; ?><br>
+															<div class="col-6">
+																<strong>
+																	ISBN
+																</strong>
+															</div>
+															<div class="col-6">
+																<span>
+																	<?php print $ISBN; ?>
+																</span>
+															</div>
 														<?php } ?>
 														<?php if ($product->get_sku()!='') { ?>
-															<strong>ISBN</strong>: <?php print ($product->get_sku());?><br>
+															<div class="col-6">
+																<strong>
+																	ISBN
+																</strong>
+															</div>
+															<div class="col-6">
+																<span>
+																	<?php print ($product->get_sku());?>
+																</span>
+															</div>
 														<?php } ?>
-														<strong><?php _e('Publisher', 'bebostore'); ?></strong>: <?php echo get_the_title($id_publisher) ;?><br>
-														<strong><?php _e('Publish Date', 'bebostore'); ?></strong>: <?php print($publishing_year_item) ?><br>
-													</p>
+														<div class="col-6">
+															<strong>
+																<?php _e('Publisher', 'bebostore'); ?>
+															</strong>
+														</div>
+														<div class="col-6">
+															<span>
+																<?php echo get_the_title($id_publisher) ;?>
+															</span>
+														</div>
+														<div class="col-6">
+															<strong>
+																<?php _e('Publish Year', 'bebostore'); ?>
+															</strong>
+														</div>
+														<div class="col-6">
+															<span>
+																<?php print($publishing_year_item) ?>
+															</span>
+														</div>
+													</div>
 												</span>
 											<?php endforeach; ?>
 										</div>
 										<?php endif; ?>
 									</div>
-									<div class="col-12 col-sm-4">
+									<div class="col-sm-7 col-12">
 									<?php if( $author ): ?>
 										<div id="meet-author" class="book-desc-detail">
 											<div class="box-meet-author box-detail-desc">
@@ -499,6 +542,11 @@
 													?>
 														<div class="name-author">
 															By <a href="<?php echo get_permalink( $id_author ); ?>" target="blank"><?php echo get_the_title( $id_author ); ?></a>
+														</div>
+														<div class="description">
+															<span class="book-desc">
+																<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
+															</span>
 														</div>
 													<div class="clearfix"></div>
 												<?php endforeach; ?>
@@ -529,136 +577,6 @@
 		 */
 		echo woocommerce_output_related_products();
 	?>
-	<section id="<?php echo esc_attr($idauth)?>">
-		<div class="detail-author-book">
-			<div class="container">
-			<?php
-				$category_name_item = strip_tags(wc_get_product_category_list(get_the_ID($product)));
-				sebodo_debug($category_name_item);
-            ?>
-
-                <?php foreach( $author as $authors ): ?>
-                	<?php
-                		$id_author        = $authors->ID;
-                		$year_author      = get_post_meta( $id_author, '_beautheme_year_job', true );
-                		$url_ava          = get_post_meta( $id_author, '_beautheme_type_image', true );
-                		$authorAvatar_ID  = beau_get_attachment_id_from_url($url_ava);
-						$author_avatar    = wp_get_attachment_image( $authorAvatar_ID,'bebostore-main-thumbnail');
-                		$url_fb           = get_post_meta( $id_author, '_beautheme_author_facebook', true );
-                		$url_tt           = get_post_meta( $id_author, '_beautheme_author_twitter', true );
-                		$url_google          = get_post_meta( $id_author, '_beautheme_author_google', true );
-                		$url_instagram = get_post_meta( $id_author, '_beautheme_author_instagram', true );
-                		$url_pinterest = get_post_meta( $id_author, '_beautheme_author_pinterest', true );
-                		$url_behance = get_post_meta( $id_author, '_beautheme_author_behance', true );
-                		$url_youtube = get_post_meta( $id_author, '_beautheme_author_youtube', true );
-                		$url_linkedin = get_post_meta( $id_author, '_beautheme_author_linkedin', true );
-                        $rand_id = rand(1000, 9999);
-                        $idauth  = "author_book_".$rand_id;
-                	?>
-				<div class="box-author-book full-author-book col-md-12 col-sm-12 col-xs-12">
-					<div class="author-book-title title-box"><span><?php _e('Books of ','bebostore'); ?><?php echo get_the_title($id_author); ?></span></div>
-					<div class="clearfix"></div>
-					<div id="<?php echo esc_attr($idauth);?>" class="swiper-container author-book-slider slider-with-scroll swiper-free-mode swiper-free-mode">
-						    <!-- Additional required wrapper -->
-							<div class="swiper-scrollbar author-book-scrollbar"></div>
-							<?php
-					          $args = array(
-					          	'post_type' 	=> 'product',
-					          	'order' 		=> 'DESC',
-								'meta_key'	 	=> 'book_author',
-								'meta_value'	=> $id_author,
-								'meta_compare'	=> 'LIKE',
-					          );
-					          $loop = new WP_Query( $args );
-					          $count_item = $loop->post_count;
-					          $width_scroll = $count_item*130;
-					          $style = 'style="width:'.$width_scroll.'px"';
-				            ?>
-
-						    <div class="swiper-wrapper" style="height: 202px;">
-						        <!-- Slides -->
-						        	<?php while ( $loop->have_posts() ) : $loop->the_post();?>
-						        	<?php
-					        	 		$none_book = get_post_meta( get_the_ID(),'_beautheme_product_none_book', TRUE);
-								        $style_product_item = '';
-										if($none_book == 'on'){
-										    $style_product_item = 'none-book';
-										}
-					        	 	?>
-						        	<div class="swiper-slide swiper-slide-visible swiper-slide-active">
-										<div class="book-item-slide">
-											<div class="book-item <?php echo esc_attr($style_product_item) ?>" datalink="<?php echo get_permalink();?>">
-												<div class="book-image">
-													<?php
-														$id_product = $loop->post->ID;
-														$publishing_year = get_post_meta( $id_product, '_beautheme_publishing_year', true );
-													?>
-													<?php if (has_post_thumbnail( $id_product )){?>
-														<?php  echo get_the_post_thumbnail($id_product); ?>
-													<?php }
-													else{
-														echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="100px" height="150px" />';
-													}
-													?>
-												</div>
-												<div class="book-actions">
-													<div class="list-action">
-														<?php
-															if ($cart_setting != '1') {
-																do_action( 'woocommerce_after_shop_loop_item' );
-															}
-									                    	if ($wishlist_setting != '1') {
-									                        	echo do_shortcode( '[yith_wcwl_add_to_wishlist]' );
-									                        }
-									                    ?>
-													</div><!--End list-action-->
-												</div>
-											</div><!--End book-item-->
-											<div class="book-info">
-												<span class="book-name"><a href="<?php echo get_permalink();?>"><?php print(get_the_title($id_product)); ?></a></span>
-												<span class="book-author"><?php print($publishing_year); ?></span>
-											</div><!--End book-info-->
-										</div><!--End .book-item-slide-->
-						        </div><!--End swiper-slide-->
-						        	<?php endwhile; ?>
-  								<?php wp_reset_postdata(); ?>
-						    </div><!--End swiper-wrapper-->
-
-						</div><!--End .book-slider-feature-->
-						<script type="text/javascript">
-							(function($) {
-                                "use strict";
-                                var bookAuthor_<?php echo esc_js($rand_id); ?> = new Swiper('#<?php echo esc_js($idauth);?>', {
-                                    slidesPerView: 8,
-									breakpoints: {
-										320: {
-											slidesPerView: 1,
-										},
-										// when window width is <= 480px
-										480: {
-											slidesPerView: 2,
-										},
-										// when window width is <= 640px
-										640: {
-											slidesPerView: 4,
-										},
-										// when window width is <= 640px
-										991: {
-											slidesPerView: 6,
-										}
-									},
-									grabCursor:true,
-									auto:true,
-                                  });
-                            })(jQuery);
-						</script>
-				</div>
-
-				<?php endforeach; ?>
-
-			</div>
-		</div>
-	</section>
 	<?php endif; ?>
 	
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />

@@ -26,6 +26,12 @@
 .woocommerce {
     div.product {
         .book-detail {
+
+            .bk-list {
+                padding: 60px;
+                border: 1px solid #989898;
+            }
+
             form.cart {
                 margin-top: 3em;
                 display: inline-block;
@@ -64,7 +70,13 @@
                     float: none;
                 }
             }
-
+            .woocommerce-product-gallery__image {
+                padding: 20px;
+                width: calc(25% - 10px);
+                flex: 1 1 auto;
+                border: 1px solid #989898;
+                margin: 20px 5px;
+            }
             .single-button-wishlist {
                 display: inline-block;
                 margin-left: 20px;
@@ -167,6 +179,29 @@
                         font-size: 15px;
                     }
                 }
+                .detail-desc {
+                    strong {
+                        font-family: 'Korina';
+                        font-style: italic;
+                        font-weight: 500;
+                        color: #858585;
+                        line-height: 2;
+                    }
+                    span {
+                        font-family: 'Work Sans';
+                        font-weight: 600;
+                        line-height: 2.5;
+                    }
+                }
+                .description {
+                    margin-top: 20px;
+                }
+                .book-desc {
+                    p {
+                        line-height: 1.7;
+                    }
+
+                }
             }
             h5 {
                 font-family: 'Work Sans';
@@ -207,7 +242,75 @@
                 color: #858585;
             }
         }
+    }
+    .feature-section {
+        background: #D04144;
+        padding: 85px 0;
+        .related.products {
+            .title-box {
+                float: none;
+                position: relative;
+                text-align: center;
     
+                &:after {
+                    content: none;
+                }
     
-    }    
+                span {
+                    float: none;
+                    position: relative;
+                    display: inline-block;
+                    width: auto;
+                    color: #F4F6DC;
+    
+                    &:after {
+                        content: "";
+                        width: 80%;
+                        height: 3px;
+                        background: #F4F6DC;
+                        display: block;
+                        margin-top: 20px;
+                        margin: 20px auto 0;
+                    }
+                }
+            }
+            .products {
+                display: flex;
+    
+                li.product {
+                    text-align: center;
+                    .book-item {
+                        margin: 0 auto;
+                        float: none;
+                    }
+                    .book-info {
+                        span.book-name {
+                            font-family: 'Work Sans';
+                            font-size: 1rem;
+                            margin-top: 35px;
+    
+                            a {
+                                color: #F4F6DC;
+                            }
+                        }
+                        span.book-author {
+                            color: #F4F6DC;
+                            a {
+                                color: #F4F6DC;
+                            }
+                        }
+                        span.book-price {
+                            font-family: 'goudy-heavyface';
+                            font-weight: 700;
+                            font-style: normal;
+                            color: #F4F6DC;
+                            margin-top: 20px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    
 }
