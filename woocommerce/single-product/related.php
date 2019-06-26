@@ -48,7 +48,7 @@ if ( $products->have_posts() ) : ?>
 		<div class="book-features no-border">
 		<?php } ?>
 			<div class="row related products">
-				<div class="title-box">
+				<div class="title-box col-12">
 					<span>
 						<?php _e( 'New Arrivals', 'bebostore' ); ?>
 					</span>
