@@ -1815,7 +1815,7 @@ header.header-one.no-header-top .beau-logo {
       border-right: none;
     }
 
-    &.current-menu-parent {
+    &.qtranxs-lang-menu {
       > a {
         display: none;
       }
@@ -1827,10 +1827,19 @@ header.header-one.no-header-top .beau-logo {
           img {
             display: none;
           }
-          &.current-menu-item {
-            a {
-              font-weight: 600;
-            }
+        }
+      }
+      &.qtranxs-lang-menu-pt {
+        li.tranxs-lang-menu-item-pt > a {
+          a {
+            font-weight: 600;
+          }
+        }
+      }
+      &.qtranxs-lang-menu-en {
+        li.tranxs-lang-menu-item-en > a {
+          a {
+            font-weight: 600;
           }
         }
       }
