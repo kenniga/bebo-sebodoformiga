@@ -48,7 +48,11 @@ if ( $products->have_posts() ) : ?>
 		<div class="book-features no-border">
 		<?php } ?>
 			<div class="row related products">
-			<div class="title-box"><span><?php _e( 'New Arrivals', 'bebostore' ); ?></span></div>
+				<div class="title-box">
+					<span>
+						<?php _e( 'New Arrivals', 'bebostore' ); ?>
+					</span>
+				</div>
 				<?php woocommerce_product_loop_start(); ?>
 
 					<?php while ( $products->have_posts() ) : $products->the_post(); ?>
