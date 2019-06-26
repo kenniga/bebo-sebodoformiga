@@ -161,9 +161,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 						<?php
 						}
 					?>
-					<?php if ( $product->is_on_sale() ) : ?>
-						<?php echo apply_filters( 'woocommerce_sale_flash', '<span class="onsale">' . __( 'Sale!', 'bebostore' ) . '</span>', $post, $product ); ?>
-					<?php endif; ?>
 				</div>
 
 				<div class="book-description col-md-4 col-sm-4 col-xs-12">
@@ -545,9 +542,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 							</li>
 						</ul>
 					<?php endif ?>
-					<?php if ( $product->is_on_sale() ) : ?>
-							<?php echo apply_filters( 'woocommerce_sale_flash', '<span class="onsale">' . __( 'Sale!', 'bebostore' ) . '</span>', $post, $product ); ?>
-						<?php endif; ?>
 				</div>
 				<div class="book-info hightlight-name col-md-5 col-sm-5 col-xs-12">
 					<span class="book-name"><a href="<?php echo esc_url(get_permalink($id_product)); ?>"><?php print($title_product); ?></a></span>

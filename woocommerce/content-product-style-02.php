@@ -11,9 +11,6 @@
 ?>
 <li <?php post_class('col-12 col-sm-3'); ?>>
 	<div class="book-item-shop">
-		<?php if ( $product->is_on_sale() ) : ?>
-			<?php echo apply_filters( 'woocommerce_sale_flash', '<span class="onsale">' . __( 'Sale!', 'bebostore' ) . '</span>', $post, $product ); ?>
-		<?php endif; ?>
 		<div class="book-item <?php print($style_product) ?>" <?php print($margin_top) ?>>
 
 
