@@ -178,11 +178,11 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 											<!-- Woo: 3.x -->
 											<?php echo wc_get_product_tag_list( $product->get_id(), ', ', '<span class="tagged_as">' . _n( 'Tag:', 'Tags:', count( $product->get_tag_ids() ), 'woocommerce' ) . ' ', '</span>' ); ?>
 										</div>
-										<div class="swiper-button-prev d-none d-sm-block">
+										<div class="swiper-button-prev d-none d-sm-inline-block">
 											<i class="fa fa-chevron-left" aria-hidden="true"></i>
 											Prev
 										</div>
-										<div class="swiper-button-next d-none d-sm-block">
+										<div class="swiper-button-next d-none d-sm-inline-block">
 											Next 
 											<i class="fa fa-chevron-right" aria-hidden="true"></i>
 										</div>
