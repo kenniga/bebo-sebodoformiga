@@ -1814,6 +1814,27 @@ header.header-one.no-header-top .beau-logo {
       padding-right: 0;
       border-right: none;
     }
+
+    &.current-menu-parent {
+      > a {
+        display: none;
+      }
+      > .sub-menu {
+        display: flex;
+        list-style: none;
+
+        > li {
+          img {
+            display: none;
+          }
+          &.current-menu-item {
+            a {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
