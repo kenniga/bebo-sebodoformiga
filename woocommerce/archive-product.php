@@ -463,7 +463,7 @@ get_header( 'shop' ); ?>
 									?>
 								</div>
 							</div>
-							<div class="col-md-9 col-sm-8 col-xs-7 white-background">
+							<div class="col-md-9 col-sm-8 col-xs-7">
 								<div class="shop-list-book row">
 									<div class="shop-list col-md-12-col-sm-12 col-xs-12">
 										<ul class="products book-grid col-md-12-col-sm-12 col-xs-12">

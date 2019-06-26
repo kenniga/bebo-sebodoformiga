@@ -47,7 +47,7 @@ if ( $products->have_posts() ) : ?>
 		<?php if($options == 'shop-style-3') { ?>
 		<div class="book-features no-border">
 		<?php } ?>
-			<div class="related products">
+			<div class="row related products">
 			<div class="title-box"><span><?php _e( 'New Arrivals', 'bebostore' ); ?></span></div>
 				<?php woocommerce_product_loop_start(); ?>
 
