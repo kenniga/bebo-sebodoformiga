@@ -9,7 +9,7 @@
     	$style_product = 'none-book';
     }
 ?>
-<li <?php post_class('col-12 col-sm-3'); ?>>
+<li <?php post_class('col-6 col-sm-3 mb-5'); ?>>
 	<div class="book-item-shop">
 		<div class="book-item <?php print($style_product) ?>" <?php print($margin_top) ?>>
 

@@ -22,5 +22,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <p class="stock <?php echo esc_attr( $class ); ?>">Stock: <?php echo wp_kses_post( $availability ); ?></p>
-</div>
 

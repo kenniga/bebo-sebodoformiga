@@ -1257,7 +1257,7 @@ footer .footer-widget .widget-body .book-info .book-rate .star-rating {
 
 @media only screen and (max-width: 767px) {
   .detail-book .book-detail .book-details-item {
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -1309,16 +1309,11 @@ footer .footer-widget .widget-body .book-info .book-rate .star-rating {
   width: 100%;
 }
 
-.detail-book .book-detail.book-full-view .book-item-detail {
-  padding-left: 30px;
-}
-
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 768px) {
   .detail-book .book-detail.book-full-view .book-item-detail {
-    padding-left: 0px;
+    padding-left: 30px;
   }
 }
-
 .detail-book .book-detail.book-full-view .social {
   padding: 0;
 }
@@ -1444,14 +1439,12 @@ footer .footer-widget .widget-body .book-info .book-rate .star-rating {
 }
 
 .woocommerce .book-item-detail {
-  padding-top: 25px;
+  padding-top: 0;
   box-sizing: border-box;
-  padding-left: 35px;
 }
-
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 767px) {
   .woocommerce .book-item-detail {
-    padding-left: 0px;
+    padding-top: 25px;
   }
 }
 
@@ -1466,10 +1459,14 @@ footer .footer-widget .widget-body .book-info .book-rate .star-rating {
 
 .woocommerce .book-item-detail .product_title {
   font-family: "Work Sans";
-  font-size: 3.07692em;
+  font-size: 1.5rem;
   font-weight: bold;
 }
-
+@media only screen and (min-width: 767px) {
+  .woocommerce .book-item-detail .product_title {
+    font-size: 3.07692em;
+  }
+}
 .woocommerce .book-item-detail .woocommerce-product-rating {
   margin-top: 10px;
   margin-bottom: 0 !important;
@@ -2812,11 +2809,6 @@ body .shop-left-bar .left-bar .title-sidebar-widget {
   margin-bottom: 25px;
 }
 
-body .shop-list-book {
-  float: left;
-  width: 100%;
-}
-
 body .shop-list-book .book-info .book-name {
   margin-bottom: 5px;
 }
@@ -2834,26 +2826,6 @@ body .shop-list-book .book-info .book-author {
   margin-bottom: 0px;
   padding-bottom: 60px;
   padding-top: 40px;
-}
-
-.book-grid .book-item-shop {
-  float: left;
-  box-sizing: border-box;
-  width: 160px;
-  margin: 35px 35px 0 35px;
-}
-
-@media only screen and (max-width: 780px) {
-  .book-grid .book-item-shop {
-    width: 120px;
-    margin: 10px 10px 0 8px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .book-grid .book-item-shop {
-    margin: 35px 50px 0 50px;
-  }
 }
 
 .book-grid .book-item-shop:nth-child(4n) {
@@ -3272,13 +3244,6 @@ body .shop-list-book .book-info .book-author {
 
 .feature-section.product-nomal .book-features .book-item-slide .book-info span.book-name {
   margin-top: 15px;
-}
-
-@media only screen and (max-width: 780px) {
-  .woocommerce-page .related ul.products li {
-    width: 48% !important;
-    padding: 0 12%;
-  }
 }
 
 @media only screen and (max-width: 780px) {
@@ -3932,24 +3897,6 @@ body .shop-list-book .book-info .book-author {
   }
 }
 
-@media only screen and (max-width: 1025px) {
-  .archive .shop-left-bar .shop-list ul.book-grid li {
-    width: 22.05%;
-  }
-}
-
-@media only screen and (max-width: 780px) {
-  .archive .shop-left-bar .shop-list ul.book-grid li {
-    width: 48%;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .archive .shop-left-bar .shop-list ul.book-grid li {
-    width: 100%;
-  }
-}
-
 @media only screen and (max-width: 780px) {
   .archive .shop-left-bar .shop-list ul.book-grid li .book-item-shop .onsale {
     left: 105px;
@@ -4505,6 +4452,12 @@ body .shop-list-book .book-info .book-author {
   width: 100%;
 }
 
+.archive .shop-left-bar .shop-list ul li .book-item-shop .book-info span.book-author {
+    font-family: Korina;
+    font-weight: 500;
+    font-style: italic;
+}
+
 .archive .shop-left-bar .shop-list ul li .book-item-shop .book-info .star-rating {
   color: #dedede;
   position: relative;
@@ -4521,10 +4474,10 @@ body .shop-list-book .book-info .book-author {
 }
 
 .archive .shop-left-bar .shop-list ul li .book-item-shop .book-info .book-price .price span {
-  font-family: "Merriweather", serif;
-  font-style: italic;
-  font-weight: bold;
-  color: #f07c29;
+  font-family: 'goudy-heavyface';
+  font-weight: 700;
+  font-style: normal;
+  color: #D03F3D;
   width: initial;
   float: initial;
 }
@@ -4780,10 +4733,10 @@ body .shop-list-book .book-info .book-author {
 }
 
 .book-info span.book-name {
-  font-family: "Times New Roman";
-  font-weight: bold;
+  font-family: "Work Sans";
+  font-weight: 600;
   font-size: 1.3em;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .book-info span.book-name a:hover {
@@ -4800,7 +4753,7 @@ body .shop-list-book .book-info .book-author {
   font-family: "Merriweather", serif;
   font-style: italic;
   color: #f07c29;
-  font-size: 1.53846em;
+  font-size: 1.23846em;
 }
 
 .book-info span .book-tags {

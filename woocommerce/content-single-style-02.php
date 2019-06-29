@@ -227,17 +227,21 @@
 										<?php
 											if ($show_price_setting != '1') {
 												echo woocommerce_template_single_price();
+												echo wc_get_stock_html( $product ); // WPCS: XSS ok.
 											}
-
 											?>
-											<?php
-											if ($cart_setting != '1') {
+										</div>
+										<div class="row align-items-center mt-4">
+										
+										<?php
 
+											if ($cart_setting != '1') {
+												?>
+												<?php
 												if($disable_add_to_cart != true){
 													echo woocommerce_template_single_add_to_cart();
-												}
-												else {
-												?>
+												} else {
+													?>
 												<div class="cart">
 													<button class="button active"><?php esc_html_e('Add to cart','bebostore')?></button>
 												</div>
@@ -246,14 +250,18 @@
 											}
 											if ($wishlist_setting == '2') {
 												?>
-												<div class="single-button-wishlist">
-													<?php
-														echo do_shortcode( '[yith_wcwl_add_to_wishlist]' );
-													?>
+												<div class="col-12 col-sm-4 text-right">
+													<div class="single-button-wishlist">
+														<?php
+															echo do_shortcode( '[yith_wcwl_add_to_wishlist]' );
+														?>
+													</div>
 												</div>
 											<?php
 											}
 										?>
+										</div>
+
 									<?php endif; ?>
 									<div class="row single-taxonomies-section">
 										<div class="col-12">
@@ -419,7 +427,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row mt-5 mt-sm-auto">
 						<div class="about-this-book">
 							<div class="container">
 								<div class="row heading-details">
@@ -430,7 +438,7 @@
 											</h5>
 										</div>
 									</div>
-									<div class="col-sm-9 col-12">
+									<div class="col-sm-9 col-12 d-none d-sm-block">
 										<div class="heading-box">
 											<h5>
 												DESCRIPTION
@@ -520,6 +528,11 @@
 										<?php endif; ?>
 									</div>
 									<div class="col-sm-7 col-12">
+										<div class="heading-box d-block d-sm-none my-4 my-sm-auto">
+											<h5>
+												DESCRIPTION
+											</h5>
+										</div>
 									<?php if( $author ): ?>
 										<div id="meet-author" class="book-desc-detail">
 											<div class="box-meet-author box-detail-desc">

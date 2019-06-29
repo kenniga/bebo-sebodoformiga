@@ -323,15 +323,17 @@ get_header( 'shop' ); ?>
 						<div class="book-grid-full col-md-12 col-sm-12 col-xs-12">
 							<div class="shop-list-book row">
 								<div class="shop-list col-md-12-col-sm-12 col-xs-12">
-									<ul class="products grid book-grid-full col-md-12-col-sm-12 col-xs-12">
-										<?php woocommerce_product_subcategories(); ?>
+									<div class="row">
+										<ul class="products grid book-grid-full col-md-12-col-sm-12 col-xs-12">
+											<?php woocommerce_product_subcategories(); ?>
 
-										<?php while ( have_posts() ) : the_post(); ?>
+											<?php while ( have_posts() ) : the_post(); ?>
 
-											<?php wc_get_template_part( 'content', 'product' ); ?>
+												<?php wc_get_template_part( 'content', 'product' ); ?>
 
-										<?php endwhile; // end of the loop. ?>
-									</ul>
+											<?php endwhile; // end of the loop. ?>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -454,7 +456,7 @@ get_header( 'shop' ); ?>
 				<div class="shop-left-bar">
 					<div class="container">
 						<div class="row">
-							<div class="right-sidebar left-bar col-md-3 col-sm-4 col-5">
+							<div class="right-sidebar left-bar col-md-3 col-sm-4 col-5 d-none d-sm-block">
 								<div class="sidebar-widget">
 									<?php
 										if ( is_active_sidebar( 'sidebar-product' ) ){
@@ -463,10 +465,10 @@ get_header( 'shop' ); ?>
 									?>
 								</div>
 							</div>
-							<div class="col-md-9 col-sm-8 col-7">
+							<div class="col-md-9 col-sm-8 col-12">
 								<div class="shop-list-book row">
 									<div class="shop-list col-md-12-col-sm-12 col-12">
-										<ul class="products book-grid col-md-12-col-sm-12 col-12">
+										<ul class="products book-grid row">
 											<?php woocommerce_product_subcategories(); ?>
 
 											<?php while ( have_posts() ) : the_post(); ?>

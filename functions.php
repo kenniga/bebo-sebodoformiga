@@ -512,3 +512,4 @@ function customizing_availability_text( $availability, $product ) {
     }
     return $availability;
 }
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
