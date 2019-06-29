@@ -26,7 +26,7 @@ if ( ! $product->is_purchasable() ) {
 
 if ( $product->is_in_stock() ) : ?>
 
-	<div class="col-12 col-sm-8">
+	<div class="col-12 col-lg-8">
 		<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
 			<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 

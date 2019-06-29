@@ -250,7 +250,7 @@
 											}
 											if ($wishlist_setting == '2') {
 												?>
-												<div class="col-12 col-sm-4 text-right">
+												<div class="col-12 col-lg-4 text-right">
 													<div class="single-button-wishlist">
 														<?php
 															echo do_shortcode( '[yith_wcwl_add_to_wishlist]' );
@@ -431,14 +431,14 @@
 						<div class="about-this-book">
 							<div class="container">
 								<div class="row heading-details">
-									<div class="col-sm-3 col-12">
+									<div class="col-lg-3 col-sm-6 col-12">
 										<div class="heading-box">
 											<h5>
 												DETAILS
 											</h5>
 										</div>
 									</div>
-									<div class="col-sm-9 col-12 d-none d-sm-block">
+									<div class="col-lg-9 col-sm-6 col-12 d-none d-sm-block">
 										<div class="heading-box">
 											<h5>
 												DESCRIPTION
@@ -454,7 +454,7 @@
 									$overview = get_the_content();
 								?>
 								<div class="row details-content">
-									<div class="col-sm-3 col-12">
+									<div class="col-lg-3 col-sm-6 col-12">
 										<?php if( $publisher ): ?>
 										<div id="desc-detail" class="book-desc-detail">
 											<?php foreach( $publisher as $publisher ): ?>
@@ -527,7 +527,7 @@
 										</div>
 										<?php endif; ?>
 									</div>
-									<div class="col-sm-7 col-12">
+									<div class="col-lg-7 col-sm-6 col-12">
 										<div class="heading-box d-block d-sm-none my-4 my-sm-auto">
 											<h5>
 												DESCRIPTION

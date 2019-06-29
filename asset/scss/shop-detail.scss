@@ -55,6 +55,16 @@
                         padding: 0 30px;
                         background: #DF713A;
                         border: none;
+
+                        @media screen and (min-width: 768px) {
+                            padding: 0 20px;
+                        }
+                        @media screen and (min-width: 1024px) {
+                            padding: 0 7px;
+                        }
+                        @media screen and (min-width: 1200px) {
+                            padding: 0 30px;
+                        }
                     }
                     &:before {
                         content: none;
@@ -84,17 +94,19 @@
                 }
             }
             .woocommerce-product-gallery__image {
-                padding: 20px;
                 width: calc(25% - 10px);
                 flex: 1 1 auto;
                 border: 1px solid #989898;
                 margin: 20px 5px;
-
+                
                 &:first-child {
                     margin-left: 0;
                 }
                 &:last-child {
                     margin-right: 0;
+                }
+                @media screen and (min-width: 992px) {
+                    padding: 20px;
                 }
             }
             .single-button-wishlist {
