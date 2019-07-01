@@ -1,0 +1,75 @@
+.woocommerce-wishlist {
+    .entry-header {
+        display: none;
+    }
+    .title-page {
+        text-align: center;
+        display: block;
+        h4 {
+            display: inline-block;
+            &:after {
+        
+                content: "";
+                width: 80%;
+                height: 3px;
+                background: black;
+                display: block;
+                margin-top: 20px;
+                margin: 20px auto 0;
+            }
+        }
+    }
+    .shopping-cart .shop_table {
+        thead {
+            tr th {
+                font-style: normal;
+
+                &:first-child {
+                    padding-left: 30px;
+                }
+                &.product-name {
+                    padding: 0 15px;
+                }
+            }
+            border: none;
+        } 
+        tbody {
+            .product-info-name {
+                display: block;
+                span, a {
+                    float: none;
+                    display: block;
+                }
+
+            }
+            tr {
+                td {
+                    float: none;
+                    &:first-child {
+                        padding-left: 0;
+                        a.remove {
+                            font-size: 20px;
+                            margin-right: 20px;
+                        }
+                    }
+                    &.product-add-to-cart a {
+                        border-radius: 0;
+                        text-transform: uppercase;
+                        padding: 11px 20px;
+                        font-weight: 700;
+                    }
+                    &.product-thumbnail {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+            span.product-info-name {
+                a {
+                    font-weight: 700;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

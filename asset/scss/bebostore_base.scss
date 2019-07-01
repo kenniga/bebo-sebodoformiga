@@ -8551,10 +8551,7 @@ List service bottom
 
 .shopping-cart .shop_table.wishlist_table tr th {
   border-top: none;
-}
-
-.shopping-cart .shop_table.wishlist_table .product-name {
-  padding: 16px 12px;
+  padding: 0;
 }
 
 .shopping-cart .shop_table.woocommerce-checkout-review-order-table tbody tr td .book-item {
@@ -8653,9 +8650,7 @@ List service bottom
 }
 
 .shopping-cart .shop_table tbody .product-info-name {
-  float: left;
   margin-left: 15px;
-  width: 184px;
   text-align: left;
 }
 
@@ -8803,7 +8798,8 @@ List service bottom
 }
 
 .shopping-cart .shop_table tbody tr td.product-stock-status span {
-  color: rgba(0, 0, 0, 0.4);
+  color: black;
+  font-weight: 500;
 }
 
 .shopping-cart .shop_table tbody tr td.product-name {
