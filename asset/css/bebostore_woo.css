@@ -4536,7 +4536,6 @@ body .shop-list-book .book-info .book-author {
 23. Setup for book item through all page
 */
 .book-item {
-  float: left;
   position: relative;
   box-sizing: border-box;
   box-shadow: 0px 15px 30px -10px rgba(0, 0, 0, 0.3);

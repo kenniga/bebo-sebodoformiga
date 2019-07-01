@@ -13,13 +13,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <tr class="cart_item row align-items-center">
-	<td class="amount-total-text col-sm-6 col-md-6 col-4">
+	<td class="amount-total-text col-sm-6 col-md-6 col-6">
 		<?php _e( 'Subtotal', 'bebostore' ); ?>
 	</td>
-	<td class="product-price col-sm-2 col-md-2 col-2">
+	<td class="product-price col-sm-2 offset-md-2 col-md-4 col-6 text-sm-center text-right">
 		<?php wc_cart_totals_subtotal_html(); ?>
 	</td>
-	<td class="product-coupon col-sm-4 col-md-4 col-4">
+	<td class="product-coupon col-sm-4 offset-md-8 col-md-4 col-12">
 		<?php if ( WC()->cart->coupons_enabled() ) { ?>
 			<div class="coupon-cart">
 
@@ -34,10 +34,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 </tr>
 <?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
 	<tr class="cart_item row align-items-center cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
-		<td class="col-sm-6 col-md-6 col-4">
+		<td class="col-sm-6 col-md-6 col-6">
 			<?php wc_cart_totals_coupon_label( $coupon ); ?>
 		</td>
-		<td class="col-sm-2 col-md-2 col-2 text-center">
+		<td class="col-sm-2 col-md-2 col-6 text-sm-center text-right">
 			<?php wc_cart_totals_coupon_html( $coupon ); ?>
 		</td>
 	</tr>
@@ -60,10 +60,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php endif; ?>
 <tr class="cart_totals total-cart-preview row align-items-center">
-	<td class="col-sm-6 col-md-6 col-2">
+	<td class="col-sm-6 col-md-6 col-8">
 		<?php _e( 'GRAND TOTAL', 'bebostore' ); ?>
 	</td>
-	<td class="col-sm-2 col-md-2 col-2 text-center">
+	<td class="col-sm-2 col-md-4 offset-md-2 col-4 text-sm-center text-right">
 		<?php wc_cart_totals_order_total_html(); ?>
 	</td>
 </tr>

@@ -26,13 +26,13 @@ do_action( 'woocommerce_before_cart' ); ?>
 				</div>
 				<table class="shop_table cart col-12" cellspacing="0">
 					<thead>
-						<tr>
-							<th class="col-sm-2 col-md-2 col-xs-4"><?php _e( 'Item name', 'bebostore' ); ?></th>
-							<th class="col-sm-4 col-md-4 col-xs-4"><?php _e( 'Description', 'bebostore' ); ?></th>
-							<th class="product-price col-sm-2 col-md-2 col-xs-2"><?php _e( 'Price', 'bebostore' ); ?></th>
-							<th class="product-quantity col-sm-1 col-md-1 col-xs-4"><?php _e( 'Qty', 'bebostore' ); ?></th>
-							<th class="product-subtotal col-sm-2 col-md-2 col-xs-2"><?php _e( 'Total', 'bebostore' ); ?></th>
-							<th class="product-subtotal col-sm-1 col-md-1 col-xs-1"></th>
+						<tr class="row">
+							<th class="col-sm-2 col-md-2 col-4"><?php _e( 'Item name', 'bebostore' ); ?></th>
+							<th class="col-sm-4 col-md-4 col-4"><?php _e( 'Description', 'bebostore' ); ?></th>
+							<th class="product-price col-sm-2 col-md-2 col-2"><?php _e( 'Price', 'bebostore' ); ?></th>
+							<th class="product-quantity col-sm-1 col-md-1 col-4"><?php _e( 'Qty', 'bebostore' ); ?></th>
+							<th class="product-subtotal col-sm-2 col-md-2 col-2"><?php _e( 'Total', 'bebostore' ); ?></th>
+							<th class="product-subtotal col-sm-1 col-md-1 col-1"></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -47,7 +47,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 								?>
 								<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item row align-items-center', $cart_item, $cart_item_key ) ); ?>">
 
-									<td class="product-thumbnail col-sm-2 col-md-2 col-2">
+									<td class="product-thumbnail col-sm-2 col-md-2 col-12">
 										<div class="book-item">
 											<div class="book-image">
 											<?php
@@ -62,7 +62,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 											</div>
 										</div>
 									</td>
-									<td class="product-name col-sm-4 col-md-4 col-4">
+									<td class="product-name col-sm-4 col-md-4 col-12" data-title="Item Name">
 										<span class="product-info-name">
 										<?php
 											if ( ! $_product->is_visible() ) {
@@ -103,13 +103,13 @@ do_action( 'woocommerce_before_cart' ); ?>
 										?>
 										</span>
 									</td>
-									<td class="product-price col-sm-2 col-md-2 col-xs-2">
+									<td class="product-price col-sm-2 col-md-2 col-12" data-title="Price">
 										<?php
 											echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
 										?>
 									</td>
 
-									<td class="product-quantity col-sm-1 col-md-1 col-xs-1">
+									<td class="product-quantity col-sm-1 col-md-1 col-12" data-title="Quantity">
 										<?php
 											if ( $_product->is_sold_individually() ) {
 												$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
@@ -126,12 +126,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 										?>
 									</td>
 
-									<td class="product-subtotal col-sm-2 col-md-2 col-xs-2">
+									<td class="product-subtotal col-sm-2 col-md-2 col-12" data-title="Total">
 										<?php
 											echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
 										?>
 									</td>
-									<td class="product-remove col-sm-1 col-md-1 col-2">
+									<td class="product-remove col-sm-1 col-md-1 col-12 text-sm-center text-right">
 									<?php
 										echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
 											'<a href="%s" class="remove" title="%s" data-product_id="%s" data-product_sku="%s">'.__('x', 'bebostore').'</a>',
@@ -155,14 +155,14 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 							?>
 						<tr class="update-cart row align-items-center">
-							<td class="col-sm-6 col-md-6 col-6">
+							<td class="col-sm-6 col-md-6 col-12 text-sm-left text-center">
 								<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 								<input type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'bebostore' ); ?>" />
 								<?php do_action( 'woocommerce_cart_actions' ); ?>
 
 								<?php wp_nonce_field( 'woocommerce-cart' ); ?>
 							</td>
-							<td class="col-sm-6 col-md-6 col-6 info-cart">
+							<td class="col-sm-6 col-md-6 col-12 info-cart">
 								<div class="box-info-cart">
 									<div class="title-box-cart">
 										<?php $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) ); ?>
