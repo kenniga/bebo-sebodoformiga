@@ -24,13 +24,13 @@ $has_calculated_shipping  = ! empty( $has_calculated_shipping );
 $show_shipping_calculator = ! empty( $show_shipping_calculator );
 $calculator_text          = '';
 $is_checkout_page = is_checkout();
-$shipping_method_class	  = $is_checkout_page ? 'offset-md-1 col-sm-5 col-3 text-sm-center text-right' : 'col-sm-2 col-md-2 col-2' ;
+$shipping_method_class	  = $is_checkout_page ? 'offset-md-1 col-sm-5 col-3 text-sm-center text-right' : 'col-sm-3 col-md-4 col-6 offset-md-2 offset-6 text-sm-center text-right' ;
 ?>
 
 <tr class="woocommerce-shipping-totals shipping row align-items-center">
-	<td class="col-sm-2 col-md-2 col-4"><?php echo wp_kses_post( $package_name ); ?></td>
+	<td class="col-sm-2 col-md-2 col-6"><?php echo wp_kses_post( $package_name ); ?></td>
 	<?php if ( $available_methods ) : ?>
-	<td class="col-sm-4 col-md-4 col-5"	 data-title="<?php echo esc_attr( $package_name ); ?>">
+	<td class="col-sm-4 col-md-4 col-6 text-sm-left text-right"	 data-title="<?php echo esc_attr( $package_name ); ?>">
 		<?php if ( is_cart() ) : ?>
 			<p class="woocommerce-shipping-destination">
 				<?php

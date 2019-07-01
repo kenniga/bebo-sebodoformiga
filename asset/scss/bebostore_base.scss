@@ -8659,6 +8659,7 @@ List service bottom
   .shopping-cart .shop_table tbody .product-info-name {
     width: 120px;
     margin-left: 0;
+    text-align: right;
   }
 }
 
@@ -8668,7 +8669,6 @@ List service bottom
 
 .shopping-cart .shop_table tbody .product-info-name a,
 .shopping-cart .shop_table tbody .product-info-name span {
-  float: left;
   width: 100%;
 }
 
@@ -8718,6 +8718,8 @@ List service bottom
 @media only screen and (max-width: 767px) {
   .shopping-cart .shop_table tbody tr.cart_item .product-thumbnail .book-item {
     margin-left: 20px;
+    margin: 0 auto;
+    width: 35%;
   }
 }
 
