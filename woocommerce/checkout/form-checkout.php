@@ -27,7 +27,11 @@ $get_checkout_url = function_exists( 'wc_get_checkout_url' ) ? wc_get_checkout_u
 <section>
 	<div class="shopping-cart">
 		<div class="container">
-			<div class="title-page"><?php _e('Check out', 'bebostore'); ?></div><!--End title-page-->
+			<div class="checkout-title title-page <?php echo ( $wishlist_meta['is_default'] != 1 && $is_user_owner ) ? 'wishlist-title-with-form' : ''?>">
+				<h4 style="font-size: 24px;padding-bottom: 27px;color: #0a0a0a;text-align: center;text-transform: uppercase;margin-bottom: 40px;" class="sebodo-underlined">
+					<?php _e('Check out', 'bebostore'); ?>
+				</h4>
+			</div>
 			<div class="clearfix"></div>
 			<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( $get_checkout_url ); ?>" enctype="multipart/form-data">
 				<div class="box-check-out">
@@ -35,16 +39,18 @@ $get_checkout_url = function_exists( 'wc_get_checkout_url' ) ? wc_get_checkout_u
 
 					<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
-					<div class="col2-set" id="customer_details">
-						<div class="billing-address pull-left col-lg-3 col-md-3 col-sm-3 col-xs-12">
+					<div class="col2-set row" id="customer_details">
+						<div class="billing-address pull-left col-lg-7 col-md-7 col-sm-7 col-12">
 							<?php do_action( 'woocommerce_checkout_billing' ); ?>
+							<div class="row">
+								<div class="shipping-address pull-left col-lg-12 col-md-12 col-sm-12 col-12">
+									<?php do_action( 'woocommerce_checkout_shipping' ); ?>
+								</div>
+							</div>
 						</div>
 
-						<div class="shipping-address pull-left col-lg-offset-1 col-md-offset-1 col-sd-offset-1 col-md-3 col-sm-3 col-xs-12">
-							<?php do_action( 'woocommerce_checkout_shipping' ); ?>
-						</div>
 
-						<div class="shipping-method pull-right col-md-4 col-sm-4 col-xs-12">
+						<div class="shipping-method col-md-5 col-sm-5 col-12">
 							<div class="title-box-checkout"><?php _e( 'PAYMENT METHOD', 'bebostore' ); ?></div>
 							<div style="clear:both;"></div>
 							<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>

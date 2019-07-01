@@ -8397,7 +8397,6 @@ List service bottom
   .woocommerce-shipping-fields {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding-left: 15px;
     width: 95%;
   }
 }
@@ -8420,7 +8419,9 @@ List service bottom
   width: 100%;
 }
 
-.shopping-cart .woocommerce-checkout .box-check-out input[type="text"] {
+.shopping-cart .woocommerce-checkout .box-check-out input[type="text"],
+.shopping-cart .woocommerce-checkout .box-check-out input[type="tel"],
+.shopping-cart .woocommerce-checkout .box-check-out input[type="email"] {
   float: left;
   background: transparent;
   border: none;
@@ -8429,11 +8430,11 @@ List service bottom
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 30px;
-  font-family: "Merriweather", serif;
+  font-family: "Work Sans", serif;
   width: 100%;
-  font-size: 0.92308em;
-  font-weight: 300;
-  font-style: italic;
+  font-size: 17px;
+  font-weight: 400;
+  font-style: normal;
   margin-bottom: 20px;
 }
 
@@ -8446,10 +8447,10 @@ List service bottom
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 30px;
-  font-family: "Merriweather", serif;
+  font-family: "Work Sans", serif;
   width: 100%;
-  font-size: 0.92308em;
-  font-weight: 300;
+  font-size: 17px;
+  font-weight: 400;
 }
 
 .shopping-cart .woocommerce-checkout .box-check-out #billing_email {
@@ -8461,10 +8462,10 @@ List service bottom
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 30px;
-  font-family: "Merriweather", serif;
+  font-family: "Work Sans", serif;
   width: 100%;
-  font-size: 0.92308em;
-  font-weight: 300;
+  font-size: 17px;
+  font-weight: 400;
 }
 
 .shopping-cart .woocommerce-checkout .box-check-out #billing_phone {
@@ -8476,10 +8477,10 @@ List service bottom
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 30px;
-  font-family: "Merriweather", serif;
+  font-family: "Work Sans", serif;
   width: 100%;
-  font-size: 0.92308em;
-  font-weight: 300;
+  font-size: 17px;
+  font-weight: 400;
 }
 
 .shopping-cart .woocommerce-checkout .box-check-out .shipping-address {
@@ -8567,21 +8568,21 @@ List service bottom
 }
 
 .shopping-cart .shop_table.woocommerce-checkout-review-order-table tbody tr td .product-info-name {
-  font-size: 1.53846em;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
   line-height: 22px;
 }
 
 .shopping-cart .shop_table.woocommerce-checkout-review-order-table tbody tr td .product-quantity {
-  font-size: 1.53846em;
+  font-size: 16px;
 }
 
 .shopping-cart .shop_table.woocommerce-checkout-review-order-table tbody tr td.product-total {
-  font-size: 1.07692em;
+  font-size: 18px;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.7);
-  font-family: "Merriweather", serif;
+  font-family: "Goudy-heavyface", serif;
 }
 
 .shopping-cart .shop_table tr {
@@ -8732,7 +8733,6 @@ List service bottom
 
 @media only screen and (max-width: 767px) {
   .shopping-cart .shop_table tbody tr td {
-    max-width: 25%;
     padding: 0;
   }
 }
@@ -8802,10 +8802,6 @@ List service bottom
   font-weight: 500;
 }
 
-.shopping-cart .shop_table tbody tr td.product-name {
-  min-width: 280px;
-}
-
 .shopping-cart .shop_table tbody tr td.product-quantity .quantity .book-quanlity {
   display: none;
 }
@@ -8829,7 +8825,7 @@ List service bottom
   padding-right: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   text-align: center;
-  font-family: "Lato", sans-serif;
+  font-family: "Work Sans", sans-serif;
   margin-bottom: 10px;
   height: 40px;
 }
