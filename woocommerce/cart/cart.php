@@ -19,7 +19,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 		<div class="container">
 		<div class="main-cart">
 			<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
-				<?php do_action( 'woocommerce_before_cart_table' ); ?>
 				<div class="title-page">
 					<h4 style="font-size: 21px;padding-bottom: 27px;color: #0a0a0a;text-align: center;text-transform: uppercase;" class="sebodo-underlined">
 						<?php _e('Shopping cart','bebostore'); ?>
@@ -151,30 +150,30 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						?>
 					</tbody>
-					<tfoot class="cart_totals  <?php echo ( WC()->customer->has_calculated_shipping() ) ? 'calculated_shipping' : ''; ?>">
+					<tfoot class="cart_totals calculated_shipping">
 						<?php
 							do_action( 'woocommerce_cart_collaterals' );
 
 							?>
-						<tr>
-							<td colspan="4">
+						<tr class="update-cart row align-items-center">
+							<td class="col-sm-6 col-md-6 col-6">
 								<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 								<input type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'bebostore' ); ?>" />
 								<?php do_action( 'woocommerce_cart_actions' ); ?>
 
 								<?php wp_nonce_field( 'woocommerce-cart' ); ?>
 							</td>
+							<td class="col-sm-6 col-md-6 col-6 info-cart">
+								<div class="box-info-cart">
+									<div class="title-box-cart">
+										<?php $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) ); ?>
+										<a href="<?php print ($shop_page_url); ?>"><?php _e('Continue shopping', 'bebostore'); ?> <i class="fa fa-chevron-right"></i></a>
+									</div>
+								</div>
+							</td>
 						</tr>
 					</tfoot>
 				</table>
-				<div class="info-cart col-12">
-					<div class="box-info-cart">
-						<div class="title-box-cart">
-							<?php $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) ); ?>
-							<a href="<?php print ($shop_page_url); ?>"><?php _e('Keep shopping', 'bebostore'); ?> <i class="fa fa-angle-right"></i></a>
-						</div>
-					</div>
-				</div>
 			</form>
 		</div>
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>

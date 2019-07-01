@@ -25,7 +25,7 @@ $show_shipping_calculator = ! empty( $show_shipping_calculator );
 $calculator_text          = '';
 ?>
 
-<tr class="woocommerce-shipping-totals shipping row">
+<tr class="woocommerce-shipping-totals shipping row align-items-center">
 	<td class="col-sm-2 col-md-2 col-xs-4"><?php echo wp_kses_post( $package_name ); ?></td>
 	<?php if ( $available_methods ) : ?>
 	<td class="col-sm-4 col-md-4 col-xs-4"	 data-title="<?php echo esc_attr( $package_name ); ?>">

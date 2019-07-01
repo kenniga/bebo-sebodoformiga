@@ -8841,7 +8841,7 @@ List service bottom
 .shopping-cart .shop_table tfoot {
   border-top: 2px solid rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
-  font-family: "Lato", sans-serif;
+  font-family: "Korina", sans-serif;
   font-weight: bold;
 }
 
@@ -8872,6 +8872,8 @@ List service bottom
   margin-right: 15px;
   border-radius: 25px;
   padding: 11px 30px;
+  border-radius: 0;
+  font-family: 'Work Sans';
 }
 
 .shopping-cart .shop_table tfoot .checkout-button:hover {
@@ -8882,7 +8884,7 @@ List service bottom
 
 .shopping-cart .shop_table tfoot span {
   font-family: "Merriweather", serif;
-  font-size: 0.92308em;
+  font-size: 1.07692em;
   color: rgba(0, 0, 0, 0.7);
   text-transform: none;
   font-weight: bold;
@@ -8926,15 +8928,18 @@ List service bottom
 }
 
 .info-cart .title-box-cart {
-  font-family: "Lato", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: bold;
   text-align: right;
   float: left;
   width: 100%;
   float: left;
   text-transform: uppercase;
-  margin-bottom: 20px;
   font-size: 1.23077em;
+}
+
+.info-cart .title-box-cart i {
+  margin-left: 20px;
 }
 
 .info-cart .title-box-cart.text-left {
@@ -8944,6 +8949,9 @@ List service bottom
 
 .info-cart .title-box-cart a {
   color: #f07c29;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .info-cart .title-box-cart i {
