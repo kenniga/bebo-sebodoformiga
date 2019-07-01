@@ -124,7 +124,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 											echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );
 										?>
-
 									</td>
 
 									<td class="product-subtotal col-sm-2 col-md-2 col-xs-2">

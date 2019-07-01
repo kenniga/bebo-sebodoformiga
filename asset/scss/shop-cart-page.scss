@@ -31,6 +31,51 @@
                 margin-left: 0;
                 margin-right: 0;
             }
+            .quantity {
+                position: relative;
+                input {
+                    padding: 0px;
+                    font-size: 14pt;
+                    border: solid 0.5px #000;
+                    z-index: 1;
+                    margin-bottom: 0;
+                    width: 100%;
+                    padding-right: 7px;
+                  }
+                  
+                  .spinner-button {
+                    position: absolute;
+                    cursor: default;
+                    z-index: 2;
+                    background-color: white;
+                    width: 20px;
+                    text-align: center;
+                    margin: 0px;
+                    pointer-events: none;
+                    height: 20px;
+                    line-height: 20px;
+                    border-left: 1px solid black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    i {
+                        color: #f07c29;
+                    }
+                  }
+                  
+                  #inc-button {
+                    right: 1px;
+                    top: 1px;
+                  }
+                  
+                  #dec-button {
+                    right: 1px;
+                    bottom: 1px;
+                    border-top: 1px solid black;
+                  }
+              }
+              
             .product-remove a {
                 font-size: 20px;
             }

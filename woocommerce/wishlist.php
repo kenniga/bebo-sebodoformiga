@@ -28,7 +28,7 @@ global $wpdb, $woocommerce;
 				    ?>
 				        <div class="wishlist-title title-page <?php echo ( $wishlist_meta['is_default'] != 1 && $is_user_owner ) ? 'wishlist-title-with-form' : ''?>">
 							<h4 style="font-size: 21px;padding-bottom: 27px;color: #0a0a0a;text-align: center;text-transform: uppercase;margin-bottom: 40px;" class="sebodo-underlined">
-								Wishlist				
+								<?php _e('Wishlist', 'bebostore'); ?>				
 							</h4>
 				        </div>
 				        <?php if( $wishlist_meta['is_default'] != 1 && $is_user_owner ): ?>

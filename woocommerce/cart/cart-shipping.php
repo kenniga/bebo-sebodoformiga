@@ -23,12 +23,14 @@ $formatted_destination    = isset( $formatted_destination ) ? $formatted_destina
 $has_calculated_shipping  = ! empty( $has_calculated_shipping );
 $show_shipping_calculator = ! empty( $show_shipping_calculator );
 $calculator_text          = '';
+$is_checkout_page = is_checkout();
+$shipping_method_class	  = $is_checkout_page ? 'offset-md-1 col-sm-5 col-3 text-sm-center text-right' : 'col-sm-2 col-md-2 col-2' ;
 ?>
 
 <tr class="woocommerce-shipping-totals shipping row align-items-center">
-	<td class="col-sm-2 col-md-2 col-xs-4"><?php echo wp_kses_post( $package_name ); ?></td>
+	<td class="col-sm-2 col-md-2 col-4"><?php echo wp_kses_post( $package_name ); ?></td>
 	<?php if ( $available_methods ) : ?>
-	<td class="col-sm-4 col-md-4 col-xs-4"	 data-title="<?php echo esc_attr( $package_name ); ?>">
+	<td class="col-sm-4 col-md-4 col-5"	 data-title="<?php echo esc_attr( $package_name ); ?>">
 		<?php if ( is_cart() ) : ?>
 			<p class="woocommerce-shipping-destination">
 				<?php
@@ -43,7 +45,7 @@ $calculator_text          = '';
 			</p>
 		<?php endif; ?>
 	</td>
-	<td class="col-sm-2 col-md-2 col-xs-2">
+	<td class="<?php esc_attr_e($shipping_method_class) ?>">
 		<ul id="shipping_method" class="woocommerce-shipping-methods">
 			<?php foreach ( $available_methods as $method ) : ?>
 				<li>
@@ -63,10 +65,8 @@ $calculator_text          = '';
 	<?php
 	elseif ( ! $has_calculated_shipping || ! $formatted_destination ) :
 		esc_html_e( 'Enter your address to view shipping options.', 'woocommerce' );
-	sebodo_debug('dor2');
 
 	elseif ( ! is_cart() ) :
-	sebodo_debug('dor3');
 	?>
 		<td class="col-sm-4 col-md-4 col-xs-4"	 data-title="<?php echo esc_attr( $package_name ); ?>">
 		<?php
@@ -91,8 +91,7 @@ $calculator_text          = '';
 	<?php if ( $show_package_details ) : ?>
 		<?php echo '<p class="woocommerce-shipping-contents"><small>' . esc_html( $package_details ) . '</small></p>'; ?>
 	<?php endif; ?>
-	
-	<td class="col-sm-2 col-md-2 col-2">
-		
-	</td>
+	<?php if( !( is_checkout() ) ) : ?>
+		<td class="col-sm-2 col-md-2 col-2"></td>
+	<?php endif; ?>
 </tr>

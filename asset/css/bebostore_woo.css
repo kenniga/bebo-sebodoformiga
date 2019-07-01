@@ -2470,6 +2470,10 @@ footer .footer-widget .widget-body .book-info .book-rate .star-rating {
 
 .box-check-out .shipping-method #order_review #payment .place-order #place_order {
   margin-right: -10px;
+  border-radius: 0;
+  display: block;
+  height: auto;
+  padding: 4px;
 }
 
 .box-check-out #order_review #payment .payment_methods {

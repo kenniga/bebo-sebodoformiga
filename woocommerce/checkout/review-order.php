@@ -14,8 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <table class="shop_table woocommerce-checkout-review-order-table">
 	<thead>
 		<tr>
-			<th class="product-name col-sm-5 col-md-5 col-xs-5"><?php _e( 'Product name', 'bebostore' ); ?></th>
-			<th class="product-total col-sm-2 col-md-2 col-xs-2"><?php _e( 'Total', 'bebostore' ); ?></th>
+			<th class="product-name col-sm-5 col-md-5 col-7"><?php _e( 'Item name', 'bebostore' ); ?></th>
+			<th class="product-total col-sm-2 col-md-2 col-2"><?php _e( 'Total', 'bebostore' ); ?></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -27,8 +27,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 					?>
-					<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
-						<td class="product-name col-sm-5 col-md-5 col-xs-5">
+					<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?> row align-items-center">
+						<td class="product-name col-sm-5 col-md-5 col-7 d-flex align-items-center">
 							<div class="book-item">
 								<div class="book-image">
 								<?php
@@ -49,10 +49,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 							<?php echo wc_get_formatted_cart_item_data( $cart_item ); ?>
 
 						</td>
-						<td class="product-quantity col-sm-2 col-md-2 col-xs-2">
-							<?php echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' <strong class="product-quantity">' . sprintf( '&times; %s', $cart_item['quantity'] ) . '</strong>', $cart_item, $cart_item_key ); ?>
+						<td class="product-quantity col-sm-2 col-md-2 col-2">
+							<?php echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' <strong class="product-quantity">' . sprintf( '%s', $cart_item['quantity'] ) . '</strong>', $cart_item, $cart_item_key ); ?>
 						</td>
-						<td class="product-total">
+						<td class="product-total col-sm-5 col-3">
 							<?php echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); ?>
 						</td>
 					</tr>
@@ -65,15 +65,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</tbody>
 	<tfoot>
 
-		<tr class="cart-subtotal">
-			<th><?php _e( 'Subtotal', 'bebostore' ); ?></th>
-			<td><?php wc_cart_totals_subtotal_html(); ?></td>
+		<tr class="cart-subtotal row align-items-center">
+			<th class="col-md-7 col-sm-7 col-5"><?php _e( 'Subtotal', 'bebostore' ); ?></th>
+			<td class="col-sm-5 col-7 text-sm-center text-right"><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
-			<tr class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
-				<th><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
-				<td><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
+			<tr class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>  row align-items-center">
+				<th class="col-md-7 col-sm-7 col-5"><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
+				<td class="col-sm-5 col-7 text-sm-center text-right"><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
 			</tr>
 		<?php endforeach; ?>
 
@@ -112,9 +112,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php do_action( 'woocommerce_review_order_before_order_total' ); ?>
 
-		<tr class="order-total">
-			<th><?php _e( 'Total : ', 'bebostore' ); ?></th>
-			<td><?php wc_cart_totals_order_total_html(); ?></td>
+		<tr class="order-total row align-items-center">
+			<th class="col-md-7 col-sm-7 col-5"><?php _e( 'Grand Total : ', 'bebostore' ); ?></th>
+			<td class="col-sm-5 col-7 text-sm-center text-right"><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>
 
 		<?php do_action( 'woocommerce_review_order_after_order_total' ); ?>
