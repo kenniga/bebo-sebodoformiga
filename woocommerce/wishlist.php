@@ -26,14 +26,10 @@ global $wpdb, $woocommerce;
 
 				    if( ! empty( $page_title ) ) :
 				    ?>
-				        <div class="wishlist-title <?php echo ( $wishlist_meta['is_default'] != 1 && $is_user_owner ) ? 'wishlist-title-with-form' : ''?>">
-				            <?php echo apply_filters( 'yith_wcwl_wishlist_title', '<h2 class="title-page">' . $page_title . '</h2>' ); ?>
-				            <?php if( $wishlist_meta['is_default'] != 1 && $is_user_owner ): ?>
-				                <a class="btn button show-title-form">
-				                    <?php echo apply_filters( 'yith_wcwl_edit_title_icon', '<i class="fa fa-pencil"></i>' )?>
-				                    <?php _e( 'Edit title', 'bebostore' ) ?>
-				                </a>
-				            <?php endif; ?>
+				        <div class="wishlist-title title-page <?php echo ( $wishlist_meta['is_default'] != 1 && $is_user_owner ) ? 'wishlist-title-with-form' : ''?>">
+							<h4 style="font-size: 21px;padding-bottom: 27px;color: #0a0a0a;text-align: center;text-transform: uppercase;margin-bottom: 40px;" class="sebodo-underlined">
+								Wishlist				
+							</h4>
 				        </div>
 				        <?php if( $wishlist_meta['is_default'] != 1 && $is_user_owner ): ?>
 				            <div class="hidden-title-form">
@@ -59,7 +55,7 @@ global $wpdb, $woocommerce;
 					    <?php $column_count = 2; ?>
 
 				        <thead>
-				        <tr>
+				        <tr class="row">
 					        <?php if( $show_cb ) : ?>
 
 						        <th class="product-checkbox">
@@ -71,9 +67,11 @@ global $wpdb, $woocommerce;
 				            endif;
 					        ?>
 
-				            <th class="product-name col-sm-6 col-md-6 col-xs-6">
-				                <?php echo apply_filters( 'yith_wcwl_wishlist_view_name_heading', __( 'Product Name', 'bebostore' ) ) ?>
-				            </th>
+				            <th class="col-sm-2 col-md-2 col-2">
+				                <?php echo apply_filters( 'yith_wcwl_wishlist_view_name_heading', __( 'Item Name', 'bebostore' ) ) ?>
+							</th>
+							
+							<th class="col-sm-4 col-md-4 col-4"><?php _e( 'Description', 'bebostore' ); ?></th>
 
 				            <?php if( $show_price ) : ?>
 
@@ -124,14 +122,17 @@ global $wpdb, $woocommerce;
 					                $availability = $product->get_availability();
 					                $stock_status = $availability['class'];
 					                ?>
-				                    <tr id="yith-wcwl-row-<?php print ($item['prod_id']); ?>" data-row-id="<?php print ($item['prod_id']); ?>">
+				                    <tr id="yith-wcwl-row-<?php print ($item['prod_id']); ?>" data-row-id="<?php print ($item['prod_id']); ?>" class="row align-items-center">
 					                    <?php if( $show_cb ) : ?>
 						                    <td class="product-checkbox">
 							                    <input type="checkbox" value="<?php echo esc_attr( $item['prod_id'] ) ?>" name="add_to_cart[]" <?php echo ( $product->product_type != 'simple' ) ? 'disabled="disabled"' : '' ?>/>
 						                    </td>
 					                    <?php endif ?>
-
-				                        <td class="product-thumbnail col-sm-6 col-md-6 col-xs-6">
+										
+				                        <td class="product-thumbnail col-sm-2 col-md-2 col-2">
+											<?php if( $is_user_owner ): ?>
+												<a href="<?php echo esc_url( add_query_arg( 'remove_from_wishlist', $item['prod_id'] ) ) ?>" class="remove remove_from_wishlist" title="<?php _e( 'Remove this product', 'bebostore' ) ?>"><?php _e('x','bebostore'); ?></a>
+											<?php endif; ?>
 				                        	<a href="<?php echo esc_url( get_permalink( apply_filters( 'woocommerce_in_cart_product', $item['prod_id'] ) ) ) ?>">
 				                        		<div class="book-item">
 					                                <div class="book-image">
@@ -139,33 +140,34 @@ global $wpdb, $woocommerce;
 					                                </div>
 					                            </div>
 				                            </a>
-					                        <span class="product-info-name">
-					                            <a href="<?php echo esc_url( get_permalink( apply_filters( 'woocommerce_in_cart_product', $item['prod_id'] ) ) ) ?>"><?php echo apply_filters( 'woocommerce_in_cartproduct_obj_title', $product->get_title(), $product ) ?></a>
-					                        	<span class="by-author">
-					                        		<?php $product_id = $item['prod_id']; ?>
-													<?php _e('by:', 'bebostore'); ?>
-									                   <?php
-									                   		$author = get_field('field_book_author',$product_id);
-									                   ?>
-									                    <?php if( $author ): ?>
-									                    	<?php
-									                    		if(count($author) == 1){
-									                    		foreach( $author as $authors ): ?>
-
-									                            <?php echo get_the_title( $authors->ID ); ?>
-									                        <?php endforeach;
-									                        	}
-									                        else{
-									                        ?>
-									                        <?php foreach( $author as $authors ): ?>
-									                            <?php echo get_the_title( $authors->ID ); ?>,
-									                        <?php endforeach; ?>
-									                        <?php } ?>
-									                    <?php endif; ?>
-									                </span>
-				                        	</span>
 				                        </td>
+										<td class="col-sm-4 col-md-4 col-4">
+											<span class="product-info-name">
+												<a href="<?php echo esc_url( get_permalink( apply_filters( 'woocommerce_in_cart_product', $item['prod_id'] ) ) ) ?>"><?php echo apply_filters( 'woocommerce_in_cartproduct_obj_title', $product->get_title(), $product ) ?></a>
+												<span class="by-author">
+													<?php $product_id = $item['prod_id']; ?>
+													<?php _e('by:', 'bebostore'); ?>
+														<?php
+															$author = get_field('field_book_author',$product_id);
+														?>
+														<?php if( $author ): ?>
+															<?php
+																if(count($author) == 1){
+																foreach( $author as $authors ): ?>
 
+																<?php echo get_the_title( $authors->ID ); ?>
+															<?php endforeach;
+																}
+															else{
+															?>
+															<?php foreach( $author as $authors ): ?>
+																<?php echo get_the_title( $authors->ID ); ?>,
+															<?php endforeach; ?>
+															<?php } ?>
+														<?php endif; ?>
+													</span>
+											</span>
+										</td>
 				                        <?php if( $show_price ) : ?>
 				                            <td class="product-price col-sm-2 col-md-2 col-xs-2">
 				                                <?php
@@ -184,10 +186,6 @@ global $wpdb, $woocommerce;
 				                                    echo apply_filters( 'yith_free_text', __( 'Free!', 'bebostore' ) );
 				                                }
 				                                ?>
-
-				                                <?php if( $is_user_owner ): ?>
-						                        	<a href="<?php echo esc_url( add_query_arg( 'remove_from_wishlist', $item['prod_id'] ) ) ?>" class="remove remove_from_wishlist" title="<?php _e( 'Remove this product', 'bebostore' ) ?>"><?php _e('Remove','bebostore'); ?></a>
-						                        <?php endif; ?>
 				                            </td>
 				                        <?php endif ?>
 
