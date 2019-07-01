@@ -2735,10 +2735,6 @@ footer .footer-widget .widget-body .book-info .book-rate .star-rating {
   justify-content: space-between;
 }
 
-.woocommerce table.shop_table {
-  width: 66.66666667%;
-}
-
 .header-one .woocomerce-cart:before {
   height: 40px;
   left: 5px;

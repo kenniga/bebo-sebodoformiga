@@ -1,0 +1,48 @@
+.woocommerce-cart {
+    .entry-header {
+        display: none;
+    }
+    .title-page {
+        text-align: center;
+        h4 {
+            display: inline-block;
+            &:after {
+        
+                content: "";
+                width: 80%;
+                height: 3px;
+                background: black;
+                display: block;
+                margin-top: 20px;
+                margin: 20px auto 0;
+            }
+        }
+    }
+    .shopping-cart .shop_table {
+        thead tr th {
+            font-style: normal;
+        }
+        tbody {
+            .product-info-name a {
+                font-weight: 700;
+                font-size: 1rem;
+            }
+            tr {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .product-remove a {
+                font-size: 20px;
+            }
+        }
+        tfoot tr {
+            td {
+                &.product-price {
+                    text-align: center;
+                }
+
+            }
+
+        }
+    }
+}
