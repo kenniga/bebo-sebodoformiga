@@ -109,9 +109,7 @@
                 </div>
             </div>
             <?php 
-                if ($hamburger_logo == "") {
-                    $hamburger_logo = get_template_directory_uri().'/asset/images/icon-hamburger-menu.png';
-                } 
+                $hamburger_logo = get_template_directory_uri().'/asset/images/icon-hamburger-menu.png';
             ?>
             <span class="humberger-button d-flex d-sm-none align-items-center justify-content-between">
                 <button>
