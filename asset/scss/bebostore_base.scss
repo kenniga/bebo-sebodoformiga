@@ -8402,7 +8402,6 @@ List service bottom
   .woocommerce-shipping-fields {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding-left: 15px;
     width: 95%;
   }
 }
@@ -8414,9 +8413,6 @@ List service bottom
 }
 
 .shopping-cart {
-  float: left;
-  width: 100%;
-  padding-top: 100px;
   padding-bottom: 100px;
 }
 
@@ -8428,7 +8424,9 @@ List service bottom
   width: 100%;
 }
 
-.shopping-cart .woocommerce-checkout .box-check-out input[type="text"] {
+.shopping-cart .woocommerce-checkout .box-check-out input[type="text"],
+.shopping-cart .woocommerce-checkout .box-check-out input[type="tel"],
+.shopping-cart .woocommerce-checkout .box-check-out input[type="email"] {
   float: left;
   background: transparent;
   border: none;
@@ -8437,11 +8435,11 @@ List service bottom
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 30px;
-  font-family: "Merriweather", serif;
+  font-family: "Work Sans", serif;
   width: 100%;
-  font-size: 0.92308em;
-  font-weight: 300;
-  font-style: italic;
+  font-size: 17px;
+  font-weight: 400;
+  font-style: normal;
   margin-bottom: 20px;
 }
 
@@ -8454,10 +8452,10 @@ List service bottom
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 30px;
-  font-family: "Merriweather", serif;
+  font-family: "Work Sans", serif;
   width: 100%;
-  font-size: 0.92308em;
-  font-weight: 300;
+  font-size: 17px;
+  font-weight: 400;
 }
 
 .shopping-cart .woocommerce-checkout .box-check-out #billing_email {
@@ -8469,10 +8467,10 @@ List service bottom
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 30px;
-  font-family: "Merriweather", serif;
+  font-family: "Work Sans", serif;
   width: 100%;
-  font-size: 0.92308em;
-  font-weight: 300;
+  font-size: 17px;
+  font-weight: 400;
 }
 
 .shopping-cart .woocommerce-checkout .box-check-out #billing_phone {
@@ -8484,10 +8482,10 @@ List service bottom
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 30px;
-  font-family: "Merriweather", serif;
+  font-family: "Work Sans", serif;
   width: 100%;
-  font-size: 0.92308em;
-  font-weight: 300;
+  font-size: 17px;
+  font-weight: 400;
 }
 
 .shopping-cart .woocommerce-checkout .box-check-out .shipping-address {
@@ -8507,7 +8505,6 @@ List service bottom
   line-height: 22px;
   text-transform: uppercase;
   color: #000;
-  margin-bottom: 80px;
   font-weight: bold;
 }
 
@@ -8542,7 +8539,6 @@ List service bottom
 }
 
 .shopping-cart .shop_table {
-  float: left;
   width: 100%;
   height: auto;
   border: none;
@@ -8561,10 +8557,7 @@ List service bottom
 
 .shopping-cart .shop_table.wishlist_table tr th {
   border-top: none;
-}
-
-.shopping-cart .shop_table.wishlist_table .product-name {
-  padding: 16px 12px;
+  padding: 0;
 }
 
 .shopping-cart .shop_table.woocommerce-checkout-review-order-table tbody tr td .book-item {
@@ -8580,28 +8573,28 @@ List service bottom
 }
 
 .shopping-cart .shop_table.woocommerce-checkout-review-order-table tbody tr td .product-info-name {
-  font-size: 1.53846em;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
   line-height: 22px;
 }
 
 .shopping-cart .shop_table.woocommerce-checkout-review-order-table tbody tr td .product-quantity {
-  font-size: 1.53846em;
+  font-size: 16px;
 }
 
 .shopping-cart .shop_table.woocommerce-checkout-review-order-table tbody tr td.product-total {
-  font-size: 1.07692em;
+  font-size: 18px;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.7);
-  font-family: "Merriweather", serif;
+  font-family: "Goudy-heavyface", serif;
 }
 
 .shopping-cart .shop_table tr {
   float: left;
   width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
 
@@ -8663,9 +8656,7 @@ List service bottom
 }
 
 .shopping-cart .shop_table tbody .product-info-name {
-  float: left;
   margin-left: 15px;
-  width: 184px;
   text-align: left;
 }
 
@@ -8673,6 +8664,7 @@ List service bottom
   .shopping-cart .shop_table tbody .product-info-name {
     width: 120px;
     margin-left: 0;
+    text-align: right;
   }
 }
 
@@ -8682,7 +8674,6 @@ List service bottom
 
 .shopping-cart .shop_table tbody .product-info-name a,
 .shopping-cart .shop_table tbody .product-info-name span {
-  float: left;
   width: 100%;
 }
 
@@ -8716,7 +8707,6 @@ List service bottom
 }
 
 .shopping-cart .shop_table tbody tr.cart_item .product-thumbnail {
-  padding: 6px 0;
   display: block;
 }
 
@@ -8733,6 +8723,8 @@ List service bottom
 @media only screen and (max-width: 767px) {
   .shopping-cart .shop_table tbody tr.cart_item .product-thumbnail .book-item {
     margin-left: 20px;
+    margin: 0 auto;
+    width: 35%;
   }
 }
 
@@ -8748,7 +8740,6 @@ List service bottom
 
 @media only screen and (max-width: 767px) {
   .shopping-cart .shop_table tbody tr td {
-    max-width: 25%;
     padding: 0;
   }
 }
@@ -8814,11 +8805,8 @@ List service bottom
 }
 
 .shopping-cart .shop_table tbody tr td.product-stock-status span {
-  color: rgba(0, 0, 0, 0.4);
-}
-
-.shopping-cart .shop_table tbody tr td.product-name {
-  min-width: 280px;
+  color: black;
+  font-weight: 500;
 }
 
 .shopping-cart .shop_table tbody tr td.product-quantity .quantity .book-quanlity {
@@ -8843,16 +8831,16 @@ List service bottom
   padding-left: 10px;
   padding-right: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 150px;
   text-align: center;
-  font-family: "Lato", sans-serif;
+  font-family: "Work Sans", sans-serif;
   margin-bottom: 10px;
+  height: 40px;
 }
 
 .shopping-cart .shop_table tfoot {
   border-top: 2px solid rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
-  font-family: "Lato", sans-serif;
+  font-family: "Korina", sans-serif;
   font-weight: bold;
 }
 
@@ -8863,6 +8851,9 @@ List service bottom
 .shopping-cart .shop_table tfoot tr {
   padding-top: 20px;
   padding-bottom: 20px;
+  margin-left: 0;
+  // padding-left: 15px;
+  // padding-right: 15px;
 }
 
 .shopping-cart .shop_table tfoot tr:last-child {
@@ -8871,7 +8862,6 @@ List service bottom
 
 .shopping-cart .shop_table tfoot tr td {
   border-top: none;
-  padding-left: 0;
 }
 
 .shopping-cart .shop_table tfoot .checkout-button {
@@ -8881,6 +8871,8 @@ List service bottom
   margin-right: 15px;
   border-radius: 25px;
   padding: 11px 30px;
+  border-radius: 0;
+  font-family: 'Work Sans';
 }
 
 .shopping-cart .shop_table tfoot .checkout-button:hover {
@@ -8891,7 +8883,7 @@ List service bottom
 
 .shopping-cart .shop_table tfoot span {
   font-family: "Merriweather", serif;
-  font-size: 0.92308em;
+  font-size: 1.07692em;
   color: rgba(0, 0, 0, 0.7);
   text-transform: none;
   font-weight: bold;
@@ -8935,15 +8927,18 @@ List service bottom
 }
 
 .info-cart .title-box-cart {
-  font-family: "Lato", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: bold;
   text-align: right;
   float: left;
   width: 100%;
   float: left;
   text-transform: uppercase;
-  margin-bottom: 20px;
   font-size: 1.23077em;
+}
+
+.info-cart .title-box-cart i {
+  margin-left: 20px;
 }
 
 .info-cart .title-box-cart.text-left {
@@ -8953,6 +8948,9 @@ List service bottom
 
 .info-cart .title-box-cart a {
   color: #f07c29;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .info-cart .title-box-cart i {
