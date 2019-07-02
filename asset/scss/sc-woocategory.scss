@@ -29,7 +29,11 @@
                 }
 
         }
-        &.col-md-7:before {
+        &.col-md-7 {
+            .category-image {
+                position: static;
+            }
+            &:before {
                 content: '';
                 position: absolute;
                 top: 20px;
@@ -46,6 +50,7 @@
                     bottom: -10px;
                 }
 
+            }
         }
         > a {
             display: block;
