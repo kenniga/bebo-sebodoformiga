@@ -2,4 +2,51 @@
     .book-info span.book-price {
         color: #E22C34;
     }
+    @media screen and (max-width: 768px) {
+        .swiper-wrapper {
+            width: auto;
+        }
+        .book-slider-hightlight .swiper-slide {
+            margin-top: 0;
+            margin-bottom: 40px;
+            .book-item-slide {
+                left: inherit;
+                right: inherit;
+                transform: inherit;
+                justify-content: normal;
+
+                .book-info {
+                    margin-top: 30px;
+                    .book-name {
+                        font-size: 1em;
+                    }
+
+                    .book-price {
+                        font-size: 1.1em;
+                    }
+
+                    .book-author {
+                        font-size: .8em;
+
+                        + .book-price {
+                            margin-top: 15px;
+                        }
+                    }
+
+                }
+            }
+            .book-item {
+                left: inherit;
+                right: inherit;
+                transform: inherit;
+                width: auto;
+            }
+            .book-image {
+                width: auto;
+            }
+        }
+    }
+    &.hightlight-slider-section .book-hightlight-slider .swiper-container .book-item {
+        max-width: none;
+    }
 } 

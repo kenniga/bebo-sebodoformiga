@@ -3250,7 +3250,7 @@ a[title~="title-sub"].mega-menu-link:after {
 
 @media only screen and (max-width: 767px) {
   .book-slider-hightlight {
-    height: 450px;
+    // height: 450px;
   }
 }
 
@@ -3431,8 +3431,12 @@ a[title~="title-sub"].mega-menu-link:after {
 }
 
 .book-hightlight-slider .book-item-slide .book-info .book-price {
-  margin-top: 30px;
+  margin-top: 10px;
   font-size: 1.3em;
+}
+
+.book-hightlight-slider .book-item-slide .book-info .book-author + .book-price {
+  margin-top: 30px;
 }
 
 .book-hightlight-slider .book-item-slide .book-info .book-price img {

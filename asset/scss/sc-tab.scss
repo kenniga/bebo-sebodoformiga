@@ -1,0 +1,47 @@
+.wpb-js-composer {
+    @media screen and (max-width: 768px) {
+        .customized-tab.vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab {
+            padding: 0 14px;
+            > a {
+                padding: 7px 0;
+            }
+            &.vc_active > a {
+                padding: 7px 10px;
+            }
+    
+        }
+        .customized-tab.vc_tta {
+            &.vc_general {
+                .vc_tta-panel-body {
+                    padding: 0;
+                }
+                .vc_tta-panels-container {
+                    .vc_tta-panel-heading {
+                        display: none;
+                    }
+                    .vc_tta-tab {
+                        padding: 0 14px;
+                    }
+                }
+            }
+            &.vc_tta-tabs .vc_tta-tabs-container {
+                display: block;
+                margin-right: 20px;
+                margin-left: 20px;
+                font-size: 10px;
+            }
+    
+            .vc_tta-tab {
+                &.vc_active {
+                    font-weight: 700;
+                    > a {
+                        padding: 7px 10px;
+                    }
+                }
+    
+            }
+    
+        }
+    }
+
+}
