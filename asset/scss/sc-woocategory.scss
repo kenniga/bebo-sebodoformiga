@@ -59,6 +59,20 @@
 
         }
 
+        .category-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+
+            .cat-image {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
         .category-info {
             font-size: 32px;
             position: absolute;

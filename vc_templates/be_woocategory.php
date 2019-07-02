@@ -3,7 +3,7 @@ $number = $option = "";
 extract(shortcode_atts(array(
     'number' 			=> '',
     'option' 			=> '',
-    'product_cat' 		=> ''
+    'category_group' 		=> ''
 ), $atts));
 $idRand = "procat_".rand(100,9999);
 global $wp_query;
@@ -19,6 +19,8 @@ $product_cat_list = array();
 if($product_cat != NULL) {
     $product_cat_list = explode(',', $product_cat);
 }
+$parsed_cats_array = vc_param_group_parse_atts($category_group);
+
 ?>
 <?php
 	if ($option == 'home-06') {
@@ -40,9 +42,9 @@ if($product_cat != NULL) {
 				?>
 				<?php
 				if ( $count > 0 ){
-					foreach ( $product_categories as $product_category ) {
-					$wthumbnail_id = get_woocommerce_term_meta( $product_category->term_id,'thumbnail_id', true );
-					   $wimage = wp_get_attachment_url( $wthumbnail_id );
+					foreach ( $parsed_cats_array as $item_category ) {
+						$product_category = get_term_by('id', $item_category['product_cat'], 'product_types');
+						$wimage = wp_get_attachment_url( $item_category['category_image'] );
 					   $cat_height = '';
 					   if ($i == 1 || $i == 4) {
 						   $cat_height = 'col-md-5 col-5';
@@ -58,9 +60,6 @@ if($product_cat != NULL) {
 								<?php if (!$wimage==''){?>
 									<img class="cat-image" src="<?php print($wimage); ?>" alt="cat-img">
 								<?php } ?>
-							</div>
-							<div class="category-info">
-								<span class="category-name"><?php print($product_category->name); ?></span>
 							</div>
 						</a>
 					</li>

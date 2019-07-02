@@ -646,19 +646,33 @@ function bebostore_proCategories() {
           'description' => __( 'Select style Slide.', 'bebostore' )
         ),
         array(
-          'type'          => 'autocomplete',
-          'heading'       => esc_html__( 'Select categoies show', 'bebostore' ),
-          'param_name'    => 'product_cat',
-          'admin_label' => true,
-          'settings'      => array(
-              'multiple'          => true,
-              'sortable'          => true,
-              'min_length'        => 1,
-              'no_hide'           => true,
-              'groups'            => true,
-              'unique_values'     => true,
-              'display_inline'    => true,
-              'values'            => bebostore_get_list_taxonomy_by_name('pa_product-type')
+          'type' => 'param_group',
+          'heading' => __( 'Category Group:', 'bebostore' ),
+          'param_name' => 'category_group',
+          'params'  => array(
+            array(
+              'type'          => 'autocomplete',
+              'heading'       => esc_html__( 'Select categoies show', 'bebostore' ),
+              'param_name'    => 'product_cat',
+              'admin_label' => true,
+              'settings'      => array(
+                  'multiple'          => false,
+                  'sortable'          => true,
+                  'min_length'        => 1,
+                  'no_hide'           => true,
+                  'groups'            => true,
+                  'unique_values'     => true,
+                  'display_inline'    => true,
+                  'values'            => bebostore_get_list_taxonomy_by_name('product_types')
+              ),
+            ),
+            array(
+              'type' => 'attach_image',
+              'heading' => __( 'Category Image', 'bebostore' ),
+              'param_name' => 'category_image',
+              'value' => '',
+              'description' => __( 'Select image from media library.', 'bebostore' )
+            ),
           ),
         ),
         array(
