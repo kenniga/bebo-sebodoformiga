@@ -11951,12 +11951,12 @@ section#wave-blue-bg .book-subcribe-form form input[type="submit"] {
 
 .sc-store .store-title {
   margin-bottom: 0;
-  border-bottom: 1px solid #D04144;
+  border-bottom: 1px solid #f07c29;
 }
 
 .sc-store .store-address > * {
   padding: 15px 0;
-  border-bottom: 1px solid #D04144;
+  border-bottom: 1px solid #f07c29;
 }
 
 .sc-store .store-address > *:last-child {
@@ -11977,7 +11977,7 @@ section#wave-blue-bg .book-subcribe-form form input[type="submit"] {
 
 .sc-store .store-address ul.socials-block li a:link,
 .sc-store .store-address ul.socials-block li a:visited {
-  color: #D04144;
+  color: #f07c29;
 }
 
 .swiper-bookslider {

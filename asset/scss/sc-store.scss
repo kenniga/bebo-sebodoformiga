@@ -1,12 +1,12 @@
 .sc-store {
     .store-title {
         margin-bottom: 0;
-            border-bottom: 1px solid #D04144;
+            border-bottom: 1px solid #f07c29;
     }
     .store-address {
         > * {
             padding: 15px 0;
-            border-bottom: 1px solid #D04144;
+            border-bottom: 1px solid #f07c29;
             &:last-child {
                 border: none;
             }
@@ -24,7 +24,7 @@
 
                 a:link,
                 a:visited {
-                    color: #D04144
+                    color: #f07c29
                 }
             }
         }
