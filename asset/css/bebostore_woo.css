@@ -424,12 +424,17 @@ img {
 }
 
 #book-mobile-menu .mobile-menu ul li {
-  font-family: "Lato", sans-serif;
-  font-size: 1.07692em;
+  font-family: "Work Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
   list-style: none;
   padding: 5px 0;
   display: inline-block;
   width: 80%;
+}
+
+#book-mobile-menu .mobile-menu ul.sub-menu li {
+  border-bottom: 1px solid #f07c29;
 }
 
 #book-mobile-menu .mobile-menu ul li a {
