@@ -371,7 +371,7 @@ get_header( 'shop' ); ?>
 	<section class="type-tab">
 	<?php
 		
-		$terms = get_terms( 'pa_product-type' );
+		$terms = get_terms( 'product_types' );
 		echo '<ul class="product-type-tab">';
 		
 		foreach ( $terms as $term ) {
