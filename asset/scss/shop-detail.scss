@@ -43,10 +43,8 @@
                 display: flex;
                 justify-content: space-between;
 
-                @media screen and (min-width: 768px) {
-
-                    display: inline-block;
-                    
+                @media screen and (max-width: 768px) {
+                    flex-wrap: wrap;
                 }
 
                 button {
@@ -55,9 +53,13 @@
                         padding: 0 30px;
                         background: #DF713A;
                         border: none;
+                        margin-top: 20px;
+                        width: 100%;
 
                         @media screen and (min-width: 768px) {
+                            margin: 0;
                             padding: 0 20px;
+                            width: auto;
                         }
                         @media screen and (min-width: 1024px) {
                             padding: 0 7px;
@@ -71,25 +73,77 @@
                     }
                 }
                 .quantity {
+                    position: relative;
                     display: inline-block;
                     float: none;
                     width: auto;
                     height: 40px;
                     padding-bottom: 0;
                     margin-right: 20px;
-
-                    .book-quanlity {
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                        margin-right: 0;
+                        text-align: right;
+                    }
+                    input {
+                        padding: 0px;
+                        font-size: 14pt;
+                        border: solid 0.5px #000;
+                        z-index: 1;
+                        margin-bottom: 0;
+                        width: 100%;
+                        padding-right: 7px;
+                        border-radius: 0;
+                        min-width: 0;
+                        width: 60px;
+                        height: 100%;
+                        padding-right: 0;
+                        padding-left: 15px;
+    
+                        @media screen and (max-width: 768px) {
+                            width: 60px;
+                            padding-right: 20px;
+                        }
+    
+                      }
+                      .book-quanlity {
                         color: #858585;
                         margin-right: 21px;
                     }
-                    input[type="number"] {
-                        border-radius: 0;
-                        min-width: 0;
-                        width: auto;
-                        height: 100%;
-                    }
-                }
-                .button {
+                      
+                      .spinner-button {
+                        position: absolute;
+                        cursor: default;
+                        z-index: 2;
+                        background-color: white;
+                        width: 20px;
+                        text-align: center;
+                        margin: 0px;
+                        pointer-events: none;
+                        height: 20px;
+                        line-height: 20px;
+                        border-left: 1px solid black;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+    
+                        i {
+                            color: #f07c29;
+                        }
+                      }
+                      
+                      #inc-button {
+                        right: 1px;
+                        top: 1px;
+                      }
+                      
+                      #dec-button {
+                        right: 1px;
+                        bottom: 1px;
+                        border-top: 1px solid black;
+                      }
+                  }
+            .button {
                     float: none;
                 }
             }
@@ -112,6 +166,7 @@
             .single-button-wishlist {
                 display: inline-block;
                 margin-left: 20px;
+                margin-top: 20px;
 
                 @media screen and (max-width: 768px) {
                     margin-top: 20px;

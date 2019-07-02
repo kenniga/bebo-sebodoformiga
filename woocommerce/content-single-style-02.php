@@ -250,7 +250,7 @@
 											}
 											if ($wishlist_setting == '2') {
 												?>
-												<div class="col-12 col-lg-4 text-right">
+												<div class="col-12 text-right">
 													<div class="single-button-wishlist">
 														<?php
 															echo do_shortcode( '[yith_wcwl_add_to_wishlist]' );
@@ -455,77 +455,293 @@
 								?>
 								<div class="row details-content">
 									<div class="col-lg-3 col-sm-6 col-12">
-										<?php if( $publisher ): ?>
-										<div id="desc-detail" class="book-desc-detail">
-											<?php foreach( $publisher as $publisher ): ?>
-												<?php
-													$id_publisher = $publisher->ID;
-													$publishing_year_item = get_post_meta( get_the_ID(), '_beautheme_publishing_year', true );
-													$publishing_page = get_post_meta( get_the_ID(), '_beautheme_page_count', true );
-													$ISBN = get_post_meta( get_the_ID(), '_beautheme_product_ISBN', true );
+										<?php 
+											$product_types = get_the_terms( get_the_ID(), 'product_types' );
+											$product_types = $product_types[0]->slug;
+											if( $product_types == 'book' ) {
+												if( $publisher ): ?>
+													<div id="desc-detail" class="book-desc-detail">
+														<?php foreach( $publisher as $publisher ): ?>
+															<?php
+																$id_publisher = $publisher->ID;
+																$publishing_year_item = get_post_meta( get_the_ID(), '_beautheme_publishing_year', true );
+																$publishing_page = get_post_meta( get_the_ID(), '_beautheme_page_count', true );
+																$ISBN = get_post_meta( get_the_ID(), '_beautheme_product_ISBN', true );
 
-												?>
-												<span class="detail-desc box-detail-desc">
-													<div class="row">
-														<div class="col-6">
-															<strong>
-																<?php _e('Pages', 'bebostore'); ?>
-															</strong>
-														</div>
-														<div class="col-6">
-															<span>
-																<?php print($publishing_page) ?> Pages
+															?>
+															<span class="detail-desc box-detail-desc">
+																<div class="row">
+																	<div class="col-6">
+																		<strong>
+																			<?php _e('Pages', 'bebostore'); ?>
+																		</strong>
+																	</div>
+																	<div class="col-6">
+																		<span>
+																			<?php print($publishing_page) ?> Pages
+																		</span>
+																	</div>
+																	<?php if ($ISBN != '') { ?>
+																		<div class="col-6">
+																			<strong>
+																				ISBN
+																			</strong>
+																		</div>
+																		<div class="col-6">
+																			<span>
+																				<?php print $ISBN; ?>
+																			</span>
+																		</div>
+																	<?php } ?>
+																	<?php if ($product->get_sku()!='') { ?>
+																		<div class="col-6">
+																			<strong>
+																				ISBN
+																			</strong>
+																		</div>
+																		<div class="col-6">
+																			<span>
+																				<?php print ($product->get_sku());?>
+																			</span>
+																		</div>
+																	<?php } ?>
+																	<div class="col-6">
+																		<strong>
+																			<?php _e('Publisher', 'bebostore'); ?>
+																		</strong>
+																	</div>
+																	<div class="col-6">
+																		<span>
+																			<?php echo get_the_title($id_publisher) ;?>
+																		</span>
+																	</div>
+																	<div class="col-6">
+																		<strong>
+																			<?php _e('Publish Year', 'bebostore'); ?>
+																		</strong>
+																	</div>
+																	<div class="col-6">
+																		<span>
+																			<?php print($publishing_year_item) ?>
+																		</span>
+																	</div>
+																</div>
 															</span>
-														</div>
-														<?php if ($ISBN != '') { ?>
-															<div class="col-6">
-																<strong>
-																	ISBN
-																</strong>
-															</div>
-															<div class="col-6">
-																<span>
-																	<?php print $ISBN; ?>
-																</span>
-															</div>
-														<?php } ?>
-														<?php if ($product->get_sku()!='') { ?>
-															<div class="col-6">
-																<strong>
-																	ISBN
-																</strong>
-															</div>
-															<div class="col-6">
-																<span>
-																	<?php print ($product->get_sku());?>
-																</span>
-															</div>
-														<?php } ?>
-														<div class="col-6">
-															<strong>
-																<?php _e('Publisher', 'bebostore'); ?>
-															</strong>
-														</div>
-														<div class="col-6">
-															<span>
-																<?php echo get_the_title($id_publisher) ;?>
-															</span>
-														</div>
-														<div class="col-6">
-															<strong>
-																<?php _e('Publish Year', 'bebostore'); ?>
-															</strong>
-														</div>
-														<div class="col-6">
-															<span>
-																<?php print($publishing_year_item) ?>
-															</span>
-														</div>
+														<?php endforeach; ?>
 													</div>
-												</span>
-											<?php endforeach; ?>
-										</div>
-										<?php endif; ?>
+												<?php endif;
+
+											} elseif ( $product_types == 'audio-cd' || $product_types == 'cassette' || $product_types == 'vinyl' ) {
+												?>
+												<div id="desc-detail" class="book-desc-detail">
+														<?php
+															$artist = get_field('artist');
+															$album = get_field('album');
+															$labels = get_field('label');
+															$original_release = get_field('original_release');
+															$format = !empty(get_field('format')) ? get_field('format') : '';
+															$condition = !empty(get_field('condition')) ? get_field('condition') : '';
+
+
+														?>
+														<span class="detail-desc box-detail-desc">
+															<div class="row">
+																<?php if ($artist != '') { ?>
+																<div class="col-6">
+																	<strong>
+																		<?php _e('Artist', 'bebostore'); ?>
+																	</strong>
+																</div>
+																<div class="col-6">
+																	<span>
+																		<?php print($artist) ?>
+																	</span>
+																</div>
+																<?php } ?>
+																<?php if ($album != '') { ?>
+																	<div class="col-6">
+																		<strong>
+																			<?php _e('Album', 'bebostore'); ?>
+																		</strong>
+																	</div>
+																	<div class="col-6">
+																		<span>
+																		<?php print($album) ?>
+																		</span>
+																	</div>
+																<?php } ?>
+																<?php if ($labels!='') { ?>
+																	<div class="col-6">
+																		<strong>
+																			<?php _e('Label', 'bebostore'); ?>
+																		</strong>
+																	</div>
+																	<div class="col-6">
+																		<span>
+																		<?php print($labels) ?>
+																		</span>
+																	</div>
+																<?php } ?>
+																<?php if ($original_release!='') { ?>
+																	<div class="col-6">
+																		<strong>
+																			<?php _e('Original Release', 'bebostore'); ?>
+																		</strong>
+																	</div>
+																	<div class="col-6">
+																		<span>
+																			<?php print($original_release) ?>
+																		</span>
+																	</div>
+																<?php } ?>
+																<?php if ($format!='') { ?>
+																	<div class="col-6">
+																		<strong>
+																			<?php _e('Format', 'bebostore'); ?>
+																		</strong>
+																	</div>
+																	<div class="col-6">
+																		<span>
+																			<?php print($format) ?>
+																		</span>
+																	</div>
+																<?php } ?>
+																<?php if ($condition!='') { ?>
+																	<div class="col-6">
+																		<strong>
+																			<?php _e('Condition', 'bebostore'); ?>
+																		</strong>
+																	</div>
+																	<div class="col-6">
+																		<span>
+																			<?php print($condition) ?>
+																		</span>
+																	</div>
+																<?php } ?>
+															</div>
+														</span>
+												</div>
+												<?php
+											} elseif ($product_types == 'vcd-dvd') {
+												?>
+													<div id="desc-detail" class="book-desc-detail">
+														<?php
+															$studio = get_field('studio');
+															$original_release = get_field('original_release');
+															$format = get_field('format');
+															$length = get_field('length');
+															$condition = !empty(get_field('condition')) ? get_field('condition') : '';
+
+
+														?>
+														<span class="detail-desc box-detail-desc">
+															<div class="row">
+																<?php if ($studio != '') { ?>
+																<div class="col-6">
+																	<strong>
+																		<?php _e('Studio', 'bebostore'); ?>
+																	</strong>
+																</div>
+																<div class="col-6">
+																	<span>
+																		<?php print($studio) ?>
+																	</span>
+																</div>
+																<?php } ?>
+																<?php if ($original_release != '') { ?>
+																	<div class="col-6">
+																		<strong>
+																			<?php _e('Original Release', 'bebostore'); ?>
+																		</strong>
+																	</div>
+																	<div class="col-6">
+																		<span>
+																		<?php print($original_release) ?>
+																		</span>
+																	</div>
+																<?php } ?>
+																<?php if ($format!='') { ?>
+																	<div class="col-6">
+																		<strong>
+																			<?php _e('Format', 'bebostore'); ?>
+																		</strong>
+																	</div>
+																	<div class="col-6">
+																		<span>
+																		<?php print($format) ?>
+																		</span>
+																	</div>
+																<?php } ?>
+																<?php if ($length!='') { ?>
+																	<div class="col-6">
+																		<strong>
+																			<?php _e('Lengthe', 'bebostore'); ?>
+																		</strong>
+																	</div>
+																	<div class="col-6">
+																		<span>
+																			<?php print($length) ?>
+																		</span>
+																	</div>
+																<?php } ?>
+																<?php if ($condition!='') { ?>
+																	<div class="col-6">
+																		<strong>
+																			<?php _e('Condition', 'bebostore'); ?>
+																		</strong>
+																	</div>
+																	<div class="col-6">
+																		<span>
+																			<?php print($condition) ?>
+																		</span>
+																	</div>
+																<?php } ?>
+															</div>
+														</span>
+												</div>
+												<?php
+											} else {
+												?>
+													<div id="desc-detail" class="book-desc-detail">
+														<?php
+															$item_type = get_field('item_type');
+															$condition = !empty(get_field('condition')) ? get_field('condition') : '';
+
+
+														?>
+														<span class="detail-desc box-detail-desc">
+															<div class="row">
+																<?php if ($item_type != '') { ?>
+																<div class="col-6">
+																	<strong>
+																		<?php _e('Item Type', 'bebostore'); ?>
+																	</strong>
+																</div>
+																<div class="col-6">
+																	<span>
+																		<?php print($item_type) ?>
+																	</span>
+																</div>
+																<?php } ?>
+																<?php if ($condition!='') { ?>
+																	<div class="col-6">
+																		<strong>
+																			<?php _e('Condition', 'bebostore'); ?>
+																		</strong>
+																	</div>
+																	<div class="col-6">
+																		<span>
+																			<?php print($condition) ?>
+																		</span>
+																	</div>
+																<?php } ?>
+															</div>
+														</span>
+												</div>
+												<?php
+											}
+										?>
+										
 									</div>
 									<div class="col-lg-7 col-sm-6 col-12">
 										<div class="heading-box d-block d-sm-none my-4 my-sm-auto">
