@@ -7,7 +7,8 @@
 	$none_book = get_post_meta( get_the_ID(),'_beautheme_product_none_book', TRUE);
 	if($none_book == 'on'){
     	$style_product = 'none-book';
-    }
+	}
+	$current_product_types = get_the_terms(get_the_ID(), 'product_types');
 ?>
 <li <?php post_class('col-6 col-sm-3 mb-5'); ?>>
 	<div class="book-item-shop">
@@ -39,13 +40,25 @@
 		<div class="book-info">
 			<?php echo woocommerce_template_loop_rating(); ?>
 			<span class="book-name"><a href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></span>
+			<?php if( $current_product_types[0]->slug !== 'merchandise' && $current_product_types[0]->slug !== 'misc' ) { ?>
 			<span class="book-author">
+						
 				<?php _e('By:', 'bebostore'); ?>
                    <?php
-                   		$author = get_field('field_book_author');
+				   		if( $current_product_types[0]->slug === 'book' ) {
+							$author = get_field('field_book_author');
+						} elseif( $current_product_types[0]->slug == 'audio-cd' || $current_product_types[0]->slug == 'cassette' || $current_product_types[0]->slug == 'vinyl' ) {
+							$author = get_field('artist');
+						} elseif( $current_product_types[0]->slug == 'vcd-dvd' ) {
+							$author = get_field('studio');
+						} else {
+							$author = '';
+						}
                    ?>
                     <?php if( $author ): ?>
                     	<?php
+							if( is_array($author) ) {
+
                     		if(count($author) == 1){
                     		foreach( $author as $authors ): ?>
                             <a href="<?php echo get_permalink( $authors->ID ); ?>" target="blank"><?php echo get_the_title( $authors->ID ); ?></a>
@@ -56,10 +69,15 @@
                         <?php foreach( $author as $authors ): ?>
                             <a href="<?php echo get_permalink( $authors->ID ); ?>" target="blank"><?php echo get_the_title( $authors->ID ); ?></a>,
                         <?php endforeach; ?>
-                        <?php } ?>
+						<?php } 
+						} else {  
+							echo get_the_title( $authors->ID );
+						}
+					?>
                     <?php endif; ?>
 			</span>
 			<?php
+			}
 				if ($show_price_setting != '1') {
 			?>
 				<span class="book-price"><?php echo woocommerce_template_loop_price(); ?></span>
