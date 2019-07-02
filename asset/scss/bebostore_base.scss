@@ -1133,12 +1133,17 @@ header.header-one .humberger-button {
 }
 
 header.header-one .humberger-button button {
-  width: 30px;
-  height: 30px;
+  width: 20px;
   padding: 0px;
   background: transparent;
   border: none;
   position: relative;
+  display: flex;
+  align-items: center;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 header.header-one .humberger-button button i {
