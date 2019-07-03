@@ -30,7 +30,7 @@
 				<?php }
 				else{
 				?>
-					<a href="<?php echo esc_url(wp_logout_url( get_permalink( wc_get_page_id( 'myaccount' ) ) )); ?>"><?php esc_html_e('Log out','bebostore'); ?></a>
+					<a href="<?php echo esc_url(get_permalink( wc_get_page_id( 'myaccount' ) ) ); ?>"><?php esc_html_e('My Account','bebostore'); ?></a>
 				<?php
 				}
 				?>
