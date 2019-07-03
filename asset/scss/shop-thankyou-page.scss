@@ -1,0 +1,222 @@
+.woocommerce-order-received {
+    .edit-link {
+        display: none;
+    }
+    > section {
+        background: #e22f3d;
+        .section-blog-detail {
+            float: none;
+            .page-blogs-grid {
+                float: none;
+                padding-top: 60px;
+
+                .sebodo-page {
+                    color: #F4F6DD;
+                    padding-bottom: 150px;
+                    
+                    h2.woocommerce-thankyou-order-received {
+                        font-family: 'goudy-heavyface';
+                        text-align: center;
+                        line-height: 1.5;
+                    }
+    
+                    .order-overview {
+                        margin-top: 60px;
+
+                        @media screen and (max-width: 768px) {
+                            margin-top: 0;
+                        }
+    
+                        .woocommerce-order-overview {
+                            padding-left: 0;
+                            list-style: none;
+                            padding-top: 40px;
+                            padding-bottom: 40px;
+                            margin-bottom: 0;
+                            border-top: 1px solid #F4F6DD;
+                            border-bottom: 1px solid #F4F6DD;
+                            color: #F4F6DD;
+
+                            @media screen and (max-width: 768px) {
+                                margin-top: 30px;
+                                padding-top: 20px;
+                                padding-bottom: 20px;
+                            }
+                            > li {
+                                font-family: 'Korina';
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 20px;
+                                padding: 10px;
+
+                                @media screen and (max-width: 768px) {
+                                    font-size: 16px;
+                                    padding: 7px 15px;
+                                }    
+
+                                strong {
+                                    font-family: 'Work Sans';
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+    
+                    }
+                    .woocommerce-order-details {
+                        margin-top: 30px;
+
+                        @media screen and (max-width: 768px) {
+                            margin-top: 70px;
+                        }
+
+                        .order-details-title {
+                            text-align: center;
+                            color: #F4F6DD;
+                        }
+    
+                        h4.sebodo-underlined:after {
+                            content: "";
+                            width: 80%;
+                            height: 3px;
+                            background: #F4F6DD;
+                            display: block;
+                            margin-top: 20px;
+                            margin: 20px auto 0;
+                        }
+    
+                        .woocommerce-table {
+                            width: 100%;
+                            thead {
+                                border-top: 2px solid;
+                                border-bottom: 2px solid;
+                                th {
+                                    padding-top: 20px;
+                                    padding-bottom: 20px;
+                                    font-size: 20px;
+                                    font-family: 'Korina';
+                                    width: 50%;
+
+                                    @media screen and (max-width: 768px) {
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        padding: 15px 0;
+                                        border-bottom: 1px solid;
+                                    }
+                                    &:last-child {
+                                        td {
+                                            border-bottom: 1px dashed;
+                                        }
+                                    }
+
+                                }
+                            }
+                            tfoot {
+                                tr {
+                                    > * {
+                                        padding-top: 20px;
+                                        padding-bottom: 20px;
+                                        border-bottom: 1px solid;
+                                    }
+                                    th {
+                                        font-family: 'Korina';
+                                        font-size: 16px;
+                                    }
+                                    td {
+                                        font-size: 18px;
+                                    }
+                                    small {
+                                        font-size: 13px;
+                                    }
+                                }
+                            }
+                            &__product-name a {
+                                color: #F4F6DD;
+                                font-weight: 600;
+                                font-size: 16px;
+
+                                @media screen and (max-width: 768px) {
+                                    font-size: 14px;
+                                }
+                            }
+                            .woocommerce-Price-amount.amount {
+                                font-family: 'goudy-heavyface';
+                                font-size: 18px;
+
+                                @media screen and (max-width: 768px) {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+
+                    .woocommerce-customer-details {
+                        margin-top: 80px;
+                        .customer-details-title {
+                            text-align: center;
+                            h4.sebodo-underlined:after {
+                                content: "";
+                                width: 80%;
+                                height: 3px;
+                                background: #F4F6DD;
+                                display: block;
+                                margin-top: 20px;
+                                margin: 20px auto 0;
+                            }
+                        }
+                        .woocommerce-columns--addresses {
+                            address {
+                                font-size: 16px;
+                            }
+                            .woocommerce-column__title {
+                                font-weight: 600;
+                                text-transform: uppercase;
+
+                                @media screen and (max-width: 768px) {
+                                    font-size: 18px;
+                                }
+                                
+                            }
+                            @media screen and (max-width: 768px) {
+                                font-size: 13px;
+                            }
+                        }
+                        .to-shop {
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 12px 20px;
+                            border: 2px solid #F4F6DD;
+                            color: #F4F6DD;
+                            font-family: 'Work Sans';
+                            font-weight: 600;
+                            font-size: 22px;
+                            text-decoration: none;
+                            transition: .42s;
+
+                            &:hover {
+                                background: #F4F6DD;
+                                color: #e22f3d;
+                                transition: .42s;
+                            }
+                            i {
+                                margin-left: 15px;
+                            }
+                            &-wrapper {
+                                text-align: center;
+                                margin-top: 40px;
+                            }
+                        }
+                    }
+
+                }
+                
+            }
+
+        }
+    } 
+}
