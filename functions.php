@@ -347,6 +347,18 @@ function bebostore_get_category_product(){
     return $category_product;
 }
 
+function bebostore_get_product_types(){
+    $terms = get_terms('product_types');
+    $category_product['Select...'] = '';
+    $category_product['All'] = '';
+    if (is_array($terms)) {
+        foreach ($terms as $term) {
+            $category_product[$term->name] = $term->name;
+        }
+    }
+    return $category_product;
+}
+
 function bebostore_get_category_blog(){
     $terms = get_terms('category');
     $category_blog['Select...'] = '';
@@ -513,3 +525,7 @@ function customizing_availability_text( $availability, $product ) {
     return $availability;
 }
 add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+
+function isMobileDevice() {
+    return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+}
