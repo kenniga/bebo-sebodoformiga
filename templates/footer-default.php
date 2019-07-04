@@ -44,7 +44,7 @@
 			<button type="button" class="close" data-dismiss="modal">&times;</button>
 			<div class="modal-body">
 				<form action="<?php echo esc_url(home_url( '/' ));?>" method="get">
-					<input type="text" name="s" value="" placeholder="<?php esc_html_e('Search by title book', 'bebostore'); ?>">
+					<input type="text" name="s" value="" placeholder="<?php esc_html_e('Search by title', 'bebostore'); ?>">
 					<input type="hidden" name="post_type" value="product" />
 					<select name="product_types" class="custom-dropdown">
 						<option value="" selected><?php esc_html_e('Product','bebostore'); ?> <i class="fa fa-chevron-down"></i></option>

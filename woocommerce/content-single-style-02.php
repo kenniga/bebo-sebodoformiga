@@ -487,7 +487,7 @@
 																	<?php if ($product->get_sku()!='') { ?>
 																		<div class="col-6">
 																			<strong>
-																				ISBN
+																				SKU
 																			</strong>
 																		</div>
 																		<div class="col-6">
