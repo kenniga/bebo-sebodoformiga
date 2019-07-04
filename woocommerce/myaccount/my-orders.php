@@ -17,8 +17,6 @@ $my_orders_columns = apply_filters( 'woocommerce_my_account_my_orders_columns', 
 	'order-actions' => '&nbsp;',
 ) );
 
-sebodo_debug($my_orders_columns);
-
 $customer_orders = get_posts( apply_filters( 'woocommerce_my_account_my_orders_query', array(
 	'numberposts' => $order_count,
 	'meta_key'    => '_customer_user',

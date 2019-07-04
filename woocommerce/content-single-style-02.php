@@ -525,92 +525,92 @@
 											} elseif ( $product_types == 'audio-cd' || $product_types == 'cassette' || $product_types == 'vinyl' ) {
 												?>
 												<div id="desc-detail" class="book-desc-detail">
-														<?php
-															$artist = get_field('artist');
-															$album = get_field('album');
-															$labels = get_field('label');
-															$original_release = get_field('original_release');
-															$format = !empty(get_field('format')) ? get_field('format') : '';
-															$condition = !empty(get_field('condition')) ? get_field('condition') : '';
+													<?php
+														$artist = get_field('artist');
+														$album = get_field('album');
+														$labels = get_field('label');
+														$original_release = get_field('original_release');
+														$format = !empty(get_field('format')) ? get_field('format') : '';
+														$condition = !empty(get_field('condition')) ? get_field('condition') : '';
 
 
-														?>
-														<span class="detail-desc box-detail-desc">
-															<div class="row">
-																<?php if ($artist != '') { ?>
+													?>
+													<span class="detail-desc box-detail-desc">
+														<div class="row">
+															<?php if ($artist != '') { ?>
+															<div class="col-6">
+																<strong>
+																	<?php _e('Artist', 'bebostore'); ?>
+																</strong>
+															</div>
+															<div class="col-6">
+																<span>
+																	<?php print($artist) ?>
+																</span>
+															</div>
+															<?php } ?>
+															<?php if ($album != '') { ?>
 																<div class="col-6">
 																	<strong>
-																		<?php _e('Artist', 'bebostore'); ?>
+																		<?php _e('Album', 'bebostore'); ?>
 																	</strong>
 																</div>
 																<div class="col-6">
 																	<span>
-																		<?php print($artist) ?>
+																	<?php print($album) ?>
 																	</span>
 																</div>
-																<?php } ?>
-																<?php if ($album != '') { ?>
-																	<div class="col-6">
-																		<strong>
-																			<?php _e('Album', 'bebostore'); ?>
-																		</strong>
-																	</div>
-																	<div class="col-6">
-																		<span>
-																		<?php print($album) ?>
-																		</span>
-																	</div>
-																<?php } ?>
-																<?php if ($labels!='') { ?>
-																	<div class="col-6">
-																		<strong>
-																			<?php _e('Label', 'bebostore'); ?>
-																		</strong>
-																	</div>
-																	<div class="col-6">
-																		<span>
-																		<?php print($labels) ?>
-																		</span>
-																	</div>
-																<?php } ?>
-																<?php if ($original_release!='') { ?>
-																	<div class="col-6">
-																		<strong>
-																			<?php _e('Original Release', 'bebostore'); ?>
-																		</strong>
-																	</div>
-																	<div class="col-6">
-																		<span>
-																			<?php print($original_release) ?>
-																		</span>
-																	</div>
-																<?php } ?>
-																<?php if ($format!='') { ?>
-																	<div class="col-6">
-																		<strong>
-																			<?php _e('Format', 'bebostore'); ?>
-																		</strong>
-																	</div>
-																	<div class="col-6">
-																		<span>
-																			<?php print($format) ?>
-																		</span>
-																	</div>
-																<?php } ?>
-																<?php if ($condition!='') { ?>
-																	<div class="col-6">
-																		<strong>
-																			<?php _e('Condition', 'bebostore'); ?>
-																		</strong>
-																	</div>
-																	<div class="col-6">
-																		<span>
-																			<?php print($condition) ?>
-																		</span>
-																	</div>
-																<?php } ?>
-															</div>
-														</span>
+															<?php } ?>
+															<?php if ($labels!='') { ?>
+																<div class="col-6">
+																	<strong>
+																		<?php _e('Label', 'bebostore'); ?>
+																	</strong>
+																</div>
+																<div class="col-6">
+																	<span>
+																	<?php print($labels) ?>
+																	</span>
+																</div>
+															<?php } ?>
+															<?php if ($original_release!='') { ?>
+																<div class="col-6">
+																	<strong>
+																		<?php _e('Original Release', 'bebostore'); ?>
+																	</strong>
+																</div>
+																<div class="col-6">
+																	<span>
+																		<?php print($original_release) ?>
+																	</span>
+																</div>
+															<?php } ?>
+															<?php if ($format!='') { ?>
+																<div class="col-6">
+																	<strong>
+																		<?php _e('Format', 'bebostore'); ?>
+																	</strong>
+																</div>
+																<div class="col-6">
+																	<span>
+																		<?php print($format) ?>
+																	</span>
+																</div>
+															<?php } ?>
+															<?php if ($condition!='') { ?>
+																<div class="col-6">
+																	<strong>
+																		<?php _e('Condition', 'bebostore'); ?>
+																	</strong>
+																</div>
+																<div class="col-6">
+																	<span>
+																		<?php print($condition) ?>
+																	</span>
+																</div>
+															<?php } ?>
+														</div>
+													</span>
 												</div>
 												<?php
 											} elseif ($product_types == 'vcd-dvd') {
@@ -760,16 +760,16 @@
 														<div class="name-author">
 															By <a href="<?php echo get_permalink( $id_author ); ?>" target="blank"><?php echo get_the_title( $id_author ); ?></a>
 														</div>
-														<div class="description">
-															<span class="book-desc">
-																<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
-															</span>
-														</div>
 													<div class="clearfix"></div>
 												<?php endforeach; ?>
 											</div><!--End box author-->
 										</div>
 									<?php endif; ?>
+										<div class="description">
+											<span class="book-desc">
+												<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
+											</span>
+										</div>
 									</div>
 								</div>
 							</div>

@@ -295,6 +295,10 @@
                         }
                     }
                 }
+
+                .box-meet-author {
+                    float: none;
+                }
                 .name-author {
                     font-family: 'Korina';
                     font-style: italic;
@@ -322,12 +326,12 @@
                         line-height: 2.5;
                     }
                 }
-                .description {
-                    margin-top: 20px;
-                }
                 .book-desc {
                     p {
                         line-height: 1.7;
+                    }
+                    &-detail + .description {
+                        margin-top: 20px;
                     }
 
                 }
