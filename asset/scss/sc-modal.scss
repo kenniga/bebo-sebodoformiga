@@ -43,6 +43,8 @@
 
         @media screen and (max-width: 768px) {
             top: -10vh;
+            left: auto;
+            right: 10px;
             z-index: 10;
         }
     }
