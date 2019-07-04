@@ -40,6 +40,11 @@
         font-size: 50px;
         color: #f4f7da;
         opacity: 1;
+
+        @media screen and (max-width: 768px) {
+            top: -10vh;
+            z-index: 10;
+        }
     }
 
     form {
@@ -69,6 +74,10 @@
             text-align: center;
             color: #f4f7da;
 
+            @media screen and (max-width: 768px) {
+                flex: 1 1 50%;
+            }
+
             &::placeholder {
                 color: #f4f7da;
                 opacity: 1; /* Firefox */
@@ -94,6 +103,11 @@
                 padding-left: 0;
                 position: absolute;
                 margin-top: 42px;
+
+                @media screen and (max-width:768px) {
+                    right: calc(1rem + 12px);
+                    left: auto;
+                }
 
                 li {
                     text-transform: uppercase;

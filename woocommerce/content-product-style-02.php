@@ -40,44 +40,49 @@
 		<div class="book-info">
 			<?php echo woocommerce_template_loop_rating(); ?>
 			<span class="book-name"><a href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></span>
-			<?php if( $current_product_types[0]->slug !== 'merchandise' && $current_product_types[0]->slug !== 'misc' ) { ?>
-			<span class="book-author">
-						
-				<?php _e('By:', 'bebostore'); ?>
-                   <?php
-				   		if( $current_product_types[0]->slug === 'book' ) {
-							$author = get_field('field_book_author');
-						} elseif( $current_product_types[0]->slug == 'audio-cd' || $current_product_types[0]->slug == 'cassette' || $current_product_types[0]->slug == 'vinyl' ) {
-							$author = get_field('artist');
-						} elseif( $current_product_types[0]->slug == 'vcd-dvd' ) {
-							$author = get_field('studio');
-						} else {
-							$author = '';
-						}
-                   ?>
-                    <?php if( $author ): ?>
-                    	<?php
-							if( is_array($author) ) {
+			<?php 
+				if( $current_product_types ) {
+					if( $current_product_types[0]->slug !== 'merchandise' && $current_product_types[0]->slug !== 'misc' ) { 
 
-                    		if(count($author) == 1){
-                    		foreach( $author as $authors ): ?>
-                            <a href="<?php echo get_permalink( $authors->ID ); ?>" target="blank"><?php echo get_the_title( $authors->ID ); ?></a>
-                        <?php endforeach;
-                        	}
-                        else{
-                        ?>
-                        <?php foreach( $author as $authors ): ?>
-                            <a href="<?php echo get_permalink( $authors->ID ); ?>" target="blank"><?php echo get_the_title( $authors->ID ); ?></a>,
-                        <?php endforeach; ?>
-						<?php } 
-						} else {  
-							echo get_the_title( $authors->ID );
-						}
-					?>
-                    <?php endif; ?>
-			</span>
-			<?php
-			}
+			?>
+					<span class="book-author">
+								
+						<?php _e('By:', 'bebostore'); ?>
+						<?php
+								if( $current_product_types[0]->slug === 'book' ) {
+									$author = get_field('field_book_author');
+								} elseif( $current_product_types[0]->slug == 'audio-cd' || $current_product_types[0]->slug == 'cassette' || $current_product_types[0]->slug == 'vinyl' ) {
+									$author = get_field('artist');
+								} elseif( $current_product_types[0]->slug == 'vcd-dvd' ) {
+									$author = get_field('studio');
+								} else {
+									$author = '';
+								}
+						?>
+							<?php if( $author ): ?>
+								<?php
+									if( is_array($author) ) {
+
+									if(count($author) == 1){
+									foreach( $author as $authors ): ?>
+									<a href="<?php echo get_permalink( $authors->ID ); ?>" target="blank"><?php echo get_the_title( $authors->ID ); ?></a>
+								<?php endforeach;
+									}
+								else{
+								?>
+								<?php foreach( $author as $authors ): ?>
+									<a href="<?php echo get_permalink( $authors->ID ); ?>" target="blank"><?php echo get_the_title( $authors->ID ); ?></a>,
+								<?php endforeach; ?>
+								<?php } 
+								} else {  
+									echo get_the_title( $authors->ID );
+								}
+							?>
+							<?php endif; ?>
+					</span>
+				<?php
+					}
+				}
 				if ($show_price_setting != '1') {
 			?>
 				<span class="book-price"><?php echo woocommerce_template_loop_price(); ?></span>

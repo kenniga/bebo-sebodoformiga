@@ -46,7 +46,7 @@
 				<form action="<?php echo esc_url(home_url( '/' ));?>" method="get">
 					<input type="text" name="s" value="" placeholder="<?php esc_html_e('Search by title book', 'bebostore'); ?>">
 					<input type="hidden" name="post_type" value="product" />
-					<select name="product_cat" class="custom-dropdown">
+					<select name="product_types" class="custom-dropdown">
 						<option value="" selected><?php esc_html_e('Product','bebostore'); ?> <i class="fa fa-chevron-down"></i></option>
 						<?php
 							if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
@@ -55,7 +55,7 @@
 								'order'     => 'ASC',
 								'hide_empty'          => FALSE,
 							);
-							$product_categories = get_terms( 'product_cat', $args );
+							$product_categories = get_terms( 'product_types', $args );
 							$count = count($product_categories);
 							if (class_exists('WC()')) {
 								# code...

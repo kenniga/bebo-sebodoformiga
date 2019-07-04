@@ -269,18 +269,9 @@
 												$category_name_item = wc_get_product_category_list(
 													get_the_ID( $product ),
 													', ', 
-													'<div class="category_as">' . _n( 'Categories:', 'Categories:', 
-													$tag_count, 'bebostore' ) . ' ', 
+													'<div class="category_as">' . _n( 'Categories:', 'Categories:', 'bebostore' ) . ' ', 
 													'</div>'
 												);
-												$product_tag = wc_get_product_tag_list(
-													get_the_ID(), 
-													', ', 
-													'<div class="tagged_as">' . _n( 'Tag:', 'Tags:', 
-													$tag_count, 'bebostore' ) . ' ', 
-													'</div>' 
-												);
-												print($product_tag);
 												print($category_name_item);
 												$pinImage = $image_links;
 											?>
