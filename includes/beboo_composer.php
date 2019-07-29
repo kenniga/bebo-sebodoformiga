@@ -414,6 +414,29 @@ function jabarmasagi_BlogCardSlider() {
 }
 class WPBakeryShortCode_Be_blogcardslider extends WPBakeryShortCode {}
 
+  //This for section blog
+add_action( 'vc_before_init', 'jabarmasagi_VideoPlayer', 999999);
+function jabarmasagi_VideoPlayer() {
+  global $bebostore_perpage_arr;
+  vc_map( array(
+      "name" => __( "Jabar Masagi Video Player", "bebostore" ),
+      "base" => "be_videoplayer",
+      'weight' => 91,
+      'category' => __( 'Beau Theme', 'bebostore' ),
+      'description' => __( 'This section contain video player in jabar masagi version', 'bebostore' ),
+      "params" => array(
+        // Need and image, select book, add more info
+        //Category
+        array(
+          'type' => 'file_picker',
+          'heading' => __( 'Video File', 'bebostore' ),
+          'param_name' => 'video_file',
+        ),
+      ),
+   ) );
+}
+class WPBakeryShortCode_Be_videoplayer extends WPBakeryShortCode {}
+
 //This for section blog
 add_action( 'vc_before_init', 'bebostore_Blog', 999999);
 function bebostore_Blog() {
