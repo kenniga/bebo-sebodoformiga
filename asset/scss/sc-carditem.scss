@@ -1,0 +1,15 @@
+.sc-card-item {
+    font-family: intro-regular;
+    border-radius: 25px;
+    background: white;
+    padding: 15px;
+
+    &__title {
+        font-family: intro-bold;
+        text-align: center;
+    }
+    &__content {
+        text-align: center;
+        margin-top: 15px;
+    }
+}

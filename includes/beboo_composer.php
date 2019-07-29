@@ -135,6 +135,95 @@ function jabarmasagi_PopupRegister() {
 }
 class WPBakeryShortCode_Be_popupregister extends WPBakeryShortCode {}
 
+  //This for popup modul jabarmasagi
+add_action( 'vc_before_init', 'jabarmasagi_CardItem', 999999);
+function jabarmasagi_CardItem() {
+  global $bebostore_perpage_arr, $bebostore_book_listall;
+  vc_map( array(
+      "name" => __( "Jabar Masagi Card Item", "bebostore" ),
+      "base" => "be_carditem",
+      'weight' => 91,
+      'category' => __( 'Beau Theme', 'bebostore' ),
+      "params" => array(
+      	// Need and image, select book, add more info
+        array(
+          'type' => 'textfield',
+          'heading' => __( 'Title Card', 'bebostore' ),
+          'admin_label' => true,
+          'param_name' => 'title_card',
+        ),
+        array(
+          'type' => 'attach_image',
+          'heading' => __( 'Card Image', 'bebostore' ),
+          'param_name' => 'card_image',
+        ),
+        array(
+          'type' => 'textarea',
+          'heading' => __( 'Content', 'bebostore' ),
+          'param_name' => 'text_content',
+        ),
+      ),
+   ) );
+}
+class WPBakeryShortCode_Be_carditem extends WPBakeryShortCode {}
+
+  //This for counter jabarmasagi
+add_action( 'vc_before_init', 'jabarmasagi_TimeCounter', 999999);
+function jabarmasagi_TimeCounter() {
+  global $bebostore_perpage_arr, $bebostore_book_listall;
+  vc_map( array(
+      "name" => __( "Jabar Masagi Time Counter", "bebostore" ),
+      "base" => "be_timecounter",
+      'weight' => 91,
+      'category' => __( 'Beau Theme', 'bebostore' ),
+      "params" => array(
+      	// Need and image, select book, add more info
+        array(
+          'type' => 'textfield',
+          'heading' => __( 'Counter Title Text', 'bebostore' ),
+          'param_name' => 'title_text',
+          'description' => __( 'Title for your counter.', 'bebostore' ),
+        ),
+        array(
+          'type' => 'textfield',
+          'heading' => __( 'Date\'s Countdown', 'bebostore' ),
+          'param_name' => 'date_countdown',
+          'admin_label' => true,
+          'description' => __( 'Date of your countdown deadline. Max: 31', 'bebostore' ),
+        ),
+        array(
+          'type' => 'dropdown',
+          'heading' => __( 'Month\'s Countdown', 'bebostore' ),
+          'param_name' => 'month_countdown',
+          'admin_label' => true,
+          'value' => array(
+            __( 'January', 'bebostore' ) => 'Jan',
+            __( 'February', 'bebostore' ) => 'Feb',
+            __( 'March', 'bebostore' ) => 'Mar',
+            __( 'April', 'bebostore' ) => 'April',
+            __( 'May', 'bebostore' ) => 'May',
+            __( 'June', 'bebostore' ) => 'Jun',
+            __( 'July', 'bebostore' ) => 'Jul',
+            __( 'August', 'bebostore' ) => 'Aug',
+            __( 'September', 'bebostore' ) => 'Sep',
+            __( 'October', 'bebostore' ) => 'Oct',
+            __( 'November', 'bebostore' ) => 'Nov',
+            __( 'December', 'bebostore' ) => 'Dec',
+          ),
+          'description' => __( 'Mont of your countdown deadline.', 'bebostore' ),
+        ),
+        array(
+          'type' => 'textfield',
+          'heading' => __( 'Year\'s Countdown', 'bebostore' ),
+          'param_name' => 'year_countdown',
+          'admin_label' => true,
+          'description' => __( 'Date of your countdown deadline. Max: 31', 'bebostore' ),
+        ),
+      ),
+   ) );
+}
+class WPBakeryShortCode_Be_timecounter extends WPBakeryShortCode {}
+
 //This for popup modul jabarmasagi
 add_action( 'vc_before_init', 'jabarmasagi_PopupModul', 999999);
 function jabarmasagi_PopupModul() {
