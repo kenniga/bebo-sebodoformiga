@@ -521,6 +521,11 @@ function jabarmasagi_VideoPlayer() {
           'heading' => __( 'Video File', 'bebostore' ),
           'param_name' => 'video_file',
         ),
+        array(
+          'type' => 'attach_image',
+          'heading' => __( 'Image Placeholder', 'bebostore' ),
+          'param_name' => 'image_placeholder',
+        ),
       ),
    ) );
 }
