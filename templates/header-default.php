@@ -60,6 +60,7 @@
                     <?php if ($disable_search != '2'): ?>
                         <div class="form-search flex-fill">
                             <a class="open-search-modal" data-toggle="modal" data-target="#search-modal" data-backdrop="static" data-keyboard="false">
+                                <span class="text">Search</span>
                                 <i class="fa fa-search" aria-hidden="true"></i>
                             </a>
                         </div><!--Left .pull-left-->
