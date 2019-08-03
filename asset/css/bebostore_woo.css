@@ -2755,14 +2755,26 @@ footer .footer-widget .widget-body .book-info .book-rate .star-rating {
 
 a.open-search-modal {
   cursor: pointer;
+  position: relative;
   width: 30px;
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid white;
-  border-radius: 50%;
+  border-radius: 20px;
   color: white;
+  margin-bottom: 10px;
+}
+
+a.open-search-modal span.text {
+  font-family: Korina;
+  font-style: italic;
+}
+
+a.open-search-modal .fa {
+  position: absolute;
+  right: 15px;
 }
 
 a.open-search-modal:hover {
