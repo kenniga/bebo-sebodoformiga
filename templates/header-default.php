@@ -57,6 +57,13 @@
 					</a>
                 </div><!--End .logo-->
                 <div id="main-nav" class="d-md-flex h-100">
+                    <?php if ($disable_search != '2'): ?>
+                        <div class="form-search">
+                            <a class="open-search-modal" data-toggle="modal" data-target="#search-modal" data-backdrop="static" data-keyboard="false">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </div><!--Left .pull-left-->
+                    <?php endif ?>
                     <?php
                         wp_nav_menu(array(
                             'theme_location' => 'main-menu',
@@ -99,13 +106,7 @@
                             }
                         }
                     ?>
-                    <?php if ($disable_search != '2'): ?>
-                    <div class="form-search">
-                        <a class="open-search-modal" data-toggle="modal" data-target="#search-modal" data-backdrop="static" data-keyboard="false">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </a>
-                    </div><!--Left .pull-left-->
-                    <?php endif ?>
+                    
                 </div>
             </div>
             <?php 
