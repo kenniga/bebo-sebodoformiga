@@ -4,6 +4,7 @@
 
 button.subscribe-button {
     background: #f07c29;
+    position: relative;
     color: white;
     align-items: center;
     justify-content: center;
@@ -15,6 +16,10 @@ button.subscribe-button {
     border: none;
     font-size: 12px;
     font-family: 'Work Sans';
+    &:before, &:after {
+        content: url(../images/icon-subscribe-ray.png);
+        position: absolute;
+    }
 }
 
 @media screen and (max-width: 768px) {
