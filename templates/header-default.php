@@ -107,7 +107,7 @@
                             }
                         }
                     ?>
-                    <button class="subscribe-button">
+                    <button class="subscribe-button" href="#subscribe-wrapper-anchor">
                         SUBSCRIBE
                     </button>
                 </div>

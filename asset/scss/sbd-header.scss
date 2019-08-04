@@ -20,6 +20,13 @@ button.subscribe-button {
         content: url(../images/icon-subscribe-ray.png);
         position: absolute;
     }
+    &:before {
+        top: -18px;
+    }
+    &:after {
+        bottom: -18px;
+        transform: rotate(180deg);
+    }
 }
 
 @media screen and (max-width: 768px) {
