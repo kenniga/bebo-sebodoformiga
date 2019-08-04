@@ -2,6 +2,21 @@
     height: 50px;;
 }
 
+button.subscribe-button {
+    background: #f07c29;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: auto;
+    padding: 5px 14px;
+    border-radius: 0;
+    margin-left: 15px;
+    border: none;
+    font-size: 12px;
+    font-family: 'Work Sans';
+}
+
 @media screen and (max-width: 768px) {
 
     .beau-logo {

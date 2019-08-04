@@ -107,7 +107,9 @@
                             }
                         }
                     ?>
-                    
+                    <button class="subscribe-button">
+                        SUBSCRIBE
+                    </button>
                 </div>
             </div>
             <?php 
