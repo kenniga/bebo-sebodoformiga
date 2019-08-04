@@ -11456,7 +11456,7 @@ a.btn.be_btn--rounded {
   height: 50px;
 }
 
-button.subscribe-button {
+a.subscribe-button {
   background: #f07c29;
   position: relative;
   color: white;
@@ -11472,16 +11472,16 @@ button.subscribe-button {
   font-family: 'Work Sans';
 }
 
-button.subscribe-button:before, button.subscribe-button:after {
+a.subscribe-button:before, a.subscribe-button:after {
   content: url(../images/icon-subscribe-ray.png);
   position: absolute;
 }
 
-button.subscribe-button:before {
+a.subscribe-button:before {
   top: -18px;
 }
 
-button.subscribe-button:after {
+a.subscribe-button:after {
   bottom: -18px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
