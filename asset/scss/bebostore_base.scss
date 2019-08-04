@@ -4735,16 +4735,31 @@ Author book style
 }
 
 .book-subcribe-form form input {
-  // float: left;
-  border: none;
-  background: transparent;
-  color: rgba(255, 255, 255, 0.5);
-  position: relative;
-  // top: 50%;
-  // bottom: auto;
-  // -webkit-transform: translateY(-50%);
-  // -ms-transform: translateY(-50%);
-  // transform: translateY(-50%);
+  &[type="email"] {
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    flex: 1 1 100%;
+    font-family: Korina;
+    font-style: italic;
+    color: #f4f7da;
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, .25);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+
+    &::placeholder {
+      color: #f4f7da;
+    }
+
+  }
+  &[type="submit"] {
+    border-radius: 0;
+    border-color: #f4f7da;
+    color: #f4f7da;
+    font-family: 'Work Sans';
+  }
+
 }
 
 .book-subcribe-form form input[type="text"] {
