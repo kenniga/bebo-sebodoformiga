@@ -226,6 +226,11 @@ ul.wpb_thumbnails-fluid>li,
 .last_toggle_el_margin,
 .wpb_button {
   margin-bottom: 0px !important;
+
+}
+
+.vc_row.vc_row-flex>.vc_column_container>.vc_column-inner > .wpb_wrapper {
+  height: 100%;
 }
 
 .vc_col-xs-1,
