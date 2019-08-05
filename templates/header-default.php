@@ -56,7 +56,7 @@
 						<img src="<?php echo esc_url($store_logo);?>" alt="Logo">
 					</a>
                 </div><!--End .logo-->
-                <div id="main-nav" class="d-md-flex flex-wrap mx-3 mx-sm-auto">
+                <div id="main-nav" class="d-md-flex flex-wrap mx-3">
                     <?php if ($disable_search != '2'): ?>
                         <div class="form-search flex-fill">
                             <a class="open-search-modal" data-toggle="modal" data-target="#search-modal" data-backdrop="static" data-keyboard="false">
@@ -68,7 +68,7 @@
                     <?php
                         wp_nav_menu(array(
                             'theme_location' => 'main-menu',
-                            'menu_class'    => 'col-md-12 col-sm-12 hidden-xs d-md-flex',
+                            'menu_class'    => 'col-md-12 col-sm-12 hidden-xs d-md-flex justify-content-center',
                             'menu_id'       => 'main-navigation',
                             'container'     => '',
                         ));

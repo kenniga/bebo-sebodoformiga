@@ -1970,7 +1970,6 @@ a[title~="title-sub"].mega-menu-link:after {
 #mega-menu-wrap-main-menu,
 .woocommerce-MyAccount-navigation {
   list-style: none;
-  padding-left: 0px;
   padding-bottom: 0px;
   position: relative;
   line-height: 31px;
@@ -1984,8 +1983,8 @@ a[title~="title-sub"].mega-menu-link:after {
 .woocommerce-MyAccount-navigation .menu-item,
 .woocommerce-MyAccount-navigation li {
   float: left;
-  margin-right: calc(3.5vw + 1rem);
-  position: relative;
+  margin-right: 1rem;
+  position: relative; 
 }
 
 #main-navigation .menu-item,
@@ -2131,7 +2130,7 @@ a[title~="title-sub"].mega-menu-link:after {
 
 #main-navigation li .sub-menu,
 #main-navigation .menu-item .sub-menu {
-  top: calc( 36px + 1rem );
+  top: calc( 1rem + 8px);
 }
 
 #main-navigation .menu-item .sub-menu li:after,
