@@ -1,6 +1,6 @@
 <?php
 /** @var $this WPBakeryShortCode_VC_Row */
-$output = $el_class = $full_height = $columns_placement = $flex_row = $bg_image = $bg_color = $bg_image_repeat = $font_color = $padding = $margin_bottom = $css = $full_width = $el_id = $parallax_image = $parallax = '';
+$output = $el_class = $full_height = $columns_placement = $equal_height = $flex_row = $bg_image = $bg_color = $bg_image_repeat = $font_color = $padding = $margin_bottom = $css = $full_width = $el_id = $parallax_image = $parallax = '';
 extract( shortcode_atts( array(
 	'el_class' => '',
 	'bg_image' => '',
@@ -17,6 +17,7 @@ extract( shortcode_atts( array(
 	'disable_element' => '',
 	'full_height' => '',
 	'columns_placement' => '',
+	'equal_height' => '',
 	'flex_row' => '',
 ), $atts ) );
 $parallax_image_id = '';
@@ -35,10 +36,11 @@ if ( ! empty( $full_height ) ) {
 	if ( ! empty( $columns_placement ) ) {
 		$flex_row = true;
 		$css_classes[] = 'vc_row-o-columns-' . $columns_placement;
-		if ( 'stretch' === $columns_placement ) {
-			$css_classes[] = 'vc_row-o-equal-height';
-		}
 	}
+}
+if ( !empty( $equal_height ) ) {
+	$flex_row = true;
+	$css_classes[] = 'vc_row-o-equal-height';
 }
 
 if ( ! empty( $flex_row ) ) {
