@@ -4013,7 +4013,6 @@ span.onsale {
 
 .subcribe-half .subcribe-message-title {
   color: black;
-  float: left;
   font-family: "Merriweather", serif;
   margin-bottom: 30px;
 
@@ -4032,7 +4031,7 @@ span.onsale {
 
 .subcribe-half .subcribe-message-title .subcribe-message {
   width: 100%;
-  font-family: "Merriweather", serif;
+  font-family: intro-regular, serif;
   font-size: 1em;
   line-height: 20px;
 }
@@ -4570,14 +4569,7 @@ Author book style
 18. Subcriber
  */
 .book-subcribe-form {
-  float: left;
   position: relative;
-  width: 360px;
-  left: 50%;
-  right: auto;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
 }
 
 @media only screen and (max-width: 767px) {
