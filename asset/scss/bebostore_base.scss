@@ -4014,7 +4014,7 @@ span.onsale {
 .subcribe-half .subcribe-message-title {
   color: black;
   font-family: "Merriweather", serif;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   > * {
     display: block;
@@ -4592,16 +4592,9 @@ Author book style
 }
 
 .book-subcribe-form form input {
-  float: left;
-  border: none;
-  background: transparent;
-  color: rgba(255, 255, 255, 0.5);
+  background: white;
   position: relative;
-  top: 50%;
-  bottom: auto;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  width: 100%;
 }
 
 .book-subcribe-form form input[type="text"] {
