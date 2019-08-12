@@ -5,10 +5,25 @@
         align-items: center;
         height: 100%;
         position: relative;
-        border: 2px solid #000000;
-        border-radius: 50px;
-        padding: 10px;
         color: black;
+        flex-wrap: wrap;
+
+        input {
+            &[type="email"] {
+                padding: 10px 20px;
+                border-radius: 20px;
+                background: white;
+                margin-bottom: 14px;
+                text-align: center;
+                font-family: intro-regular;
+            }
+            
+            &[type="submit"] {
+                font-family: intro-bold, sans-serif;
+                background: #1386c8;
+                color: white;
+            }
+        }
     }
 
     .mc4wp-response > * {
