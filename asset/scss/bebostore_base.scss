@@ -4016,6 +4016,10 @@ span.onsale {
   float: left;
   font-family: "Merriweather", serif;
   margin-bottom: 30px;
+
+  > * {
+    display: block;
+  }
 } 
 
 .subcribe-half .subcribe-message-title .subcribe-title {
