@@ -10049,6 +10049,10 @@ footer .footer-widget .widget-title {
   font-size: 2em;
 }
 
+footer .footer-widget .widget-title:after {
+  content: none;
+}
+
 footer .footer-widget .widget-body {
   font-family: "Merriweather", serif;
   line-height: 20px;

@@ -323,8 +323,8 @@ function bebostore_register_sidebar() {
                     'id' => 'sidebar-footer-'.$i,
                     'before_widget' => '<div class="footer-column col-md-'.$columns.' col-sm-'.$columns.' col-12"><div class="footer-widget">',
                     'after_widget' => '</div></div>',
-                    'before_title' => '<div class="title-box widget-title"><span>',
-                    'after_title' => '</span></div><div class="widget-body">'
+                    'before_title' => '<div class="title-box widget-title">',
+                    'after_title' => '</div>'
                 )
             );
         }
