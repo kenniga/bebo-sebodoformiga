@@ -309,7 +309,7 @@ function bebostore_register_sidebar() {
                 'name' => esc_html__( 'Footer sidebar', 'bebostore' ),
                 'description' => esc_html__( 'This is footer sidebar ', 'bebostore' ),
                 'id' => 'sidebar-footer-1',
-                'before_widget' => '<div class="footer-column col-md-12 col-sm-12 col-xs-12"><div class="footer-widget">',
+                'before_widget' => '<div class="footer-column col-md-12 col-sm-12 col-12"><div class="footer-widget">',
                 'after_widget' => '</div></div></div>',
                 'before_title' => '<div class="title-box widget-title"><span>',
                 'after_title' => '</span></div><div class="widget-body">'
@@ -321,8 +321,8 @@ function bebostore_register_sidebar() {
                 array(
                     'name' => 'Footer sidebar '.$i,
                     'id' => 'sidebar-footer-'.$i,
-                    'before_widget' => '<div class="footer-column col-md-'.$columns.' col-sm-'.$columns.' col-xs-12"><div class="footer-widget">',
-                    'after_widget' => '</div></div></div>',
+                    'before_widget' => '<div class="footer-column col-md-'.$columns.' col-sm-'.$columns.' col-12"><div class="footer-widget">',
+                    'after_widget' => '</div></div>',
                     'before_title' => '<div class="title-box widget-title"><span>',
                     'after_title' => '</span></div><div class="widget-body">'
                 )
