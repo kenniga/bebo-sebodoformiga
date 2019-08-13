@@ -44,7 +44,7 @@
                 <div class="beau-logo">
                     <?php
                         if (isset($beau_option['logo'])) {
-                            $store_logo = $beau_option['logo']['url'];
+                            $store_logo = wp_get_attachment_thumb_url( $beau_option['logo']['id'] );
                         }else{
                             $store_logo = get_template_directory_uri().'/asset/images/logo.png';
                         }
