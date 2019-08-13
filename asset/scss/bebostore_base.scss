@@ -658,6 +658,18 @@ a.book-button-active-bg {
   margin: 8px;
 }
 
+.list-social li a {
+  border: 1px solid white;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+
 .list-social li:first-child {
   margin-left: 0px;
 }
@@ -667,8 +679,9 @@ a.book-button-active-bg {
 }
 
 .list-social li a:hover {
-  color: #f07c29;
-}
+  opacity: .8;
+  text-decoration: none;
+} 
 
 .btn-prev {
   position: absolute;
@@ -10031,6 +10044,9 @@ footer .footer-widget:last-child {
 
 footer .footer-widget .widget-title {
   width: 100%;
+  margin-bottom: 0;
+  font-family: intro-bold;
+  font-size: 2em;
 }
 
 footer .footer-widget .widget-body {
@@ -10095,7 +10111,6 @@ footer .footer-widget .widget-body .book-info .book-price {
 footer .footer-widget .widget-footer {
   float: left;
   width: 100%;
-  margin-top: 20px;
 }
 
 footer .landing-social-author {
