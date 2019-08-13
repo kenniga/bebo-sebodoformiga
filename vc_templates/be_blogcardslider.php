@@ -32,7 +32,6 @@ if ($title_center == "title_center") {
 }else{
 	$class_extra = "";
 }
-sebodo_debug($args);
 
 ?>
 <div class="book-blogs-section jabarmasagi-blog-card-slider <?php echo esc_attr($blog_thumbnail_style) ?>">
