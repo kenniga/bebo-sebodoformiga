@@ -6,7 +6,7 @@
     include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 ?>
 <header class="menu-stick sticky-top header-one <?php if ( $enabled_header_top ) { echo 'no-header-top'; } ?>">
-    <div class="container">
+    <div class="container-fluid">
         <div class="d-flex">
             <?php if( $enabled_header_top == 0 ): ?>
             <div class="header-top">
@@ -143,6 +143,28 @@
                         </div>
                     </div><!--Left .pull-left-->
                     <?php endif ?>
+                </div>
+                <div class="beau-logo invisible">
+                    <?php
+                        if (isset($beau_option['logo'])) {
+                            $store_logo = $beau_option['logo']['url'];
+                        }else{
+                            $store_logo = get_template_directory_uri().'/asset/images/logo.png';
+                        }
+                    ?>
+                    <a href="<?php echo esc_url(home_url( '/' ));?>"><img src="<?php echo esc_url($store_logo);?>" alt="Logo"></a>
+                </div><!--End .logo-->
+                <div id="main-nav">
+                    <?php
+                        wp_nav_menu(array(
+                            'theme_location' => 'main-menu',
+                            'menu_class'    => 'col-md-12 col-sm-12 hidden-xs',
+                            'menu_id'       => 'main-navigation',
+                            'container'     => '',
+                        ));
+                    ?>
+    
+    
                 </div>
             </div>
             <span class="humberger-button d-flex d-sm-none">
