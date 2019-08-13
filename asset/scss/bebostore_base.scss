@@ -10047,6 +10047,7 @@ footer .footer-widget .widget-title {
   margin-bottom: 0;
   font-family: intro-bold;
   font-size: 2em;
+  float: none;
 }
 
 footer .footer-widget .widget-title:after {
@@ -10064,14 +10065,14 @@ footer .footer-widget .widget-body .product-categories {
   list-style: none;
   padding-left: 0px;
   margin-bottom: 0px;
+  margin-top: 20px;
 }
 
 footer .footer-widget .menu li,
 footer .footer-widget .widget-body .product-categories li {
-  float: left;
   width: 100%;
   height: auto;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   line-height: 25px;
 }
 
@@ -10085,7 +10086,9 @@ footer .footer-widget .widget-body .product-categories li.col-sm-6 {
 footer .footer-widget .menu li a,
 footer .footer-widget .widget-body .product-categories li a {
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-family: intro-bold;
+  font-size: 16px;
 }
 
 footer .footer-widget .menu li a:hover,
