@@ -1,38 +1,38 @@
 <?php
-$perpage = $category = $title_box = $title_center = $blog_thumbnail_style = "";
+$blog_perpage = $category = $title_box = $title_center = $blog_thumbnail_style = "";
 extract(shortcode_atts(array(
     'title_box' => '',
     'title_center' => '',
-    'perpage' 	=> '3',
+    'blog_perpage' 	=> '3',
     'category' => '',
     'blog_thumbnail_style' => '',
 ), $atts));
-if ($category == 'All') {
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+if ($category == '') {
   	$args = array(
-      'post_type' => 'post',
-      'posts_per_page' => $perpage,
-	  'order' => 'DESC' ,
-	  'nopaging' => true
+    	'post_type' => 'post',
+      	'posts_per_page' => $blog_perpage,
+	  	'order' => 'DESC' ,
+		'ignore_sticky_posts' => true,
+		'paged'               => $paged
 	);
 }
 else{
 	$args = array(
       'post_type' => 'post',
-      'posts_per_page' => $perpage,
+      'posts_per_page' => $blog_perpage,
       'order' => 'DESC' ,
       'category_name' => $category,
 	);
 }
 $loop = new WP_Query( $args );
-
 wp_reset_postdata();
 if ($title_center == "title_center") {
 	$class_extra = "book-center";
 }else{
 	$class_extra = "";
 }
-
-sebodo_debug($loop); 
+sebodo_debug($args);
 
 ?>
 <div class="book-blogs-section jabarmasagi-blog-card-slider <?php echo esc_attr($blog_thumbnail_style) ?>">
