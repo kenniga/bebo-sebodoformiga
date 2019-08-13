@@ -9801,14 +9801,14 @@ footer .footer-widget .widget-body {
   color: rgba(0, 0, 0, 0.5);
 }
 
-footer .footer-widget .widget-body .menu,
+footer .footer-widget .menu,
 footer .footer-widget .widget-body .product-categories {
   list-style: none;
   padding-left: 0px;
   margin-bottom: 0px;
 }
 
-footer .footer-widget .widget-body .menu li,
+footer .footer-widget .menu li,
 footer .footer-widget .widget-body .product-categories li {
   float: left;
   width: 100%;
@@ -9817,20 +9817,20 @@ footer .footer-widget .widget-body .product-categories li {
   line-height: 25px;
 }
 
-footer .footer-widget .widget-body .menu li.col-md-6,
-footer .footer-widget .widget-body .menu li.col-sm-6,
+footer .footer-widget .menu li.col-md-6,
+footer .footer-widget .menu li.col-sm-6,
 footer .footer-widget .widget-body .product-categories li.col-md-6,
 footer .footer-widget .widget-body .product-categories li.col-sm-6 {
   width: 50%;
 }
 
-footer .footer-widget .widget-body .menu li a,
+footer .footer-widget .menu li a,
 footer .footer-widget .widget-body .product-categories li a {
   font-weight: 300;
   color: rgba(0, 0, 0, 0.5);
 }
 
-footer .footer-widget .widget-body .menu li a:hover,
+footer .footer-widget .menu li a:hover,
 footer .footer-widget .widget-body .product-categories li a:hover {
   color: #f07c29;
 }
