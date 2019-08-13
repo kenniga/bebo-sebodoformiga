@@ -3,7 +3,7 @@ $perpage = $category = $title_box = $title_center = "";
 extract(shortcode_atts(array(
     'title_box' => '',
     'title_center' => '',
-    'perpage' 	=> '4',
+    'perpage' 	=> '3',
     'category' => '',
 ), $atts));
 if ($category == 'All') {
