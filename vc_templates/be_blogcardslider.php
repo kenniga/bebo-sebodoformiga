@@ -3,7 +3,7 @@ $perpage = $category = $title_box = $title_center = $blog_thumbnail_style = "";
 extract(shortcode_atts(array(
     'title_box' => '',
     'title_center' => '',
-    'perpage' 	=> '4',
+    'perpage' 	=> '3',
     'category' => '',
     'blog_thumbnail_style' => '',
 ), $atts));
@@ -24,7 +24,7 @@ else{
 }
 $loop = new WP_Query( $args );
 
-
+echo $perpage;
 wp_reset_postdata();
 if ($title_center == "title_center") {
 	$class_extra = "book-center";
