@@ -36,11 +36,11 @@ if ($title_center == "title_center") {
 <div class="book-blogs-section jabarmasagi-blog-card-slider <?php echo esc_attr($blog_thumbnail_style) ?>">
 	<?php if ($loop->have_posts()) {?>
 		<div class="container">
-			<div class="blog-card-slider-container swiper-container">
+			<div class="blog-card-slider-container">
 				<!-- Additional required wrapper -->
-				<ul class="list-blog-slider swiper-wrapper">
+				<ul class="row list-blog-slider">
 					<?php while ($loop->have_posts()) {$loop ->the_post();?>
-					<li class="col-md-4 col-sm-4 col-xs-12 swiper-slide">
+					<li class="col-md-4 col-sm-4 col-12">
 						<?php 
 							$post_format = get_post_format( get_the_ID() );
 							if ($post_format == 'video') {
@@ -92,13 +92,6 @@ if ($title_center == "title_center") {
 				</ul>
 	
 			</div>
-		</div>
-		<!-- If we need navigation buttons -->
-		<div class="swiper-button-prev">
-			<i class="fa fa-chevron-left"></i>
-		</div>
-		<div class="swiper-button-next">
-			<i class="fa fa-chevron-right"></i>
 		</div>
 	<?php }?>
 </div><!--End landing-auth-blog-->

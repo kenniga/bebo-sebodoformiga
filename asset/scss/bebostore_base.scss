@@ -11433,9 +11433,10 @@ a.btn.be_btn--rounded {
 
 .jabarmasagi-blog-card-slider .card-item {
   background: white;
-  padding: 20px 60px;
   border-radius: 20px;
   height: 100%;
+  text-align: center;
+  box-shadow: 1px 3px 7px 2px rgba(206, 206, 206, 0.5);
 }
 
 .jabarmasagi-blog-card-slider.full_thumbnail .card-item {
@@ -11469,9 +11470,14 @@ a.btn.be_btn--rounded {
   font-size: 20px;
 }
 
-.jabarmasagi-blog-card-slider .card-item>a {
-  display: block;
+.jabarmasagi-blog-card-slider .card-item>a.btn.jabarmasagi-btn.btn-rounded {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 8px 35px;
   text-align: center;
+  width: auto;
+  background: #1386c8;
+  margin-bottom: 20px;
 }
 
 .jabarmasagi-blog-card-slider .swiper-button-next,
@@ -11506,18 +11512,21 @@ a.btn.be_btn--rounded {
 
 .jabarmasagi-blog-card-slider .card-item p.blog-excerpt {
   font-family: intro-regular;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   color: #cecece;
   margin-bottom: 40px;
+  padding: 0 15px;
 }
 
 .jabarmasagi-blog-card-slider .card-item>a img {
   margin: 0 auto;
-  border-radius: 20px;
-  min-height: 200px;
-  object-fit: contain;
+  min-height: 350px;
+  object-fit: cover;
   -o-object-fit: contain;
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
 .jabarmasagi-blog-card-slider.full_thumbnail .card-item>a.book-blog-thumb {
