@@ -265,6 +265,14 @@ if (function_exists('register_sidebar')) {
 
 }
 
+function sebodo_debug( $dv_value, $dv_bgcolor = '#666', $dv_fontcolor='#fff', $dv_height = '450' ){
+    $dv_height = ( $dv_height == '' ) ? '450' : $dv_height;
+    $dv_output = '<pre style="font-size:13px; height:'.$dv_height.'px; overflow-y:scroll; background: '.$dv_bgcolor.'; color: '.$dv_fontcolor.';">';
+    $dv_output .= print_r( $dv_value, true );
+    $dv_output .= '</pre>';
+    printf( "%s", $dv_output );
+}
+
 /*
 Register footer sidebar
 */

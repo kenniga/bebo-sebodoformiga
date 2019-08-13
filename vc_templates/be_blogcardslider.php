@@ -24,13 +24,14 @@ else{
 }
 $loop = new WP_Query( $args );
 
-echo $perpage;
 wp_reset_postdata();
 if ($title_center == "title_center") {
 	$class_extra = "book-center";
 }else{
 	$class_extra = "";
 }
+
+sebodo_debug($args);
 
 ?>
 <div class="book-blogs-section jabarmasagi-blog-card-slider <?php echo esc_attr($blog_thumbnail_style) ?>">
