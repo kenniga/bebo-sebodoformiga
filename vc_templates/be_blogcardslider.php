@@ -11,7 +11,8 @@ if ($category == 'All') {
   	$args = array(
       'post_type' => 'post',
       'posts_per_page' => $perpage,
-      'order' => 'DESC' ,
+	  'order' => 'DESC' ,
+	  'nopaging' => true
 	);
 }
 else{
