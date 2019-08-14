@@ -57,19 +57,41 @@ $GLOBALS['add_css_animation'] = $add_css_animation;
 add_action( 'vc_before_init', 'bebostore_containerCenter', 999999);
 function bebostore_containerCenter(){
   if(function_exists('vc_add_param')){
-    vc_add_param('vc_row',array(
-        'type' => 'dropdown',
-        'heading' => __( 'Row stretch', 'bebostore' ),
-        'param_name' => 'full_width',
-        'value' => array(
-          __( 'Default', 'bebostore' ) => '',
-          __( 'Stretch row', 'bebostore' ) => 'stretch_row',
-          __( 'Stretch row and content', 'bebostore' ) => 'stretch_row_content',
-          __( 'Stretch row and content (no paddings)', 'bebostore' ) => 'stretch_row_content_no_spaces',
-          __( 'Stretch row and content (no paddings content in center)', 'bebostore' ) => 'stretch_row_content_no_spaces_content',
+    vc_add_params(
+      'vc_row',
+      array(
+        array(
+            'type' => 'dropdown',
+            'heading' => __( 'Row stretch', 'bebostore' ),
+            'param_name' => 'full_width',
+            'value' => array(
+              __( 'Default', 'bebostore' ) => '',
+              __( 'Stretch row', 'bebostore' ) => 'stretch_row',
+              __( 'Stretch row and content', 'bebostore' ) => 'stretch_row_content',
+              __( 'Stretch row and content (no paddings)', 'bebostore' ) => 'stretch_row_content_no_spaces',
+              __( 'Stretch row and content (no paddings content in center)', 'bebostore' ) => 'stretch_row_content_no_spaces_content',
+            ),
+            'description' => __( 'Select stretching options for row and content (Note: stretched may not work properly if parent container has "overflow: hidden" CSS property).', 'bebostore' )
+            // "group" => __( 'Design options', 'bebostore' ),
         ),
-        'description' => __( 'Select stretching options for row and content (Note: stretched may not work properly if parent container has "overflow: hidden" CSS property).', 'bebostore' )
-        // "group" => __( 'Design options', 'bebostore' ),
+        array(
+          'type' => 'dropdown',
+          'heading' => __( 'Columns position', 'js_composer' ),
+          'param_name' => 'columns_placement',
+          'value' => array(
+            __( 'Top', 'js_composer' ) => 'top',
+            __( 'Bottom', 'js_composer' ) => 'bottom',
+            __( 'This is Middle', 'js_composer' ) => 'middle',
+            __( 'Stretch', 'js_composer' ) => 'stretch',
+          ),
+          'description' => __( 'Select columns position within row.', 'js_composer' ),
+          'dependency' => array(
+            'element' => 'full_height',
+            'not_empty' => true,
+          ),
+        ),
+
+
       )
     );
 

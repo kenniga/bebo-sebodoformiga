@@ -16,7 +16,7 @@ extract( shortcode_atts( array(
 	'el_id' => '',
 	'disable_element' => '',
 	'full_height' => '',
-	'columns_placement' => '',
+	'columns_placement' => 'middle',
 	'equal_height' => '',
 	'flex_row' => '',
 ), $atts ) );
