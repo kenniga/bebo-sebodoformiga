@@ -10649,7 +10649,7 @@ footer .bottom-footer .copyright a {
 }
 
 a.be_popupmodul {
-  &__button {
+  &__button:not([href]):not([tabindex]) {
     font-family: intro-bold;
     font-size: 20px;
     cursor: pointer;

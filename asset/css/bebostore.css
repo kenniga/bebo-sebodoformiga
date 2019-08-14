@@ -10373,13 +10373,13 @@ footer .bottom-footer .copyright a {
   margin-top: 20px;
 }
 
-a.be_popupmodul__button {
+a.be_popupmodul__button:not([href]):not([tabindex]) {
   font-family: intro-bold;
   font-size: 20px;
   cursor: pointer;
 }
 
-a.be_popupmodul__button:hover {
+a.be_popupmodul__button:not([href]):not([tabindex]):hover {
   text-decoration: underline;
 }
 
