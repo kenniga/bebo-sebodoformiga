@@ -13,9 +13,6 @@ $button_unique_id = generateRandomString();
 
 $scoped_style = sprintf('
 	<style>
-		#' . $button_unique_id . ':hover{
-            background: #1b2c51;
-		}
 	</style>
     ',
     $modul_background          = !empty( $modul_background ) ? 'background:' . $modul_background : ''
