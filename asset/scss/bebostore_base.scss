@@ -10648,6 +10648,18 @@ footer .bottom-footer .copyright a {
   margin-top: 20px;
 }
 
+a.be_popupmodul {
+  &__button {
+    font-family: intro-bold;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 
 @media only screen and (max-width: 780px) {
   .be_popupmodul a.btn {

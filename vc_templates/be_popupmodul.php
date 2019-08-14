@@ -13,10 +13,6 @@ $button_unique_id = generateRandomString();
 
 $scoped_style = sprintf('
 	<style>
-		#' . $button_unique_id . ' {
-            %1$s;
-            color: white;
-		}
 		#' . $button_unique_id . ':hover{
             background: #1b2c51;
 		}
@@ -28,7 +24,7 @@ echo $scoped_style;
 
 ?>
 
-<a id="<?php echo esc_attr($button_unique_id) ?>" class="btn be_btn--rounded" data-toggle="modal" data-target="#<?php echo esc_attr( $modul_target ); ?>">
+<a id="<?php echo esc_attr($button_unique_id) ?>" class="be_popupmodul__button" data-toggle="modal" data-target="#<?php echo esc_attr( $modul_target ); ?>">
 	<?php esc_html_e( $modul_title ); ?>
 </a>
 
