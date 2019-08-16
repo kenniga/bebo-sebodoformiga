@@ -46,7 +46,7 @@ $parsed_cats_array = vc_param_group_parse_atts($category_group);
 						$product_category = get_term_by('id', $item_category['product_cat'], 'product_types');
 						$wimage = wp_get_attachment_url( $item_category['category_image'] );
 					   $cat_height = '';
-					   if ($i == 1 || $i == 4 || $i == 5) {
+					   if ($i == 1 || $i == 4 || $i == 5 || $i == 8) {
 						   $cat_height = 'col-md-5 col-5';
 					   }
 					   else {
