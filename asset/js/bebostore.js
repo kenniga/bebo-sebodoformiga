@@ -239,29 +239,28 @@
 
     $(document).ready(function(){
 
-        $('.jabarmasagi-blog-card-slider').each(function(){
-            console.log(this);
-            var mySwiper = new Swiper ($(this).find('.swiper-container'), {
-                slidesPerView: 3,
-                spaceBetween: 40,
-                breakpoints: {
-                    // when window width is <= 320px
-                    640: {
-                      slidesPerView: 1,
-                      spaceBetween: 20
-                    }
-                  }
-              });
+        // $('.jabarmasagi-blog-card-slider').each(function(){
+        //     var mySwiper = new Swiper ($(this).find('.swiper-container'), {
+        //         slidesPerView: 3,
+        //         spaceBetween: 40,
+        //         breakpoints: {
+        //             // when window width is <= 320px
+        //             640: {
+        //               slidesPerView: 1,
+        //               spaceBetween: 20
+        //             }
+        //           }
+        //       });
     
-              $(this).find('.swiper-button-next').on('click', function(){
-                mySwiper.slideNext();
-              })
+        //       $(this).find('.swiper-button-next').on('click', function(){
+        //         mySwiper.slideNext();
+        //       })
     
-              $(this).find('.swiper-button-prev').on('click', function(){
-                mySwiper.slidePrev();
-              })
+        //       $(this).find('.swiper-button-prev').on('click', function(){
+        //         mySwiper.slidePrev();
+        //       })
 
-        })
+        // })
           
           $('body').on('click', '.launch-video-modal', function () {
               var videoSrc = $(this).data('video-id');

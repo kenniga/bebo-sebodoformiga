@@ -189,6 +189,49 @@ function jabarmasagi_CardItem() {
 }
 class WPBakeryShortCode_Be_carditem extends WPBakeryShortCode {}
 
+  //This for popup modul jabarmasagi
+add_action( 'vc_before_init', 'jabarmasagi_CardItemSlider', 999999);
+function jabarmasagi_CardItemSlider() {
+  global $bebostore_perpage_arr, $bebostore_book_listall;
+  vc_map( array(
+      "name" => __( "Jabar Masagi Card Item Slider", "bebostore" ),
+      "base" => "be_carditemslider",
+      'weight' => 91,
+      'category' => __( 'Beau Theme', 'bebostore' ),
+      "params" => array(
+      	// Need and image, select book, add more info
+        array(
+          "type" => "param_group",
+          "heading" => __( "Card Slider", "my-text-domain" ),
+          "param_name" => "slider_attr",
+          "params" => array(
+            array(
+              'type' => 'attach_image',
+              'value' => '',
+              'heading' => __( 'Upload Picture', 'pt-vc' ),
+              'param_name' => 'upload_slider_picture',
+            ),
+            array(
+              'type' => 'textfield',
+              'value' => '',
+              'heading' => __( 'Title', 'pt-vc' ),
+              'param_name' => 'slider_title',
+              'admin_label' => true
+            ),
+            array(
+              'type' => 'textarea',
+              'value' => '',
+              'heading' => __( 'Description', 'pt-vc' ),
+              'param_name' => 'slider_desc',
+              'admin_label' => true
+            ),
+          )
+        ),
+      ),
+   ) );
+}
+class WPBakeryShortCode_Be_carditemslider extends WPBakeryShortCode {}
+
   //This for counter jabarmasagi
 add_action( 'vc_before_init', 'jabarmasagi_TimeCounter', 999999);
 function jabarmasagi_TimeCounter() {
