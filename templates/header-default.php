@@ -59,7 +59,7 @@
 						<img class="d-block d-sm-none" src="<?php echo esc_url($store_logo_mobile);?>" alt="Logo">
 					</a>
                 </div><!--End .logo-->
-                <div id="main-nav" class="d-md-flex flex-wrap mx-3">
+                <div id="main-nav" class="d-md-flex flex-wrap mx-sm-3">
                     <?php if ($disable_search != '2'): ?>
                         <div class="form-search flex-fill">
                             <a class="open-search-modal" data-toggle="modal" data-target="#search-modal" data-backdrop="static" data-keyboard="false">
