@@ -6,7 +6,7 @@ extract(shortcode_atts(array(
 $parsed_atts = vc_param_group_parse_atts( $slider_attr );
 $id_slider  =  "slider_id_".rand(1111,9999);
 ?>
-<div class="sc-card-slider__container swiper-container" id="<?php echo esc_attr($id_slider);?>">
+<div class="sc-card-slider sc-card-slider__container swiper-container" id="<?php echo esc_attr($id_slider);?>">
     <div class="swiper-wrapper">
         <?php foreach ($parsed_atts as $item) { ?>
         <div class="swiper-slide">
