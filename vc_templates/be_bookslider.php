@@ -180,10 +180,10 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 										</div>
 										<div class="swiper-button-prev d-none d-sm-inline-block">
 											<i class="fa fa-chevron-left" aria-hidden="true"></i>
-											Prev
+											<?php echo __('[:en]Prev[:pt]Anterior') ?>
 										</div>
 										<div class="swiper-button-next d-none d-sm-inline-block">
-											Next 
+											<?php echo __('[:en]Next[:pt]Próxima') ?>
 											<i class="fa fa-chevron-right" aria-hidden="true"></i>
 										</div>
 									</div>

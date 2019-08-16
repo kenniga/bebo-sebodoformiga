@@ -14,11 +14,6 @@ if (is_search()) {
     $title_page = esc_html__('Search with keywords: ','bebostore').esc_html($_REQUEST['s']);
 }
 ?>
-<section class="header-page blog-header-grid" <?php printf('%s', $style_page)?>>
-    <div class="container">
-        <span class="title-page"><?php echo esc_attr( $title_page ); ?></span>
-    </div>
-</section>
 <section>
     <div class="container">
         <div class="left-cols pull-left col-md-12 col-sm-12 col-xs-12">

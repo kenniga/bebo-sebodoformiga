@@ -1,11 +1,6 @@
 <?php if ( have_posts() ) :
 require(get_template_directory().'/templates/header-blog.php');
 ?>
-<section class="header-page blog-header-grid" <?php printf('%s', $style_page); ?>>
-	<div class="container">
-		<span class="title-page"><?php echo esc_attr($title_page); ?></span>
-	</div>
-</section>
 <section>
 	<div class="container">
 		<div class="page-blogs-list no-border section-landing-view section-blog-detail">
