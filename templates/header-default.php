@@ -48,12 +48,15 @@
                     <?php
                         if (isset($beau_option['logo'])) {
                             $store_logo = $beau_option['logo']['url'];
+                            $store_logo_mobile = $beau_option['logo-mobile']['url'];
                         }else{
                             $store_logo = get_template_directory_uri().'/asset/images/logo.png';
+                            $store_logo_mobile = get_template_directory_uri().'/asset/images/logo.png';
                         }
                     ?>
                     <a href="<?php echo esc_url(home_url( '/' ));?>">
-						<img src="<?php echo esc_url($store_logo);?>" alt="Logo">
+						<img class="d-none d-sm-block" src="<?php echo esc_url($store_logo);?>" alt="Logo">
+						<img class="d-block d-sm-none" src="<?php echo esc_url($store_logo_mobile);?>" alt="Logo">
 					</a>
                 </div><!--End .logo-->
                 <div id="main-nav" class="d-md-flex flex-wrap mx-3">
