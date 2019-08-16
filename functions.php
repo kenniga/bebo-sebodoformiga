@@ -407,7 +407,6 @@ function bebostore_get_list_taxonomy_by_name($taxonomy){
                 }
             }
         }
-
     return $taxonomy_list;
     }
     else return false;

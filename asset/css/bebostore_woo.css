@@ -2768,8 +2768,15 @@ a.open-search-modal {
 }
 
 a.open-search-modal span.text {
-  font-family: Korina;
-  font-style: italic;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  a.open-search-modal span.text {
+    display: block;
+    font-family: Korina;
+    font-style: italic;
+  }
 }
 
 a.open-search-modal .fa {

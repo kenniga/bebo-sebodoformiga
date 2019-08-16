@@ -105,7 +105,7 @@ a.subscribe-button {
 
     a.open-search-modal {
         cursor: pointer;
-        width: 100%;
+        width: 2.2em;
         height: 2.2em;
         display: flex;
         justify-content: center;
@@ -117,6 +117,7 @@ a.subscribe-button {
         margin-bottom: 0;
 
         .fa {
+            position: static;
             right: 7px;
         }
     }
