@@ -108,7 +108,7 @@
                         }
                     ?>
                     <a class="subscribe-button" href="#subscribe-wrapper-anchor">
-                        SUBSCRIBE
+                        <?php echo __('[:en]SUBSCRIBE[:pt]CADASTRE-SE') ?>
                     </a>
                 </div>
             </div>
