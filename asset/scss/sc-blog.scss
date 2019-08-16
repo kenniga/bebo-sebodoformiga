@@ -7,4 +7,20 @@
         font-weight: 700;
         letter-spacing: -0.5px;
     }
+    .title-box {
+        float: none;
+
+        &:after {
+            float: none;
+            display: block;
+        }
+        span {
+            float: none;
+        }
+    }
+    .list-blog {
+        float: none;
+        width: auto;
+        margin-bottom: 0px;
+    }
 }
