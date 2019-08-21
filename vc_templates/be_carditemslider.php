@@ -32,24 +32,28 @@ $id_slider  =  "slider_id_".rand(1111,9999);
         ?>
         
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <script>
-            (function($) {
-                "use strict";
-                var cardSlider_<?php echo esc_js($id_slider);?> = new Swiper('#<?php echo esc_js($id_slider);?>', {
-                    slidesPerView: 3,
-                    grabCursor:true,
-                    speed: 1000,
-                    loop: true,
-                    spaceBetween: 30,
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                });
-            })(jQuery);
-		</script>
 </div>
+<div class="swiper-button-next sc-card-slider__btn-next">
+    <i class="fa fa-chevron-right"></i>
+</div>
+<div class="swiper-button-prev sc-card-slider__btn-prev">
+    <i class="fa fa-chevron-left"></i>
+</div>
+<script>
+        (function($) {
+            "use strict";
+            var cardSlider_<?php echo esc_js($id_slider);?> = new Swiper('#<?php echo esc_js($id_slider);?>', {
+                slidesPerView: 3,
+                grabCursor:true,
+                speed: 1000,
+                loop: true,
+                spaceBetween: 30,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        })(jQuery);
+    </script>
 
 
