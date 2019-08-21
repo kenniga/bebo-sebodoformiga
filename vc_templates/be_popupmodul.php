@@ -35,7 +35,7 @@ echo $scoped_style;
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 			</button>
-			<div class="modal-body">
+			<div class="modal-body d-flex flex-column justify-content-center">
 				<h3>
 					<?php esc_html_e( $modul_title ); ?>
 				</h3>
