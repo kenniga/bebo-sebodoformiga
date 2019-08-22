@@ -50,6 +50,7 @@ $id_slider  =  "slider_id_".rand(1111,9999);
 <div class="swiper-button-prev sc-full-card-slider__btn-prev">
     <i class="fa fa-chevron-left"></i>
 </div>
+<div class="swiper-pagination sc-full-card-slider__pagination"></div>
 <script>
         (function($) {
             "use strict";
@@ -63,6 +64,9 @@ $id_slider  =  "slider_id_".rand(1111,9999);
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
+                pagination: {
+                    el: '.swiper-pagination',
+                }
             });
         })(jQuery);
     </script>
