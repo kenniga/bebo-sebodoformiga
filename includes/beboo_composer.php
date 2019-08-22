@@ -333,6 +333,32 @@ function jabarmasagi_SidedCardItemSlider() {
 }
 class WPBakeryShortCode_Be_sidedcarditemslider extends WPBakeryShortCode {}
 
+//This for popup modul jabarmasagi
+add_action( 'vc_before_init', 'jabarmasagi_UltimateForm', 999999);
+function jabarmasagi_UltimateForm() {
+  global $bebostore_perpage_arr, $bebostore_book_listall;
+  vc_map( array(
+      "name" => __( "Jabar Masagi Ultimate Form", "bebostore" ),
+      "base" => "be_ultimateform",
+      'weight' => 91,
+      'category' => __( 'Beau Theme', 'bebostore' ),
+      "params" => array(
+      	// Need and image, select book, add more info
+        array(
+          'type' => 'textfield',
+          'heading' => __( 'Form Class', 'bebostore' ),
+          'param_name' => 'form_class',
+        ),
+        array(
+          'type' => 'textarea_html',
+          'heading' => __( 'Content', 'bebostore' ),
+          'param_name' => 'content',
+        ),
+      ),
+   ) );
+}
+class WPBakeryShortCode_Be_ultimateform extends WPBakeryShortCode {}
+
   //This for counter jabarmasagi
 add_action( 'vc_before_init', 'jabarmasagi_TimeCounter', 999999);
 function jabarmasagi_TimeCounter() {

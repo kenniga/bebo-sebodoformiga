@@ -1,0 +1,56 @@
+.sc-ultimate-form {
+    &__register-form {
+        .um {
+            .um-field {
+                padding: 0 0 15px 0;
+            }
+            .um-field-label {
+                label {
+                    margin-bottom: 3px;
+                }
+    
+            } 
+            .um-form input[type=text], .um-form input[type=tel], .um-form input[type=number], .um-form input[type=password] {
+                border-radius: 7px;
+    
+                &:focus {
+                    border: 2px solid #0ea34a !important;
+                }
+            }
+            .um-col-alt {
+                
+                .um-left {
+                    input {
+                        background: white;
+                        padding: 10px 25px !important;
+                        border-radius: 2004px !important;
+                        border: 1px solid #0ea34a!important;
+                        font-family: intro-bold;
+                        color: #0ea34a;
+                        font-size: 21px;
+                        &:hover {
+                            background: #0ea34a;
+                            color: white;
+                        }
+                    }
+                }
+                .um-right {
+                    a {
+                        background: #0ea34a;
+                        padding: 10px 25px !important;
+                        border-radius: 2004px!important;
+                        font-family: intro-bold;
+                        color: white;
+                        font-size: 25px;
+                        &:hover {
+                            background: white;
+                            color: #0ea34a;
+                        }
+                    }
+                }
+
+            }
+        }
+        
+    }
+}
