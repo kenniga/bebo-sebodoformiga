@@ -1,0 +1,132 @@
+.sc-sided-card-slider {
+
+    &__container {
+        padding: 14px;
+    }
+
+    &__item {
+        font-family: intro-regular;
+        border-radius: 25px;
+        padding: 45px 15%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+
+    &__desc {
+        padding-bottom: 0;
+        padding-left: 20px;
+
+        &-slider {
+            height: 100%;
+        }
+    }
+    &__title {
+        font-family: intro-bold;
+        text-align: left;
+    }
+    &__img {
+        text-align: center;
+        width: 50%;
+        flex: 1 1 50%;
+        img {
+            width: 100%;
+        }
+    }
+    &__content {
+        text-align: center;
+        flex: 1 1 50%;
+
+        &-inner {
+            p {
+                text-align: left;
+            }
+        }
+    }
+
+    &__btn-next, &__btn-prev {
+        position: absolute;
+        top: 50%;
+        width: 32px;
+        height: 32px;
+        margin-top: -22px;
+        z-index: 10;
+        cursor: pointer;
+        background-size: 27px 44px;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 2px solid #203c75;
+        border-radius: 100%;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 21px;
+        color: #203c75;
+    }
+
+    &__btn-next {
+        background-image: none;
+        padding-left: 7px;
+    }
+
+    &__btn-prev {
+        background-image: none;
+        padding-right: 7px;
+    }
+
+    &__pagination {
+        left: 0;
+        right: 0;
+        position: relative;
+        margin-top: 25px;
+
+        .swiper-pagination-bullet {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border-radius: 100%;
+            border: 2px solid #cdcdcd;
+            background: transparent;
+            opacity: 1;
+            margin: 0 7px;
+            position: relative;
+
+            &-active:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 1px;
+                left: 1px;
+                right: 1px;
+                bottom: 1px;
+                background: #0ea34a;
+                border-radius: 100%;
+            }
+        }
+    }
+
+    &__readmore-btn {
+        background: #1885c6;
+        padding: 3px 25px;
+        border-radius: 2004px;
+        font-family: intro-bold;
+        color: white;
+        font-size: 20px;
+        margin-top: 30px;
+        box-shadow: 1px 5px 12px 5px rgba(206, 206, 206, 0.5);
+        flex: 0 1 auto;
+        align-self: flex-start;
+        
+        &:hover {
+            text-decoration: none;
+            color: white;
+            opacity: .7;
+        }
+    }
+    .swiper-slide {
+        height: auto;
+    }
+}

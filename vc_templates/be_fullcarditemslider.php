@@ -44,31 +44,31 @@ $id_slider  =  "slider_id_".rand(1111,9999);
         
     </div>
 </div>
-<div class="swiper-button-next sc-full-card-slider__btn-next">
+<div class="swiper-button-next sc-full-card-slider__btn-next" id="<?php echo esc_attr($id_slider);?>_next">
     <i class="fa fa-chevron-right"></i>
 </div>
-<div class="swiper-button-prev sc-full-card-slider__btn-prev">
+<div class="swiper-button-prev sc-full-card-slider__btn-prev" id="<?php echo esc_attr($id_slider);?>_prev">
     <i class="fa fa-chevron-left"></i>
 </div>
-<div class="swiper-pagination sc-full-card-slider__pagination"></div>
+<div class="swiper-pagination sc-full-card-slider__pagination" id="<?php echo esc_attr($id_slider);?>_pagination"></div>
 <script>
-        (function($) {
-            "use strict";
-            var cardSlider_<?php echo esc_js($id_slider);?> = new Swiper('#<?php echo esc_js($id_slider);?>', {
-                slidesPerView: 1,
-                grabCursor:false,
-                speed: 1000,
-                loop: true,
-                spaceBetween: 30,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                }
-            });
-        })(jQuery);
-    </script>
+    (function($) {
+        "use strict";
+        var cardSlider_<?php echo esc_js($id_slider);?> = new Swiper('#<?php echo esc_js($id_slider);?>', {
+            slidesPerView: 1,
+            grabCursor:false,
+            speed: 1000,
+            loop: true,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '#<?php echo esc_attr($id_slider);?>_next.swiper-button-next',
+                prevEl: '#<?php echo esc_attr($id_slider);?>_prev.swiper-button-prev',
+            },
+            pagination: {
+                el: '#<?php echo esc_attr($id_slider);?>_pagination.swiper-pagination',
+            }
+        });
+    })(jQuery);
+</script>
 
 

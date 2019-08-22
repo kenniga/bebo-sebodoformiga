@@ -33,13 +33,13 @@ $id_slider  =  "slider_id_".rand(1111,9999);
         
     </div>
 </div>
-<div class="swiper-button-next sc-card-slider__btn-next">
+<div class="swiper-button-next sc-card-slider__btn-next" id="<?php echo esc_js($id_slider);?>_next">
     <i class="fa fa-chevron-right"></i>
 </div>
-<div class="swiper-button-prev sc-card-slider__btn-prev">
+<div class="swiper-button-prev sc-card-slider__btn-prev" id="<?php echo esc_js($id_slider);?>_prev">
     <i class="fa fa-chevron-left"></i>
 </div>
-<div class="swiper-pagination"></div>
+<div class="swiper-pagination" id="<?php echo esc_js($id_slider);?>_pagination"></div>
 <script>
         (function($) {
             "use strict";
@@ -50,11 +50,11 @@ $id_slider  =  "slider_id_".rand(1111,9999);
                 loop: true,
                 spaceBetween: 30,
                 navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                    nextEl: '#<?php echo esc_js($id_slider);?>_next.swiper-button-next',
+                    prevEl: '#<?php echo esc_js($id_slider);?>_prev.swiper-button-prev',
                 },
                 pagination: {
-                    el: '.swiper-pagination',
+                    el: '#<?php echo esc_js($id_slider);?>_pagination.swiper-pagination',
                 }
             });
         })(jQuery);
