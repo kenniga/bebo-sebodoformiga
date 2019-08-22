@@ -1,0 +1,117 @@
+.sc-full-card-slider {
+
+    &__container {
+        padding: 14px;
+    }
+
+    &__item {
+        font-family: intro-regular;
+        border-radius: 25px;
+        background: white;
+        padding: 45px 15%;
+        box-shadow: 1px 3px 7px 2px rgba(206, 206, 206, 0.5);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+    &__title {
+        font-family: intro-bold;
+        text-align: left;
+        margin-top: 27px;
+    }
+    &__img {
+        text-align: center;
+        width: 50%;
+        flex: 1 1 50%;
+        img {
+            width: 100%;
+        }
+    }
+    &__content {
+        text-align: center;
+        margin-top: 15px;
+        flex: 1 1 50%;
+        padding-left: 40px;
+
+        &-inner {
+            p {
+                text-align: left;
+            }
+        }
+    }
+
+    &__btn-next, &__btn-prev {
+        position: absolute;
+        top: 50%;
+        width: 32px;
+        height: 32px;
+        margin-top: -22px;
+        z-index: 10;
+        cursor: pointer;
+        background-size: 27px 44px;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 2px solid #203c75;
+        border-radius: 100%;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 21px;
+        color: #203c75;
+    }
+
+    &__btn-next {
+        right: -50px;
+        background-image: none;
+        padding-left: 7px;
+    }
+
+    &__btn-prev {
+        left: -50px;
+        background-image: none;
+        padding-right: 7px;
+    }
+
+    &__participate-btn {
+        background: #0ea34a;
+        padding: 5px 25px;
+        border-radius: 2004px;
+        font-family: intro-bold;
+        color: white;
+        font-size: 25px;
+        width: 70%;
+        margin-top: 30px;
+        box-shadow: 1px 5px 12px 5px rgba(206, 206, 206, 0.5);
+        
+        &:hover {
+            text-decoration: none;
+            color: white;
+            opacity: .7;
+        }
+    }
+
+    &__read-more-btn {
+        color: #0ea34a;
+        align-self: flex-end;
+        font-weight: bold;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            text-decoration: none;
+            opacity: .7;
+        }
+
+        i {
+            margin-left: 10px;
+        }
+    }
+
+    .swiper-slide {
+        height: auto;
+    }
+}
