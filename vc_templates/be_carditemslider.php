@@ -14,7 +14,7 @@ $id_slider  =  "slider_id_".rand(1111,9999);
                 <div class="sc-card-slider__img">
                     <?php 
                     if ( !empty( $item['upload_slider_picture'] ) ) { 
-                        echo '<img src="' . wp_get_attachment_image_src( $item['upload_slider_picture'], 'thumbnail' )[0] .  '  " class="img-responsive" />'; 
+                        echo '<img src="' . wp_get_attachment_image_src( $item['upload_slider_picture'], 'medium' )[0] .  '  " class="img-responsive" />'; 
                     }  ?>
                 </div>
                 <h5 class="sc-card-slider__title">
