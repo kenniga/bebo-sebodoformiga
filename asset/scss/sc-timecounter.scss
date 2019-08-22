@@ -1,5 +1,16 @@
 .sc-timecounter {
     font-family: intro-bold;
+    &:before {
+        position: absolute;
+        display: block;
+        content: "";
+        left: 0;
+        bottom: 20px;
+        right: 0;
+        box-shadow: 8px 8px 8px 8px #cecece;
+        width: 80%;
+        margin: 0 auto;
+    }
     &__title {
         background: green;
         color: white;
@@ -16,30 +27,26 @@
         text-align: center;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
-        &:after {
-            position: absolute;
-            display: block;
-            content: "";
-            left: 0;
-            bottom: 0;
-            right: 0;
-            box-shadow: 8px 8px 8px 8px #cecece;
-            width: 80%;
-            margin: 0 auto;
-        }
     }
     &__time-remaining {
         list-style: none;
         padding-left: 0;
         text-align: center;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
+        justify-content: center;
+        align-items: flex-start;
         padding: 20px 0;
+        background: white;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
         li {
             display: inline-block;
             font-size: 1rem;
             color: #7b7b7b;
+            padding: 0 20px;
+            .separator {
+                line-height: 1.2;
+            }
             span {
                 display: block;
                 font-size: 2.5rem;
@@ -47,4 +54,59 @@
             }
         }
     }
+}
+
+.sc-logged-in-widget {
+
+    &__nav {
+        font-family: intro-bold;
+        border: 1px solid #0ea34a;
+        border-radius: 7px;
+        overflow: hidden;
+
+        a.nav-link {
+            padding: 0.7rem;
+            background: white;
+            color: black;
+            font-size: 17px;
+
+            &:hover,
+            &:focus {
+                color: #0ea34a;
+            }
+        }
+
+        .nav-item {
+            border-right: 1px solid #0ea34a;
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+
+    &__contest-info {
+        padding-left: 30px;
+    }
+
+    &__registered-photo, &__registered-user {
+        h5 {
+            margin-bottom: 0;
+            font-weight: 700;
+            margin-right: 14px;
+        }
+        span {
+            color: #888888;
+        }
+    }
+
+    &__submit-photo {
+        background: #0ea34a;
+        padding: 7px 40px !important;
+        border-radius: 2004px !important;
+        font-family: intro-bold;
+        color: white;
+        font-size: 17px;
+        display: inline-block;
+    }
+
 }

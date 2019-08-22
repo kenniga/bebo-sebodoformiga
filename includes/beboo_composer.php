@@ -350,6 +350,11 @@ function jabarmasagi_UltimateForm() {
           'param_name' => 'form_class',
         ),
         array(
+          'type' => 'textfield',
+          'heading' => __( 'Form Title', 'bebostore' ),
+          'param_name' => 'form_title',
+        ),
+        array(
           'type' => 'textarea_html',
           'heading' => __( 'Content', 'bebostore' ),
           'param_name' => 'content',
@@ -360,12 +365,12 @@ function jabarmasagi_UltimateForm() {
 class WPBakeryShortCode_Be_ultimateform extends WPBakeryShortCode {}
 
   //This for counter jabarmasagi
-add_action( 'vc_before_init', 'jabarmasagi_TimeCounter', 999999);
-function jabarmasagi_TimeCounter() {
+add_action( 'vc_before_init', 'jabarmasagi_LoggedInWidget', 999999);
+function jabarmasagi_LoggedInWidget() {
   global $bebostore_perpage_arr, $bebostore_book_listall;
   vc_map( array(
-      "name" => __( "Jabar Masagi Time Counter", "bebostore" ),
-      "base" => "be_timecounter",
+      "name" => __( "Jabar Masagi Logged In Widget", "bebostore" ),
+      "base" => "be_loggedinwidget",
       'weight' => 91,
       'category' => __( 'Beau Theme', 'bebostore' ),
       "params" => array(
@@ -414,7 +419,7 @@ function jabarmasagi_TimeCounter() {
       ),
    ) );
 }
-class WPBakeryShortCode_Be_timecounter extends WPBakeryShortCode {}
+class WPBakeryShortCode_Be_loggedinwidget extends WPBakeryShortCode {}
 
 //This for popup modul jabarmasagi
 add_action( 'vc_before_init', 'jabarmasagi_PopupModul', 999999);
