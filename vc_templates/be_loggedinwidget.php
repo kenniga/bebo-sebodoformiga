@@ -105,16 +105,11 @@ extract(shortcode_atts(array(
 <div class="modal" id="upload-foto-kontes">
   <div class="modal-dialog">
     <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        <div class="row">
-            <div class="col-12">
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-12">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <?php echo do_shortcode($content); ?>
             </div>
         </div>
