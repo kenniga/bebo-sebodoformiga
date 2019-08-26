@@ -25,7 +25,11 @@
     label[for="photo-contest-upload"] {
       width: 100%;
       cursor: pointer;
+      background-size: cover;
       background-image: url(../images/upload-photo-placeholder.png);
+      background-repeat: no-repeat;
+      height: 200px;
+      border-radius: 7px;
       
       &:before {
         content: "";
