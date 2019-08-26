@@ -107,10 +107,13 @@ extract(shortcode_atts(array(
     <div class="modal-content">
         <!-- Modal body -->
         <div class="modal-body">
-            <div class="row">
-                <div class="col-12">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <?php echo do_shortcode($content); ?>
+            <div class="container-small">
+                <div class="row">
+                    <div class="col-12">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <?php echo do_shortcode($content); ?>
+                </div>
+
             </div>
         </div>
       </div>
