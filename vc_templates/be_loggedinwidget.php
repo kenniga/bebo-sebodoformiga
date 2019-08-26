@@ -105,12 +105,15 @@ extract(shortcode_atts(array(
 <div class="modal sc-logged-in-widget__modal" id="upload-foto-kontes">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            <h5 class="modal-title" id="exampleModalLongTitle">Unggah Foto</h5>
+        </div>
         <!-- Modal body -->
         <div class="modal-body">
             <div class="container-small">
                 <div class="row">
                     <div class="col-12">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <?php echo do_shortcode($content); ?>
                 </div>
 

@@ -8,9 +8,6 @@
       max-width: 450px;
       margin: 0 auto;
     }
-  }
-  
-  &__photo-contest-form {
     button.close {
       width: 30px;
       height: 30px;
@@ -29,6 +26,9 @@
         color: white;
       }
     }
+  }
+
+  &__photo-contest-form {
 
     label[for="photo-contest-upload"] {
       width: 100%;
