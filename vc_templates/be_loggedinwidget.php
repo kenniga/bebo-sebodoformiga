@@ -88,7 +88,7 @@ extract(shortcode_atts(array(
                             </span>
                         </div>
                         <div class="sc-logged-in-widget__submission-action">
-                            <a href="#" class="sc-logged-in-widget__submit-photo">
+                            <a href="#upload-foto-kontes" data-toggle="modal" class="sc-logged-in-widget__submit-photo">
                                 Unggah Foto
                             </a>
                         </div>
@@ -99,6 +99,28 @@ extract(shortcode_atts(array(
         </div>
     </div>
 
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="upload-foto-kontes">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-12">
+                <?php echo do_shortcode($content); ?>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <?php endif; ?>

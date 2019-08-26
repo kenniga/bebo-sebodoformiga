@@ -416,6 +416,11 @@ function jabarmasagi_LoggedInWidget() {
           'admin_label' => true,
           'description' => __( 'Date of your countdown deadline. Max: 31', 'bebostore' ),
         ),
+        array(
+          'type' => 'textarea_html',
+          'heading' => __( 'Content', 'bebostore' ),
+          'param_name' => 'content',
+        ),
       ),
    ) );
 }
