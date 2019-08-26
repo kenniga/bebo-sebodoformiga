@@ -2,11 +2,15 @@
   .input-wrapper {
     margin-bottom: 20px;
   }
-  &__photo-contest-form {
+
+  &__modal {
     .container-small {
       max-width: 450px;
       margin: 0 auto;
     }
+  }
+  
+  &__photo-contest-form {
     button.close {
       width: 30px;
       height: 30px;

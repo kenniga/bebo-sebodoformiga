@@ -102,7 +102,7 @@ extract(shortcode_atts(array(
 </div>
 
 <!-- The Modal -->
-<div class="modal" id="upload-foto-kontes">
+<div class="modal sc-logged-in-widget__modal" id="upload-foto-kontes">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
         <!-- Modal body -->
