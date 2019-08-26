@@ -125,3 +125,22 @@ extract(shortcode_atts(array(
 
 <?php endif; ?>
 
+<script>
+    (function($) {
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('label[for="photo-contest-upload"]').css('background-image', 'url('+e.target.result +')');
+                    $('label[for="photo-contest-upload"]').hide();
+                    $('label[for="photo-contest-upload"]').fadeIn(650);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#photo-contest-upload").change(function() {
+            readURL(this);
+        });
+    })(jQuery);
+</script>
+

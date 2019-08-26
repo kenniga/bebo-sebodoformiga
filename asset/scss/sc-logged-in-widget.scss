@@ -1,11 +1,34 @@
 .sc-logged-in-widget {
+  .input-wrapper {
+    margin-bottom: 20px;
+  }
   &__photo-contest-form {
+    button.close {
+      width: 30px;
+      height: 30px;
+      background: #BB3135;
+      opacity: 1;
+      color: white;
+      line-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 300;
+      float: none;
+      margin-left: auto;
+
+      &:hover {
+        color: white;
+      }
+    }
+
     label[for="photo-contest-upload"] {
       width: 100%;
+      cursor: pointer;
+      background-image: url(../images/upload-photo-placeholder.png);
       
       &:before {
         content: "";
-        background-image: url(../images/upload-photo-placeholder.png);
         width: 100%;
         height: 200px;
         background-repeat: no-repeat;
@@ -22,13 +45,29 @@
     }
 
     .contest-form-upload {
-      display: none;
+      display: none!important;
     }
 
     input[type="text"], textarea {
       width: 100%;
       border: 1px solid #cecece;
       padding: 7px;
+      border-radius: 7px;
+    }
+
+    input[type="submit"] {
+      margin: 0 auto;
+      background: #4BA054;
+      border: 0;
+      text-transform: capitalize;
+      color: white;
+      font-size: 17px;
+      font-family: intro-bold;
+
+      &:hover {
+        color: white;
+        opacity: .7;
+      }
     }
 
   }
