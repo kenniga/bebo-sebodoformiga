@@ -1,7 +1,11 @@
 .sc-logged-in-widget {
   &__photo-contest-form {
-    label[for="photo-contest-upload"]:after {
-      content: "Max file size: 10MB, Max resolution: 1234 x 1234 pixel";
+    label[for="photo-contest-upload"] {
+      background: url(../images/upload-photo-placeholder.png);
+      &:after {
+        content: "Max file size: 10MB, Max resolution: 1234 x 1234 pixel";
+      }
+
     }
 
   }
