@@ -103,7 +103,7 @@ extract(shortcode_atts(array(
 
 <!-- The Modal -->
 <div class="modal" id="upload-foto-kontes">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
         <!-- Modal body -->
         <div class="modal-body">
