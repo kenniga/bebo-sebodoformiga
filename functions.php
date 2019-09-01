@@ -528,3 +528,18 @@ add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 function isMobileDevice() {
     return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
 }
+
+add_action( 'widgets_init', 'override_woocommerce_widgets', 15 );
+
+function override_woocommerce_widgets() {
+  // Ensure our parent class exists to avoid fatal error (thanks Wilgert!)
+
+  if ( class_exists( 'WC_Widget_Product_Categories' ) ) {
+    unregister_widget( 'WC_Widget_Product_Categories' );
+
+    include_once( 'widgets/new-widget.php' );
+
+    register_widget( 'Custom_WC_Widget_Product_Categories' );
+  }
+
+}
