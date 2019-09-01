@@ -538,8 +538,13 @@ function override_woocommerce_widgets() {
     unregister_widget( 'WC_Widget_Product_Categories' );
 
     include_once( 'widgets/new-widget.php' );
+    include_once( 'widgets/music-genre-widget.php' );
 
     register_widget( 'Custom_WC_Widget_Product_Categories' );
+    register_widget( 'Custom_WC_Widget_Music_Movie_Genres' );
+  }
+  
+
   }
 
 }
