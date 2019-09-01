@@ -545,6 +545,4 @@ function override_woocommerce_widgets() {
   }
   
 
-  }
-
 }
