@@ -82,7 +82,14 @@ class Custom_WC_Widget_Music_Movie_Genres extends WC_Widget {
 		$terms = get_terms( 'music_movie_genre', array(
 			'hide_empty' => false,
 	) );
-		sebodo_debug($terms);
+
+		foreach ( $terms as $term ) {
+			// The $term is an object, so we don't need to specify the $taxonomy.
+			$term_link = get_term_link( $term );
+			
+			echo '<li class="cat-item"><a href="' . esc_url( $term_link ) . '">' . $term->name . '</a></li>';
+
+		}
 		echo '</ul>';
 
 		$this->widget_end( $args );
