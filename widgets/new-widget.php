@@ -12,15 +12,7 @@ class Custom_WC_Widget_Product_Categories extends WC_Widget_Product_Categories {
 		$hide_empty         = isset( $instance['hide_empty'] ) ? $instance['hide_empty'] : $this->settings['hide_empty']['std'];
 		$dropdown_args      = array(
 			'hide_empty' => $hide_empty,
-    );
-    
-    // The WP_Term object for the current product category
-    $current_term = get_queried_object();
-
-    // Get the current term name for the product category page
-    $current_term_name = $term->name;
-
-    sebodo_debug($current_term_name);
+		);
 		$list_args          = array(
 			'show_count'   => $count,
 			'hierarchical' => $hierarchical,
