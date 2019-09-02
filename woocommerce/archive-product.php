@@ -463,10 +463,6 @@ get_header( 'shop' ); ?>
 							is_tax('product_types', 'vinyl')
 							): 
 							?>
-							<?php sebodo_debug( !is_tax('product_types', 'book') ); ?>
-							<?php sebodo_debug( !is_tax('product_types', 'cassette') ); ?>
-							<?php sebodo_debug( !is_tax('product_types', 'audio-cd') ); ?>
-							<?php sebodo_debug( !is_tax('product_types', 'vinyl') ); ?>
 							<div class="right-sidebar left-bar col-md-3 col-sm-4 col-5 d-none d-sm-block">
 								<div class="sidebar-widget">
 									<?php
