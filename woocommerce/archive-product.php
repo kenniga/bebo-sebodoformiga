@@ -456,6 +456,12 @@ get_header( 'shop' ); ?>
 				<div class="shop-left-bar">
 					<div class="container">
 						<div class="row">
+						<?php if( 
+							!is_tax('product_types', 'book') &&
+							!is_tax('product_types', 'cassette') && 
+							!is_tax('product_types', 'audio-cd') && 
+							!is_tax('product_types', 'vinyl')
+							): ?>
 							<div class="right-sidebar left-bar col-md-3 col-sm-4 col-5 d-none d-sm-block">
 								<div class="sidebar-widget">
 									<?php
@@ -465,7 +471,13 @@ get_header( 'shop' ); ?>
 									?>
 								</div>
 							</div>
-							<div class="col-md-9 col-sm-8 col-12">
+							<?php endif ?>
+							<div class="<?php if(
+								is_tax('product_types', 'book') ||
+								is_tax('product_types', 'cassette') || 
+								is_tax('product_types', 'audio-cd') || 
+								is_tax('product_types', 'vinyl')  
+							) { echo "col-md-9 col-sm-8"; }?> col-12">
 								<div class="shop-list-book row">
 									<div class="shop-list col-md-12-col-sm-12 col-12">
 										<ul class="products book-grid row">
