@@ -457,10 +457,10 @@ get_header( 'shop' ); ?>
 					<div class="container">
 						<div class="row">
 						<?php if( 
-							!is_tax('product_types', 'book') &&
-							!is_tax('product_types', 'cassette') && 
-							!is_tax('product_types', 'audio-cd') && 
-							!is_tax('product_types', 'vinyl')
+							is_tax('product_types', 'book') ||
+							is_tax('product_types', 'cassette') || 
+							is_tax('product_types', 'audio-cd') || 
+							is_tax('product_types', 'vinyl')
 							): 
 							?>
 							<?php sebodo_debug( !is_tax('product_types', 'book') ); ?>
