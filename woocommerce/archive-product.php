@@ -223,7 +223,7 @@ get_header( 'shop' ); ?>
 		// get the query object
 		$cat = $wp_query->get_queried_object();
 		// get the thumbnail id user the term_id
-		$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+		$thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
 		if (function_exists('z_taxonomy_image_url')){
 			$image = z_taxonomy_image_url($cat->term_id, NULL, TRUE);
 		}
@@ -232,13 +232,6 @@ get_header( 'shop' ); ?>
 		$count_product = $term->count;
 
 	?>
-
-	<section class="header-page header-shop" style="background: url(<?php print ($image); ?>) no-repeat center center;background-size: cover;">
-		<div class="container">
-			<div class="title-page"><?php print($term->name); ?> <span>(<?php print ($count_product); ?>)</span></div>
-		</div>
-
-	</section>
 
 	<?php 
 	} else {
@@ -370,11 +363,12 @@ get_header( 'shop' ); ?>
 	</section>
 	<section class="type-tab">
 	<?php
-		
-		$terms = get_terms( 'product_types' );
+
+		$terms = get_terms( 'product_cat', array( 'parent' => 0, 'orderby' => 'slug', 'hide_empty' => false ) );
 		echo '<ul class="product-type-tab">';
 		
 		foreach ( $terms as $term ) {
+			if( $term->name == 'Uncategorized' ) { break; }
 			$current_term_class = '';
 		 
 			// The $term is an object, so we don't need to specify the $taxonomy.
