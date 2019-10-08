@@ -14,9 +14,9 @@ $thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
 // get the image URL
 $image = wp_get_attachment_url( $thumbnail_id );
 // print the IMG HTML
-$term = get_terms( 'pa_product-type' );
+$term = get_terms( 'product_cat' );
 $product_cat_list = array();
-if($product_cat != NULL) {
+if(!empty($product_cat)) {
     $product_cat_list = explode(',', $product_cat);
 }
 $parsed_cats_array = vc_param_group_parse_atts($category_group);
@@ -36,7 +36,7 @@ $parsed_cats_array = vc_param_group_parse_atts($category_group);
 					'include'	 =>  $product_cat_list,
 					'order'      => 'ASC',
 				);
-				$product_categories = get_terms( 'pa_product-type', $args );
+				$product_categories = get_terms( 'product_cat', $args );
 				$count = count($product_categories);
 				$i = 1;
 				?>

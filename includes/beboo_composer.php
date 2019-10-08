@@ -663,7 +663,7 @@ function bebostore_proCategories() {
                   'groups'            => true,
                   'unique_values'     => true,
                   'display_inline'    => true,
-                  'values'            => bebostore_get_list_taxonomy_by_name('product_types')
+                  'values'            => bebostore_get_list_taxonomy_by_name('product_cat')
               ),
             ),
             array(
