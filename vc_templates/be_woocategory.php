@@ -10,7 +10,7 @@ global $wp_query;
 // get the query object
 $cat = $wp_query->get_queried_object();
 // get the thumbnail id user the term_id
-$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+$thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
 // get the image URL
 $image = wp_get_attachment_url( $thumbnail_id );
 // print the IMG HTML
@@ -106,7 +106,7 @@ $parsed_cats_array = vc_param_group_parse_atts($category_group);
 	$i = 1;
 	if ( $count > 0 ){
 	    foreach ( $product_categories as $product_category ) {
-	    $wthumbnail_id = get_woocommerce_term_meta( $product_category->term_id,'thumbnail_id', true );
+	    $wthumbnail_id = get_term_meta( $product_category->term_id,'thumbnail_id', true );
    		$wimage = wp_get_attachment_url( $wthumbnail_id );
 	   	?>
 	   	<li class="items-category" id="items-category-home<?php print($i)?>">

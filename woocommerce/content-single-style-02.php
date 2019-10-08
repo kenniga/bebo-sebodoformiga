@@ -447,6 +447,7 @@
 								<div class="row details-content">
 									<div class="col-lg-3 col-sm-6 col-12">
 										<?php 
+
 											$product_types = get_the_terms( get_the_ID(), 'product_types' );
 											$product_types = $product_types[0]->slug;
 											if( $product_types == 'book' ) {

@@ -41,6 +41,7 @@
 			<?php echo woocommerce_template_loop_rating(); ?>
 			<span class="book-name"><a href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></span>
 			<?php 
+			// sebodo_debug($current_product_types[0]);
 				if( $current_product_types ) {
 					if( $current_product_types[0]->slug !== 'merchandise' && $current_product_types[0]->slug !== 'misc' ) { 
 

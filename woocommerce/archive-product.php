@@ -28,7 +28,7 @@ get_header( 'shop' ); ?>
 		'post_type'           => 'product',
 		'post_status'         => 'publish',
 		'ignore_sticky_posts' => 1,
-		'orderby'             => $orderby,
+		'orderby'             => 'date',
 		'order'               => $order == 'asc' ? 'asc' : 'desc',
 		'tax_query'           => $tax_query // <===
 	) );
