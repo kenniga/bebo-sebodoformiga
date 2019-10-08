@@ -420,8 +420,16 @@
 					</div>
 					<div class="row mt-5 mt-sm-auto">
 						<div class="about-this-book">
+						<?php
+							$author = get_field('field_book_author');
+							$editorial = get_post_meta( get_the_ID(), '_beautheme_editorial_reviews', true );
+							$author = get_field('field_book_author');
+							$publisher = get_field('field_book_publisher');
+							$overview = get_the_content();
+						?>
 							<div class="container">
 								<div class="row heading-details">
+								<?php if( $publisher ): ?>
 									<div class="col-lg-3 col-sm-6 col-12">
 										<div class="heading-box">
 											<h5>
@@ -429,6 +437,7 @@
 											</h5>
 										</div>
 									</div>
+								<?php endif;?>
 									<div class="col-lg-9 col-sm-6 col-12 d-none d-sm-block">
 										<div class="heading-box">
 											<h5>
@@ -437,21 +446,14 @@
 										</div>
 									</div>
 								</div>
-								<?php
-									$author = get_field('field_book_author');
-									$editorial = get_post_meta( get_the_ID(), '_beautheme_editorial_reviews', true );
-									$author = get_field('field_book_author');
-									$publisher = get_field('field_book_publisher');
-									$overview = get_the_content();
-								?>
 								<div class="row details-content">
+								<?php if( $publisher ): ?>
 									<div class="col-lg-3 col-sm-6 col-12">
-										<?php 
+										<?php
 
-											$product_types = get_the_terms( get_the_ID(), 'product_types' );
+											$product_types = get_the_terms( get_the_ID(), 'product_cat' );
 											$product_types = $product_types[0]->slug;
-											if( $product_types == 'book' ) {
-												if( $publisher ): ?>
+											if( $product_types == 'books' ) {?>
 													<div id="desc-detail" class="book-desc-detail">
 														<?php foreach( $publisher as $publisher ): ?>
 															<?php
@@ -521,7 +523,7 @@
 															</span>
 														<?php endforeach; ?>
 													</div>
-												<?php endif;
+												<?php
 
 											} elseif ( $product_types == 'audio-cd' || $product_types == 'cassette' || $product_types == 'vinyl' ) {
 												?>
@@ -735,6 +737,7 @@
 										?>
 										
 									</div>
+								<?php endif;?>
 									<div class="col-lg-7 col-sm-6 col-12">
 										<div class="heading-box d-block d-sm-none my-4 my-sm-auto">
 											<h5>

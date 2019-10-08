@@ -347,6 +347,18 @@ function bebostore_get_category_product(){
     return $category_product;
 }
 
+function bebostore_get_parent_category_product(){
+    $terms = get_terms( 'product_cat', array( 'parent' => 0, 'orderby' => 'slug', 'hide_empty' => false ) );
+    $category_product['Select...'] = '';
+    $category_product['All'] = '';
+    if (is_array($terms)) {
+        foreach ($terms as $term) {
+            $category_product[$term->name] = $term->name;
+        }
+    }
+    return $category_product;
+}
+
 function bebostore_get_product_types(){
     $terms = get_terms('product_types');
     $category_product['Select...'] = '';

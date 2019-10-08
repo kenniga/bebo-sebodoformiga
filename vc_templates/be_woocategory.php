@@ -6,19 +6,7 @@ extract(shortcode_atts(array(
     'category_group' 		=> ''
 ), $atts));
 $idRand = "procat_".rand(100,9999);
-global $wp_query;
-// get the query object
-$cat = $wp_query->get_queried_object();
-// get the thumbnail id user the term_id
-$thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
-// get the image URL
-$image = wp_get_attachment_url( $thumbnail_id );
-// print the IMG HTML
-$term = get_terms( 'product_cat' );
 $product_cat_list = array();
-if(!empty($product_cat)) {
-    $product_cat_list = explode(',', $product_cat);
-}
 $parsed_cats_array = vc_param_group_parse_atts($category_group);
 
 ?>
@@ -43,7 +31,7 @@ $parsed_cats_array = vc_param_group_parse_atts($category_group);
 				<?php
 				if ( $count > 0 ){
 					foreach ( $parsed_cats_array as $item_category ) {
-						$product_category = get_term_by('id', $item_category['product_cat'], 'product_types');
+						$product_category = get_term_by('id', $item_category['product_cat'], 'product_cat');
 						$wimage = wp_get_attachment_url( $item_category['category_image'] );
 					   $cat_height = '';
 					   if ($i == 1 || $i == 4 || $i == 5 || $i == 8) {

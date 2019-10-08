@@ -469,8 +469,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 														</span>
 														<span class="book-author">
 															<?php
-																$author = get_fields($loop_product->ID)['book_author'];
-																
+																$author = !empty(get_fields($loop_product->ID)['book_author']) ? get_fields($loop_product->ID)['book_author'] : '';
 															?>
 																<?php if( $author ): ?>
 																	<?php esc_html_e('by:', 'bebostore'); ?>

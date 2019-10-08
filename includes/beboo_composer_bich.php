@@ -97,7 +97,7 @@ function bebostore_product_slide() {
           'type' => 'dropdown',
           'heading' => esc_html__( 'Category', 'bebostore' ),
           'param_name' => 'category',
-          'value' => bebostore_get_product_types(),
+          'value' => bebostore_get_parent_category_product(),
           'admin_label' => true,
           'description' => esc_html__( 'Select category products.', 'bebostore' )
         ),

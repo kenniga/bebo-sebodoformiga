@@ -46,7 +46,6 @@ get_header( 'shop' ); ?>
 					<?php 
 					
 						$products = $query->posts;
-						// sebodo_debug($products);
 						for ($i=0; $i < sizeof($products) ; $i++) { 
 							$id_product = (int) $products[$i]->ID;
 							$product = new WC_Product( $id_product );
