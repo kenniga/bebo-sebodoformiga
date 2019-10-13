@@ -16,7 +16,7 @@ extract(shortcode_atts(array(
 ), $atts));
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) :
 	if ($category){
-		$category = get_term_by('slug',$category,'product_types');
+		$category = get_term_by('slug',$category,'product_cat');
 		if (is_object($category)){
 			$category = $category->slug;
 		}
@@ -410,7 +410,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 											'tax_query' => array(
 												'relation' => 'OR',
 												array(
-														'taxonomy' => 'product_types',
+														'taxonomy' => 'product_cat',
 														'field' => 'slug',
 														'terms' => $category
 												),
