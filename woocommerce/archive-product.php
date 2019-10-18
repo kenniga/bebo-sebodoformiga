@@ -378,14 +378,17 @@ get_header( 'shop' ); ?>
 				continue;
 			}
 
+			$current_term_class = 'current-term';
 			if( get_queried_object()->slug == $term->slug ) {
-				$current_term_class = 'current-term';
-				echo '<li class=" ' . $current_term_class . '"><span href="' . esc_url( $term_link ) . '">' . $term->name . '</span></li>';
+				echo '<li class=" ' . $current_term_class . '"><span>' . $term->name . '</span></li>';
 			} else {
-				echo '<li><a href="' . esc_url( $term_link ) . '">' . $term->name . '</a></li>';
+				if( get_queried_object()->parent == $term->term_id ) {
+					echo '<li class=" ' . $current_term_class . '"><a class="active" href="' . esc_url( $term_link ) . '">' . $term->name . '</a></li>';
+				}	else {
+					echo '<li><a href="' . esc_url( $term_link ) . '">' . $term->name . '</a></li>';
 
+				}
 			}
-			
 			// We successfully got a link. Print it out.
 		}
 		 
@@ -425,7 +428,8 @@ get_header( 'shop' ); ?>
 							
 					</div>
 					<?php
-						$categories = get_term_children( get_queried_object()->term_id, 'product_cat' ); 
+						$parent_of_children = get_queried_object()->parent === 0 ? get_queried_object()->term_id : get_queried_object()->parent ;
+						$categories = get_term_children( $parent_of_children, 'product_cat' ); 
 						if ( $categories && ! is_wp_error( $category ) ) :
 					?>
 					<div class="dd">

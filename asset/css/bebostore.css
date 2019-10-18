@@ -13057,7 +13057,8 @@ ul.product-type-tab li a:hover {
   text-decoration: none;
 }
 
-ul.product-type-tab li.current-term span {
+ul.product-type-tab li.current-term span,
+ul.product-type-tab li.current-term a.active {
   padding: 7px 10px;
   border-bottom-color: #F4610B;
   color: white;
