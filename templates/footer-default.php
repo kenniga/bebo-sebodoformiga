@@ -50,19 +50,21 @@
 						<option value="" selected><?php esc_html_e('Product','bebostore'); ?> <i class="fa fa-chevron-down"></i></option>
 						<?php
 							if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-							$args = array(
-								'orderby'   => 'title',
-								'order'     => 'ASC',
-								'hide_empty'          => FALSE,
+								$args = array(
+									'orderby'   => 'title',
+									'order'     => 'ASC',
+									'hide_empty'=> FALSE,
 							);
-							$product_categories = get_terms( 'product_types', $args );
+							$product_categories = get_terms( 'product_cat', array( 'parent' => 0, 'orderby' => 'title', 'hide_empty' => false ) );
 							$count = count($product_categories);
 							if (class_exists('WC()')) {
 								# code...
 							}
 							if ( $count > 0 ){
 								foreach ( $product_categories as $product_category ) {
-									echo '<option value="' .  $product_category->slug . '">' . $product_category->name . '</option>';
+									if( $product_category->slug !== 'uncategorized' ) {
+										echo '<option value="' .  $product_category->slug . '">' . $product_category->name . '</option>';
+									}
 								}
 							}
 						}

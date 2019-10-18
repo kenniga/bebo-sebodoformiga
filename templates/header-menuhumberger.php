@@ -90,23 +90,23 @@
 							<form action="<?php echo esc_url(home_url( '/' ));?>" method="GET">
 								<span class="felement">
 									<input type="text" name="s" id="txt-search" placeholder="<?php esc_html_e('Search by title book','bebostore'); ?>">
-	                                <input type="hidden" name="post_type" value="product" />
+									<input type="hidden" name="post_type" value="product" />
 									<select name="category_name" class="custom-dropdown search-fillter">
 										<option value="0" selected><?php esc_html_e('All products','bebostore'); ?></option>
 										<?php
-				                            $args = array(
-				                                'orderby'   => 'title',
-				                                'order'     => 'ASC',
-				                                'hide_empty'          => FALSE,
-				                            );
-				                            $product_categories = get_terms( 'product_cat', $args );
-				                            $count = count($product_categories);
-				                            if ( $count > 0 ){
-				                                foreach ( $product_categories as $product_category ) {
-				                                    echo '<option value="' . $product_category->slug . '">' . $product_category->name . '</option>';
-				                                }
-				                            }
-				                        ?>
+											$args = array(
+													'orderby'   => 'title',
+													'order'     => 'ASC',
+													'hide_empty'          => FALSE,
+											);
+											$product_categories = get_terms( 'product_cat', $args );
+											$count = count($product_categories);
+											if ( $count > 0 ){
+													foreach ( $product_categories as $product_category ) {
+															echo '<option value="' . $product_category->slug . '">' . $product_category->name . '</option>';
+													}
+											}
+									?>
 									</select>
 								</span>
 								<button type="submit"><?php esc_html_e('Search','bebostore');?></button>

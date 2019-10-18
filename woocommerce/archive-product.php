@@ -424,6 +424,34 @@ get_header( 'shop' ); ?>
 						</div>
 							
 					</div>
+					<?php
+						$categories = get_term_children( get_queried_object()->term_id, 'product_cat' ); 
+						if ( $categories && ! is_wp_error( $category ) ) :
+					?>
+					<div class="dd">
+						<div class="dd-a"><span>Product Genre</span></div>
+						<input type="checkbox">
+						<div class="dd-c">
+							<ul>
+							<?php
+									foreach($categories as $category) :
+
+										$term = get_term( $category, 'product_cat' );
+										if($term->count > 0) {
+											echo '<li>';
+											echo '<a href="'.get_term_link($term).'">';
+											echo '<span>' . $term->name . '</span>';
+											echo '</a>';
+											echo '</li>';
+										}
+									endforeach;
+							?>
+							</ul>
+						</div>
+					</div>
+
+					<?php endif; ?>
+
 					<div class="archive-tools">
 						<?php
 							/**
@@ -502,7 +530,6 @@ get_header( 'shop' ); ?>
 			?>
 
 		<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
-
 			<?php wc_get_template( 'loop/no-products-found.php' ); ?>
 
 		<?php endif; ?>

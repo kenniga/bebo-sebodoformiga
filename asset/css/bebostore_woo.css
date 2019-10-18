@@ -2784,7 +2784,7 @@ a.open-search-modal .fa {
   right: 15px;
 }
 
-a.open-search-modal:hover {
+a.open-search-modal:not([href]):not([tabindex]):hover {
   background: white;
   color: #f07c29;
 }
