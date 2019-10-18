@@ -29,7 +29,7 @@ get_header( 'shop' ); ?>
 		'post_status'         => 'publish',
 		'ignore_sticky_posts' => 1,
 		'orderby'             => 'date',
-		'order'               => $order == 'asc' ? 'asc' : 'desc',
+		'order'               => 'desc',
 		'tax_query'           => $tax_query // <===
 	) );
 		?>
@@ -427,14 +427,34 @@ get_header( 'shop' ); ?>
 						</div>
 							
 					</div>
+					<div class="archive-tools">
+						<?php
+							/**
+							 * woocommerce_before_shop_loop hook
+							 *
+							 * @hooked woocommerce_result_count - 20
+							 * @hooked woocommerce_catalog_ordering - 30
+							 */
+							do_action( 'woocommerce_before_shop_loop' );
+							$form = '<form class="product-search" role="search" method="get" id="searchform" action="' . esc_url( home_url( '/'  ) ) . '">
+									<label class="screen-reader-text" for="s">' . __( 'Search for:', 'woocommerce' ) . '</label>
+									<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="' . __( 'Search by Title', 'woocommerce' ) . '" />
+									<input type="hidden" name="post_type" value="product" />
+							</form>';
+							
+							echo $form;
+						?>
+					</div>
+
 					<?php
 						$parent_of_children = get_queried_object()->parent === 0 ? get_queried_object()->term_id : get_queried_object()->parent ;
 						$categories = get_term_children( $parent_of_children, 'product_cat' ); 
-						if ( $categories && ! is_wp_error( $category ) ) :
+						if ( $categories ) :
 					?>
 					<div class="dd">
 						<div class="dd-a"><span>Product Genre</span></div>
 						<input type="checkbox">
+						<i class="fa fa-caret-down"></i>
 						<div class="dd-c">
 							<ul>
 							<?php
@@ -455,25 +475,6 @@ get_header( 'shop' ); ?>
 					</div>
 
 					<?php endif; ?>
-
-					<div class="archive-tools">
-						<?php
-							/**
-							 * woocommerce_before_shop_loop hook
-							 *
-							 * @hooked woocommerce_result_count - 20
-							 * @hooked woocommerce_catalog_ordering - 30
-							 */
-							do_action( 'woocommerce_before_shop_loop' );
-							$form = '<form class="product-search" role="search" method="get" id="searchform" action="' . esc_url( home_url( '/'  ) ) . '">
-									<label class="screen-reader-text" for="s">' . __( 'Search for:', 'woocommerce' ) . '</label>
-									<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="' . __( 'Search by Title', 'woocommerce' ) . '" />
-									<input type="hidden" name="post_type" value="product" />
-							</form>';
-							
-							echo $form;
-						?>
-					</div>
 				</div>
 			</section>
 
