@@ -356,6 +356,23 @@ function bebostore_get_category_blog(){
     }
     return $category_blog;
 }
+
+function bebostore_get_home_slider(){
+    $args = array(
+        'post_type'        => 'slider_hero',
+        'post_status'      => 'publish',
+    );
+    $posts_array = get_posts( $args );
+    $home_sliders['Select...'] = '';
+    if (is_array($posts_array)) {
+        foreach ($posts_array as $post) {
+            $home_sliders[get_field('show_on_page' , $post->ID)] = $post->ID;
+            
+        }
+    }
+    return $home_sliders;
+}
+
 //Get option page
 function bebostore_option($string){
     global $beau_option;
@@ -419,6 +436,11 @@ function bebostore_get_single_post( $post_type = '' ) {
 
     return $result;
 }
+
+if (!current_user_can('manage_options')) {
+    add_filter('show_admin_bar','__return_false');
+}
+
 @ini_set( 'upload_max_size' , '256M' );
 @ini_set( 'post_max_size', '256M');
 @ini_set( 'max_execution_time', '300' );

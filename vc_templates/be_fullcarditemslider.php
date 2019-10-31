@@ -19,9 +19,6 @@ $id_slider  =  "slider_id_".rand(1111,9999);
                     if ( !empty( $item['upload_slider_picture'] ) ) { 
                         echo '<img src="' . wp_get_attachment_image_src( $item['upload_slider_picture'], 'medium' )[0] .  '  " class="img-responsive" />'; 
                     }  ?>
-                    <a href="<?php echo $participate_link_atts['url']; ?>" class="sc-full-card-slider__participate-btn">
-                        <?php echo esc_html($participate_link_atts['title']); ?>
-                    </a>
                 </div>
                 <div class="sc-full-card-slider__content d-flex justify-content-around flex-wrap flex-column">
                     <div class="sc-full-card-slider__content-inner">

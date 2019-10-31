@@ -122,6 +122,27 @@ function bebostore_SocialList() {
 }
 class WPBakeryShortCode_Be_sociallist extends WPBakeryShortCode {}
 
+// Hero Slider
+add_action( 'vc_before_init', 'jabarmasagi_HeroSlider', 999999);
+function jabarmasagi_HeroSlider() {
+  vc_map( array(
+      "name" => __( "Show hero slider", "bebostore" ),
+      "base" => "be_heroslider",
+      'weight' => 91,
+      'category' => __( 'Beau Theme', 'bebostore' ),
+      "params" => array(
+        array(
+          'type' => 'dropdown',
+          'heading' => esc_html__( 'Slider Select', 'bebostore' ),
+          'param_name' => 'show_on_page',
+          'value' => bebostore_get_home_slider(),
+          'admin_label' => true,
+        ),
+      ),
+   ) );
+}
+class WPBakeryShortCode_Be_heroslider extends WPBakeryShortCode {}
+
 //This for popup modul jabarmasagi
 add_action( 'vc_before_init', 'jabarmasagi_PopupRegister', 999999);
 function jabarmasagi_PopupRegister() {

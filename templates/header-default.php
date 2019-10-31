@@ -6,7 +6,7 @@
     include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 ?>
 <header class="menu-stick sticky-top header-one <?php if ( $enabled_header_top ) { echo 'no-header-top'; } ?>">
-    <div class="container-fluid      ">
+    <div class="container">
         <div class="d-flex">
             <?php if( $enabled_header_top == 0 ): ?>
             <div class="header-top">

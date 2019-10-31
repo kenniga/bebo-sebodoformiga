@@ -19,7 +19,8 @@
     &__action {
         text-align: center;
         a {
-            &:link {
+            &:link,
+            &.sc-card-item__action-link {
                 padding: 7px 25px;
                 background: #2a86c7;
                 border-radius: 20px;

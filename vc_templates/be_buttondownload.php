@@ -20,6 +20,7 @@ $scoped_style = sprintf('
             %2$s;
             %5$s;
             %6$s;
+            %7$s;
 		}
 		#' . $button_unique_id . ':hover{
             %3$s;
@@ -32,7 +33,8 @@ $scoped_style = sprintf('
     $button_background_hover    = !empty( $button_background_hover ) ? 'background:' . $button_background_hover : '',
     $button_font_color_hover    = !empty( $button_font_color_hover ) ? 'color:' . $button_font_color_hover : '',
     $button_font_size           = !empty( $button_font_size ) ? 'font-size: calc(' . $button_font_size . 'vw + 1rem)' : '',
-    $button_width               = !empty( $button_width ) ? 'width: ' . $button_width . ';' : ''
+    $button_width               = !empty( $button_width ) ? 'width: ' . $button_width . ';' : '',
+    $button_margin_bottom       = 'margin-bottom: calc(2vw + 1rem)'
 );
 echo $scoped_style;
 
