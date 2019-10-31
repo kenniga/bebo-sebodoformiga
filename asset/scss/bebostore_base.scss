@@ -11476,6 +11476,9 @@ a.btn.be_btn--rounded {
  */
 
 .jabarmasagi-blog-card-slider .card-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: white;
   border-radius: 20px;
   height: 100%;

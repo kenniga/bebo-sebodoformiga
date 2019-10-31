@@ -5,7 +5,8 @@ extract(shortcode_atts(array(
     'title_center' => '',
     'blog_perpage' 	=> '3',
     'category' => '',
-    'blog_thumbnail_style' => '',
+		'blog_thumbnail_style' => '',
+		'blog_selection' => ''
 ), $atts));
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 if ($category == '') {
@@ -16,13 +17,25 @@ if ($category == '') {
 		'ignore_sticky_posts' => true,
 		'paged'               => $paged
 	);
+	if( $blog_selection == 'upcoming_program' ) {
+		$with_upcoming_program = array(
+			'meta_query' => array(
+				array(
+						'key' => 'show_this_post_on',
+						'value' => 'upcoming-program',
+						'compare' => 'LIKE'
+				)
+			)
+		);
+		$args = array_merge($args, $with_upcoming_program);
+	}
 }
 else{
 	$args = array(
-      'post_type' => 'post',
-      'posts_per_page' => $blog_perpage,
-      'order' => 'DESC' ,
-      'category_name' => $category,
+		'post_type' => 'post',
+		'posts_per_page' => $blog_perpage,
+		'order' => 'DESC' ,
+		'category_name' => $category,
 	);
 }
 $loop = new WP_Query( $args );

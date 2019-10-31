@@ -721,6 +721,16 @@ function jabarmasagi_BlogCardSlider() {
           'admin_label' => true,
           'description' => __( 'How thumbnail image displayed.', 'bebostore' )
         ),
+        array(
+          'type' => 'dropdown',
+          'heading' => __( 'Blog Selection', 'bebostore' ),
+          'param_name' => 'blog_selection',
+          'value' => array(
+            __( 'Recent Posts', 'bebostore' ) => '',
+            __( 'Upcoming Program', 'bebostore' ) => 'upcoming_program',
+          ),
+          'admin_label' => true,
+        ),
       ),
    ) );
 }
