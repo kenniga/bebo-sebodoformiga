@@ -1,0 +1,47 @@
+.sc-galeri-kontes {
+
+  &__item {
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__overlay {
+    opacity: 0;
+    transition: 420ms;
+    position: absolute;
+    bottom: 0;
+    background: rgba(210,255,82,0);
+    background: -moz-linear-gradient(top, rgba(210,255,82,0) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(210,255,82,0)), color-stop(100%, rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(top, rgba(210,255,82,0) 0%, rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(top, rgba(210,255,82,0) 0%, rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(top, rgba(210,255,82,0) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(210,255,82,0) 0%, rgba(0,0,0,0.7) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#000000', GradientType=0 );
+    right: 0;
+    left: 0;
+    color: white;
+    padding: 0px 7px;
+  
+    h6 {
+      margin: 0;
+      font-family: intro-bold;
+      font-size: 14px;
+    }
+  
+    p {
+      margin-bottom: 7px;
+      font-family: intro-regular;
+      font-weight: 400;
+    }
+  }
+  
+  &__item {
+    &:hover {
+      .sc-galeri-kontes__overlay {
+        opacity: 1;
+        transition: 420ms;
+      }
+    }
+  }
+}

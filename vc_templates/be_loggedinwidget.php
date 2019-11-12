@@ -6,6 +6,8 @@ extract(shortcode_atts(array(
     'month_countdown'	=> '',
     'year_countdown' => ''
 ), $atts));
+
+$user_post_count = count_user_posts( get_current_user_id() , 'galeri_kontes' );
 ?>
 
 <?php if ( is_user_logged_in() ): ?>
@@ -88,9 +90,21 @@ extract(shortcode_atts(array(
                             </span>
                         </div>
                         <div class="sc-logged-in-widget__submission-action">
-                            <a href="#upload-foto-kontes" data-toggle="modal" class="sc-logged-in-widget__submit-photo">
-                                Unggah Foto
-                            </a>
+                            <?php 
+                                if ($user_post_count != 3) {
+                                    ?>
+                                        <a href="#upload-foto-kontes" data-toggle="modal" class="sc-logged-in-widget__submit-photo">
+                                            Unggah Foto
+                                        </a>
+                                    <?php
+                                } else {
+                                    ?>
+                                        <a href="#" disabled class="sc-logged-in-widget__submit-photo">
+                                            Anda sudah mencapai batas maksimal upload (3 foto)
+                                        </a>
+                                    <?php
+                                }
+                            ?>
                         </div>
                     </div>
                 </div>

@@ -447,6 +447,18 @@ function jabarmasagi_LoggedInWidget() {
 }
 class WPBakeryShortCode_Be_loggedinwidget extends WPBakeryShortCode {}
 
+  //This for counter jabarmasagi
+add_action( 'vc_before_init', 'jabarmasagi_GaleriKontes', 999999);
+function jabarmasagi_GaleriKontes() {
+  vc_map( array(
+      "name" => __( "Jabar Masagi Galeri Kontes", "bebostore" ),
+      "base" => "be_galerikontes",
+      'weight' => 91,
+      'category' => __( 'Beau Theme', 'bebostore' )
+   ) );
+}
+class WPBakeryShortCode_Be_galerikontes extends WPBakeryShortCode {}
+
 //This for popup modul jabarmasagi
 add_action( 'vc_before_init', 'jabarmasagi_PopupModul', 999999);
 function jabarmasagi_PopupModul() {

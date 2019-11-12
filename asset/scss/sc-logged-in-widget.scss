@@ -3,54 +3,85 @@
     margin-bottom: 20px;
   }
 
+  &__progress {
+    margin: 25px 0 35px;
+  }
+
   &__modal {
     .container-small {
       max-width: 450px;
       margin: 0 auto;
     }
-    .modal-dialog .modal-content .modal-header {
-      width: 450px;
-      margin: 0 auto;
-      border-bottom: none;
-      padding-left: 0;
-      padding-top: 70px;
-
-      h5.modal-title {
-        font-family: intro-bold;
-        font-size: 27px;
-      }
-      button.close {
-        width: 30px;
-        height: 30px;
-        background: #BB3135;
-        opacity: 1;
-        color: white;
-        line-height: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 600;
-        font-size: 27px;
-        float: none;
-        margin-left: auto;
-        position: absolute;
-        top: 30px;
-        right: 35px;
+    .modal-dialog .modal-content {
+      background: #F2F5F8;
+      .modal-header {
+        width: 450px;
+        margin: 0 auto;
+        border-bottom: none;
+        padding-left: 0;
+        padding-top: 70px;
+        display: block;
   
-        &:hover {
+        h5.modal-title {
+          font-family: intro-bold;
+          font-size: 27px;
+        }
+        button.close {
+          width: 30px;
+          height: 30px;
+          background: #BB3135;
+          opacity: 1;
           color: white;
+          line-height: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 600;
+          font-size: 27px;
+          float: none;
+          margin-left: auto;
+          position: absolute;
+          top: 30px;
+          right: 35px;
+    
+          &:hover {
+            color: white;
+          }
         }
       }
+
+    }
+  }
+
+  &__success-upload {
+    font-family: intro-regular;
+    display: none;
+    left: 0;
+    right: 0;
+    margin-bottom: 0;
+    z-index: 0;
+    border-radius: 7px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    i.fa {
+      color: #4BA054;
+      font-size: 22px;
+      margin-left: 7px;
     }
   }
 
   &__photo-contest-form {
 
+    .ugc-input-wrapper {
+      position: relative;
+    }
+
     label[for="photo-contest-upload"] {
       width: 100%;
       cursor: pointer;
-      background-size: cover;
+      background-size: contain;
       background-image: url(../images/upload-photo-placeholder.png);
+      background-position: center;
       background-repeat: no-repeat;
       height: 200px;
       border-radius: 7px;
@@ -69,8 +100,16 @@
       &:after {
         content: "Max file size: 10MB, Max resolution: 1234 x 1234 pixel";
       }
-
+      
+      &.success {
+        &:before {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          border-top: none;
+        }
+      }
     }
+
 
     .contest-form-upload {
       display: none!important;
@@ -83,7 +122,8 @@
       border-radius: 7px;
     }
 
-    input[type="submit"] {
+    input[type="submit"],
+    input[type="button"] {
       margin: 0 auto;
       background: #4BA054;
       border: 0;
@@ -95,6 +135,22 @@
       &:hover {
         color: white;
         opacity: .7;
+      }
+      
+    }
+
+    .ugc-inner-wrapper {
+      width: 450px;
+      margin: 0 auto;
+      .ugc-input-wrapper {
+        label {
+          font-weight: normal;
+          font-family: intro-regular;
+        }
+        input[type="button"] {
+          display: none;
+    
+        }
       }
     }
 

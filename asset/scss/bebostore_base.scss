@@ -10711,9 +10711,21 @@ a.btn.be_btn--rounded {
 
 .modal-dialog .modal-content .modal-header .close {
   position: absolute;
-  right: -21px;
-  top: 0px;
+  right: 30px;
+  top: 25px;
   font-size: 1.5em;
+  height: 35px;
+  width: 35px;
+  background: #BB3135;
+  padding: 0;
+  color: white;
+  opacity: 1;
+  font-size: 25px;
+
+  > span {
+    margin-top: -4px;
+    display: block;
+  }
 }
 
 .modal-dialog .modal-body {

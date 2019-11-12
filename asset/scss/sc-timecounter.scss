@@ -101,12 +101,25 @@
 
     &__submit-photo {
         background: #0ea34a;
-        padding: 7px 40px !important;
-        border-radius: 2004px !important;
+        padding: 7px 40px;
+        border-radius: 2004px;
         font-family: intro-bold;
         color: white;
         font-size: 17px;
         display: inline-block;
+
+        &[disabled] {
+            border-radius: 0;
+            padding: 10px;
+            background: #9e9c9c;
+
+            &:hover {
+                color: white;
+                text-decoration: none;
+                opacity: .7;
+                cursor: auto;
+            }
+        }
     }
 
 }
