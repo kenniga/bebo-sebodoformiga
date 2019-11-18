@@ -9,8 +9,16 @@
 				<!-- a block container is required -->
 				<div class="image-viewer">
 					<ul id="images">
-						<li><img src="https://via.placeholder.com/1500x1200" alt="Picture 1"></li>
-						<li><img src="https://via.placeholder.com/1600x1200	" alt="Picture 2"></li>
+					<?php 
+						$args = array(
+							'author' => get_the_author_meta('ID'),
+							'post_type' => 'galeri_kontes',
+						);
+						$author_posts = get_posts( $args );
+						foreach ($author_posts as $key => $value) {
+							?>
+							<li><?php echo get_the_post_thumbnail($value->ID) ?></li>
+							<?php } ?>
 					</ul>
 					<a href="#" class="image-viewer__nav image-viewer__next"><i class="fa fa-chevron-right"></i></a>
 					<a href="#" class="image-viewer__nav image-viewer__prev"><i class="fa fa-chevron-left"></i></a>
