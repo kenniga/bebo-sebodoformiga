@@ -1,0 +1,26 @@
+.sc-galeri-kontes-terdahulu {
+
+  &__item {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    > img {
+      flex: 0 0 50%;
+      width: 50%;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+
+  &__overlay {
+  
+    h6 {
+      margin: 0;
+      font-family: intro-bold;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  }
+  
+}

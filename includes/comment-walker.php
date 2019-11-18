@@ -38,21 +38,26 @@ if (!class_exists('beau_Theme_walker_comment')) {
 				'add_below' => $add_below,
 				'depth' => $depth,
 				'max_depth' => $args['max_depth'] );
+			$get_author_id = get_comment()->user_id;
+			$get_author_gravatar = get_avatar_url($get_author_id, array('size' => 450));
 		?>
-			<div class="title-comment">
-				<span class="comment-name"><?php echo get_comment_author_link(); ?></span>
-				<span class="comment-posted-in"><?php esc_html_e('Posted','bebostore')?> <?php comment_date(); ?> <?php esc_html_e('at','bebostore') ?><?php comment_time(); ?>  &nbsp; <?php comment_reply_link( array_merge( $args, $reply_args ) );  ?></span>
+			<div class="comment-item">
+				<div class="comment-avatar">
+					<?php echo '<img src="'.$get_author_gravatar.'" alt="'.get_the_title().'" />' ?>
+				</div>
+				<div id="comment-body-<?php esc_attr(comment_ID())?>" class="comment-body">
+					<div class="comment-name"><?php echo get_comment_author_link(); ?></div>
+					<div class="comment-posted-in"><?php comment_date('j M Y'); ?> <?php comment_reply_link( array_merge( $args, $reply_args ) );  ?></div>
+					<span class="comment-message comment" id="comment-content-<?php esc_attr(comment_ID()); ?>">
+						<?php if( !$comment->comment_approved ) : ?>
+						<em class="comment-awaiting-moderation"><?php esc_html_e('Your comment is awaiting moderation.','bebostore')?></em>
+						<?php else: ?>
+						<div class="comment-body-text"><?php comment_text();?></div><!--End comment-body-->
+						<?php endif; ?>
+					</span>
+					<div class="clearfix"></div>
+				</div><!-- /.comment-body -->
 			</div>
-			<div id="comment-body-<?php esc_attr(comment_ID())?>" class="comment-body">
-				<span class="comment-message comment" id="comment-content-<?php esc_attr(comment_ID()); ?>">
-					<?php if( !$comment->comment_approved ) : ?>
-					<em class="comment-awaiting-moderation"><?php esc_html_e('Your comment is awaiting moderation.','bebostore')?></em>
-					<?php else: ?>
-					<div class="comment-body"><?php comment_text();?></div><!--End comment-body-->
-					<?php endif; ?>
-				</span>
-				<div class="clearfix"></div>
-			</div><!-- /.comment-body -->
 		<?php }
 
 		function end_el(&$output, $comment, $depth = 0, $args = array() ) { ?>

@@ -151,6 +151,8 @@ function bebostore_scripts(){
             //js site
             // wp_enqueue_script('jquery-author-app', BEAU_JS .'/grid.js', array('jquery'), '1.0.1', TRUE);
             wp_enqueue_script('jquery-book-app', BEAU_JS .'/bebostore.js', array('jquery'), '1.0.1', TRUE);
+            wp_enqueue_script('viewer-js', BEAU_JS .'/viewer.min.js', array('jquery'), '1.0.1', TRUE);
+            wp_enqueue_script('jquery-viewer-js', BEAU_JS .'/jquery-viewer.min.js', array('jquery'), '1.0.1', TRUE);
         }
         if (!is_404()) {
             wp_enqueue_style('css-font-awesome', BEAU_CSS .'/font-awesome.min.css', array(), '4.3.0');
@@ -159,6 +161,7 @@ function bebostore_scripts(){
             wp_enqueue_style('css-idangerous', BEAU_CSS .'/swiper.min.css', array(), BEAU_THEME_VERSION);
             wp_enqueue_style('css-style-woo', BEAU_CSS .'/bebostore_woo.css', array(), '1.0.0');
             wp_enqueue_style('css-flipbook', BEAU_CSS .'/css-flipbook.css', array(), '1.0.0');
+            wp_enqueue_style('css-viewer', BEAU_CSS .'/viewer.min.css', array(), '1.0.0');
         }
         wp_enqueue_style('css-bootstrap', BEAU_CSS .'/bootstrap.css', array(), '3.3.1');
         wp_enqueue_style('css-bootstrap', BEAU_CSS .'/animate.css', array(), '3.3.1');
@@ -440,6 +443,71 @@ function bebostore_get_single_post( $post_type = '' ) {
 if (!current_user_can('manage_options')) {
     add_filter('show_admin_bar','__return_false');
 }
+
+function gt_get_post_view() {
+
+
+    $count = get_post_meta( get_the_ID(), 'post_views_count', true );
+
+
+    return "$count views";
+
+
+}
+
+
+function gt_set_post_view() {
+
+
+    $key = 'post_views_count';
+
+
+    $post_id = get_the_ID();
+
+
+    $count = (int) get_post_meta( $post_id, $key, true );
+
+
+    $count++;
+
+
+    update_post_meta( $post_id, $key, $count );
+
+
+}
+
+
+function gt_posts_column_views( $columns ) {
+
+
+    $columns['post_views'] = 'Views';
+
+
+    return $columns;
+
+
+}
+
+
+function gt_posts_custom_column_views( $column ) {
+
+
+    if ( $column === 'post_views') {
+
+
+        echo gt_get_post_view();
+
+
+    }
+
+
+}
+
+
+add_filter( 'manage_posts_columns', 'gt_posts_column_views' );
+
+
+add_action( 'manage_posts_custom_column', 'gt_posts_custom_column_views' );
 
 @ini_set( 'upload_max_size' , '256M' );
 @ini_set( 'post_max_size', '256M');

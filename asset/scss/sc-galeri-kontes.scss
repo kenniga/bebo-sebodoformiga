@@ -3,6 +3,13 @@
   &__item {
     cursor: pointer;
     position: relative;
+    height: 200px;
+    display: block;
+
+    > img {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__overlay {

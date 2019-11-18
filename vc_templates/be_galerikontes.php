@@ -1,5 +1,22 @@
 <?php
-$args = array('post_type'=> 'galeri_kontes', 'post_status' => 'publish', 'order' => 'DESC');
+$args_terms = array(
+    'taxonomy' => 'lokasi_kontes',
+    'meta_query' => array(
+        array(
+             'key'       => 'kontes_aktif',
+             'value'     => true,
+             'compare'   => '=='
+        )
+    ),
+);
+$terms = get_terms( $args_terms )[0]->term_id;
+$args = array('post_type'=> 'galeri_kontes', 'post_status' => 'publish', 'order' => 'DESC', 'tax_query' => array(
+    array(
+    'taxonomy' => 'lokasi_kontes',
+    'field' => 'ID',
+    'terms' => $terms,
+    )
+));
 ?>
 <div class="container">
     <div class="row">
@@ -16,17 +33,17 @@ $args = array('post_type'=> 'galeri_kontes', 'post_status' => 'publish', 'order'
     while($query->have_posts()) : $query->the_post();
         if(has_post_thumbnail()) {  ?>
         <div class="col-sm-3">
-            <div class="sc-galeri-kontes__item">
+            <a href="<?php echo get_permalink(); ?>" class="sc-galeri-kontes__item">
                 <?php the_post_thumbnail(); ?>
                 <div class="sc-galeri-kontes__overlay">
                     <h6>
                         Judul Karya <?php the_title(); ?>
                     </h6>
                     <p>
-                        Nama Peserta <?php the_author_nickname(); ?>
+                        Nama Peserta <?php the_author_meta('nickname'); ?>
                     </p>
                 </div>
-            </div>
+            </a>
         </div>
     <?php }
     elseif($thumbnail = get_post_meta($post->ID, 'image', true)) { echo 12323; ?>

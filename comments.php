@@ -8,7 +8,6 @@ $aria_req = ( $req ? " aria-required='true'" : '' );
 ?>
 <?php if ( have_comments() ) : ?>
 	<div class="comment-list no-border">
-		<div class="title-box title-comment-box"><span><?php esc_html_e("Comments" ,'bebostore'); echo get_comments_number(); ?></span></div>
 		<?php wp_list_comments( array(
 	        'walker' 		=> new beau_theme_walker_comment,
 	        'callback' 		=> null,
@@ -19,9 +18,12 @@ $aria_req = ( $req ? " aria-required='true'" : '' );
 	    ) ); ?>
 	</div><!--End comment-list-->
 <?php endif; // have_comments() ?>
-<div class="clearfix"></div>
 <div class="book-comment-form">
+
 	<?php
+	global $current_user;
+	wp_get_current_user();     
+	echo get_avatar( $current_user->ID, 80 );
 	comment_form(
 		array(
 	        'label_submit'	=>esc_html__('Submit comment','bebostore'),
@@ -33,7 +35,8 @@ $aria_req = ( $req ? " aria-required='true'" : '' );
 	            <input id="author" class="required txt-form" name="author" placeholder="'.esc_html__('Name','bebostore').' '. ( $req ? '*' : '' ) .'" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"' . $aria_req . ' /></li>',
 		    ),
 		    'comment_field' => '<li class="col-md-12 col-sm-12 col-xs-12"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" class="required txt-form" placeholder="'.esc_html__('Message *','bebostore').'"></textarea></li></ul>',
-		    'comment_notes_after' => ''
+				'comment_notes_after' => '',
+				'logged_in_as' => ''
 		)
 	);
 	paginate_comments_links();
