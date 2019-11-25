@@ -14,7 +14,7 @@ $user_post_count = count_user_posts( get_current_user_id() , 'galeri_kontes' );
 <div class="sc-logged-in-widget my-5">
     <div class="container">
         <div class="row justify-content-center">
-        <div class="col-10">
+        <div class="col-12 col-sm-10">
             <div class="row">
                 <div class="col-sm-12">
                     <ul class="nav nav-pills nav-fill sc-logged-in-widget__nav mb-5">
@@ -22,7 +22,7 @@ $user_post_count = count_user_posts( get_current_user_id() , 'galeri_kontes' );
                             <a class="nav-link" href="#">Galeri Saya</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Profil Saya</a>
+                            <a class="nav-link" href="<?php um_fetch_user($user_id); echo um_user_profile_url(); ?>">Profil Saya</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Keluar</a>
@@ -62,10 +62,12 @@ $user_post_count = count_user_posts( get_current_user_id() , 'galeri_kontes' );
                                     document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute));
                                     
                                     //do something later when date is reached
-                                    //if (distance < 0) {
-                                    //  clearInterval(x);
-                                    //  'IT'S MY BIRTHDAY!;
-                                    //}
+                                    if (distance < 0) {
+                                        clearInterval(x);
+                                        document.getElementById('days').innerText = '0',
+                                        document.getElementById('hours').innerText = '0',
+                                        document.getElementById('minutes').innerText = '0';
+                                    }
 
                                     }, second)
                         </script>
@@ -73,17 +75,21 @@ $user_post_count = count_user_posts( get_current_user_id() , 'galeri_kontes' );
                 </div>
                 <div class="col-sm-4">
                     <div class="sc-logged-in-widget__contest-info">
-                        <div class="sc-logged-in-widget__registered-photo d-flex align-items-end mb-3">
+                        <div class="sc-logged-in-widget__registered-photo d-flex justify-content-center justify-content-sm-start align-items-center align-items-sm-end mb-3">
+                            <?php 
+                                $count_posts = wp_count_posts( 'galeri_kontes' )->publish; 
+                                $users_count = count( get_users( array( 'fields' => array( 'ID' ), 'role' => 'contributor' ) ) );
+                            ?>
                             <h5>
-                                2000
+                                <?php echo esc_html($count_posts) ?>
                             </h5>
                             <span>
                                 Foto yang sudah masuk
                             </span>
                         </div>
-                        <div class="sc-logged-in-widget__registered-user d-flex align-items-end mb-4">
+                        <div class="sc-logged-in-widget__registered-user d-flex justify-content-center justify-content-sm-start align-items-center align-items-sm-end mb-4">
                             <h5>
-                                300
+                                <?php echo esc_html($users_count) ?>
                             </h5>
                             <span>
                                 Peserta Terdaftar

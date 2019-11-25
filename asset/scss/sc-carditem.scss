@@ -4,6 +4,10 @@
     background: white;
     padding: 15px;
 
+    @media only screen and (max-width: 480px) {
+        margin: 0 15px 40px;
+    }
+
     &__title {
         font-family: intro-bold;
         text-align: center;

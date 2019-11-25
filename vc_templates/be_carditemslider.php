@@ -55,6 +55,12 @@ $id_slider  =  "slider_id_".rand(1111,9999);
                 },
                 pagination: {
                     el: '#<?php echo esc_js($id_slider);?>_pagination.swiper-pagination',
+                },
+                breakpoints: {
+                    480: {
+                        slidesPerView: 1,
+                        spaceBetween: 30
+                    },
                 }
             });
         })(jQuery);

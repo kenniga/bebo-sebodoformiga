@@ -13,6 +13,15 @@ $button_unique_id = generateRandomString();
 
 $scoped_style = sprintf('
 	<style>
+	@media only screen and (max-width: 480px) {
+		#' . $button_unique_id . ' {
+						%1$s;
+						color: white;
+		}
+		#' . $button_unique_id . ':hover{
+						background: #1b2c51;
+		}
+	}
 	</style>
     ',
     $modul_background          = !empty( $modul_background ) ? 'background:' . $modul_background : ''

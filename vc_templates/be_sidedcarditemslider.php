@@ -20,7 +20,7 @@ $args = array(
 ?>
 <div class="sc-sided-card-slider" id="<?php echo esc_attr($id_slider);?>">
     <div class="row">
-        <div class="col-6">
+        <div class="col-12 col-sm-6">
             <div class="sc-sided-card-slider__image-slider sc-sided-card-slider__container swiper-container">
                 <div class="swiper-wrapper">
                     <?php foreach ($posts as $post) { ?>
@@ -48,7 +48,7 @@ $args = array(
             </div>
             <div class="swiper-pagination sc-sided-card-slider__pagination" id="<?php echo esc_js($id_slider);?>_pagination"></div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-sm-6">
             <div class="sc-sided-card-slider__desc-slider sc-sided-card-slider__container swiper-container">
                 <div class="swiper-wrapper">
                     <?php foreach ($posts as $post) { 

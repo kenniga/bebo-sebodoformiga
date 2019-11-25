@@ -9,11 +9,25 @@
     height: 50px;
     fill: white;
     background-size: 13px;
+
+    @media only screen and (max-width: 480px) {
+      width: 30px;
+      height: 30px;
+      background-size: 6px;
+    }
   }
   .swiper-button-prev {
     left: 60px;
+
+    @media only screen and (max-width: 480px) {
+      left: 20px;
+    }
   }
   .swiper-button-next {
     right: 60px;
+
+    @media only screen and (max-width: 480px) {
+      right: 20px;
+    }
   }
 } 

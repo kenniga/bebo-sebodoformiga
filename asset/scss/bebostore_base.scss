@@ -1717,6 +1717,12 @@ header.header-one.no-header-top #main-nav {
 header.header-one.no-header-top .beau-logo {
   position: static;
   float: none;
+
+  @media only screen and (max-width: 480px) {
+    img {
+      width: 70%;
+    }
+  }
 }
 
 #menu-top {
@@ -2856,7 +2862,7 @@ a[title~="title-sub"].mega-menu-link:after {
   .wpb_single_image .vc_single_image-wrapper {
     width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
   }
 
   .wpb_single_image img {
@@ -4590,9 +4596,9 @@ Author book style
   position: relative;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 480px) {
   .book-subcribe-form {
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -10015,14 +10021,6 @@ footer .footer-column {
   padding-right: 15px;
 }
 
-footer .footer-column:first-child {
-  padding-left: 0px;
-}
-
-footer .footer-column:last-child {
-  padding-right: 0px;
-}
-
 footer .footer-widget {
   float: left;
   width: 100%;
@@ -10031,14 +10029,12 @@ footer .footer-widget {
           box-sizing: border-box;
   padding-left: 15px;
   padding-right: 15px;
-}
 
-footer .footer-widget:first-child {
-  padding-left: 0px;
-}
-
-footer .footer-widget:last-child {
-  padding-right: 0px;
+  @media only screen and (max-width: 480px) {
+    img {
+      width: 150px;
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -10671,6 +10667,16 @@ a.be_popupmodul {
   .be_popupmodul a.btn {
     max-width: 100%;
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .be_popupmodul__button {
+    display: block;
+    max-width: 100%;
+    width: calc(100% - 15px);
+    margin: 0 auto 20px;
+    border-radius: 50px;
   }
 }
 
@@ -11496,6 +11502,12 @@ a.btn.be_btn--rounded {
   height: 100%;
   text-align: center;
   box-shadow: 1px 3px 7px 2px rgba(206, 206, 206, 0.5);
+
+  @media only screen and (max-width: 480px) {
+    margin: 0 15px;
+  }
+
+
 }
 
 .jabarmasagi-blog-card-slider.full_thumbnail .card-item {
@@ -11505,6 +11517,13 @@ a.btn.be_btn--rounded {
 .jabarmasagi-blog-card-slider .list-blog-slider {
   padding-left: 0;
   list-style: none;
+
+  @media only screen and (max-width: 480px) {
+    li {
+      margin-bottom: 30px;
+    }
+  }
+
 }
 
 #video-modal button.close {
@@ -11538,6 +11557,11 @@ a.btn.be_btn--rounded {
   width: auto;
   background: #1386c8;
   margin-bottom: 20px;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 14px;
+  }
+
 }
 
 .jabarmasagi-blog-card-slider .swiper-button-next,
@@ -11577,6 +11601,10 @@ a.btn.be_btn--rounded {
   color: #cecece;
   margin-bottom: 40px;
   padding: 0 15px;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 13px;
+  }
 }
 
 .jabarmasagi-blog-card-slider .card-item>a img {
@@ -11587,6 +11615,10 @@ a.btn.be_btn--rounded {
   width: 100%;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
+
+  @media only screen and (max-width: 480px) {
+    min-height: 200px;
+  }
 }
 
 .jabarmasagi-blog-card-slider.full_thumbnail .card-item>a.book-blog-thumb {

@@ -2,6 +2,9 @@
 
     &__container {
         padding: 14px;
+        @media screen and (max-width: 480px) {
+            padding: 0;
+        }
     }
 
     &__item {
@@ -14,12 +17,20 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+
+        @media screen and (max-width: 480px) {
+            padding: 25px 15px;
+        }
         
     }
     &__title {
         font-family: intro-bold;
         text-align: left;
         margin-top: 27px;
+
+        @media screen and (max-width: 480px) {
+            text-align: center;
+        }
     }
     &__img {
         text-align: center;
@@ -27,6 +38,9 @@
         flex: 1 1 50%;
         img {
             width: 100%;
+            @media only screen and (max-device-width : 768px) {
+                width: 50%;
+            }
         }
     }
     &__content {
@@ -35,9 +49,18 @@
         flex: 1 1 50%;
         padding-left: 40px;
 
+        @media only screen and (max-device-width : 768px) {
+            flex: 1 1 100%;
+            padding-left: 0;
+        }
+
         &-inner {
             p {
                 text-align: left;
+                @media screen and (max-width: 480px) {
+                    text-align: center;
+                    font-weight: 400;
+                }
             }
         }
     }
@@ -67,12 +90,20 @@
         right: -50px;
         background-image: none;
         padding-left: 7px;
+
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+            right: 40px;
+        }
     }
 
     &__btn-prev {
         left: -50px;
         background-image: none;
         padding-right: 7px;
+
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+            left: 40px;
+        }
     }
 
     &__pagination {
@@ -131,6 +162,10 @@
         font-size: 17px;
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: 480px) {
+            align-self: center;
+        }
 
         &:hover {
             text-decoration: none;

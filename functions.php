@@ -509,6 +509,18 @@ add_filter( 'manage_posts_columns', 'gt_posts_column_views' );
 
 add_action( 'manage_posts_custom_column', 'gt_posts_custom_column_views' );
 
+function custom_um_profile_query_make_posts( $args = array() ) {
+
+    // Change the post type to our liking.
+
+    $args['post_type'] = 'galeri_kontes';
+
+    return $args;
+
+}
+
+add_filter( 'um_profile_query_make_posts', 'custom_um_profile_query_make_posts', 12, 1 );
+
 @ini_set( 'upload_max_size' , '256M' );
 @ini_set( 'post_max_size', '256M');
 @ini_set( 'max_execution_time', '300' );

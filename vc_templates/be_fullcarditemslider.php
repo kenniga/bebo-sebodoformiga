@@ -56,7 +56,7 @@ $id_slider  =  "slider_id_".rand(1111,9999);
             grabCursor:false,
             speed: 1000,
             loop: true,
-            spaceBetween: 30,
+            spaceBetween: 25,
             navigation: {
                 nextEl: '#<?php echo esc_attr($id_slider);?>_next.swiper-button-next',
                 prevEl: '#<?php echo esc_attr($id_slider);?>_prev.swiper-button-prev',
