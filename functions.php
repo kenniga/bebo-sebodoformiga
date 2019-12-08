@@ -521,6 +521,15 @@ function custom_um_profile_query_make_posts( $args = array() ) {
 
 add_filter( 'um_profile_query_make_posts', 'custom_um_profile_query_make_posts', 12, 1 );
 
+function override_lokasi_kontes_archive_query( $query ){
+    if( ! is_admin()
+        && $query->is_archive()
+        && $query->is_tax('lokasi_kontes') ){
+            $query->set( 'posts_per_page', 8 );
+    }
+}
+add_action( 'pre_get_posts', 'override_lokasi_kontes_archive_query' );
+
 @ini_set( 'upload_max_size' , '256M' );
 @ini_set( 'post_max_size', '256M');
 @ini_set( 'max_execution_time', '300' );

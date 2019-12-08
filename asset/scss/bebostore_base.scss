@@ -5805,7 +5805,6 @@ List service bottom
 }
 
 .blog-items {
-  float: left;
   position: relative;
 }
 
@@ -6108,7 +6107,6 @@ List service bottom
   width: 245px;
   padding-bottom: 70px;
   margin-top: 30px;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
 }
 
 @media only screen and (max-width: 767px) {
@@ -11595,7 +11593,7 @@ a.btn.be_btn--rounded {
 }
 
 .jabarmasagi-blog-card-slider .card-item p.blog-excerpt {
-  font-family: intro-regular;
+  font-family: Barlow;
   font-size: 14px;
   text-align: center;
   color: #cecece;
@@ -11896,6 +11894,7 @@ a.btn.be_btn--rounded {
       
       img {
         border-radius: 50%;
+        width: 50px;
 
         @media screen and (max-width: 480px) {
           width: 50px;
@@ -11957,6 +11956,7 @@ a.btn.be_btn--rounded {
       }
 
       &__content {
+        font-family: Barlow;
         font-size: 15px;
       }
     }

@@ -98,7 +98,7 @@ if ($title_center == "title_center") {
 								<p class="blog-excerpt">
 									<?php esc_html_e($trimmed);?>
 								</p>
-								<a href="<?php echo esc_url(the_permalink());?>" class="jabarmasagi-btn btn btn-rounded">Read More</a>
+								<a href="<?php echo esc_url(the_permalink());?>" class="jabarmasagi-btn btn btn-rounded">Lebih Lanjut</a>
 							</div>
 						<?php } ?>
 					</li>

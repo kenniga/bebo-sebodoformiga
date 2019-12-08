@@ -13,6 +13,16 @@
     }
   }
 
+  &__button {
+    padding: 7px 40px;
+    border: 2px solid;
+    font-family: intro-bold;
+    color: #242d32;
+    font-size: 17px;
+    display: inline-block;
+    margin-top: 30px;
+  }
+
   &__overlay {
     opacity: 0;
     transition: 420ms;

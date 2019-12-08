@@ -38,19 +38,6 @@ if (is_search()) {
                 }
             ?>
             </div><!--End blog-list-->
-            <script>
-                (function($) {
-                    "use strict";
-                    $(window).load(function() {
-                        $('.grid-random-columns').isotope({
-                        itemSelector: '.blog-items',
-                            masonry: {
-                              columnWidth: 267
-                            }
-                        });
-                    });
-                })(jQuery);
-            </script>
             <div class="clearfix"></div>
             <?php echo bebostore_pagination($wp_query);?>
         </div><!--End left-cols-->

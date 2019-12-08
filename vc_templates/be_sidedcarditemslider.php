@@ -66,7 +66,7 @@ $args = array(
                                     </p>
                                 </div>
                                 <a href="<?php echo $more_link_atts; ?>" class="sc-sided-card-slider__readmore-btn">
-                                    Read More
+                                    Lebih Lanjut
                                 </a>
                             </div>
                         </div>

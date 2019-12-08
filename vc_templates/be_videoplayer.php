@@ -18,6 +18,9 @@ $args = array(
   $post = get_posts($args)[0];
 ?>
 <div class="row">
+  <div class="col-sm-12">
+    <h4 style="color: #ffffff;text-align: center" class="vc_custom_heading font-intro-bold">What We Do</h4>
+  </div>
   <div class="col-sm-4">
     <div class="sc-card-item">
       <h5 class="sc-card-item__title">
@@ -36,7 +39,7 @@ $args = array(
         </div>
         <div class="sc-card-item__action">
             <a class="sc-card-item__action-link" href="<?php echo get_permalink( $post->ID ) ?>">
-                Lanjut
+                Lebih Lanjut
             </a>
         </div>
     </div>

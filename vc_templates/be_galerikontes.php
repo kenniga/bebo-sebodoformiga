@@ -10,7 +10,8 @@ $args_terms = array(
     ),
 );
 $terms = get_terms( $args_terms )[0]->term_id;
-$args = array('post_type'=> 'galeri_kontes', 'post_status' => 'publish', 'order' => 'DESC', 'tax_query' => array(
+
+$args = array('post_type'=> 'galeri_kontes', 'posts_per_page' => 12, 'post_status' => 'publish', 'order' => 'DESC', 'tax_query' => array(
     array(
     'taxonomy' => 'lokasi_kontes',
     'field' => 'ID',
@@ -25,33 +26,34 @@ $args = array('post_type'=> 'galeri_kontes', 'post_status' => 'publish', 'order'
         </div>
     </div>
     <div class="row">
-    
-
-<?php
-    wp_reset_query();
-    $query = new WP_Query($args);
-    while($query->have_posts()) : $query->the_post();
-        if(has_post_thumbnail()) {  ?>
-        <div class="col-sm-3">
-            <a href="<?php echo get_permalink(); ?>" class="sc-galeri-kontes__item">
-                <?php the_post_thumbnail(); ?>
-                <div class="sc-galeri-kontes__overlay">
-                    <h6>
-                        Judul Karya <?php the_title(); ?>
-                    </h6>
-                    <p>
-                        Nama Peserta <?php the_author_meta('nickname'); ?>
-                    </p>
-                </div>
-            </a>
+        <?php
+            wp_reset_query();
+            $query = new WP_Query($args);
+                while($query->have_posts()) : $query->the_post();
+                    if(has_post_thumbnail()) {  ?>
+                    <div class="col-sm-3">
+                        <a href="<?php echo get_permalink(); ?>" class="sc-galeri-kontes__item">
+                            <?php the_post_thumbnail(); ?>
+                            <div class="sc-galeri-kontes__overlay">
+                                <h6>
+                                    Judul Karya <?php the_title(); ?>
+                                </h6>
+                                <p>
+                                    Nama Peserta <?php the_author_meta('nickname'); ?>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                <?php }
+            elseif($thumbnail = get_post_meta($post->ID, 'image', true)) { ?>
+                <div class="col-sm-3">
+                    <img src="<?php echo $thumbnail; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
+                    </div>
+            <?php } endwhile;
+        ?>
+        <div class="col-12">
+            <a href="<?php echo get_term_link($terms); ?>" class="sc-galeri-kontes__button">Lebih Banyak Lagi</a>
         </div>
-    <?php }
-    elseif($thumbnail = get_post_meta($post->ID, 'image', true)) { echo 12323; ?>
-        <div class="col-sm-3">
-            <img src="<?php echo $thumbnail; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
-            </div>
-    <?php } endwhile;
-    ?>
     </div>
 </div>
 <?php

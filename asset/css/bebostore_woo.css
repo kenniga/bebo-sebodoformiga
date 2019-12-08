@@ -385,6 +385,7 @@ img {
   width: 240px;
   z-index: 9999;
   top: 0;
+  right: 0;
 }
 
 #book-mobile-menu .mobile-menu {
@@ -407,7 +408,7 @@ img {
   
   #book-mobile-menu .mobile-menu.mobile-show span.close-btn {
     position: absolute;
-    color: white;
+    color: black;
     z-index: 999;
     right: 14px;
     top: 14px;
@@ -416,7 +417,7 @@ img {
 }
 
 #book-mobile-menu .mobile-menu ul {
-  background-color: #131210;
+  background-color: white;
   padding: 15px 0 15px 30px;
 }
 
@@ -434,7 +435,7 @@ img {
 }
 
 #book-mobile-menu .mobile-menu ul li a {
-  color: rgba(255, 255, 255, 0.6);
+  color: black;
   background: none;
   box-shadow: none;
 }

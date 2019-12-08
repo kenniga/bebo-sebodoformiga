@@ -25,6 +25,7 @@
         }
     }
     &__content {
+        font-family: Barlow;
         text-align: center;
         margin-top: 15px;
     }
@@ -54,12 +55,28 @@
         right: -50px;
         background-image: none;
         padding-left: 7px;
+        
+        @media screen and (max-width: 480px) {
+            right: 0;
+            width: 40px;
+            height: 40px;
+            border-color: black;
+            color: black;
+        }
     }
 
     &__btn-prev {
         left: -50px;
         background-image: none;
         padding-right: 7px;
+
+        @media screen and (max-width: 480px) {
+            left: 0;
+            width: 40px;
+            height: 40px;
+            border-color: black;
+            color: black;
+        }
     }
 
     .swiper-slide {
