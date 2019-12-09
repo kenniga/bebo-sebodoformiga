@@ -22,7 +22,7 @@ $args = array('post_type'=> 'galeri_kontes', 'posts_per_page' => 12, 'post_statu
 <div class="container">
     <div class="row">
         <div class="col-12">
-        <h4 style="color: #0a0a0a;text-align: left;font-size: 18px;margin-bottom: 30px;" class="vc_custom_heading font-intro-bold">Galeri Peserta</h4>
+        <h4 style="color: #0a0a0a;text-align: left;font-size: 18px;margin-bottom: 30px;" class="vc_custom_heading font-intro-bold">Galeri Peserta Kontes <?php echo esc_html(get_terms( $args_terms )[0]->name); ?></h4>
         </div>
     </div>
     <div class="row">
