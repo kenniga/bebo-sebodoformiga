@@ -51,7 +51,7 @@ $args = array('post_type'=> 'galeri_kontes', 'posts_per_page' => 12, 'post_statu
                     </div>
             <?php } endwhile;
         ?>
-        <div class="col-12">
+        <div class="col-12 text-center">
             <a href="<?php echo get_term_link($terms); ?>" class="sc-galeri-kontes__button">Lebih Banyak Lagi</a>
         </div>
     </div>
