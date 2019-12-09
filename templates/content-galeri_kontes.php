@@ -17,11 +17,17 @@
 						$author_posts = get_posts( $args );
 						foreach ($author_posts as $key => $value) {
 							?>
-							<li><?php echo get_the_post_thumbnail($value->ID) ?></li>
+							<li><?php echo get_the_post_thumbnail() ?></li>
 							<?php } ?>
 					</ul>
-					<a href="#" class="image-viewer__nav image-viewer__next"><i class="fa fa-chevron-right"></i></a>
-					<a href="#" class="image-viewer__nav image-viewer__prev"><i class="fa fa-chevron-left"></i></a>
+					<?php
+						$is_bottom_post =  get_permalink( get_adjacent_post(true,'',false, 'lokasi_kontes')->ID ) === get_permalink();
+						$is_top_post =  get_permalink( get_adjacent_post(true,'',true, 'lokasi_kontes')->ID ) === get_permalink();
+						$next_post_link_url = !$is_bottom_post ? get_permalink( get_adjacent_post(true,'',false, 'lokasi_kontes')->ID ) : 'javascript:void(0)'; 
+						$prev_post_link_url = !$is_top_post ? get_permalink( get_adjacent_post(true,'',true, 'lokasi_kontes')->ID ) : 'javascript:void(0)';
+					?>
+					<a href="<?php echo $prev_post_link_url; ?>" class="image-viewer__nav image-viewer__next <?php if($is_top_post) { echo 'disabled'; } ?>"><i class="fa fa-chevron-right"></i></a>
+					<a href="<?php echo $next_post_link_url; ?>" class="image-viewer__nav image-viewer__prev <?php if($is_bottom_post) { echo 'disabled'; } ?>"><i class="fa fa-chevron-left"></i></a>
 				</div>
 				<div class="image-viewer__fullscreen-container">
 					<a href="#" class="image-viewer__fullscreen-action">
@@ -124,15 +130,15 @@
 			title: false
 		});
 
-		$('.image-viewer__next').on('click', function(e){
-			e.preventDefault();
-			$('#images').viewer('next');
-		});
+		// $('.image-viewer__next').on('click', function(e){
+		// 	e.preventDefault();
+		// 	$('#images').viewer('next');
+		// });
 
-		$('.image-viewer__prev').on('click', function(e){
-			e.preventDefault();
-			$('#images').viewer('prev');
-		});
+		// $('.image-viewer__prev').on('click', function(e){
+		// 	e.preventDefault();
+		// 	$('#images').viewer('prev');
+		// });
 
 		$('.image-viewer__fullscreen-action').on('click', function(e){
 			e.preventDefault();

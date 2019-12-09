@@ -11707,7 +11707,7 @@ a.btn.be_btn--rounded {
   #images {
     height: 200px;
     display: none;
-  }
+  } 
 
   .viewer-fullscreen {
     display: none;
@@ -11723,6 +11723,10 @@ a.btn.be_btn--rounded {
     top: 50%;
     transform: translateY(-50%);
     color: white;
+
+    &.disabled {
+      opacity: .2;
+    }
   }
 
   &__prev {
