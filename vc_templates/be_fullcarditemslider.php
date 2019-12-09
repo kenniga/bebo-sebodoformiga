@@ -5,38 +5,47 @@ extract(shortcode_atts(array(
 ), $atts));
 $parsed_atts = vc_param_group_parse_atts( $slider_attr );
 $id_slider  =  "slider_id_".rand(1111,9999);
+$args = array(
+    'post_type' => 'post',
+
+    'meta_query' => array(
+      array(
+          'key' => 'show_this_post_on',
+          'value' => 'ongoing-program',
+          'compare' => 'LIKE'
+      )
+    )
+  );
+    $posts = get_posts($args);
 ?>
 <div class="sc-full-card-slider sc-full-card-slider__container swiper-container" id="<?php echo esc_attr($id_slider);?>">
     <div class="swiper-wrapper">
-        <?php foreach ($parsed_atts as $item) { 
-            $participate_link_atts = !empty($item['link_destination']) ? vc_build_link($item['link_destination']) : '';
-            $more_link_atts = !empty($item['link_more_destination']) ? vc_build_link($item['link_more_destination']) : '';
-            ?>
-        <div class="swiper-slide">
-            <div class="sc-full-card-slider__item">
-                <div class="sc-full-card-slider__img d-flex flex-column align-items-center">
-                    <?php 
-                    if ( !empty( $item['upload_slider_picture'] ) ) { 
-                        echo '<img src="' . wp_get_attachment_image_src( $item['upload_slider_picture'], 'medium' )[0] .  '  " class="img-responsive" />'; 
-                    }  ?>
-                </div>
-                <div class="sc-full-card-slider__content d-flex justify-content-around flex-wrap flex-column">
-                    <div class="sc-full-card-slider__content-inner">
-                        <h4 class="sc-full-card-slider__title mb-4">
-                            <?php echo esc_html($item['slider_title']) ?>
-                        </h4>
-                        <p>
-                            <?php echo esc_html( $item['slider_desc'] ); ?>
-                        </p>
+        <?php foreach ($posts as $post) { ?>
+            <div class="swiper-slide">
+                <div class="sc-full-card-slider__item">
+                    <div class="sc-full-card-slider__img d-flex flex-column align-items-center">
+                        <?php 
+                        if ( !empty( $post->ID ) ) { 
+                            echo '<img src="' . get_the_post_thumbnail_url( $post->ID, 'medium' ) .  '  " class="img-responsive" />'; 
+                        }  ?>
                     </div>
-                    <a href="<?php echo $more_link_atts['url']; ?>" class="sc-full-card-slider__read-more-btn">
-                        <?php echo esc_html($participate_link_atts['title']); ?> <i class="fa fa-chevron-right"></i>
-                    </a>
+                    <div class="sc-full-card-slider__content d-flex justify-content-around flex-wrap flex-column">
+                        <div class="sc-full-card-slider__content-inner">
+                            <h4 class="sc-full-card-slider__title mb-4">
+                                <?php echo esc_html($post->post_title) ?>
+                            </h4>
+                            <p>
+                                <?php echo get_the_excerpt( $post->ID ); ?>
+                            </p>
+                        </div>
+                        <a href="<?php echo get_permalink( $post->ID ); ?>" class="sc-full-card-slider__read-more-btn">
+                            Lebih Lanjut <i class="fa fa-chevron-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
         <?php
-        }
+            }
         ?>
         
     </div>

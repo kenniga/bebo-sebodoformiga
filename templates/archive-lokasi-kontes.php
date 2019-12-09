@@ -6,6 +6,11 @@ if(is_category()){
     $cat = get_category_by_path(get_query_var('category_name'),false);
     $title_page = $cat->cat_name;
 }
+if(is_tax('lokasi_kontes')){
+    $cat = get_queried_object()->name;
+    $banner_header = get_term_meta(get_queried_object()->term_id, 'lokasi_header')[0];
+    $style_page = 'style="background-image: url(' . wp_get_attachment_url($banner_header, 'full') . ')"';
+}
 if (is_tag()) {
     $postTag = get_term_by('slug', get_query_var('tag'), 'post_tag');
     $title_page = esc_html__('Tag: ','bebostore').$postTag->name;
@@ -13,10 +18,11 @@ if (is_tag()) {
 if (is_search()) {
     $title_page = esc_html__('Search with keywords: ','bebostore').esc_html($_REQUEST['s']);
 }
+
 ?>
 <section class="header-page blog-header-grid" <?php printf('%s', $style_page)?>>
     <div class="container">
-        <span class="title-page"><?php echo esc_attr( $title_page ); ?> Hello</span>
+        <span class="title-page">Galeri Peserta Kontes <?php echo esc_attr( $cat ); ?></span>
     </div>
 </section>
 <section>

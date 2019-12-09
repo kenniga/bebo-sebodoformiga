@@ -5948,7 +5948,8 @@ List service bottom
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  float: left;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .page-blogs-grid.grid-2columns .clearfix {
@@ -6107,6 +6108,7 @@ List service bottom
   width: 245px;
   padding-bottom: 70px;
   margin-top: 30px;
+  padding: 0 10px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -9329,7 +9331,7 @@ List service bottom
 }
 
 .landing-book-blog .landing-list-news li div a {
-  font-family: "Times New Roman";
+  font-family: Barlow;
   font-size: 1.53846em;
   line-height: 24px;
   font-weight: bold;

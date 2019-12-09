@@ -42,7 +42,6 @@ if ($page_setting == 'one-column-full' || $page_setting == 'default' || $page_se
 	</a>
 	<span class="news-description <?php printf('%s', $class_thumb);?>">
 		<a href="<?php echo esc_url(get_the_permalink());?>" class="news-title"><?php the_title();?></a>
-		<div class="news-dateup"><?php esc_html_e('On','bebostore')?> <?php printf('%s', get_the_date());?> | <?php printf('%s', get_post_field( 'comment_count', get_the_ID()))?> <?php esc_html_e('Comments','bebostore');?> | <?php ?></div>
 		<?php
 		if ($lengthExc) {
 		?>

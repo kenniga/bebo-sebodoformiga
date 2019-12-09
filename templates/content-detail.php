@@ -2,7 +2,13 @@
 <?php $post_id = get_the_ID();?>
 <?php if (has_post_thumbnail()) {?>
 <section class="banner-detail">
-    <?php echo the_post_thumbnail('bebostore-banner-thumbnail'); ?>
+	<?php sebodo_debug(get_field('header_image')); ?>
+		<?php if(!empty(get_field('header_image'))) {
+			echo wp_get_attachment_image(get_field('header_image'), 'full');
+		} else {
+			echo the_post_thumbnail('bebostore-banner-thumbnail'); 
+		}
+	?>
 </section>
 <?php }?>
 <section class="section-blog-detail blogs-detail-full wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
