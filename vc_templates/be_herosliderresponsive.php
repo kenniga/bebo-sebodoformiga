@@ -4,7 +4,7 @@ extract(shortcode_atts(array(
     'show_on_page' => ''
 ), $atts));
 
-$images_array = get_field('home_slider' , $show_on_page);
+$images_array = get_field('home_slider_responsive' , $show_on_page);
 
 ?>
 
