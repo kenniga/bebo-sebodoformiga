@@ -1,4 +1,5 @@
 .sc-logged-in-widget {
+  
   .input-wrapper {
     margin-bottom: 20px;
   }
@@ -74,6 +75,11 @@
 
     .ugc-input-wrapper {
       position: relative;
+
+      .checkbox-option-wrapper input {
+        float: none;
+        display: inline-block;
+      }
     }
 
     label[for="photo-contest-upload"] {
@@ -110,6 +116,9 @@
       }
     }
 
+    label[for="post_youtube"], input#post_youtube {
+      display: none;
+    }
 
     .contest-form-upload {
       display: none!important;

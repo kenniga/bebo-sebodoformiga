@@ -25,17 +25,25 @@
 			<div class="close close-overlay" data-dismiss="modal" aria-label="Close"></div>
 			<div class="modal-dialog modal-dialog-centered" role="document">
 				<div class="modal-content">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 100 100" overflow="visible" enable-background="new 0 0 100 100" xml:space="preserve">
-					<line fill="none" stroke="#fff" stroke-width="12" stroke-linecap="square" x1="10" y1="10" x2="90" y2="90"></line>
-					<line fill="none" stroke="#fff" stroke-width="12" stroke-linecap="square" x1="90" y1="10" x2="10" y2="90"></line>
-					</svg>
-				</button>
-				<div class="modal-body">
-					<div class="video-wrapper">
-					<iframe src="" frameborder="0" allowfullscreen></iframe>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 100 100" overflow="visible" enable-background="new 0 0 100 100" xml:space="preserve">
+						<line fill="none" stroke="#fff" stroke-width="12" stroke-linecap="square" x1="10" y1="10" x2="90" y2="90"></line>
+						<line fill="none" stroke="#fff" stroke-width="12" stroke-linecap="square" x1="90" y1="10" x2="10" y2="90"></line>
+						</svg>
+					</button>
+					<div class="modal-body">
+						<div class="video-wrapper">
+						<iframe src="" frameborder="0" allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="modal-pp" tabindex="-1" role="dialog" aria-labelledby="ppModalTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+						<img class="pp-image-inside-modal" src="#" alt="">
 				</div>
 			</div>
 		</div>

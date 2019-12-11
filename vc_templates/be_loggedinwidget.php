@@ -159,9 +159,23 @@ $user_post_count = count_user_posts( get_current_user_id() , 'galeri_kontes' );
                 reader.readAsDataURL(input.files[0]);
             }
         }
+
         $("#photo-contest-upload").change(function() {
             readURL(this);
         });
+        $('.sc-logged-in-widget__photo-contest-form input[type="checkbox"]').on('change', function(){
+            if($('.sc-logged-in-widget__photo-contest-form input[type="checkbox"]').attr('checked')) {
+                $('.sc-logged-in-widget__photo-contest-form .ugc-inner-wrapper .ugc-input-wrapper label[for="photo-contest-upload"]').hide();
+                $('#photo-contest-upload').hide();
+                $('.sc-logged-in-widget__photo-contest-form .ugc-inner-wrapper .ugc-input-wrapper label[for="post_youtube"]').show();
+                $('#post_youtube').show();
+            } else {
+                $('.sc-logged-in-widget__photo-contest-form .ugc-inner-wrapper .ugc-input-wrapper label[for="photo-contest-upload"]').show();
+                $('#photo-contest-upload').show();
+                $('.sc-logged-in-widget__photo-contest-form .ugc-inner-wrapper .ugc-input-wrapper label[for="post_youtube"]').hide();
+                $('#post_youtube').hide();
+            }
+        })
     })(jQuery);
 </script>
 

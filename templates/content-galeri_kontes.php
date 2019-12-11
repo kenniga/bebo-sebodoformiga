@@ -53,9 +53,10 @@
 				<div id="post-detail-<?php the_ID();?>" <?php post_class("page-blogs-grid single-galeri_kontes__author blogs-detail");?>>
 				<?php 
 					$get_author_gravatar = get_avatar_url(get_the_author_meta('ID'), array('size' => 80));
+					$get_author_gravatar_modal = get_avatar_url(get_the_author_meta('ID'), array('size' => 370));
 				?>
 					<div class="single-galeri_kontes__author-detail">
-						<img src="<?php echo $get_author_gravatar; ?>" />
+						<img src="<?php echo $get_author_gravatar; ?>" class="single-galeri-kontes--author-photo" data-img-modal="<?php echo $get_author_gravatar_modal; ?>" />
 						<div class="author-info">
 							<div class="author-name">
 								<?php the_author(); ?>
@@ -116,6 +117,11 @@
 (function($) {
 	$(document).ready(function(){
 		var $image = $('#image');
+
+		$('.single-galeri-kontes--author-photo').on('click', function(){
+			$('#modal-pp img.pp-image-inside-modal').attr('src', $(this).data('img-modal'));
+			$('#modal-pp').modal('show');
+		});
 
 	
 		// Get the Viewer.js instance after initialized

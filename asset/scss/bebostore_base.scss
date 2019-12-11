@@ -11899,8 +11899,10 @@ a.btn.be_btn--rounded {
       flex-wrap: wrap;
       
       img {
+        cursor: pointer;
         border-radius: 50%;
         width: 50px;
+
 
         @media screen and (max-width: 480px) {
           width: 50px;
@@ -11934,6 +11936,7 @@ a.btn.be_btn--rounded {
     margin-top: 40px;
     font-family: intro-regular;
     font-weight: 400;
+    width: 100%;
 
     .news-title {
       margin-bottom: 20px;
@@ -11991,3 +11994,15 @@ a.btn.be_btn--rounded {
 
   }
 }
+
+#modal-pp .modal-content {
+  background: transparent;
+}
+
+.pp-image-inside-modal {
+  height: 370px;
+  width: 370px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1000px;
+} 
