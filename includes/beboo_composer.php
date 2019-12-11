@@ -163,7 +163,7 @@ function jabarmasagi_HeroSliderResponsive() {
    ) );
 }
 
-class WPBakeryShortCode_Be_heroslider extends WPBakeryShortCode {}
+class WPBakeryShortCode_Be_herosliderresponsive extends WPBakeryShortCode {}
 
 //This for popup modul jabarmasagi
 add_action( 'vc_before_init', 'jabarmasagi_PopupRegister', 999999);
