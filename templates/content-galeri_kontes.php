@@ -1,12 +1,28 @@
 <?php while ( have_posts() ) : the_post();?>
 <?php $post_id = get_the_ID();?>
-<?php if (has_post_thumbnail()) {?>
 <?php gt_set_post_view(); ?>
+<?php
+	$is_bottom_post =  get_permalink( get_adjacent_post(true,'',false, 'lokasi_kontes')->ID ) === get_permalink();
+	$is_top_post =  get_permalink( get_adjacent_post(true,'',true, 'lokasi_kontes')->ID ) === get_permalink();
+	$next_post_link_url = !$is_bottom_post ? get_permalink( get_adjacent_post(true,'',false, 'lokasi_kontes')->ID ) : 'javascript:void(0)'; 
+	$prev_post_link_url = !$is_top_post ? get_permalink( get_adjacent_post(true,'',true, 'lokasi_kontes')->ID ) : 'javascript:void(0)';
+?>
 <section>
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
 				<!-- a block container is required -->
+				
+				<?php 
+					if( !empty(get_field('post_youtube')) ) {
+						?>
+						<div class="video-viewer">
+							<?php echo get_field('post_youtube') ?>
+							<a href="<?php echo $prev_post_link_url; ?>" class="image-viewer__nav image-viewer__next <?php if($is_top_post) { echo 'disabled'; } ?>"><i class="fa fa-chevron-right"></i></a>
+							<a href="<?php echo $next_post_link_url; ?>" class="image-viewer__nav image-viewer__prev <?php if($is_bottom_post) { echo 'disabled'; } ?>"><i class="fa fa-chevron-left"></i></a>
+						</div>
+					<?php } else if (has_post_thumbnail()) {?>
+
 				<div class="image-viewer">
 					<ul id="images">
 					<?php 
@@ -20,12 +36,7 @@
 							<li><?php echo get_the_post_thumbnail() ?></li>
 							<?php } ?>
 					</ul>
-					<?php
-						$is_bottom_post =  get_permalink( get_adjacent_post(true,'',false, 'lokasi_kontes')->ID ) === get_permalink();
-						$is_top_post =  get_permalink( get_adjacent_post(true,'',true, 'lokasi_kontes')->ID ) === get_permalink();
-						$next_post_link_url = !$is_bottom_post ? get_permalink( get_adjacent_post(true,'',false, 'lokasi_kontes')->ID ) : 'javascript:void(0)'; 
-						$prev_post_link_url = !$is_top_post ? get_permalink( get_adjacent_post(true,'',true, 'lokasi_kontes')->ID ) : 'javascript:void(0)';
-					?>
+				
 					<a href="<?php echo $prev_post_link_url; ?>" class="image-viewer__nav image-viewer__next <?php if($is_top_post) { echo 'disabled'; } ?>"><i class="fa fa-chevron-right"></i></a>
 					<a href="<?php echo $next_post_link_url; ?>" class="image-viewer__nav image-viewer__prev <?php if($is_bottom_post) { echo 'disabled'; } ?>"><i class="fa fa-chevron-left"></i></a>
 				</div>
@@ -34,11 +45,11 @@
 						<i class="fa fa-arrows-alt"></i>
 					</a>
 				</div>
+				<?php } ?>
 			</div>
 		</div>
 	</div>
 </section>
-<?php } ?>
 
 <section class="kontes-detail-full wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
 	<div class="container">
