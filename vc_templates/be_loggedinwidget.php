@@ -100,7 +100,7 @@ $user_post_count = count_user_posts( get_current_user_id() , 'galeri_kontes' );
                                 if ($user_post_count != 3) {
                                     ?>
                                         <a href="#upload-foto-kontes" data-toggle="modal" class="sc-logged-in-widget__submit-photo">
-                                            Unggah Foto
+                                            Unggah Foto/Video
                                         </a>
                                     <?php
                                 } else {
@@ -127,7 +127,7 @@ $user_post_count = count_user_posts( get_current_user_id() , 'galeri_kontes' );
     <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-            <h5 class="modal-title" id="exampleModalLongTitle">Unggah Foto</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle">Unggah Foto/Video</h5>
         </div>
         <!-- Modal body -->
         <div class="modal-body">

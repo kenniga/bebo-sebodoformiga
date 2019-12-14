@@ -2,7 +2,6 @@
 <?php $post_id = get_the_ID();?>
 <?php if (has_post_thumbnail()) {?>
 <section class="banner-detail">
-	<?php sebodo_debug(get_field('header_image')); ?>
 		<?php if(!empty(get_field('header_image'))) {
 			echo wp_get_attachment_image(get_field('header_image'), 'full');
 		} else {

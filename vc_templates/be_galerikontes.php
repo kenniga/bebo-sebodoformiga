@@ -45,10 +45,30 @@ $args = array('post_type'=> 'galeri_kontes', 'posts_per_page' => 12, 'post_statu
                         </a>
                     </div>
                 <?php }
-            elseif($thumbnail = get_post_meta($post->ID, 'image', true)) { ?>
+            else { ?>
+            <?php 
+                $video = get_field( 'post_youtube' );
+                preg_match('/src="(.+?)"/', $video, $matches_url );
+                $src = $matches_url[1];	
+                
+                preg_match('/embed(.*?)?feature/', $src, $matches_id );
+                $id = $matches_id[1];
+                $id = str_replace( str_split( '?/' ), '', $id );
+                
+            ?>
                 <div class="col-sm-3">
-                    <img src="<?php echo $thumbnail; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
-                    </div>
+                    <a href="<?php echo get_permalink(); ?>" class="sc-galeri-kontes__item">
+                        <img src="http://img.youtube.com/vi/<?php echo $id; ?>/mqdefault.jpg"" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
+                        <div class="sc-galeri-kontes__overlay">
+                            <h6>
+                                Judul Karya <?php the_title(); ?>
+                            </h6>
+                            <p>
+                                Nama Peserta <?php the_author_meta('nickname'); ?>
+                            </p>
+                        </div>
+                    </a>
+                </div>
             <?php } endwhile;
         ?>
         <div class="col-12 text-center">

@@ -12011,3 +12011,43 @@ a.btn.be_btn--rounded {
   text-align: center;
   padding: 20px 0;
 }
+
+.profile-galeri {
+  .um-item {
+    box-sizing: border-box;
+    padding: 0 15px;
+    border-bottom: none;
+    margin-top: 30px;
+
+    &-link {
+      margin-bottom: 10px;
+      a {
+        font-family: intro-regular;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000;
+      }
+    }
+
+    &-meta {
+      font-family: Barlow;
+      font-weight: 600;
+      line-height: 21px;
+    }
+  }
+  .um-item-img {
+    margin-bottom: 10px;
+    a {
+      padding: 0;
+      width: 100%;
+      border: none;
+
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+  }
+}
