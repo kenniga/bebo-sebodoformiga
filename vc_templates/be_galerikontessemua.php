@@ -7,7 +7,7 @@ $terms = get_terms( $args_terms );
 <div class="container">
     <div class="row">
         <div class="col-12">
-        <h4 style="color: #0a0a0a;text-align: left;font-size: 18px;margin-bottom: 30px;" class="vc_custom_heading font-intro-bold">Galeri Sebelumnya</h4>
+        <h2 style="color: #55718f;text-align: center;font-size: 18px;margin-bottom: 30px;" class="vc_custom_heading font-barlow bold">Galeri Kontes</h2>
         </div>
     </div>
     <div class="row">
@@ -15,7 +15,7 @@ $terms = get_terms( $args_terms );
 
 <?php
     foreach ($terms as $key => $value) { 
-        $args = array('post_type'=> 'galeri_kontes', 'post_status' => 'publish', 'order' => 'DESC', 'tax_query' => array(
+        $args = array('post_type'=> 'galeri_kontes', 'post_status' => 'publish', 'order' => 'ASC', 'tax_query' => array(
             array(
             'taxonomy' => 'lokasi_kontes',
             'field' => 'ID',
