@@ -15,7 +15,7 @@ $terms = get_terms( $args_terms );
 
 <?php
     foreach ($terms as $key => $value) { 
-        $args = array('post_type'=> 'galeri_kontes', 'post_status' => 'publish', 'order' => 'ASC', 'order_by' => 'date', 'tax_query' => array(
+        $args = array('post_type'=> 'galeri_kontes', 'post_status' => 'publish', 'order' => 'DESC', 'orderby' => 'date', 'tax_query' => array(
             array(
             'taxonomy' => 'lokasi_kontes',
             'field' => 'ID',
