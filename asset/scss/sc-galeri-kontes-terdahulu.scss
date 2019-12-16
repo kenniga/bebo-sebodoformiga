@@ -1,5 +1,13 @@
 .sc-galeri-kontes-terdahulu {
 
+  &__title {
+    margin-bottom: 70px;
+
+    @media only screen and (max-device-width : 480px) {
+      margin-bottom: 30px;
+    }
+  }
+
   &__item {
     cursor: pointer;
     position: relative;

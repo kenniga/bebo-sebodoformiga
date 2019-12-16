@@ -389,6 +389,26 @@ function jabarmasagi_UltimateForm() {
       	// Need and image, select book, add more info
         array(
           'type' => 'textfield',
+          'heading' => __( 'Image Title', 'bebostore' ),
+          'param_name' => 'image_title',
+        ),
+        array(
+          'type' => 'attach_image',
+          'heading' => __( 'Image After Login', 'bebostore' ),
+          'param_name' => 'image_after_login',
+        ),
+        array(
+          'type' => 'attach_image',
+          'heading' => __( 'Image Before Login', 'bebostore' ),
+          'param_name' => 'image_before_login',
+        ),
+        array(
+          'type' => 'vc_link',
+          'heading' => __( 'Image Link', 'bebostore' ),
+          'param_name' => 'image_link',
+        ),
+        array(
+          'type' => 'textfield',
           'heading' => __( 'Form Class', 'bebostore' ),
           'param_name' => 'form_class',
         ),

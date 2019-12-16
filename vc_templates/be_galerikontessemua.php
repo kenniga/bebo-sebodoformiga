@@ -7,7 +7,7 @@ $terms = get_terms( $args_terms );
 <div class="container">
     <div class="row">
         <div class="col-12">
-        <h2 style="color: #55718f;text-align: center;margin-bottom: 30px;" class="vc_custom_heading font-barlow bold">Galeri Kontes</h2>
+        <h2 style="color: #55718f;text-align: center;" class="vc_custom_heading font-barlow bold sc-galeri-kontes-terdahulu__title">Galeri Kontes</h2>
         </div>
     </div>
     <div class="row">
