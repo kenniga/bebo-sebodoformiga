@@ -25,7 +25,7 @@ $user_post_count = count_user_posts( get_current_user_id() , 'galeri_kontes' );
                             <a class="nav-link" href="<?php um_fetch_user($user_id); echo um_user_profile_url(); ?>">Profil Saya</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Keluar</a>
+                            <a class="nav-link" href="<?php echo wp_logout_url(site_url()); ?>">Keluar</a>
                         </li>
                     </ul>
                 </div>
