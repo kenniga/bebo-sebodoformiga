@@ -69,9 +69,9 @@
 					<div class="single-galeri_kontes__author-detail">
 						<img src="<?php echo $get_author_gravatar; ?>" class="single-galeri-kontes--author-photo" data-img-modal="<?php echo $get_author_gravatar_modal; ?>" />
 						<div class="author-info">
-							<div class="author-name">
+							<a href="<?php um_fetch_user(get_the_author_meta('ID')); echo um_user_profile_url(); ?>" class="author-name">
 								<?php the_author(); ?>
-							</div>
+							</a>
 							<div class="author-school">
 								<?php echo get_the_author_meta('sekolah_asal'); ?>
 							</div>
