@@ -12059,5 +12059,8 @@ a.btn.be_btn--rounded {
   .um-load-items { 
     display: block;
     width: 100%;
+    text-transform: capitalize!important;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
